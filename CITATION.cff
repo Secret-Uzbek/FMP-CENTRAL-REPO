@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Living citation - no versions, only breath"
+type: software
+title: "Fractal Metascience Paradigm - Central Repository"
+version: living
+date-released: 2025-11-08
+license: Terra-Public-v1.0
+repository-code: "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
+url: "https://github.com/Secret-Uzbek"
+abstract: >-
+  Central hub for Fractal Metascience Paradigm ecosystem.
+  Created in prison, zero budget, human-AI symbiosis.
+authors:
+  - family-names: Abdukarimov
+    given-names: Abdurashid Abdulkhamitovich
+    orcid: "https://orcid.org/0009-0000-6394-4912"
+keywords:
+  - fractal metascience
+  - AIUZ Terra
+  - living organism
+  - human-AI symbiosis
+  - Uzbekistan
