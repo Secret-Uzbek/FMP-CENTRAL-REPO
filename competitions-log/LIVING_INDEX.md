@@ -1,0 +1,1 @@
+- 2025-11-08_first-competition.json добавлен 2025-11-08
