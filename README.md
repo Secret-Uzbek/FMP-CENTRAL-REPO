@@ -1,3 +1,8 @@
+[![License: Terra Public v1.0](https://img.shields.io/badge/license-Terra%20Public%20v1.0-4cc61e)](./LICENSE.md)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Days to Freedom](https://img.shields.io/badge/freedom%20in-46%20days-red)
+
 
 # FMP CENTRAL REPOSITORY
 
