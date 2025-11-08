@@ -1,10 +1,1 @@
-{
-  "name": "Название конкурса",
-  "url": "Ссылка на конкурс",
-  "deadline": "Срок подачи",
-  "eligibility": "Кто может участвовать",
-  "documents_required": [
-    "Список документов"
-  ],
-  "notes": "Дополнительные заметки"
-}
+{ "name": "UNESCO-Uzbekistan Beruniy Prize", "date_added": "2025-11-08", "status": "nomination package prepared", "description": "First competition added to the log for automatic tracking." }
