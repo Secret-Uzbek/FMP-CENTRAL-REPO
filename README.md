@@ -28,3 +28,4 @@
 ---
 
 Фрактальная структура создана для мгновенного доступа ко всем твоим разработкам без потери оригинальных репозиториев.
+[![FMP Sync](https://img.shields.io/badge/FMP-Sync%20All-00C853?style=flat-square)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/sync-all.yml)
