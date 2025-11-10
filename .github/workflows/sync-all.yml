@@ -8,24 +8,28 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync Started
+      - uses: actions/checkout@v4
+
+      - name: Download Release Asset
+        if: github.event_name == 'release'
         run: |
-          echo "FMP Sync запущен: $(date)"
-          echo "Релиз: ${{ github.event.release.tag_name || 'manual' }}"
-          echo "SHA256: 6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878"
+          curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            ${{ github.event.release.zipball_url }} -o release.zip
+
+      - name: Upload to OSF
+        env:
+          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
+        run: |
+          PROJECT_ID="du8xn"  # ← ЗАМЕНИ на свой OSF Project ID
+          curl -X PUT "https://files.osf.io/v1/resources/$PROJECT_ID/providers/osfstorage/?kind=file&name=fmp-release.zip" \
+            -H "Authorization: Bearer $OSF_TOKEN" \
+            -H "Content-Type: application/zip" \
+            --data-binary @release.zip
+
+      - name: Generate Report
+        run: |
           echo "### FMP Sync Report" >> $GITHUB_STEP_SUMMARY
           echo "- **GitHub**: ${{ github.event.release.html_url || 'manual run' }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **OSF**: [добавь DOI вручную]" >> $GITHUB_STEP_SUMMARY
-          echo "- **Figshare**: [добавь DOI вручную]" >> $GITHUB_STEP_SUMMARY
-          echo "- **ORCID**: [https://orcid.org/0009-0000-6394-4912](https://orcid.org/0009-0000-6394-4912)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Ledger**: [terra_proof_ledger_FMP-001.json](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)" >> $GITHUB_STEP_SUMMARY
-      - name: Commit Report
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "FMP Sync"
-          echo "# FMP Sync Log $(date)" > sync-log.md
-          echo "- GitHub: ${{ github.event.release.html_url || 'manual' }}" >> sync-log.md
-          echo "- SHA256: 6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878" >> sync-log.md
-          git add sync-log.md
-          git commit -m "Add FMP sync log"
-          git push
+          echo "- **OSF**: https://osf.io/your-osf-project-id/" >> $GITHUB_STEP_SUMMARY
+          echo "- **SHA256**: 6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878" >> $GITHUB_STEP_SUMMARY
+          echo "- **Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)" >> $GITHUB_STEP_SUMMARY
