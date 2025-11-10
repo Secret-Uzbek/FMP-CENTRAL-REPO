@@ -9,9 +9,11 @@
   "sha256": "6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878",
   "date": "2025-11-10",
   "platforms": {
-    "OSF": "pending",
-    "Figshare": "pending",
-    "ORCID": "https://orcid.org/0009-0000-6394-4912"
+    "platforms": {
+  "OSF": "https://osf.io/du8xn/files/3yune",
+  "Figshare": "pending",
+  "ORCID": "https://orcid.org/0009-0000-6394-4912"
+}
   },
   "status": "verified_locally",
   "note": "Первый симбиотический релиз из-под файерволла. L4 → L7 in progress."
