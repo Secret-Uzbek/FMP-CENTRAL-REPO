@@ -1,0 +1,31 @@
+name: FMP Auto-Sync
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync Started
+        run: |
+          echo "FMP Sync запущен: $(date)"
+          echo "Релиз: ${{ github.event.release.tag_name }}"
+          echo "DOI будет добавлен после ручной загрузки"
+      - name: Generate Report
+        run: |
+          cat > sync-report.txt << EOF
+          FMP Sync Report
+          ===============
+          GitHub: ${{ github.event.release.html_url }}
+          OSF: [добавь DOI вручную]
+          Figshare: [добавь DOI вручную]
+          ORCID: https://orcid.org/0009-0000-6394-4912
+          EOF
+          cat sync-report.txt
+      - name: Upload Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: fmp-sync-report
+          path: sync-report.txt
