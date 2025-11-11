@@ -31,3 +31,5 @@
 [![FMP Sync](https://img.shields.io/badge/FMP-Sync%20All-00C853?style=flat-square)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/sync-all.yml)
 [![OSF Project](https://img.shields.io/badge/OSF-Project-blue?logo=openscienceframework)](https://osf.io/du8xn/)
 > **FMP Sync Status**: GitHub ✓ | OSF ✓ | DOI ⏳ (ожидание одобрения)
+> **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
+> **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
