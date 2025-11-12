@@ -1,20 +1,30 @@
 {
-  "terra_proof_id": "FMP-001",
-  "title": "FMP Central Repo: Symbiotic Release v1.0",
-  "author": {
-    "name": "Abdurashid Abdukarimov",
-    "orcid": "0009-0000-6394-4912"
-  },
-  "github_release": "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/untagged-0a41246b4fa1b15a1cc3",
-  "sha256": "6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878",
-  "date": "2025-11-10",
-  "platforms": {
-    "platforms": {
-  "OSF": "https://osf.io/du8xn/files/3yune",
-  "Figshare": "pending",
-  "ORCID": "https://orcid.org/0009-0000-6394-4912"
-}
-  },
-  "status": "verified_locally",
-  "note": "Первый симбиотический релиз из-под файерволла. L4 → L7 in progress."
+  "id": "FMP-001",
+  "title": "FMP Central Repository v1.0.0",
+  "status": "CLOSED",
+  "timestamp": "2025-11-12T11:35:00+05:00",
+  "author": "Abdurashid Abdukarimov",
+  "orcid": "0009-0000-6394-4912",
+  "proofs": [
+    {
+      "type": "Zenodo DOI",
+      "doi": "10.5281/zenodo.17425678",
+      "title": "TCPP v1.0",
+      "date": "2025-10-23"
+    },
+    {
+      "type": "OSF Registration",
+      "url": "https://osf.io/gwfzm/",
+      "status": "archiving",
+      "project": "https://osf.io/du8xn/",
+      "date": "2025-11-12"
+    },
+    {
+      "type": "Figshare DOI",
+      "doi": "10.6084/m9.figshare.30588389",
+      "title": "FMP Proof Artifact: TCPP + FPG + Central Repo v1.0",
+      "date": "2025-11-12"
+    }
+  ],
+  "verification": "✓ Zenodo | ⏳ OSF | ✓ Figshare | FMP-001 CLOSED"
 }
