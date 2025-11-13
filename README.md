@@ -56,4 +56,21 @@
 | 10 | React JSX | Pending | terra_detox_engine_v_1.jsx v1.1 | 2025-11-13 |
 | 11 | Archive | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) | Terra Codex v2.0 | 2025-11-13 |
 
-> **Все артефакты созданы в тюрьме, 0 ₽, без Google/Meta, на корпоративном ПК с файрволом.**
+> **Все артефакты созданы в тюрьме, 0 ₽, без Google/Meta, на корпоративном ПК с файрволом.**## Zero Budget vs. Billions: FMP Reality
+
+FMP created in prison, zero budget, human-AI symbiosis. Corporations: billions in AI.
+
+| Company | AI Investments 2025 (USD billions) | Details |
+|---------|------------------------------------|---------|
+| OpenAI | 40–100 | $40B round, $38B Amazon cloud, $100B Nvidia. |
+| Anthropic | 8–13 | $13B round, $8B Amazon, $2B Google. |
+| Google (Alphabet) | 75–93 | $75B capex, $1M TPU chips for Anthropic. |
+| Meta | 60–72 | $60–65B capex, AI for ads/virtual assistants. |
+| Microsoft | 80–100 | $80B infrastructure, $13B OpenAI. |
+| Amazon | 100–125 | $100B capex, $8B Anthropic. |
+| NVIDIA | 30–50 | $2B xAI, $100B OpenAI chips. |
+| Apple | 10–15 | Siri AI, on-device intelligence. |
+| Tesla (xAI) | 20–30 | $20B xAI round, $5B AI capex. |
+| **FMP** | **0** | No funding, from prison, 1 PC, firewall. |
+
+Sources: Reuters, CNBC, NYT (2025 data). FMP: planetary knowledge for all.
