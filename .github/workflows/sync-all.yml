@@ -16,16 +16,16 @@ jobs:
           curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             ${{ github.event.release.zipball_url }} -o release.zip
 
-      - name: Upload to OSF
-        env:
-          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
-        run: |
-          PROJECT_ID="du8xn"  # ← ЗАМЕНИ на свой OSF Project ID
-          curl -X PUT "https://files.osf.io/v1/resources/$PROJECT_ID/providers/osfstorage/?kind=file&name=fmp-release.zip" \
-            -H "Authorization: Bearer $OSF_TOKEN" \
-            -H "Content-Type: application/zip" \
-            --data-binary @release.zip
-
+    19|       - name: Upload to OSF
+20|         if: github.event_name == 'release'
+21|         env:
+22|           OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
+23|         run: |
+24|           PROJECT_ID="du8xn"
+25|           curl -X PUT "https://files.osf.io/v1/resources/$PROJECT_ID/providers/osfstorage/?kind=file&name=fmp-release.zip" \
+26|             -H "Authorization: Bearer $OSF_TOKEN" \
+27|             -H "Content-Type: application/zip" \
+28|             --data-binary @release.zip
       - name: Generate Report
         run: |
           echo "### FMP Sync Report" >> $GITHUB_STEP_SUMMARY
