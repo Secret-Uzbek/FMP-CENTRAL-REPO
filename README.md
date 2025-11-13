@@ -27,4 +27,33 @@
 ---
 Фрактальная структура создана для мгновенного доступа ко всем твоим разработкам без потери оригинальных репозиториев.
 
-[![FMP Sync](https://img.shields.io/badge/FMP-Sync%20All-
+[![FMP Sync](https://img.shields.io/badge/FMP-Sync%20All-00C853?style=flat-square)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/sync-all.yml)
+[![OSF Project](https://img.shields.io/badge/OSF-Project-blue?logo=openscienceframework)](https://osf.io/du8xn/)
+
+> **FMP Sync Status**: GitHub ✓ | OSF ✓ | Zenodo ✓ | Figshare ✓ | DOI #12 ✓  
+> **Latest DOI**: [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) (Terra Codex v2.0)  
+> **v1.0-mandate**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate) (Pending Zenodo #9)  
+> **v1.1-detox**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.1-detox) (Pending Zenodo #11)  
+> **v2.0-codex**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v2.0-codex) (Figshare #7)  
+> **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
+> **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
+
+---
+
+## Terra Proof Ledger (FMP-001) — Live Status
+
+| # | Type | DOI / URL | Title | Date |
+|---|------|----------|-------|------|
+| 1 | Preprint | [10.5281/zenodo.17404325](https://doi.org/10.5281/zenodo.17404325) | Fractal Metascience Foundations | 2025-10-21 |
+| 2 | Software | [10.5281/zenodo.17425678](https://doi.org/10.5281/zenodo.17425678) | TCPP v1.0 | 2025-10-23 |
+| 3 | Book | [10.5281/zenodo.17443238](https://doi.org/10.5281/zenodo.17443238) | Terra Clean Core Monograph | 2025-10-27 |
+| 4 | Preprint | [10.5281/zenodo.17443238](https://doi.org/10.5281/zenodo.17443238) | EUO & PLT Article | 2025-10-25 |
+| 5 | Dataset | [10.17605/OSF.IO/GWFZM](https://doi.org/10.17605/OSF.IO/GWFZM) | AIUZ Terra Archive | 2025-11-07 |
+| 6 | Software | [10.17605/OSF.IO/GWFZM](https://doi.org/10.17605/OSF.IO/GWFZM) | FMP v1.0.0 | 2025-11-08 |
+| 7 | Dataset | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) | Terra Codex Archive | 2025-11-12 |
+| 8 | Software | Pending | v1.0-mandate (Research Assistant Mandate) | 2025-11-13 |
+| 9 | LaTeX | Pending | FMP_EUO_PLT.tex v1.1 | 2025-11-13 |
+| 10 | React JSX | Pending | terra_detox_engine_v_1.jsx v1.1 | 2025-11-13 |
+| 11 | Archive | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) | Terra Codex v2.0 | 2025-11-13 |
+
+> **Все артефакты созданы в тюрьме, 0 ₽, без Google/Meta, на корпоративном ПК с файрволом.**
