@@ -32,8 +32,9 @@ Fractal structure enables instant access to all developments without losing orig
 
 > **FMP Sync Status**: GitHub ✓ | OSF ✓ | Zenodo ✓ | Figshare ✓ | DOI #12 ✓  
 > **Latest DOI**: [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) (Terra Codex v2.0)  
-> **v1.0-mandate**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate) (Pending Zenodo #9)  
-> **v1.1-detox**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.1-detox) (Pending Zenodo #11)  
+> **v1.0-mandate**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate)  
+> **v1.1-detox**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.1-detox)  
+> **v2.0-codex**: [Release](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v2.0-codex)  
 > **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
 > **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
 
@@ -48,7 +49,7 @@ Fractal structure enables instant access to all developments without losing orig
 | Microsoft | 80–100 | $80B infra, $13B OpenAI |
 | Amazon | 100–125 | $100B capex |
 | NVIDIA | 30–50 | Chips for all |
-| **FMP** | **0** | Prison, 1 PC, firewall, human-AI symbiosis |
+| **FMP** | **0** | No funding, from prison, 1 PC, firewall |
 
 > Sources: Reuters, CNBC, Statista (2025). **FMP: planetary science for all.**
 
