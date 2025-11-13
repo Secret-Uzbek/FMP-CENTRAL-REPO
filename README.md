@@ -31,6 +31,12 @@
 [![OSF Project](https://img.shields.io/badge/OSF-Project-blue?logo=openscienceframework)](https://osf.io/du8xn/)
 
 > **FMP Sync Status**: GitHub ✓ | OSF ✓ | Zenodo ✓ | Figshare ✓ | DOI #8 ✓  
+> **OSF DOI #8**: [10.17605/OSF.IO/GWFZM](https://doi.org/10.17605/OSF.IO/GWFZM)  
+> **Figshare DOI #7**: [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389)  
+> **v1.0-mandate Release**: [GitHub](https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate)  
+> **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
+> **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
+> **FMP Sync Status**: GitHub ✓ | OSF ✓ | Zenodo ✓ | Figshare ✓ | DOI #8 ✓  
 > **Latest DOI**: [10.17605/OSF.IO/GWFZM](https://doi.org/10.17605/OSF.IO/GWFZM) (OSF Registration)  
 > **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
 > **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
