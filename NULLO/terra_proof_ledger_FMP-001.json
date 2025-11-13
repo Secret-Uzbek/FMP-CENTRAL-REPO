@@ -28,3 +28,10 @@
   ],
   "verification": "✓ Zenodo | ⏳ OSF | ✓ Figshare | FMP-001 CLOSED"
 }
+{
+  "type": "GitHub Release",
+  "doi": "pending Zenodo #9",
+  "title": "L7 Research Assistant Mandate v1.0 (Terra Setup)",
+  "url": "https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate",
+  "date": "2025-11-13"
+}
