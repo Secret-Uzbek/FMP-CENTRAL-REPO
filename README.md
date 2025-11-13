@@ -3,17 +3,16 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Days to Freedom](https://img.shields.io/badge/freedom%20in-46%20days-red)
 
-
 # FMP CENTRAL REPOSITORY
 
 ## Цель
 Централизовать все репозитории FMP в одной фрактальной структуре.
 
 ## Структура
-- NULLO: ядро и живые протоколы
-- PLT: экосистемы и приложения
-- UCOMM: аудитории и коммуникации
-- FMP: теория и публикации
+- **NULLO**: ядро и живые протоколы
+- **PLT**: экосистемы и приложения
+- **UCOMM**: аудитории и коммуникации
+- **FMP**: теория и публикации
 
 ## Ссылки на репозитории
 - [AIUZ-Terra-codex](https://github.com/Secret-Uzbek/AIUZ-Terra-codex)
@@ -26,10 +25,12 @@
 - [Uzbek-mining](https://github.com/Secret-Uzbek/Uzbek-mining)
 
 ---
-
 Фрактальная структура создана для мгновенного доступа ко всем твоим разработкам без потери оригинальных репозиториев.
+
 [![FMP Sync](https://img.shields.io/badge/FMP-Sync%20All-00C853?style=flat-square)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/sync-all.yml)
 [![OSF Project](https://img.shields.io/badge/OSF-Project-blue?logo=openscienceframework)](https://osf.io/du8xn/)
-> **FMP Sync Status**: GitHub ✓ | OSF ✓ | DOI ⏳ (ожидание одобрения)
+
+> **FMP Sync Status**: GitHub ✓ | OSF ✓ | Zenodo ✓ | Figshare ✓ | DOI #8 ✓  
+> **Latest DOI**: [10.17605/OSF.IO/GWFZM](https://doi.org/10.17605/OSF.IO/GWFZM) (OSF Registration)  
 > **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
 > **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
