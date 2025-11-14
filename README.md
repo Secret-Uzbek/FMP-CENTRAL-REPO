@@ -1,5 +1,5 @@
 # FMP CENTRAL REPOSITORY
-
+[Русский](README_RU.md) | [O'zbekcha](README_UZ.md) | [English](README.md)
 [![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.30588389-blue)](https://doi.org/10.6084/m9.figshare.30588389)
 [![License](https://img.shields.io/badge/License-Open-green.svg)]()
 [![GitHub Sync](https://img.shields.io/badge/GitHub-✓-success)]()
