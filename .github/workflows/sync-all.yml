@@ -1,35 +1,63 @@
-name: FMP Auto-Sync
+name: Sync All FMP Repos
 on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 9 * * 1'
   workflow_dispatch:
-  release:
-    types: [published]
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: central-repo
 
-      - name: Download Release Asset
-        if: github.event_name == 'release'
-        run: |
-          curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            ${{ github.event.release.zipball_url }} -o release.zip
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    19|       - name: Upload to OSF
-20|         if: github.event_name == 'release'
-21|         env:
-22|           OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
-23|         run: |
-24|           PROJECT_ID="du8xn"
-25|           curl -X PUT "https://files.osf.io/v1/resources/$PROJECT_ID/providers/osfstorage/?kind=file&name=fmp-release.zip" \
-26|             -H "Authorization: Bearer $OSF_TOKEN" \
-27|             -H "Content-Type: application/zip" \
-28|             --data-binary @release.zip
-      - name: Generate Report
+      - name: Install deps
+        run: pip install requests
+
+      - name: Create output
+        run: mkdir -p output
+
+      - name: Clone repos
         run: |
-          echo "### FMP Sync Report" >> $GITHUB_STEP_SUMMARY
-          echo "- **GitHub**: ${{ github.event.release.html_url || 'manual run' }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **OSF**: https://osf.io/your-osf-project-id/" >> $GITHUB_STEP_SUMMARY
-          echo "- **SHA256**: 6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878" >> $GITHUB_STEP_SUMMARY
-          echo "- **Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)" >> $GITHUB_STEP_SUMMARY
+          mkdir -p repos
+          repos=( "AIUZ-Terra-codex" "FMP-monograph" "AIUZ-terra-codex-FMP" "Theory-of-fractal-metascience-paradigm" "Nullo-PLT-UCOMM-FMP-Academic-Research" "AIUZ-Terra-Ecosystem" "Uzbek-mining" )
+          for repo in "${repos[@]}"; do
+            git clone https://x-access-token:$$ {{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Secret-Uzbek/ $${repo}.git repos/${repo} || echo "skip $repo"
+          done
+
+      - name: Generate article
+        run: python .github/scripts/generate_article.py
+        env:
+          TARGET: 'all'
+
+      - name: Publish Zenodo
+        run: python .github/scripts/publish_zenodo.py
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+
+      - name: Publish Figshare
+        run: python .github/scripts/publish_figshare.py
+        env:
+          FIGSHARE_TOKEN: ${{ secrets.FIGSHARE_TOKEN }}
+
+      - name: Publish OSF
+        run: python .github/scripts/publish_osf.py
+        env:
+          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: auto-${{ github.run_number }}
+          files: output/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
