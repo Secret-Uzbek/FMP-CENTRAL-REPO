@@ -1,124 +1,54 @@
-# .github/workflows/auto-submission.yml
-# Terra Auto-Submission Engine v7.0 — полностью рабочий 17.11.2025
-# Author: Abdurashid Abdulkhamitovich Abdukarimov (ORCID: 0009-0000-6394-4912)
-
 name: Terra Auto-Submission
-
 on:
   schedule:
-    - cron: '0 9 * * 1'                  # Каждый понедельник 09:00 UTC (14:00 Ташкент)
+    - cron: '0 9 * * 1'
   workflow_dispatch:
     inputs:
-      target_journal:
-        description: 'Целевой журнал / направление'
-        required: true
-        default: all
-        type: choice
-        options: [philosophy, nbiot, education, ai-education, epistemology, all]
-      platforms:
-        description: 'Платформы для публикации (через запятую)'
-        required: true
-        default: zenodo,figshare,osf
+      target:
+        description: 'Target journal'
+        default: 'all'
 
 jobs:
-  terra-auto-publish:
+  submit:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
-
     steps:
-      - name: Checkout Central Repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           path: central-repo
 
-      - name: Clone All FMP Repositories
-        run: |
-          mkdir -p repos
-          repos=(
-            AIUZ-Terra-codex
-            FMP-monograph
-            AIUZ-terra-codex-FMP
-            Theory-of-fractal-metascience-paradigm
-            Nullo-PLT-UCOMM-FMP-Academic-Research
-            AIUZ-Terra-Ecosystem
-            Uzbek-mining
-          )
-          for repo in "${repos[@]}"; do
-            echo "Cloning Secret-Uzbek/$repo..."
-            git clone https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Secret-Uzbek/${repo}.git repos/${repo} || echo "skip $repo"
-          done
-
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install Dependencies
-        run: pip install requests PyYAML jinja2 markdown2
+      - name: Create output
+        run: mkdir -p output
 
-      - name: Generate Article (Terra FMP Engine)
-        id: generate
+      - name: Generate
+        run: python .github/scripts/generate_article.py
         env:
-          TARGET: ${{ github.event.inputs.target_journal || 'all' }}
-        run: |
-          python3 .github/scripts/generate_article.py
-          echo "article_title=$(cat central-repo/output/title.txt)" >> $GITHUB_OUTPUT
+          TARGET: ${{ github.event.inputs.target || 'all' }}
 
-      - name: Publish to Zenodo
-        if: contains(github.event.inputs.platforms || 'zenodo', 'zenodo')
+      - name: Zenodo
+        run: python .github/scripts/publish_zenodo.py
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-        run: |
-          python3 .github/scripts/publish_zenodo.py
 
-      - name: Publish to Figshare
-        if: contains(github.event.inputs.platforms || 'figshare', 'figshare')
+      - name: Figshare
+        run: python .github/scripts/publish_figshare.py
         env:
           FIGSHARE_TOKEN: ${{ secrets.FIGSHARE_TOKEN }}
-        run: |
-          python3 .github/scripts/publish_figshare.py
 
-      - name: Publish to OSF
-        if: contains(github.event.inputs.platforms || 'osf', 'osf')
+      - name: OSF
+        run: python .github/scripts/publish_osf.py
         env:
           OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
-        run: |
-          python3 .github/scripts/publish_osf.py
 
-      - name: Create GitHub Release + DOI Badges
-        uses: softprops/action-gh-release@v2
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: auto-v${{ github.run_number }}
-          name: "Terra Auto-Submission #${{ github.run_number }} — ${{ steps.generate.outputs.article_title }}"
-          body: |
-            🚀 **Fractal Metascience Paradigm — автоматическая публикация из 8 репозиториев**
-            DOI Zenodo: ![Zenodo Badge](https://zenodo.org/badge/DOI/$(cat central-repo/output/zenodo_doi.txt).svg)
-            Figshare: [Link]($(cat central-repo/output/figshare_url.txt))
-            OSF: [Link]($(cat central-repo/output/osf_url.txt))
-            Created in prison. Zero budget. Maximum impact.
-          files: |
-            central-repo/output/article.md
-            central-repo/output/*.json
-            central-repo/output/*.txt
+          tag_name: submission-${{ github.run_number }}
+          files: output/*
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
-      - name: Update README with Badges
-        run: |
-          python3 -c "import os; badges = []; if os.path.exists('central-repo/output/zenodo_doi.txt'): badges.append('![Zenodo Badge](https://zenodo.org/badge/DOI/$(cat central-repo/output/zenodo_doi.txt).svg)'); if os.path.exists('central-repo/output/figshare_url.txt'): badges.append('[Figshare]($(cat central-repo/output/figshare_url.txt))'); if os.path.exists('central-repo/output/osf_url.txt'): badges.append('[OSF]($(cat central-repo/output/osf_url.txt))'); with open('central-repo/README.md', 'a') as f: f.write('\n\n## Latest Publications\n' + '\n'.join(badges))"
-          git config user.name "Terra Bot"
-          git config user.email "a.a.abdukarimov@tutamail.com"
-          git add central-repo/README.md
-          git commit -m "auto: add latest DOI badges from run #${{ github.run_number }}" || echo "nothing to commit"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
-      - name: Send Email Notification
-        run: |
-          echo "✅ Workflow завершён! Публикации готовы."
-          echo "Проверь email: a.a.abdukarimov@tutamail.com для подтверждений от Zenodo/Figshare/OSF."
-          echo "Релиз: https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases"
