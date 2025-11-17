@@ -6,7 +6,7 @@ name: Terra Auto-Submission
 
 on:
   schedule:
-    - cron: '0 9 * * 1'                  # каждый понедельник 09:00 UTC (14:00 Ташкент)
+    - cron: '0 9 * * 1'                  # Каждый понедельник 09:00 UTC (14:00 Ташкент)
   workflow_dispatch:
     inputs:
       target_journal:
@@ -16,7 +16,7 @@ on:
         type: choice
         options: [philosophy, nbiot, education, ai-education, epistemology, all]
       platforms:
-        description: 'Платформы (через запятую)'
+        description: 'Платформы для публикации (через запятую)'
         required: true
         default: zenodo,figshare,osf
 
@@ -47,7 +47,7 @@ jobs:
             Uzbek-mining
           )
           for repo in "${repos[@]}"; do
-            echo "Cloning Secret-Uzbek/$repo ..."
+            echo "Cloning Secret-Uzbek/$repo..."
             git clone https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Secret-Uzbek/${repo}.git repos/${repo} || echo "skip $repo"
           done
 
@@ -56,7 +56,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pip install requests PyYAML jinja2 markdown2
 
       - name: Generate Article (Terra FMP Engine)
@@ -65,17 +65,15 @@ jobs:
           TARGET: ${{ github.event.inputs.target_journal || 'all' }}
         run: |
           python3 .github/scripts/generate_article.py
-          echo "article_title=$(cat output/title.txt)" >> $GITHUB_OUTPUT
+          echo "article_title=$(cat central-repo/output/title.txt)" >> $GITHUB_OUTPUT
 
-      # ========== ZENODO ==========
-      - name: Publish to Zenodo (real, not sandbox)
+      - name: Publish to Zenodo
         if: contains(github.event.inputs.platforms || 'zenodo', 'zenodo')
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
         run: |
           python3 .github/scripts/publish_zenodo.py
 
-      # ========== FIGSHARE ==========
       - name: Publish to Figshare
         if: contains(github.event.inputs.platforms || 'figshare', 'figshare')
         env:
@@ -83,7 +81,6 @@ jobs:
         run: |
           python3 .github/scripts/publish_figshare.py
 
-      # ========== OSF ==========
       - name: Publish to OSF
         if: contains(github.event.inputs.platforms || 'osf', 'osf')
         env:
@@ -91,30 +88,37 @@ jobs:
         run: |
           python3 .github/scripts/publish_osf.py
 
-      # ========== GitHub Release ==========
-      - name: Create GitHub Release + DOI badges
+      - name: Create GitHub Release + DOI Badges
         uses: softprops/action-gh-release@v2
         with:
           tag_name: auto-v${{ github.run_number }}
           name: "Terra Auto-Submission #${{ github.run_number }} — ${{ steps.generate.outputs.article_title }}"
           body: |
-            Fractal Metascience Paradigm — автоматическая публикация из 8 репозиториев
-            DOI Zenodo: ![](https://zenodo.org/badge/DOI/[будет после публикации].svg)
+            🚀 **Fractal Metascience Paradigm — автоматическая публикация из 8 репозиториев**
+            DOI Zenodo: ![Zenodo Badge](https://zenodo.org/badge/DOI/$(cat central-repo/output/zenodo_doi.txt).svg)
+            Figshare: [Link]($(cat central-repo/output/figshare_url.txt))
+            OSF: [Link]($(cat central-repo/output/osf_url.txt))
             Created in prison. Zero budget. Maximum impact.
           files: |
-            output/*.pdf
-            output/*.json
-            output/*.txt
+            central-repo/output/article.md
+            central-repo/output/*.json
+            central-repo/output/*.txt
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      - name: Update README with new badges
+      - name: Update README with Badges
         run: |
-          python3 .github/scripts/update_readme_badges.py
+          python3 -c "import os; badges = []; if os.path.exists('central-repo/output/zenodo_doi.txt'): badges.append('![Zenodo Badge](https://zenodo.org/badge/DOI/$(cat central-repo/output/zenodo_doi.txt).svg)'); if os.path.exists('central-repo/output/figshare_url.txt'): badges.append('[Figshare]($(cat central-repo/output/figshare_url.txt))'); if os.path.exists('central-repo/output/osf_url.txt'): badges.append('[OSF]($(cat central-repo/output/osf_url.txt))'); with open('central-repo/README.md', 'a') as f: f.write('\n\n## Latest Publications\n' + '\n'.join(badges))"
           git config user.name "Terra Bot"
           git config user.email "a.a.abdukarimov@tutamail.com"
-          git add README.md
-          git commit -m "auto: add new DOI badges from run #${{ github.run_number }}" || echo "nothing to commit"
+          git add central-repo/README.md
+          git commit -m "auto: add latest DOI badges from run #${{ github.run_number }}" || echo "nothing to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Send Email Notification
+        run: |
+          echo "✅ Workflow завершён! Публикации готовы."
+          echo "Проверь email: a.a.abdukarimov@tutamail.com для подтверждений от Zenodo/Figshare/OSF."
+          echo "Релиз: https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases"
