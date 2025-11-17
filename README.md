@@ -1,6 +1,5 @@
-# FMP CENTRAL REPOSITORY
-[Русский](README_RU.md) | [O'zbekcha](README_UZ.md) | [English](README.md)
-
+# 🌍 FMP CENTRAL REPOSITORY
+## Terra Ecosystem: Fractal Metascience for Planetary Future
 
 [![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.30588389-blue)](https://doi.org/10.6084/m9.figshare.30588389)
 [![License](https://img.shields.io/badge/License-Open-green.svg)]()
@@ -8,14 +7,23 @@
 [![OSF Sync](https://img.shields.io/badge/OSF-✓-success)]()
 [![Zenodo Sync](https://img.shields.io/badge/Zenodo-✓-success)]()
 [![Figshare Sync](https://img.shields.io/badge/Figshare-✓-success)]()
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
 
 > **Planetary science for all. Zero budget. Maximum impact.**
+
+**📍 Built in Tashkent, Uzbekistan 🇺🇿 | 📧 a.a.abdukarimov@tutamail.com**
 
 ---
 
 ## 🎯 Mission
 
 **Centralize all FMP (Fractal Metascience Paradigm) repositories in a single, navigable fractal structure.**
+
+Terra Ecosystem implements FMP through:
+- 🎓 **Theory**: Nullo-PLT-UCOMM-FMP academic framework
+- 🛠️ **Practice**: AIUZ Terra implementations (education, DAO, green infrastructure)
+- 🌱 **Projects**: Uzbek Mining (green EV stations), Fractal Silk Route, Millennium Solver
+- 🪙 **DAO**: Decentralized governance with reputation-based system (no financial tokens)
 
 This repository serves as the central hub for the Fractal Metascience Paradigm ecosystem — a revolutionary approach to scientific knowledge organization and dissemination, built entirely from prison with zero funding.
 
@@ -167,6 +175,32 @@ ls -la
 ✅ **Zero Budget** — Built entirely without funding  
 ✅ **Prison-Made** — Created under extreme constraints with corporate firewall  
 ✅ **Open Science** — Fully transparent and reproducible  
+✅ **DAO without Tokens** — Reputation-based governance system
+
+---
+
+## 📊 Ecosystem Statistics
+
+| Category | Count | Details |
+|----------|-------|---------|
+| 🎓 **Theory Documents** | 85+ | Academic papers, monographs, frameworks |
+| 🛠️ **Components** | 129+ | Practical implementations, tools, modules |
+| 📚 **Repositories** | 8 | Interconnected FMP ecosystem repos |
+| 📄 **Total Files** | 2,000+ | Documentation, code, research materials |
+| 🌍 **Languages** | 3+ | English, Russian, Uzbek (PLT multilingual layer) |
+| 👥 **Contributors** | Open | Human-AI symbiosis (Claude, ChatGPT, Gemini) |
+| 💰 **Budget** | $0 | Zero funding, maximum impact |
+
+---
+
+## 🎯 Core Principles
+
+1. 🔄 **Self-Similarity**: Same patterns at all scales (from individual cognition to planetary systems)
+2. ♻️ **Recursion**: Iterative knowledge building through fractal compression
+3. 🌐 **Cultural Integration**: Multi-perspective synthesis without linguistic bias
+4. 🧬 **NULLO Foundation**: Maximum potentiality through ontological zero-point
+5. 💬 **PLT Communication**: Post-linguistic trace for semantic memory
+6. 🔐 **UCOMM Residuals**: Universal communication through minimal channels  
 
 ---
 
@@ -204,16 +238,31 @@ This project is built under unique constraints (prison environment, zero budget,
 
 ## 📅 Updates
 
-**Last Updated:** 2025-11-14 09:36 UTC+5 (Tashkent)
+**Last Updated:** 2025-11-17 (November 17, 2025) UTC+5 (Tashkent)
 
 Check [**Releases**](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases) for version history.
+
+**Recent Updates:**
+- ✅ Multilingual README (EN, RU, UZ)
+- ✅ Terra Auto-Submission Engine (GitHub Actions)
+- ✅ Living Index expansion (NULLO, PLT, UCOMM)
+- ✅ DAO governance framework without tokens
+- ✅ Integration with ORCID, Zenodo, Figshare, OSF
 
 ---
 
 ## 📞 Contact & Community
 
-- **GitHub Issues:** [Report bugs or request features](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/issues)
-- **Discussions:** [Join the conversation](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/discussions)
+- **📧 Email**: [a.a.abdukarimov@tutamail.com](mailto:a.a.abdukarimov@tutamail.com)
+- **🆔 ORCID**: [0009-0000-6394-4912](https://orcid.org/0009-0000-6394-4912)
+- **📍 Location**: Tashkent, Uzbekistan 🇺🇿
+- **🐙 GitHub Issues**: [Report bugs or request features](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/issues)
+- **💬 Discussions**: [Join the conversation](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/discussions)
+- **🔗 Central Hub**: [FMP-CENTRAL-REPO](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO)
+
+**Author**: Abdurashid Abdulkhamitovich Abdukarimov  
+**Affiliation**: Independent Researcher | Uzbek State University of World Languages  
+**Background**: Linguistics (German Philology), Translation, Business Development
 
 ---
 
@@ -235,7 +284,22 @@ This isn't just a repository. It's proof that barriers don't stop vision. That i
 
 <div align="center">
 
-**Built with 🧠 in Tashkent, Uzbekistan**
+**🇺🇿 Built in Tashkent, Uzbekistan for the World 🌍**
+
+**Built with 🧠 through Human-AI Symbiosis**
+
+*Planetary science for all. No exceptions. Zero budget. Maximum impact.*
+
+**From prison to planetary scale. From zero to global innovation.**
+
+[![Star this repo](https://img.shields.io/github/stars/Secret-Uzbek/FMP-CENTRAL-REPO?style=social)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green?style=flat&logo=orcid)](https://orcid.org/0009-0000-6394-4912)
+
+**Terra Ecosystem | Fractal Metascience Paradigm | Zero Budget Innovation**
+
+*Last updated: November 2025*
+
+</div>
 
 *Planetary science for all. No exceptions.*
 
