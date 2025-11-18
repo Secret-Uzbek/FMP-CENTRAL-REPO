@@ -1,102 +1,101 @@
-# FMP MARKAZIY РЕПОЗИТОРИЙ
+# FMP MARKAZIY Ð ÐÐÐÐÐÐ¢ÐÐ ÐÐ
 
 [![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.30588389-blue)](https://doi.org/10.6084/m9.figshare.30588389)
 [![Litsenziya](https://img.shields.io/badge/License-Open-green.svg)]()
-[![GitHub Sinxronizatsiya](https://img.shields.io/badge/GitHub-✓-success)]()
-[![OSF Sinxronizatsiya](https://img.shields.io/badge/OSF-✓-success)]()
-[![Zenodo Sinxronizatsiya](https://img.shields.io/badge/Zenodo-✓-success)]()
-[![Figshare Sinxronizatsiya](https://img.shields.io/badge/Figshare-✓-success)]()
+[![GitHub Sinxronizatsiya](https://img.shields.io/badge/GitHub-â-success)]()
+[![OSF Sinxronizatsiya](https://img.shields.io/badge/OSF-â-success)]()
+[![Zenodo Sinxronizatsiya](https://img.shields.io/badge/Zenodo-â-success)]()
+[![Figshare Sinxronizatsiya](https://img.shields.io/badge/Figshare-â-success)]()
 
 > **Barcha uchun sayyora fani. Nol byudjet. Maksimal ta'sir.**
 
 ---
 
-## 🎯 Missiya
+## ð¯ Missiya
 
 **Barcha FMP (Fraktal metafan paradigmasi) repozitoriylarini yagona, navigatsiya qilinadigan fraktal strukturada markazlashtirish.**
 
-Bu repozitoriy Fraktal metafan paradigmasi ekotizimining markaziy markazi bo'lib xizmat qiladi — ilmiy bilimlarni tashkil qilish va tarqatishning inqilobiy yondashuvi, nol moliyalashtirish bilan qamoqxonadan to'liq yaratilgan.
+Bu repozitoriy Fraktal metafan paradigmasi ekotizimining markaziy markazi bo'lib xizmat qiladi â ilmiy bilimlarni tashkil qilish va tarqatishning inqilobiy yondashuvi, nol moliyalashtirish bilan qamoqxonadan to'liq yaratilgan.
 
 ---
 
-## 🌳 Repozitoriy strukturasi
+## ð³ Repozitoriy strukturasi
 
 FMP ekotizimi to'rtta asosiy ustunda tashkil etilgan:
 
-### **NULLO** — Yadro va tirik protokollar
+### **NULLO** â Yadro va tirik protokollar
 Tirik protokollar va asosiy tizim arxitekturasini o'z ichiga olgan poydevor qatlami.
 
-### **PLT** — Platformalar, ekotizimlar va ilovalar  
+### **PLT** â Platformalar, ekotizimlar va ilovalar  
 Amaliy vositalar, ilovalar va ekotizimni boshqarish bilan amalga oshirish qatlami.
 
-### **UCOMM** — Universal kommunikatsiyalar
+### **UCOMM** â Universal kommunikatsiyalar
 Auditoriya bilan aloqa va bilimlarni tarqatish uchun kommunikatsiya qatlami.
 
-### **FMP** — Nazariya va nashrlar
+### **FMP** â Nazariya va nashrlar
 Nazariy asos, akademik nashrlar va tadqiqot hujjatlari.
 
 ---
 
-## 📚 Bog'langan repozitoriylar
+## ð Bog'langan repozitoriylar
 
 | Repozitoriy | Tavsif | Status |
 |------------|-------------|--------|
-| [**AIUZ-Terra-codex**](https://github.com/Secret-Uzbek/AIUZ-Terra-codex) | Terra Kodeks — AI bilimlar bazasi | ✓ Faol |
-| [**FMP-monograph**](https://github.com/Secret-Uzbek/FMP-monograph) | To'liq FMP monografiyasi | ✓ Faol |
-| [**AIUZ-terra-codex-FMP**](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP) | Terra Kodeks FMP integratsiyasi | ✓ Faol |
-| [**Theory-of-fractal-metascience-paradigm**](https://github.com/Secret-Uzbek/Theory-of-fractal-metascience-paradigm) | Asosiy nazariy asos | ✓ Faol |
-| [**AIUZ**](https://github.com/Secret-Uzbek/AIUZ) | O'zbekiston AI loyihasi | ✓ Faol |
-| [**Nullo-PLT-UCOMM-FMP-Academic-Research**](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research) | Akademik tadqiqotlar to'plami | ✓ Faol |
-| [**AIUZ-Terra-Ecosystem**](https://github.com/Secret-Uzbek/AIUZ-Terra-Ecosystem) | Terra ekotizimini boshqarish | ✓ Faol |
-| [**Uzbek-mining**](https://github.com/Secret-Uzbek/Uzbek-mining) | O'zbek mayning operatsiyalari | ✓ Faol |
-| [FMP-Full-Publication-Package](https://github.com/Secret-Uzbek/FMP-Full-Publication-Package)|Ikki to‘liq ilmiy maqola (naziariy + amaliy) + LaTeX manbalari, BibTeX, 5 rasmlar|✓ Faol|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13742917.svg)](https://doi.org/10.5281/zenodo.13742917)|
+| [**AIUZ-Terra-codex**](https://github.com/Secret-Uzbek/AIUZ-Terra-codex) | Terra Kodeks â AI bilimlar bazasi | â Faol |
+| [**FMP-monograph**](https://github.com/Secret-Uzbek/FMP-monograph) | To'liq FMP monografiyasi | â Faol |
+| [**AIUZ-terra-codex-FMP**](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP) | Terra Kodeks FMP integratsiyasi | â Faol |
+| [**Theory-of-fractal-metascience-paradigm**](https://github.com/Secret-Uzbek/Theory-of-fractal-metascience-paradigm) | Asosiy nazariy asos | â Faol |
+| [**AIUZ**](https://github.com/Secret-Uzbek/AIUZ) | O'zbekiston AI loyihasi | â Faol |
+| [**Nullo-PLT-UCOMM-FMP-Academic-Research**](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research) | Akademik tadqiqotlar to'plami | â Faol |
+| [**AIUZ-Terra-Ecosystem**](https://github.com/Secret-Uzbek/AIUZ-Terra-Ecosystem) | Terra ekotizimini boshqarish | â Faol |
+| [**Uzbek-mining**](https://github.com/Secret-Uzbek/Uzbek-mining) | O'zbek mayning operatsiyalari | â Faol |
 ---
 
-## 🗺️ Navigatsiya
+## ðºï¸ Navigatsiya
 
-AI agentlari va dasturchlar uchun [**META-INDEX.md**](META-INDEX.md) ga qarang — butun FMP ekotizimining keng qamrovli navigatsiya xaritasi.
+AI agentlari va dasturchlar uchun [**META-INDEX.md**](META-INDEX.md) ga qarang â butun FMP ekotizimining keng qamrovli navigatsiya xaritasi.
 
 ---
 
-## 📦 Versiya relizlari
+## ð¦ Versiya relizlari
 
 | Versiya | Reliz | DOI | SHA256 nazorat yig'indisi |
 |---------|---------|-----|-----------------|
 | **v2.0-codex** | [Reliz](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v2.0-codex) | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) | `6209f372...` |
-| **v1.1-detox** | [Reliz](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v1.1-detox) | — | — |
-| **v1.0-mandate** | [Reliz](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v1.0-mandate) | — | — |
+| **v1.1-detox** | [Reliz](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v1.1-detox) | â | â |
+| **v1.0-mandate** | [Reliz](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v1.0-mandate) | â | â |
 
 **Terra dalil daftari:** FMP-001  
 **Oxirgi SHA256:** `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
 
 ---
 
-## 🔄 Sinxronizatsiya holati
+## ð Sinxronizatsiya holati
 
 | Platforma | Status | Havola |
 |----------|--------|------|
-| **GitHub** | ✓ Sinxronlashtirilgan | [Repozitoriy](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO) |
-| **OSF** | ✓ Sinxronlashtirilgan | [Loyiha](https://osf.io/) |
-| **Zenodo** | ✓ Sinxronlashtirilgan | [Arxiv](https://zenodo.org/) |
-| **Figshare** | ✓ Sinxronlashtirilgan | [Dataset](https://figshare.com/) |
-| **DOI** | ✓ Faol | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) |
+| **GitHub** | â Sinxronlashtirilgan | [Repozitoriy](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO) |
+| **OSF** | â Sinxronlashtirilgan | [Loyiha](https://osf.io/) |
+| **Zenodo** | â Sinxronlashtirilgan | [Arxiv](https://zenodo.org/) |
+| **Figshare** | â Sinxronlashtirilgan | [Dataset](https://figshare.com/) |
+| **DOI** | â Faol | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) |
 
 ---
 
-## 💰 Nol byudjet milliardlarga qarshi
+## ð° Nol byudjet milliardlarga qarshi
 
 **AI investitsiyalari 2025** (milliard AQSh dollari)
 
 | Kompaniya | Investitsiya | Tafsilotlar |
 |---------|-----------|---------|
-| **OpenAI** | $40–100 mlrd | $40 mlrd raund, $100 mlrd Nvidia, $1 trln Stargate |
-| **Anthropic** | $8–13 mlrd | $13 mlrd raund, $8 mlrd Amazon |
-| **Google** | $75–93 mlrd | $75 mlrd kapital xarajatlari |
-| **Meta** | $60–72 mlrd | $60 mlrd kapital xarajatlari |
-| **Microsoft** | $80–100 mlrd | $80 mlrd infratuzilma, $13 mlrd OpenAI |
-| **Amazon** | $100–125 mlrd | $100 mlrd kapital xarajatlari |
-| **NVIDIA** | $30–50 mlrd | Hamma uchun chiplar |
-| **FMP** | **$0** | 🔥 **Moliyalashtirish yo'q, qamoqxonadan, 1 kompyuter, firewall** |
+| **OpenAI** | $40â100 mlrd | $40 mlrd raund, $100 mlrd Nvidia, $1 trln Stargate |
+| **Anthropic** | $8â13 mlrd | $13 mlrd raund, $8 mlrd Amazon |
+| **Google** | $75â93 mlrd | $75 mlrd kapital xarajatlari |
+| **Meta** | $60â72 mlrd | $60 mlrd kapital xarajatlari |
+| **Microsoft** | $80â100 mlrd | $80 mlrd infratuzilma, $13 mlrd OpenAI |
+| **Amazon** | $100â125 mlrd | $100 mlrd kapital xarajatlari |
+| **NVIDIA** | $30â50 mlrd | Hamma uchun chiplar |
+| **FMP** | **$0** | ð¥ **Moliyalashtirish yo'q, qamoqxonadan, 1 kompyuter, firewall** |
 
 *Manbalar: Reuters, CNBC, Statista (2025)*
 
@@ -104,18 +103,18 @@ AI agentlari va dasturchlar uchun [**META-INDEX.md**](META-INDEX.md) ga qarang �
 
 ---
 
-## 🌍 Ko'p tilli kirish
+## ð Ko'p tilli kirish
 
 PLT leksikografiya qatlami bir nechta tillarda kontentni ta'minlaydi:
 
-- 🇬🇧 **English**: [README.md](README.md)
-- 🇷🇺 **Русский**: [README_RU.md](README_RU.md)
-- 🇺🇿 **O'zbek** (standart): Bu fayl
-- 🤖 **Avtomatik aniqlash**: `Accept-Language` sarlavhasini qo'llab-quvvatlaydigan kelajakdagi PLT moduli
+- ð¬ð§ **English**: [README.md](README.md)
+- ð·ðº **Ð ÑÑÑÐºÐ¸Ð¹**: [README_RU.md](README_RU.md)
+- ðºð¿ **O'zbek** (standart): Bu fayl
+- ð¤ **Avtomatik aniqlash**: `Accept-Language` sarlavhasini qo'llab-quvvatlaydigan kelajakdagi PLT moduli
 
 ---
 
-## 🛠️ Boshlash
+## ð ï¸ Boshlash
 
 ### Tez boshlash
 
@@ -146,29 +145,29 @@ ls -la
 
 ---
 
-## 📖 Hujjatlar
+## ð Hujjatlar
 
-- **[ROADMAP.md](ROADMAP.md)** — Loyiha yo'l xaritasi va kelajak rejalari
-- **[META-INDEX.md](META-INDEX.md)** — AI uchun navigatsiya xaritasi
-- **[CITATION.cff](CITATION.cff)** — Iqtibos metadata
-- **[NULLO/](NULLO/)** — Asosiy protokollar hujjatlari
-- **[living-index/](living-index/)** — Jonli indeks tizimi
-
----
-
-## 🏆 Asosiy xususiyatlar
-
-✅ **Fraktal arxitektura** — Asl repozitoriylarni yo'qotmasdan zudlik bilan kirish  
-✅ **Ko'p platformali sinxronizatsiya** — GitHub, OSF, Zenodo, Figshare integratsiyasi  
-✅ **DOI qo'llab-quvvatlash** — Akademik iqtibos uchun doimiy identifikatorlar  
-✅ **Ko'p tillilik** — Ingliz, rus, o'zbek tillarini qo'llab-quvvatlash  
-✅ **Nol byudjet** — To'liq moliyalashtirmasdan qurilgan  
-✅ **Qamoqxonada yaratilgan** — Korporativ firewall bilan ekstremal sharoitda ishlab chiqilgan  
-✅ **Ochiq fan** — To'liq shaffof va takrorlanuvchi  
+- **[ROADMAP.md](ROADMAP.md)** â Loyiha yo'l xaritasi va kelajak rejalari
+- **[META-INDEX.md](META-INDEX.md)** â AI uchun navigatsiya xaritasi
+- **[CITATION.cff](CITATION.cff)** â Iqtibos metadata
+- **[NULLO/](NULLO/)** â Asosiy protokollar hujjatlari
+- **[living-index/](living-index/)** â Jonli indeks tizimi
 
 ---
 
-## 📜 Iqtibos keltirish
+## ð Asosiy xususiyatlar
+
+â **Fraktal arxitektura** â Asl repozitoriylarni yo'qotmasdan zudlik bilan kirish  
+â **Ko'p platformali sinxronizatsiya** â GitHub, OSF, Zenodo, Figshare integratsiyasi  
+â **DOI qo'llab-quvvatlash** â Akademik iqtibos uchun doimiy identifikatorlar  
+â **Ko'p tillilik** â Ingliz, rus, o'zbek tillarini qo'llab-quvvatlash  
+â **Nol byudjet** â To'liq moliyalashtirmasdan qurilgan  
+â **Qamoqxonada yaratilgan** â Korporativ firewall bilan ekstremal sharoitda ishlab chiqilgan  
+â **Ochiq fan** â To'liq shaffof va takrorlanuvchi  
+
+---
+
+## ð Iqtibos keltirish
 
 Agar siz ushbu repozitoriyni tadqiqotlaringizda ishlatsangiz, iltimos, iqtibos keltiring:
 
@@ -188,7 +187,7 @@ To'liq iqtibos metadata uchun [**CITATION.cff**](CITATION.cff) ga qarang.
 
 ---
 
-## 🤝 Loyihaga hissa qo'shish
+## ð¤ Loyihaga hissa qo'shish
 
 Bu loyiha noyob sharoitlarda (qamoqxona muhiti, nol byudjet, cheklangan resurslar) qurilgan. Shunga qaramay, hissa qo'shish xush kelibsiz:
 
@@ -200,7 +199,7 @@ Bu loyiha noyob sharoitlarda (qamoqxona muhiti, nol byudjet, cheklangan resursla
 
 ---
 
-## 📅 Yangilanishlar
+## ð Yangilanishlar
 
 **Oxirgi yangilanish:** 2025-11-14 09:36 UTC+5 (Toshkent)
 
@@ -208,20 +207,20 @@ Versiya tarixi uchun [**Relizlar**](https://github.com/Secret-Uzbek/FMP-CENTRAL-
 
 ---
 
-## 📞 Kontaktlar va jamoa
+## ð Kontaktlar va jamoa
 
 - **GitHub Issues:** [Xatolar haqida xabar bering yoki xususiyatlarni so'rang](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/issues)
 - **Muhokamalar:** [Suhbatga qo'shiling](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/discussions)
 
 ---
 
-## ⚖️ Litsenziya
+## âï¸ Litsenziya
 
 Ochiq manba. Muayyan litsenziyalar uchun alohida repozitoriyalarga qarang.
 
 ---
 
-## 🔥 Tarix
+## ð¥ Tarix
 
 **Barcha artefaktlar qamoqxonada yaratilgan. Nol byudjet. Firewall bilan korporativ kompyuter.**
 
@@ -233,7 +232,7 @@ Bu shunchaki repozitoriy emas. Bu to'siqlar qarashnini to'xtatmasligining isboti
 
 <div align="center">
 
-**Toshkent, O'zbekistonda 🧠 bilan yaratilgan**
+**Toshkent, O'zbekistonda ð§  bilan yaratilgan**
 
 *Barcha uchun sayyora fani. Istisnolar yo'q.*
 
