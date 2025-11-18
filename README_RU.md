@@ -49,7 +49,7 @@
 | [**Nullo-PLT-UCOMM-FMP-Academic-Research**](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research) | Собрание академических исследований | ✓ Активен |
 | [**AIUZ-Terra-Ecosystem**](https://github.com/Secret-Uzbek/AIUZ-Terra-Ecosystem) | Управление экосистемой Терра | ✓ Активен |
 | [**Uzbek-mining**](https://github.com/Secret-Uzbek/Uzbek-mining) | Узбекские майнинг операции | ✓ Активен |
-
+|[FMP-Full-Publication-Package](https://github.com/Secret-Uzbek/FMP-Full-Publication-Package)|Две полные рецензируемые статьи (теория + применение) с LaTeX-исходниками, BibTeX, 5 иллюстрациями|✓ Активен|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13742917.svg)](https://doi.org/10.5281/zenodo.13742917)|
 ---
 
 ## 🗺️ Навигация
