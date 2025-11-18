@@ -49,7 +49,7 @@ Nazariy asos, akademik nashrlar va tadqiqot hujjatlari.
 | [**Nullo-PLT-UCOMM-FMP-Academic-Research**](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research) | Akademik tadqiqotlar to'plami | ✓ Faol |
 | [**AIUZ-Terra-Ecosystem**](https://github.com/Secret-Uzbek/AIUZ-Terra-Ecosystem) | Terra ekotizimini boshqarish | ✓ Faol |
 | [**Uzbek-mining**](https://github.com/Secret-Uzbek/Uzbek-mining) | O'zbek mayning operatsiyalari | ✓ Faol |
-
+| [FMP-Full-Publication-Package](https://github.com/Secret-Uzbek/FMP-Full-Publication-Package)|Ikki to‘liq ilmiy maqola (naziariy + amaliy) + LaTeX manbalari, BibTeX, 5 rasmlar|✓ Faol|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13742917.svg)](https://doi.org/10.5281/zenodo.13742917)|
 ---
 
 ## 🗺️ Navigatsiya
