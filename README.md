@@ -59,7 +59,7 @@ Theoretical framework, academic publications, and research documentation.
 | [**Nullo-PLT-UCOMM-FMP-Academic-Research**](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research) | Academic research collection | ✓ Active |
 | [**AIUZ-Terra-Ecosystem**](https://github.com/Secret-Uzbek/AIUZ-Terra-Ecosystem) | Terra ecosystem management | ✓ Active |
 | [**Uzbek-mining**](https://github.com/Secret-Uzbek/Uzbek-mining) | Uzbek mining operations | ✓ Active |
-
+| FMP-Full-Publication-Package               | Two complete peer-ready papers (theoretical + applied) with full LaTeX sources, BibTeX, 5 illustrations | ✓ Active | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13742917.svg)](https://doi.org/10.5281/zenodo.13742917) |
 ---
 
 ## 🗺️ Navigation
