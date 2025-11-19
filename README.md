@@ -50,6 +50,7 @@ Theoretical framework, academic publications, and research documentation.
 
 | Repository | Description | Status |
 |------------|-------------|--------|
+| [**FMP-Full-Publication-Package**](https://github.com/Secret-Uzbek/FMP-Full-Publication-Package) | The Fractal Metascience Paradigm — Full Publication Package<br>Two complete peer-ready papers (theoretical + applied) with full LaTeX sources, BibTeX, 5 generated illustrations, HTML versions | ✓ Active | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17558638.svg)](https://doi.org/10.5281/zenodo.17558638) |
 | [**AIUZ-Terra-codex**](https://github.com/Secret-Uzbek/AIUZ-Terra-codex) | Terra Codex — AI knowledge base | ✓ Active |
 | [**FMP-monograph**](https://github.com/Secret-Uzbek/FMP-monograph) | Complete FMP monograph | ✓ Active |
 | [**AIUZ-terra-codex-FMP**](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP) | Terra Codex FMP integration | ✓ Active |
