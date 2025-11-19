@@ -69,15 +69,16 @@ For AI agents and developers, see [**META-INDEX.md**](META-INDEX.md) — a compr
 
 ## 📦 Version Releases
 
-| Version       | Release                          | DOI                                                                                   | SHA256 Checksum                          |
-|---------------|----------------------------------|---------------------------------------------------------------------------------------|------------------------------------------|
-| **v2.0-codex** | [Release](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v2.0-codex) | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389)         | `6209f372...`                             |
-| **v1.1-detox** | [Release](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v1.1-detox) | —                                                                                     | —                                        |
-| **v1.0-mandate** | [Release](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases/tag/v1.0-mandate) | —                                                                                     | —                                        |
+| Version                | Release Description                                      | DOI                                                                                   | SHA256 Checksum                          |
+|------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------|------------------------------------------|
+| **v1.0.0-publication** | **The Fractal Metascience Paradigm — Full Publication Package** | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17632584.svg)](https://doi.org/10.5281/zenodo.17632584) | актуальный SHA из твоего релиза |
+| v2.0-codex             | Terra Codex Core                                            | [10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389)         | 6209f372...                              |
+| v1.1-detox             | Detox Engine                                             | [10.5281/zenodo.17598487](https://doi.org/10.5281/zenodo.17598487)                  | —                                        |
+| v1.0-mandate           | L7 Research Assistant Mandate                             | [10.5281/zenodo.17597945](https://doi.org/10.5281/zenodo.17597945)                  | —                                        |
 
-**Terra Proof Ledger:** FMP-001  
-**Latest SHA256:** `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
-
+**Terra Proof Ledger: FMP-002**  
+**Latest Release:** v1.0.0-publication (19.11.2025)  
+**Main DOI:** [10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584)
 ---
 
 ## 🔄 Sync Status
