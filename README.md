@@ -28,7 +28,47 @@ Terra Ecosystem implements FMP through:
 This repository serves as the central hub for the Fractal Metascience Paradigm ecosystem — a revolutionary approach to scientific knowledge organization and dissemination, built entirely from prison with zero funding.
 
 ---
+---
 
+## 🌱 Active Projects
+
+The FMP ecosystem includes groundbreaking initiatives demonstrating fractal principles in practice:
+
+### 🏭 Uzbek Mining (Green Infrastructure)
+**Repository**: [Uzbek-mining](https://github.com/Secret-Uzbek/Uzbek-mining)  
+**Focus**: Sustainable mining operations and green energy solutions for Uzbekistan
+- ⚡ Solar-powered EV charging stations network
+- ♻️ Circular economy integration
+- 🌍 Zero-emission transportation infrastructure
+- 📊 ESG compliance framework
+
+### 🛣️ Fractal Silk Route
+**Status**: Conceptual framework in development  
+**Vision**: Reconceptualizing ancient Silk Road through fractal metascience lens
+- 🔄 Self-similar trade and knowledge patterns across scales
+- 🌐 Cultural integration without linguistic barriers (PLT implementation)
+- 🤝 Decentralized cooperation nodes (UCOMM protocols)
+- 📚 Historical-contemporary synthesis
+
+### 🧮 Millennium Solver
+**Status**: Theoretical framework  
+**Approach**: Applying FMP principles to millennium mathematical problems
+- 🔬 Fractal approaches to P vs NP, Riemann Hypothesis
+- 🧬 NULLO compression for computational complexity
+- 🌊 Recursive problem decomposition
+- 💡 Cross-disciplinary mathematical synthesis
+
+### 🎓 AIUZ Terra (Educational Ecosystem)
+**Repository**: [AIUZ-Terra-codex](https://github.com/Secret-Uzbek/AIUZ-Terra-codex)  
+**Implementation**: Live educational platform for Uzbekistan
+- 📖 AIUZ LiveClass (immersive global learning)
+- 🗣️ Multilingual knowledge without translation (PLT)
+- 👥 DAO governance for educational content
+- 🧠 Human-AI symbiotic learning model
+
+**All projects share core FMP principles**: fractal architecture, zero-budget innovation, open science, and planetary impact focus.
+
+---
 ## 🌳 Repository Structure
 The FMP ecosystem is organized into four core pillars:
 
@@ -135,3 +175,5 @@ cd FMP-CENTRAL-REPO
 
 # Explore the structure
 ls -la
+**Last Updated:** 2025-11-19 11:06 UTC+5 (Tashkent)*
+Last updated: November 19, 2025*
