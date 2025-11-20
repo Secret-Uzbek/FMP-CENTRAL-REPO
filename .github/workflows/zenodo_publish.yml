@@ -1,0 +1,42 @@
+name: Publish to Zenodo
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: built-pdf
+          path: artifact
+      - name: Create deposition
+        id: create_dep
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          API='https://zenodo.org/api/deposit/depositions'
+          r=$(curl -s -H 'Content-Type: application/json' -H 'Authorization: Bearer '$ZENODO_TOKEN -X POST $API -d '{"metadata": {"title": "Auto deposit", "upload_type": "publication"}}')
+          echo "$r" > deposit.json
+          id=$(python3 - <<'EOF'
+import json; print(json.load(open('deposit.json'))['id'])
+EOF
+)
+          echo 'DEPOSITION_ID='$id >> $GITHUB_OUTPUT
+      - name: Upload file
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          id=${{ steps.create_dep.outputs.DEPOSITION_ID }}
+          file=$(ls artifact/*.pdf | head -n1)
+          curl -s -H 'Authorization: Bearer '$ZENODO_TOKEN -X POST 'https://zenodo.org/api/deposit/depositions/'$id'/files' -F file=@$file
+      - name: Publish
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          id=${{ steps.create_dep.outputs.DEPOSITION_ID }}
+          curl -s -H 'Authorization: Bearer '$ZENODO_TOKEN -X POST 'https://zenodo.org/api/deposit/depositions/'$id'/actions/publish'
