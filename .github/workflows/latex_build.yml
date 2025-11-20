@@ -1,0 +1,29 @@
+name: Build LaTeX -> PDF
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  pull_request:
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          texlive_version: '2024'
+      - name: Find generated PDF
+        run: |
+          PDF=$(find . -name '*.pdf' -type f | head -n1)
+          if [ -z "$PDF" ]; then
+            echo '::error ::PDF not built'; exit 1; fi
+          echo 'PDF_FOUND='$PDF >> $GITHUB_OUTPUT
+        id: findpdf
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-pdf
+          path: ${{ steps.findpdf.outputs.PDF_FOUND }}
