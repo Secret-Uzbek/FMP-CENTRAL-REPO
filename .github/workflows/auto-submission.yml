@@ -1,53 +1,62 @@
-name: 🚀 FMP Auto-Publisher v1.1-supplement
+name: 🚀 Auto-Publish FMP
 
 on:
-  workflow_dispatch:    # можно запустить вручную одной кнопкой
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (e.g. v1.1-supplement)'
+        required: true
+        default: 'v1.1-supplement'
+      files:
+        description: 'Files to publish (comma-separated)'
+        required: true
+        default: 'README.md,docs/supplement.md'
   push:
     tags:
-      - 'v*'             # или просто запушить тег и всё само
+      - 'v*'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
-      deployments: write
+    env:
+      VERSION: ${{ github.event.inputs.version || github.ref_name }}
+      FILES: ${{ github.event.inputs.files || 'README.md,docs/supplement.md' }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
 
-      - name: Run FMP Auto-Publisher (fully automatic)
+      - name: Publish to Zenodo + GitHub Release
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-          FIGSHARE_TOKEN: ${{ secrets.FIGSHARE_TOKEN }}
-          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd .publisher
-          cat << 'EOF' | node publish.js
-          y
-          ../fmp_supplementary.md,../package_json.json,../publisher_readme.md,../quick_install.sh,../README - FMP Auto-Publisher Setup.pdf,../FMP Supplementary Materials - Zenodo Package.pdf
-          y
-          y
-          y
-          y
-          y
-          y
-          y
-          y
-          EOF
+          node publish.js
 
-      - name: Create Release if tagged
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: FMP Supplementary Materials ${{ github.ref_name }}
-          generate_release_notes: true
+      - name: Extract DOI
+        id: doi
+        run: |
+          DOI=$(cat .publisher/output/zenodo_doi.txt)
+          echo "doi=$DOI" >> $GITHUB_OUTPUT
+          echo "DOI=$DOI" >> $GITHUB_ENV
+
+      - name: Create/Update README badges
+        run: |
+          DOI="${{ steps.doi.outputs.doi }}"
+          BADGE="![\Zenodo](https://zenodo.org/badge/DOI/${DOI:10}.svg)](https://doi.org/${DOI})"
+          if ! grep -q "zenodo.org/badge" README.md; then
+            sed -i "/# The Fractal Metascience Paradigm/a $BADGE" README.md
+            git config user.name "FMP Auto-Publisher"
+            git config user.email "a.a.abdukarimov@tutamail.com"
+            git add README.md
+            git commit -m "docs: add Zenodo badge for ${{ env.VERSION }}" || echo "No changes"
+            git push || echo "Nothing to push"
+          fi
