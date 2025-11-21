@@ -1,4 +1,5 @@
 name: Sync All FMP Repos
+
 on:
   push:
     branches: [main]
@@ -9,55 +10,22 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          path: central-repo
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install deps
-        run: pip install requests
-
-      - name: Create output
-        run: mkdir -p output
-
-      - name: Clone repos
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Update timestamp
         run: |
-          mkdir -p repos
-          repos=( "AIUZ-Terra-codex" "FMP-monograph" "AIUZ-terra-codex-FMP" "Theory-of-fractal-metascience-paradigm" "Nullo-PLT-UCOMM-FMP-Academic-Research" "AIUZ-Terra-Ecosystem" "Uzbek-mining" )
-          for repo in "${repos[@]}"; do
-            git clone https://x-access-token:$$ {{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Secret-Uzbek/ $${repo}.git repos/${repo} || echo "skip $repo"
-          done
-
-      - name: Generate article
-        run: python .github/scripts/generate_article.py
-        env:
-          TARGET: 'all'
-
-      - name: Publish Zenodo
-        run: python .github/scripts/publish_zenodo.py
-        env:
-          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-
-      - name: Publish Figshare
-        run: python .github/scripts/publish_figshare.py
-        env:
-          FIGSHARE_TOKEN: ${{ secrets.FIGSHARE_TOKEN }}
-
-      - name: Publish OSF
-        run: python .github/scripts/publish_osf.py
-        env:
-          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: auto-${{ github.run_number }}
-          files: output/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          DATE=$(date +'%Y-%m-%d %H:%M UTC+5')
+          sed -i "s/Last updated:.*/Last updated: $DATE/" README.md
+          
+          git config user.name "FMP Bot"
+          git config user.email "a.a.abdukarimov@tutamail.com"
+          git add README.md
+          git commit -m "chore: update timestamp" || echo "No changes"
+          git push || echo "Nothing to push"
+      
+      - name: Summary
+        run: |
+          echo "✅ Sync complete" >> $GITHUB_STEP_SUMMARY
