@@ -1,29 +1,65 @@
 name: Build LaTeX -> PDF
+
 on:
   push:
-    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '**.bib'
   workflow_dispatch:
-  pull_request:
+
 jobs:
-  build-latex:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: main.tex
-          texlive_version: '2024'
-      - name: Find generated PDF
+      
+      - name: Find LaTeX files
+        id: find-tex
         run: |
-          PDF=$(find . -name '*.pdf' -type f | head -n1)
-          if [ -z "$PDF" ]; then
-            echo '::error ::PDF not built'; exit 1; fi
-          echo 'PDF_FOUND='$PDF >> $GITHUB_OUTPUT
-        id: findpdf
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+          # Find all .tex files in repository
+          TEX_FILES=$(find . -name "*.tex" -type f | head -5)
+          echo "Found LaTeX files:"
+          echo "$TEX_FILES"
+          
+          # If no .tex files, skip
+          if [ -z "$TEX_FILES" ]; then
+            echo "No LaTeX files found"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            # Get first .tex file
+            FIRST_TEX=$(echo "$TEX_FILES" | head -1)
+            echo "main_tex=$FIRST_TEX" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Compile LaTeX
+        if: steps.find-tex.outputs.skip != 'true'
+        uses: xu-cheng/latex-action@v2
         with:
-          name: built-pdf
-          path: ${{ steps.findpdf.outputs.PDF_FOUND }}
+          root_file: ${{ steps.find-tex.outputs.main_tex }}
+          working_directory: .
+          latexmk_use_xelatex: true
+          args: -pdf -interaction=nonstopmode -file-line-error
+      
+      - name: Upload PDFs
+        if: steps.find-tex.outputs.skip != 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-pdfs
+          path: |
+            **/*.pdf
+          retention-days: 30
+      
+      - name: Comment with PDF links
+        if: steps.find-tex.outputs.skip != 'true' && github.event_name == 'push'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: '✅ LaTeX compilation successful! PDFs available in Actions artifacts.'
+            })
