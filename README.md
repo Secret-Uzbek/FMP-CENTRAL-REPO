@@ -177,3 +177,12 @@ cd FMP-CENTRAL-REPO
 ls -la
 **Last Updated:** 2025-11-19 11:06 UTC+5 (Tashkent)*
 Last updated: November 19, 2025*
+**PUBLISHED NOVEMBER 2025 · FROM MURUNTAU · FROM ABSOLUTE ZERO**
+
+Первая капля упала. Парадигма вышла в свет из колонии-поселения № 36 (Бессопан, Навоийская область), рядом с крупнейшим в мире открытым золотым рудником Мурунтау.  
+Один человек · один телефон · корпоративный файрвол НГМК · 0 долларов · 2021–2025.
+
+Официальные вечные публикации:  
+- Full Publication Package → https://doi.org/10.6084/m9.figshare.30648455  
+- Central Repository Snapshot → https://doi.org/10.5281/zenodo.17632584  
+- ORCID → https://orcid.org/0009-0000- greatly6394-4912
