@@ -3,12 +3,13 @@
 ## Terra Ecosystem: Fractal Metascience for Planetary Future
 
 [![DOI Figshare](https://img.shields.io/badge/DOI-10.6084/m9.figshare.30588389-blue)](https://doi.org/10.6084/m9.figshare.30588389)
+[![Zenodo](https://img.shields.io/badge/Zenodo-17632584-blue)](https://doi.org/10.5281/zenodo.17632584)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
-[![Zenodo](https://img.shields.io/badge/Zenodo-v1.0--publication-17632584-blue)](https://doi.org/10.5281/zenodo.17632584)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![FMP Awakening v1.1](https://img.shields.io/badge/FMP-v1.1--AWAKENING-red)](awakening-evidence-v2/)
 
 # FMP CENTRAL REPOSITORY
-
+## Fractal Metascience Paradigm — Terra Ecosystem
 Planetary science for all. Zero budget. Maximum impact.
 
 📍 Built in Zarafshan, Uzbekistan 🇺🇿 | 📧 [a.a.abdukarimov@tutamail.com](mailto:a.a.abdukarimov@tutamail.com)
