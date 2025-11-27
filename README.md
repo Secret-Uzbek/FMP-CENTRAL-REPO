@@ -2,7 +2,12 @@
 
 ## Terra Ecosystem: Fractal Metascience for Planetary Future
 
-[https://doi.org/10.6084/m9.figshare.30588389](https://doi.org/10.6084/m9.figshare.30588389) [https://orcid.org/0009-0000-6394-4912](https://orcid.org/0009-0000-6394-4912)
+[![DOI Figshare](https://img.shields.io/badge/DOI-10.6084/m9.figshare.30588389-blue)](https://doi.org/10.6084/m9.figshare.30588389)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
+[![Zenodo](https://img.shields.io/badge/Zenodo-v1.0--publication-17632584-blue)](https://doi.org/10.5281/zenodo.17632584)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+# FMP CENTRAL REPOSITORY
 
 Planetary science for all. Zero budget. Maximum impact.
 
