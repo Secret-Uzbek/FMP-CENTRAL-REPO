@@ -1,0 +1,36 @@
+name: Security: gitleaks + npm audit
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run gitleaks
+        uses: zricethezav/gitleaks-action@v1
+        with:
+          args: detect --source . --report-path gitleaks-report.json || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.json
+  npm-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install deps if package.json present
+        run: |
+          if [ -f package.json ]; then npm ci --no-audit || true; fi
+      - name: Run npm audit if package.json
+        run: |
+          if [ -f package.json ]; then npm audit --json > npm-audit.json || true; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit
+          path: npm-audit.json
