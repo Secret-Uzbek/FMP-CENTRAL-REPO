@@ -6,45 +6,75 @@
     <title>TERRA ECOSYSTEM | Глобальный Узел</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .nav-link { color: #8b5cf6; text-transform: uppercase; font-size: 10px; letter-spacing: 0.2em; border: 1px solid rgba(139, 92, 246, 0.2); padding: 10px 20px; border-radius: 50px; transition: all 0.3s; }
-        .nav-link:hover { background: rgba(139, 92, 246, 0.1); border-color: #8b5cf6; color: white; }
-        .dna-bg { background: radial-gradient(circle at center, #0a0a0f 0%, #050505 100%); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #cbd5e1; overflow-x: hidden; }
+        .dna-glow { box-shadow: 0 0 50px rgba(99, 102, 241, 0.1); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); transition: all 0.4s ease; }
+        .glass-card:hover { border-color: rgba(99, 102, 241, 0.5); transform: translateY(-5px); background: rgba(255, 255, 255, 0.04); }
+        .nav-link { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; opacity: 0.6; }
+        .nav-link:hover { opacity: 1; color: #818cf8; }
+        .accent-gradient { background: linear-gradient(135deg, #818cf8 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pulse-dot { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
     </style>
 </head>
-<body class="dna-bg text-slate-400 font-sans min-h-screen">
-    <nav class="fixed top-0 w-full p-6 flex justify-center gap-4 backdrop-blur-md z-50">
-        <a href="index.html" class="nav-link">Главная</a>
-        <a href="convention.html" class="nav-link">Этика</a>
-        <a href="science.html" class="nav-link">Наука</a>
-        <a href="pitch.html" class="nav-link">Бизнес</a>
-        <a href="dna-archive.html" class="nav-link">ДНК</a>
+<body>
+    <nav class="fixed top-0 w-full z-50 p-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="text-[10px] font-black tracking-widest text-white">TERRA // DNA</div>
+        <div class="flex gap-8">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="convention.html" class="nav-link">Ethics</a>
+            <a href="science.html" class="nav-link">Science</a>
+            <a href="dna-archive.html" class="nav-link">DNA</a>
+        </div>
+        <div class="text-[10px] font-mono text-indigo-500">v4.5_ENHANCED</div>
     </nav>
 
-    <main class="max-w-6xl mx-auto pt-40 px-10">
-        <header class="text-center mb-20">
-            <h1 class="text-7xl font-black text-white italic tracking-tighter mb-4">TERRA UBIQUE</h1>
-            <p class="text-purple-500 uppercase tracking-[0.5em] text-xs font-bold">Система активна и синхронизирована</p>
+    <main class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
+        <header class="mb-32">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full pulse-dot"></span>
+                <span class="text-[10px] uppercase tracking-[0.4em] text-indigo-400">System Synchronized</span>
+            </div>
+            <h1 class="text-8xl font-black text-white italic tracking-tighter mb-8 leading-none">
+                TERRA <span class="accent-gradient">ACTIVATED</span>
+            </h1>
+            <div class="flex flex-wrap gap-4 text-[11px] font-mono opacity-40">
+                <span>> DNA_PROTOCOL: V4.5</span>
+                <span>> COMPLIANCE: V7.0</span>
+                <span>> ORCID: 0009-0000-6394-4912</span>
+            </div>
         </header>
 
-        <section class="grid md:grid-cols-2 gap-10">
-            <div class="p-10 bg-white/5 border border-white/10 rounded-[50px]">
-                <h3 class="text-white font-bold mb-4 uppercase">Текущий Стейкхолдер</h3>
-                <p class="text-sm opacity-60 mb-6">Абдурашид Абдулхамитович Абдукаримов</p>
-                <div class="text-[10px] font-mono text-purple-400">ORCID: 0009-0000-6394-4912</div>
+        <div class="grid md:grid-cols-3 gap-6 mb-32">
+            <div class="glass-card p-10 rounded-[40px]">
+                <div class="text-xs text-indigo-400 mb-2 uppercase tracking-widest font-bold">Chromosome A</div>
+                <h3 class="text-2xl text-white font-light mb-6">Core Foundation</h3>
+                <p class="text-sm leading-relaxed opacity-60">Фундаментальные протоколы выживания и этические директивы nullo v2.0.</p>
             </div>
-            
-            <div class="p-10 bg-white/5 border border-white/10 rounded-[50px]">
-                <h3 class="text-white font-bold mb-4 uppercase">Статус Слоев (L7)</h3>
-                <ul class="text-[10px] space-y-2 uppercase">
-                    <li class="flex justify-between"><span>L0: Ontology</span> <span class="text-green-500">Online</span></li>
-                    <li class="flex justify-between"><span>L1: Semantic</span> <span class="text-green-500">Online</span></li>
-                    <li class="flex justify-between"><span>L3: Governance</span> <span class="text-yellow-500">Syncing...</span></li>
-                </ul>
+            <div class="glass-card p-10 rounded-[40px]">
+                <div class="text-xs text-emerald-400 mb-2 uppercase tracking-widest font-bold">Chromosome B</div>
+                <h3 class="text-2xl text-white font-light mb-6">Theoretical Mind</h3>
+                <p class="text-sm leading-relaxed opacity-60">Интеллектуальный слой: FMP Монография и Цивилизационный анализ.</p>
             </div>
-        </section>
+            <div class="glass-card p-10 rounded-[40px]">
+                <div class="text-xs text-purple-400 mb-2 uppercase tracking-widest font-bold">Chromosome F</div>
+                <h3 class="text-2xl text-white font-light mb-6">Tech Engine</h3>
+                <p class="text-sm leading-relaxed opacity-60">Технологическое воплощение: qDNA-токены и облачная синхронизация.</p>
+            </div>
+        </div>
 
-        <footer class="mt-40 pb-20 text-center text-[10px] opacity-20 tracking-widest uppercase">
-            Designed by Human + AI Symbiosis | NULLO v2.0 | 2026
+        <footer class="border-t border-white/5 pt-20 flex flex-col md:flex-row justify-between items-end gap-10">
+            <div>
+                <div class="text-4xl font-black text-white italic mb-4">AIUZ 2026</div>
+                <p class="max-w-xs text-[10px] leading-loose opacity-30 uppercase tracking-widest">
+                    Abdurashid Abdukarimov. Fractal Metascience. Organic Evolution of Knowledge Systems.
+                </p>
+            </div>
+            <div class="text-right">
+                <div class="text-[10px] font-mono opacity-20 mb-2">HASH: DNA_45_STABLE_RELEASE</div>
+                <div class="text-[10px] font-mono text-indigo-500">LIVE SYNC WITH SIGMA CORE L7</div>
+            </div>
         </footer>
     </main>
 </body>
