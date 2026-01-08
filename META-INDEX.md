@@ -146,7 +146,7 @@
 **Abdurashid Abdulkhamitovich Abdukarimov**
 
 - ORCID: [0009-0000-6394-4912](https://orcid.org/0009-0000-6394-4912)
-- Email: a.a.abdukarimov@tutamail.com
+- Email: a.abdukarimov@fractal-metascience.org
 - Location: Tashkent, Uzbekistan
 - Context: Created in Prison Colony #36, Navoi (2025-04-05 to 2025-10-30)
 - Freedom: 2025-12-24 (41 days remaining)
