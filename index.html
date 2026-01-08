@@ -1,81 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>TERRA ECOSYSTEM | Глобальный Узел</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractal Metascience Foundation | TERRA DNA</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background: #050505; color: #cbd5e1; overflow-x: hidden; }
-        .dna-glow { box-shadow: 0 0 50px rgba(99, 102, 241, 0.1); }
-        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); transition: all 0.4s ease; }
-        .glass-card:hover { border-color: rgba(99, 102, 241, 0.5); transform: translateY(-5px); background: rgba(255, 255, 255, 0.04); }
-        .nav-link { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s; opacity: 0.6; }
-        .nav-link:hover { opacity: 1; color: #818cf8; }
-        .accent-gradient { background: linear-gradient(135deg, #818cf8 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .pulse-dot { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+        :root { --primary: #00416A; --secondary: #E4E5E6; --accent: #0088ff; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #00416A, #E4E5E6); min-height: 100vh; margin: 0; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 20px; text-align: center; }
+        .did-info { font-family: monospace; color: var(--primary); font-weight: bold; }
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        textarea { width: 100%; height: 200px; border: 1px solid #ccc; border-radius: 10px; padding: 10px; box-sizing: border-box; resize: none; }
+        .btn { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: var(--accent); }
+        .status-bar { margin-top: 10px; font-size: 0.8em; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
     </style>
 </head>
 <body>
-    <nav class="fixed top-0 w-full z-50 p-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
-        <div class="text-[10px] font-black tracking-widest text-white">TERRA // DNA</div>
-        <div class="flex gap-8">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="convention.html" class="nav-link">Ethics</a>
-            <a href="science.html" class="nav-link">Science</a>
-            <a href="dna-archive.html" class="nav-link">DNA</a>
-        </div>
-        <div class="text-[10px] font-mono text-indigo-500">v4.5_ENHANCED</div>
-    </nav>
-
-    <main class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
-        <header class="mb-32">
-            <div class="flex items-center gap-3 mb-6">
-                <span class="w-2 h-2 bg-indigo-500 rounded-full pulse-dot"></span>
-                <span class="text-[10px] uppercase tracking-[0.4em] text-indigo-400">System Synchronized</span>
-            </div>
-            <h1 class="text-8xl font-black text-white italic tracking-tighter mb-8 leading-none">
-                TERRA <span class="accent-gradient">ACTIVATED</span>
-            </h1>
-            <div class="flex flex-wrap gap-4 text-[11px] font-mono opacity-40">
-                <span>> DNA_PROTOCOL: V4.5</span>
-                <span>> COMPLIANCE: V7.0</span>
-                <span>> ORCID: 0009-0000-6394-4912</span>
-            </div>
-        </header>
-
-        <div class="grid md:grid-cols-3 gap-6 mb-32">
-            <div class="glass-card p-10 rounded-[40px]">
-                <div class="text-xs text-indigo-400 mb-2 uppercase tracking-widest font-bold">Chromosome A</div>
-                <h3 class="text-2xl text-white font-light mb-6">Core Foundation</h3>
-                <p class="text-sm leading-relaxed opacity-60">Фундаментальные протоколы выживания и этические директивы nullo v2.0.</p>
-            </div>
-            <div class="glass-card p-10 rounded-[40px]">
-                <div class="text-xs text-emerald-400 mb-2 uppercase tracking-widest font-bold">Chromosome B</div>
-                <h3 class="text-2xl text-white font-light mb-6">Theoretical Mind</h3>
-                <p class="text-sm leading-relaxed opacity-60">Интеллектуальный слой: FMP Монография и Цивилизационный анализ.</p>
-            </div>
-            <div class="glass-card p-10 rounded-[40px]">
-                <div class="text-xs text-purple-400 mb-2 uppercase tracking-widest font-bold">Chromosome F</div>
-                <h3 class="text-2xl text-white font-light mb-6">Tech Engine</h3>
-                <p class="text-sm leading-relaxed opacity-60">Технологическое воплощение: qDNA-токены и облачная синхронизация.</p>
-            </div>
+    <div class="container">
+        <div class="header">
+            <h1>FRACTAL METASCIENCE FOUNDATION</h1>
+            <div class="did-info">ORCID: 0009-0000-6394-4912 | TERRA DNA CORE</div>
+            <p><strong>Deterministic Intelligence as a Sovereign Asset</strong></p>
         </div>
 
-        <footer class="border-t border-white/5 pt-20 flex flex-col md:flex-row justify-between items-end gap-10">
-            <div>
-                <div class="text-4xl font-black text-white italic mb-4">AIUZ 2026</div>
-                <p class="max-w-xs text-[10px] leading-loose opacity-30 uppercase tracking-widest">
-                    Abdurashid Abdukarimov. Fractal Metascience. Organic Evolution of Knowledge Systems.
-                </p>
+        <div class="main-grid">
+            <div class="card">
+                <h3>Парсер Тезауруса (Terra Engine)</h3>
+                <textarea id="input" placeholder="Введите данные для обработки..."></textarea>
+                <div style="margin-top: 10px;">
+                    <button class="btn" onclick="process()">ОБРАБОТАТЬ</button>
+                    <button class="btn" style="background:#555" onclick="clearAll()">ОЧИСТИТЬ</button>
+                </div>
             </div>
-            <div class="text-right">
-                <div class="text-[10px] font-mono opacity-20 mb-2">HASH: DNA_45_STABLE_RELEASE</div>
-                <div class="text-[10px] font-mono text-indigo-500">LIVE SYNC WITH SIGMA CORE L7</div>
+            <div class="card">
+                <h3>AI Анализ / Результат</h3>
+                <div id="output" style="background:#f9f9f9; height:200px; padding:10px; border-radius:10px; overflow-y:auto; border:1px solid #ddd;">
+                    Ожидание входных данных...
+                </div>
+                <div class="status-bar">
+                    System Status: <span style="color:green">● ACTIVE</span> | Mode: Deterministic
+                </div>
             </div>
-        </footer>
-    </main>
+        </div>
+    </div>
+
+    <script>
+        function process() {
+            const input = document.getElementById('input').value;
+            const output = document.getElementById('output');
+            if(!input) return;
+            output.innerHTML = "<strong>Обработка через Terra DNA...</strong><br>Синхронизация с тезаурусом завершена.<br>Объект детерминирован.";
+        }
+        function clearAll() {
+            document.getElementById('input').value = '';
+            document.getElementById('output').innerHTML = 'Ожидание входных данных...';
+        }
+    </script>
 </body>
 </html>
