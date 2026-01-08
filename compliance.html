@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>AIUZ/UBITIQUE Compliance Specification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .layer-box { border-left: 4px solid #8b5cf6; padding-left: 20px; margin-bottom: 2rem; }
+        .compliant-badge { background: #10b981; color: white; padding: 2px 8px; rounded: 4px; font-size: 10px; }
+    </style>
+</head>
+<body class="bg-[#0c0c0d] text-slate-300 p-10 font-sans">
+    <header class="max-w-4xl mx-auto border-b border-white/10 pb-10 mb-10">
+        <div class="flex justify-between items-center mb-4">
+            <span class="compliant-badge">CONFORMS TO v1.0</span>
+            <span class="text-xs font-mono opacity-50">AIUZ_SESSION_JULY07_FINAL</span>
+        </div>
+        <h1 class="text-4xl font-black text-white uppercase tracking-tighter">Комплексная Спецификация Соответствия</h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto space-y-12">
+        <section class="layer-box">
+            <h2 class="text-xl font-bold text-purple-400 mb-4">Раздел 1. Архитектурные слои (Layer Model)</h2>
+            <div class="grid grid-cols-5 gap-2 text-[10px] text-center uppercase font-bold">
+                <div class="p-4 bg-purple-900/20 border border-purple-500/30 rounded-xl">L0: Ontology</div>
+                <div class="p-4 bg-purple-900/20 border border-purple-500/30 rounded-xl">L1: Semantic</div>
+                <div class="p-4 bg-purple-900/20 border border-purple-500/30 rounded-xl">L2: Infra</div>
+                <div class="p-4 bg-purple-900/20 border border-purple-500/30 rounded-xl">L3: DAO</div>
+                <div class="p-4 bg-purple-900/20 border border-purple-500/30 rounded-xl">L4: API</div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white/5 p-6 rounded-3xl border border-white/5">
+                <h3 class="font-bold text-white mb-2">Стандарты ID</h3>
+                <p class="text-xs opacity-60">Использование DID-архитектуры: did:web, did:key, did:aiuz. Контроль через stake_registry.json.</p>
+            </div>
+            <div class="bg-white/5 p-6 rounded-3xl border border-white/5">
+                <h3 class="font-bold text-white mb-2">Протокол DAO</h3>
+                <p class="text-xs opacity-60">Три типа токенов: GOV, UTIL, REP. Голосование: взвешенное и Quadratic.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 text-center text-[10px] opacity-30 italic">
+        Версия: v1.0 (2025-07-07) | Поддержка: infrastructure@aiuz.org
+    </footer>
+</body>
+</html>
