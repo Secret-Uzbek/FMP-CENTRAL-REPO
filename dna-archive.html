@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TERRA | LIVING DNA ARCHIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dna-gradient { background: linear-gradient(180deg, #050505 0%, #0a0a0f 100%); }
+        .chromosome-card { background: rgba(255,255,255,0.01); border: 1px solid rgba(16, 185, 129, 0.1); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .chromosome-card:hover { border-color: #10b981; background: rgba(16, 185, 129, 0.05); transform: scale(1.05); shadow: 0 0 40px rgba(16, 185, 129, 0.1); }
+        .pulse { animation: pulse-glow 2s infinite; }
+        @keyframes pulse-glow { 0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; } }
+    </style>
+</head>
+<body class="dna-gradient text-slate-400 font-sans p-6 md:p-16">
+    <header class="max-w-6xl mx-auto mb-24 text-center">
+        <div class="inline-block px-4 py-1 border border-green-500/30 rounded-full text-[10px] text-green-500 mb-6 pulse uppercase tracking-[0.3em]">
+            Status: Living Organism — Evolving
+        </div>
+        <h1 class="text-7xl font-black text-white italic tracking-tighter mb-4">TERRA DNA</h1>
+        <p class="text-slate-500 uppercase tracking-[0.6em] text-xs">Органическая Эволюция Знаний</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="chromosome-card p-8 rounded-[40px]">
+            <div class="text-green-500 mb-4 text-2xl">🌱</div>
+            <h3 class="text-white font-bold mb-2">Хромосома A</h3>
+            <p class="text-[10px] uppercase opacity-50 mb-4">Основа Жизни</p>
+            <ul class="text-[9px] space-y-1 opacity-70">
+                <li>• Директива v7.0</li>
+                <li>• Nullo v2.0</li>
+                <li>• Протокол Архивации</li>
+            </ul>
+        </div>
+
+        <div class="chromosome-card p-8 rounded-[40px]">
+            <div class="text-blue-500 mb-4 text-2xl">🌿</div>
+            <h3 class="text-white font-bold mb-2">Хромосома B</h3>
+            <p class="text-[10px] uppercase opacity-50 mb-4">Теоретический Разум</p>
+            <ul class="text-[9px] space-y-1 opacity-70">
+                <li>• FMP Monograph</li>
+                <li>• Цивилизационный анализ</li>
+            </ul>
+        </div>
+
+        </main>
+
+    <section class="max-w-4xl mx-auto mt-32 p-10 bg-white/5 rounded-[50px] border border-white/5 text-center">
+        <h2 class="text-xl font-bold text-white mb-10 tracking-widest uppercase">Показатели жизненной силы</h2>
+        <div class="grid grid-cols-3 gap-10">
+            <div><span class="block text-2xl text-green-500 font-mono">98.7</span><span class="text-[8px] uppercase opacity-40">Пульс (bpm)</span></div>
+            <div><span class="block text-2xl text-blue-500 font-mono">99.1%</span><span class="text-[8px] uppercase opacity-40">Нейронная активность</span></div>
+            <div><span class="block text-2xl text-purple-500 font-mono">100%</span><span class="text-[8px] uppercase opacity-40">Метаболизм</span></div>
+        </div>
+    </section>
+
+    <footer class="mt-40 text-center text-[10px] opacity-20 tracking-widest">
+        GENOME: ∞-DIMENSIONAL FRACTAL STRUCTURE | TASHKENT 2026
+    </footer>
+</body>
+</html>
