@@ -1,21 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>TERRA ECOSYSTEM | CORE</title>
+    <title>TERRA ECOSYSTEM | Глобальный Узел</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-link { color: #8b5cf6; text-transform: uppercase; font-size: 10px; letter-spacing: 0.2em; border: 1px solid rgba(139, 92, 246, 0.2); padding: 10px 20px; border-radius: 50px; transition: all 0.3s; }
+        .nav-link:hover { background: rgba(139, 92, 246, 0.1); border-color: #8b5cf6; color: white; }
+        .dna-bg { background: radial-gradient(circle at center, #0a0a0f 0%, #050505 100%); }
+    </style>
 </head>
-<body class="bg-[#050505] text-slate-300 font-sans">
-    <div class="max-w-4xl mx-auto py-20 px-10">
-        <h1 class="text-5xl font-black text-white italic mb-10">TERRA ACTIVATED</h1>
-        <div class="p-10 bg-purple-900/10 border border-purple-500/30 rounded-[40px]">
-            <p class="text-purple-400 font-mono text-sm mb-4">> System Status: Stable</p>
-            <p class="text-purple-400 font-mono text-sm mb-4">> DNA Protocol: v4.5 Enhanced</p>
-            <p class="text-purple-400 font-mono text-sm">> Compliance: v7.0 Verified</p>
-        </div>
-        <div class="mt-20 text-[10px] opacity-20 tracking-widest uppercase">
-            0009-0000-6394-4912 | Abdurashid Abdukarimov
-        </div>
-    </div>
+<body class="dna-bg text-slate-400 font-sans min-h-screen">
+    <nav class="fixed top-0 w-full p-6 flex justify-center gap-4 backdrop-blur-md z-50">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="convention.html" class="nav-link">Этика</a>
+        <a href="science.html" class="nav-link">Наука</a>
+        <a href="pitch.html" class="nav-link">Бизнес</a>
+        <a href="dna-archive.html" class="nav-link">ДНК</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto pt-40 px-10">
+        <header class="text-center mb-20">
+            <h1 class="text-7xl font-black text-white italic tracking-tighter mb-4">TERRA UBIQUE</h1>
+            <p class="text-purple-500 uppercase tracking-[0.5em] text-xs font-bold">Система активна и синхронизирована</p>
+        </header>
+
+        <section class="grid md:grid-cols-2 gap-10">
+            <div class="p-10 bg-white/5 border border-white/10 rounded-[50px]">
+                <h3 class="text-white font-bold mb-4 uppercase">Текущий Стейкхолдер</h3>
+                <p class="text-sm opacity-60 mb-6">Абдурашид Абдулхамитович Абдукаримов</p>
+                <div class="text-[10px] font-mono text-purple-400">ORCID: 0009-0000-6394-4912</div>
+            </div>
+            
+            <div class="p-10 bg-white/5 border border-white/10 rounded-[50px]">
+                <h3 class="text-white font-bold mb-4 uppercase">Статус Слоев (L7)</h3>
+                <ul class="text-[10px] space-y-2 uppercase">
+                    <li class="flex justify-between"><span>L0: Ontology</span> <span class="text-green-500">Online</span></li>
+                    <li class="flex justify-between"><span>L1: Semantic</span> <span class="text-green-500">Online</span></li>
+                    <li class="flex justify-between"><span>L3: Governance</span> <span class="text-yellow-500">Syncing...</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-40 pb-20 text-center text-[10px] opacity-20 tracking-widest uppercase">
+            Designed by Human + AI Symbiosis | NULLO v2.0 | 2026
+        </footer>
+    </main>
 </body>
 </html>
