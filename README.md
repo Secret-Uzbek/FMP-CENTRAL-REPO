@@ -12,7 +12,7 @@
 ## Fractal Metascience Paradigm — Terra Ecosystem
 Planetary science for all. Zero budget. Maximum impact.
 
-📍 Built in Zarafshan, Uzbekistan 🇺🇿 | 📧 [a.a.abdukarimov@tutamail.com](mailto:a.a.abdukarimov@tutamail.com)
+📍 Built in Zarafshan, Uzbekistan 🇺🇿 | 📧 [a.abdukarimov@fractal-metascience.org](mailto:a.abdukarimov@fractal-metascience.org)
 
 ## 🎯 Mission
 
