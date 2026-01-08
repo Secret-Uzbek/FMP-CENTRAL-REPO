@@ -31,7 +31,7 @@ article = f"""# {title}
 
 **Abdurashid Abdulkhamitovich Abdukarimov**  
 Independent Researcher • Uzbek State University of World Languages  
-Tashkent, Uzbekistan • a.a.abdukarimov@tutamail.com  
+Tashkent, Uzbekistan • a.abdukarimov@fractal-metascience.org  
 ORCID: 0009-0000-6394-4912  
 
 **Created in prison. Zero budget. Human-AI symbiosis only.**
