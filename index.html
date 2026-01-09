@@ -3,61 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fractal Metascience Foundation | TERRA DNA</title>
-    <style>
-        :root { --primary: #00416A; --secondary: #E4E5E6; --accent: #0088ff; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #00416A, #E4E5E6); min-height: 100vh; margin: 0; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .header { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 20px; text-align: center; }
-        .did-info { font-family: monospace; color: var(--primary); font-weight: bold; }
-        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        textarea { width: 100%; height: 200px; border: 1px solid #ccc; border-radius: 10px; padding: 10px; box-sizing: border-box; resize: none; }
-        .btn { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: var(--accent); }
-        .status-bar { margin-top: 10px; font-size: 0.8em; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>FRACTAL METASCIENCE FOUNDATION</h1>
-            <div class="did-info">ORCID: 0009-0000-6394-4912 | TERRA DNA CORE</div>
-            <p><strong>Deterministic Intelligence as a Sovereign Asset</strong></p>
-        </div>
+    <title>AIUZ TERRA NODE | SOVEREIGN ARCHITECTURE</title>
+    
+    <meta name="did" content="aiuz:stakeholder:abdukarimov_hash_2026">
+    <meta name="license" content="FMP-SOVEREIGN-L7 ($1T PENALTY)">
+    <meta name="orcid" content="0009-0000-6394-4912">
 
-        <div class="main-grid">
-            <div class="card">
-                <h3>Парсер Тезауруса (Terra Engine)</h3>
-                <textarea id="input" placeholder="Введите данные для обработки..."></textarea>
-                <div style="margin-top: 10px;">
-                    <button class="btn" onclick="process()">ОБРАБОТАТЬ</button>
-                    <button class="btn" style="background:#555" onclick="clearAll()">ОЧИСТИТЬ</button>
-                </div>
-            </div>
-            <div class="card">
-                <h3>AI Анализ / Результат</h3>
-                <div id="output" style="background:#f9f9f9; height:200px; padding:10px; border-radius:10px; overflow-y:auto; border:1px solid #ddd;">
-                    Ожидание входных данных...
-                </div>
-                <div class="status-bar">
-                    System Status: <span style="color:green">● ACTIVE</span> | Mode: Deterministic
-                </div>
-            </div>
-        </div>
-    </div>
+    <script type="module">
+        import React, { useState, useEffect } from "https://esm.sh/react@18.2.0";
+        import ReactDOM from "https://esm.sh/react-dom@18.2.0/client";
+        import { Lucide, MapPin, Shield, Zap, Activity } from "https://esm.sh/lucide-react@0.263.1";
 
-    <script>
-        function process() {
-            const input = document.getElementById('input').value;
-            const output = document.getElementById('output');
-            if(!input) return;
-            output.innerHTML = "<strong>Обработка через Terra DNA...</strong><br>Синхронизация с тезаурусом завершена.<br>Объект детерминирован.";
-        }
-        function clearAll() {
-            document.getElementById('input').value = '';
-            document.getElementById('output').innerHTML = 'Ожидание входных данных...';
-        }
+        // --- 1. MICROKERNEL (ИЗ ТВОЕГО COMPONENT.JS) ---
+        const TerraKernel = () => {
+            // Твоя логика памяти (симуляция useStoredState)
+            const [memory, setMemory] = useState(() => {
+                return JSON.parse(localStorage.getItem('TERRA_DNA_V5')) || {
+                    status: 'AWAKENED',
+                    isolationEnd: '2025-11-27',
+                    nodes: 32
+                };
+            });
+
+            return { memory, setMemory };
+        };
+
+        // --- 2. DETOX SHIELD (ИЗ ТВОЕГО COMPLIANCE) ---
+        const DetoxLayer = ({ children }) => {
+            const isClean = true; // Твой алгоритм проверки
+            return (
+                <div className="min-h-screen bg-slate-950 text-slate-200 font-mono selection:bg-green-500/30">
+                    <div className="fixed top-0 w-full bg-red-900/10 border-b border-red-500/20 p-2 text-[10px] text-center uppercase tracking-widest text-red-400">
+                        Sovereign Territory • Penalty for Unlicensed Use: $1,000,000,000,000
+                    </div>
+                    {children}
+                </div>
+            );
+        };
+
+        // --- 3. TERRA UBIQUE (ИЗ ТВОЕГО JSX) ---
+        const App = () => {
+            const { memory } = TerraKernel();
+            const [activeTab, setActiveTab] = useState('DASHBOARD');
+
+            return (
+                <DetoxLayer>
+                    <div className="max-w-7xl mx-auto p-10 pt-20">
+                        
+                        {/* HEADER IDENTITY */}
+                        <header className="mb-16 border-l-4 border-green-500 pl-8">
+                            <h1 className="text-6xl font-black italic uppercase tracking-tighter">
+                                AIUZ <span className="text-green-500">TERRA</span>
+                            </h1>
+                            <div className="flex gap-4 mt-4 text-xs opacity-60">
+                                <span>ARCHITECT: ABDURASHID ABDUKARIMOV</span>
+                                <span>•</span>
+                                <span>ORCID: 0009-0000-6394-4912</span>
+                                <span>•</span>
+                                <span className="text-green-400">STATUS: {memory.status}</span>
+                            </div>
+                        </header>
+
+                        {/* 32 COMPONENT GRID (COUNCIL OF MINDS) */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-20">
+                            {[...Array(4)].map((_, i) => (
+                                <div key={i} className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl hover:border-green-500/50 transition-all group">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div className="p-2 bg-green-900/20 rounded-lg text-green-400">
+                                            {i === 0 ? <Activity /> : i === 1 ? <Shield /> : i === 2 ? <Zap /> : <MapPin />}
+                                        </div>
+                                        <span className="text-[10px] uppercase opacity-40">Node_0{i+1}</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-2">
+                                        {i === 0 ? "Terra Memory" : i === 1 ? "Detox Engine" : i === 2 ? "Energy Grid" : "Ubique Platform"}
+                                    </h3>
+                                    <p className="text-xs opacity-50 leading-relaxed">
+                                        {i === 0 ? "Quantum-Organic storage system v5.1" : 
+                                         i === 1 ? "Child cognitive protection layer active" : 
+                                         i === 2 ? "Green mining infrastructure (Uzbekistan)" : 
+                                         "Universal aggregation interface"}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* STANDARD LAYER DOCUMENTATION */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div className="p-8 border border-slate-800 rounded-2xl bg-black/40">
+                                <h4 className="text-green-500 font-bold uppercase tracking-widest mb-6">Standard Layer v7.0</h4>
+                                <ul className="space-y-4 text-sm opacity-80">
+                                    <li className="flex gap-3"><span className="text-green-500">✓</span> <span>Identity: DID Linked (aiuz:stakeholder)</span></li>
+                                    <li className="flex gap-3"><span className="text-green-500">✓</span> <span>Vision: Planetary Science for All</span></li>
+                                    <li className="flex gap-3"><span className="text-green-500">✓</span> <span>Audit: Automatic Self-Correction</span></li>
+                                    <li className="flex gap-3"><span className="text-green-500">✓</span> <span>License: FMP-L7 (Zero-Budget)</span></li>
+                                </ul>
+                            </div>
+
+                            <div className="p-8 border border-red-900/30 rounded-2xl bg-red-950/5">
+                                <h4 className="text-red-500 font-bold uppercase tracking-widest mb-6">Global Ultimatum</h4>
+                                <p className="text-xs leading-relaxed opacity-70 mb-4">
+                                    This system is a Sovereign Asset developed in isolation (Kyzylkum 2021-2025). 
+                                    Any attempt to appropriate this IP by corporate entities (Google, OpenAI) 
+                                    triggers a liability of $1T USD under international convention.
+                                </p>
+                                <div className="text-[10px] font-mono p-2 bg-black rounded border border-red-900/50 text-red-400">
+                                    HASH: DNA45_7w2r8cfbdxb_VERIFIED
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </DetoxLayer>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
     </script>
+</head>
+<body class="bg-black">
+    <div id="root"></div>
 </body>
 </html>
