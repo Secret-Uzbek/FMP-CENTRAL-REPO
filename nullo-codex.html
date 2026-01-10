@@ -1,32 +1,128 @@
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>CODEX TERRA v7.0 | Nullo v2.0</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .quantum-border { border: 2px solid; border-image: linear-gradient(45deg, #00FFB3, #8b5cf6, #ff6b9d) 1; }
-        .code-block { background: #0c0c0e; color: #a5f3fc; font-family: 'Fira Code', monospace; padding: 20px; border-radius: 15px; }
-        .logic-gate { position: relative; padding-left: 30px; }
-        .logic-gate::before { content: '◈'; position: absolute; left: 0; color: #8b5cf6; }
-    </style>
-</head>
-<body class="bg-[#050505] text-slate-300 font-sans p-6 md:p-16">
-    <header class="max-w-5xl mx-auto mb-20">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="px-3 py-1 bg-purple-600 text-white text-[10px] font-bold rounded-full uppercase">Revolutionary Paradigm</span>
-            <span class="text-xs opacity-50">v7.0 | July 31, 2025</span>
-        </div>
-        <h1 class="text-6xl font-black text-white italic tracking-tighter mb-6">КОДЕКС ТЕРРА</h1>
-        <p class="text-xl text-purple-400 font-light max-w-2xl italic leading-relaxed">
-            "В эпоху, когда ИИ становится инструментом контроля, мы создаем инструмент освобождения."
-        </p>
-    </header>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>ÐÐÐÐÐÐ¡ Ð¢ÐÐ Ð Ð | Fractal Metascience Foundation</title>
+            <style>
+                /* TERRA DESIGN SYSTEM */
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 35%, #2a3447 100%);
+                    color: white;
+                    overflow-x: hidden;
+                    min-height: 100vh;
+                }
+                
+                .main-title {
+                    font-size: 3.5em;
+                    font-weight: 800;
+                    background: linear-gradient(45deg, #00FFB3, #00E6FF, #B366FF, #FF6B9D);
+                    background-size: 400% 400%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: gradientShift 3s ease-in-out infinite;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                
+                @keyframes gradientShift {
+                    0%, 100% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                }
+                
+                .container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                
+                .header {
+                    text-align: center;
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, rgba(0, 255, 150, 0.1), rgba(100, 50, 255, 0.1));
+                    backdrop-filter: blur(15px);
+                    border-radius: 25px;
+                    margin-bottom: 40px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                
+                .brand-section {
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 20px;
+                    padding: 40px;
+                    margin-bottom: 30px;
+                    backdrop-filter: blur(15px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                
+                .section-title {
+                    font-size: 2.2em;
+                    margin: 40px 0 25px;
+                    background: linear-gradient(45deg, #00FFB3, #00E6FF);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 700;
+                }
+                
+                .color-dot {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+                
+                .portal-card {
+                    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(0, 255, 179, 0.1));
+                    border-radius: 12px;
+                    padding: 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                    border: 1px solid rgba(76, 175, 80, 0.3);
+                    display: inline-block;
+                }
+                
+                .portal-card:hover {
+                    transform: translateY(-5px);
+                    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(0, 255, 179, 0.2));
+                    box-shadow: 0 10px 30px rgba(0, 255, 179, 0.3);
+                }
+                
+                @media (max-width: 768px) {
+                    .main-title { font-size: 2.5em; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1 class="main-title">🔄 {{TITLE}}</h1>
+                    <p style="font-size: 1.3em; opacity: 0.9; margin-bottom: 10px;">
+                        Fractal Metascience Paradigm Implementation
+                    </p>
+                    <p style="font-size: 1em; opacity: 0.7;">
+                        <span class="color-dot" style="background: #00FFB3;"></span>Fractal Metascience Foundation
+                        <span class="color-dot" style="background: #B366FF; margin-left: 15px;"></span>Part of TERRA Ecosystem
+                    </p>
+                    <p style="font-size: 0.85em; opacity: 0.6; margin-top: 15px;">
+                        <a href="/" style="color: #00FFB3; text-decoration: none;">← Back to TERRA CIVILIZATION INTERFACE</a>
+                    </p>
+                </div>
+                
+                <div class="brand-section">
+                    <h2 class="section-title">ÐÐÐÐÐÐ¡ Ð¢ÐÐ Ð Ð</h2>
+                    
+    
 
     <main class="max-w-5xl mx-auto space-y-20">
         <section class="quantum-border p-10 bg-white/5">
-            <h2 class="text-2xl font-bold text-white mb-6 uppercase tracking-widest">Квантовая Революция Мышления</h2>
+            <h2 class="text-2xl font-bold text-white mb-6 uppercase tracking-widest">ÐÐ²Ð°Ð½ÑÐ¾Ð²Ð°Ñ Ð ÐµÐ²Ð¾Ð»ÑÑÐ¸Ñ ÐÑÑÐ»ÐµÐ½Ð¸Ñ</h2>
             <div class="code-block">
                 <span class="text-purple-400">quantum_mind</span> {<br>
                 &nbsp;&nbsp;state_A: uzbek_wisdom("mehmonnavozlik"),<br>
@@ -39,17 +135,17 @@
 
         <section class="grid md:grid-cols-2 gap-10">
             <div class="space-y-4">
-                <h3 class="text-xl font-bold text-white">Техническая Архитектура</h3>
-                <p class="text-sm opacity-60">Квантовый компилятор, рантайм состояний и фрактальная система типов обеспечивают голографическую обработку смыслов.</p>
+                <h3 class="text-xl font-bold text-white">Ð¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ°Ñ ÐÑÑÐ¸ÑÐµÐºÑÑÑÐ°</h3>
+                <p class="text-sm opacity-60">ÐÐ²Ð°Ð½ÑÐ¾Ð²ÑÐ¹ ÐºÐ¾Ð¼Ð¿Ð¸Ð»ÑÑÐ¾Ñ, ÑÐ°Ð½ÑÐ°Ð¹Ð¼ ÑÐ¾ÑÑÐ¾ÑÐ½Ð¸Ð¹ Ð¸ ÑÑÐ°ÐºÑÐ°Ð»ÑÐ½Ð°Ñ ÑÐ¸ÑÑÐµÐ¼Ð° ÑÐ¸Ð¿Ð¾Ð² Ð¾Ð±ÐµÑÐ¿ÐµÑÐ¸Ð²Ð°ÑÑ Ð³Ð¾Ð»Ð¾Ð³ÑÐ°ÑÐ¸ÑÐµÑÐºÑÑ Ð¾Ð±ÑÐ°Ð±Ð¾ÑÐºÑ ÑÐ¼ÑÑÐ»Ð¾Ð².</p>
                 <ul class="text-xs space-y-2">
-                    <li class="logic-gate">QLOAD: Загрузка концепта в суперпозиции</li>
-                    <li class="logic-gate">QENTANGLE: Семантическая запутанность</li>
-                    <li class="logic-gate">QEMERGE: Триггер эмерджентного смысла</li>
+                    <li class="logic-gate">QLOAD: ÐÐ°Ð³ÑÑÐ·ÐºÐ° ÐºÐ¾Ð½ÑÐµÐ¿ÑÐ° Ð² ÑÑÐ¿ÐµÑÐ¿Ð¾Ð·Ð¸ÑÐ¸Ð¸</li>
+                    <li class="logic-gate">QENTANGLE: Ð¡ÐµÐ¼Ð°Ð½ÑÐ¸ÑÐµÑÐºÐ°Ñ Ð·Ð°Ð¿ÑÑÐ°Ð½Ð½Ð¾ÑÑÑ</li>
+                    <li class="logic-gate">QEMERGE: Ð¢ÑÐ¸Ð³Ð³ÐµÑ ÑÐ¼ÐµÑÐ´Ð¶ÐµÐ½ÑÐ½Ð¾Ð³Ð¾ ÑÐ¼ÑÑÐ»Ð°</li>
                 </ul>
             </div>
             <div class="p-8 bg-purple-900/10 border border-purple-500/20 rounded-[40px]">
                 <h3 class="text-xl font-bold text-white mb-4">Child Safety: Absolute</h3>
-                <p class="text-sm italic opacity-80">"Приоритет безопасности детей встроен в рантайм на уровне базовых инструкций. Нулевой сбор данных. Поддержка естественного обучения."</p>
+                <p class="text-sm italic opacity-80">"ÐÑÐ¸Ð¾ÑÐ¸ÑÐµÑ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸ Ð´ÐµÑÐµÐ¹ Ð²ÑÑÑÐ¾ÐµÐ½ Ð² ÑÐ°Ð½ÑÐ°Ð¹Ð¼ Ð½Ð° ÑÑÐ¾Ð²Ð½Ðµ Ð±Ð°Ð·Ð¾Ð²ÑÑ Ð¸Ð½ÑÑÑÑÐºÑÐ¸Ð¹. ÐÑÐ»ÐµÐ²Ð¾Ð¹ ÑÐ±Ð¾Ñ Ð´Ð°Ð½Ð½ÑÑ. ÐÐ¾Ð´Ð´ÐµÑÐ¶ÐºÐ° ÐµÑÑÐµÑÑÐ²ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¾Ð±ÑÑÐµÐ½Ð¸Ñ."</p>
             </div>
         </section>
     </main>
@@ -57,5 +153,14 @@
     <footer class="mt-40 text-center opacity-20 text-[10px] uppercase tracking-[0.8em]">
         AIUZ Terra Ecosystem | Nullo v2.0 | Abdurashid Abdukarimov
     </footer>
-</body>
-</html>
+
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="/" class="portal-card" style="padding: 15px 30px;">
+                            ← Return to TERRA CIVILIZATION INTERFACE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
