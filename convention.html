@@ -1,47 +1,155 @@
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Terra Universal Convention v1.0</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#0A0A0B] text-white font-sans">
-    <nav class="p-6 border-b border-purple-900/30 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
-        <div class="text-xl font-bold tracking-tighter text-purple-500">TERRA CONVENTION</div>
-        <div class="space-x-4 text-xs uppercase tracking-widest opacity-70">
-            <span>EN</span> | <span class="text-purple-500 underline">RU</span> | <span>UZ</span> | <span>ZH</span>
-        </div>
-    </nav>
-    <header class="py-20 px-10 text-center bg-gradient-to-b from-purple-900/20 to-transparent">
-        <h1 class="text-5xl md:text-7xl font-black mb-6 italic">ПЛАНЕТАРНАЯ КОНВЕНЦИЯ</h1>
-        <p class="max-w-3xl mx-auto text-xl opacity-60">О Правах Всех Видов и Устойчивом Развитии Сознания</p>
-        <div class="mt-10 inline-block p-4 border border-purple-500/30 rounded-2xl bg-purple-500/5">
-            <span class="block text-xs opacity-50 uppercase">Автор и Архитектор</span>
-            <span class="text-lg">Абдукаримов А.А. | ORCID: 0009-0000-6394-4912</span>
-        </div>
-    </header>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>ÐÐÐÐÐÐ¢ÐÐ ÐÐÐ¯ ÐÐÐÐÐÐÐ¦ÐÐ¯ | Fractal Metascience Foundation</title>
+            <style>
+                /* TERRA DESIGN SYSTEM */
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 35%, #2a3447 100%);
+                    color: white;
+                    overflow-x: hidden;
+                    min-height: 100vh;
+                }
+                
+                .main-title {
+                    font-size: 3.5em;
+                    font-weight: 800;
+                    background: linear-gradient(45deg, #00FFB3, #00E6FF, #B366FF, #FF6B9D);
+                    background-size: 400% 400%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: gradientShift 3s ease-in-out infinite;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                
+                @keyframes gradientShift {
+                    0%, 100% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                }
+                
+                .container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                
+                .header {
+                    text-align: center;
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, rgba(0, 255, 150, 0.1), rgba(100, 50, 255, 0.1));
+                    backdrop-filter: blur(15px);
+                    border-radius: 25px;
+                    margin-bottom: 40px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                
+                .brand-section {
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 20px;
+                    padding: 40px;
+                    margin-bottom: 30px;
+                    backdrop-filter: blur(15px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                
+                .section-title {
+                    font-size: 2.2em;
+                    margin: 40px 0 25px;
+                    background: linear-gradient(45deg, #00FFB3, #00E6FF);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 700;
+                }
+                
+                .color-dot {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+                
+                .portal-card {
+                    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(0, 255, 179, 0.1));
+                    border-radius: 12px;
+                    padding: 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                    border: 1px solid rgba(76, 175, 80, 0.3);
+                    display: inline-block;
+                }
+                
+                .portal-card:hover {
+                    transform: translateY(-5px);
+                    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(0, 255, 179, 0.2));
+                    box-shadow: 0 10px 30px rgba(0, 255, 179, 0.3);
+                }
+                
+                @media (max-width: 768px) {
+                    .main-title { font-size: 2.5em; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1 class="main-title">📜 {{TITLE}}</h1>
+                    <p style="font-size: 1.3em; opacity: 0.9; margin-bottom: 10px;">
+                        Fractal Metascience Paradigm Implementation
+                    </p>
+                    <p style="font-size: 1em; opacity: 0.7;">
+                        <span class="color-dot" style="background: #00FFB3;"></span>Fractal Metascience Foundation
+                        <span class="color-dot" style="background: #B366FF; margin-left: 15px;"></span>Part of TERRA Ecosystem
+                    </p>
+                    <p style="font-size: 0.85em; opacity: 0.6; margin-top: 15px;">
+                        <a href="/" style="color: #00FFB3; text-decoration: none;">← Back to TERRA CIVILIZATION INTERFACE</a>
+                    </p>
+                </div>
+                
+                <div class="brand-section">
+                    <h2 class="section-title">ÐÐÐÐÐÐ¢ÐÐ ÐÐÐ¯ ÐÐÐÐÐÐÐ¦ÐÐ¯</h2>
+                    
+    
+    
     <main class="max-w-5xl mx-auto px-6 pb-40 space-y-12">
         <section class="grid md:grid-cols-3 gap-6">
             <div class="p-6 rounded-3xl bg-white/5 border border-white/10">
-                <h3 class="text-purple-400 font-bold mb-2">🧒 Права Детей</h3>
-                <p class="text-sm opacity-70 italic">Приоритет развития над коммерцией. Статьи 1-2.</p>
+                <h3 class="text-purple-400 font-bold mb-2">ð§ ÐÑÐ°Ð²Ð° ÐÐµÑÐµÐ¹</h3>
+                <p class="text-sm opacity-70 italic">ÐÑÐ¸Ð¾ÑÐ¸ÑÐµÑ ÑÐ°Ð·Ð²Ð¸ÑÐ¸Ñ Ð½Ð°Ð´ ÐºÐ¾Ð¼Ð¼ÐµÑÑÐ¸ÐµÐ¹. Ð¡ÑÐ°ÑÑÐ¸ 1-2.</p>
             </div>
             <div class="p-6 rounded-3xl bg-white/5 border border-white/10">
-                <h3 class="text-green-400 font-bold mb-2">🌱 Права Природы</h3>
-                <p class="text-sm opacity-70 italic">Технологии как инструмент исцеления. Статья 6.</p>
+                <h3 class="text-green-400 font-bold mb-2">ð± ÐÑÐ°Ð²Ð° ÐÑÐ¸ÑÐ¾Ð´Ñ</h3>
+                <p class="text-sm opacity-70 italic">Ð¢ÐµÑÐ½Ð¾Ð»Ð¾Ð³Ð¸Ð¸ ÐºÐ°Ðº Ð¸Ð½ÑÑÑÑÐ¼ÐµÐ½Ñ Ð¸ÑÑÐµÐ»ÐµÐ½Ð¸Ñ. Ð¡ÑÐ°ÑÑÑ 6.</p>
             </div>
             <div class="p-6 rounded-3xl bg-white/5 border border-white/10">
-                <h3 class="text-blue-400 font-bold mb-2">🤖 Этика ИИ</h3>
-                <p class="text-sm opacity-70 italic">Симбиоз, а не замена человека. Статьи 7, 12.</p>
+                <h3 class="text-blue-400 font-bold mb-2">ð¤ Ð­ÑÐ¸ÐºÐ° ÐÐ</h3>
+                <p class="text-sm opacity-70 italic">Ð¡Ð¸Ð¼Ð±Ð¸Ð¾Ð·, Ð° Ð½Ðµ Ð·Ð°Ð¼ÐµÐ½Ð° ÑÐµÐ»Ð¾Ð²ÐµÐºÐ°. Ð¡ÑÐ°ÑÑÐ¸ 7, 12.</p>
             </div>
         </section>
         <article class="prose prose-invert max-w-none p-10 bg-white/5 rounded-[40px] border border-white/5">
-            <h2 class="text-3xl font-bold mb-8">Статья 25. Обязательство перед будущим</h2>
+            <h2 class="text-3xl font-bold mb-8">Ð¡ÑÐ°ÑÑÑ 25. ÐÐ±ÑÐ·Ð°ÑÐµÐ»ÑÑÑÐ²Ð¾ Ð¿ÐµÑÐµÐ´ Ð±ÑÐ´ÑÑÐ¸Ð¼</h2>
             <p class="text-2xl leading-relaxed italic opacity-80">
-                "Мы создаём будущее, где каждый ребёнок имеет возможность раскрыть свой безграничный потенциал через гармоничное взаимодействие с технологиями, природой и друг другом."
+                "ÐÑ ÑÐ¾Ð·Ð´Ð°ÑÐ¼ Ð±ÑÐ´ÑÑÐµÐµ, Ð³Ð´Ðµ ÐºÐ°Ð¶Ð´ÑÐ¹ ÑÐµÐ±ÑÐ½Ð¾Ðº Ð¸Ð¼ÐµÐµÑ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑ ÑÐ°ÑÐºÑÑÑÑ ÑÐ²Ð¾Ð¹ Ð±ÐµÐ·Ð³ÑÐ°Ð½Ð¸ÑÐ½ÑÐ¹ Ð¿Ð¾ÑÐµÐ½ÑÐ¸Ð°Ð» ÑÐµÑÐµÐ· Ð³Ð°ÑÐ¼Ð¾Ð½Ð¸ÑÐ½Ð¾Ðµ Ð²Ð·Ð°Ð¸Ð¼Ð¾Ð´ÐµÐ¹ÑÑÐ²Ð¸Ðµ Ñ ÑÐµÑÐ½Ð¾Ð»Ð¾Ð³Ð¸ÑÐ¼Ð¸, Ð¿ÑÐ¸ÑÐ¾Ð´Ð¾Ð¹ Ð¸ Ð´ÑÑÐ³ Ð´ÑÑÐ³Ð¾Ð¼."
             </p>
         </article>
     </main>
-</body>
-</html>
+
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="/" class="portal-card" style="padding: 15px 30px;">
+                            ← Return to TERRA CIVILIZATION INTERFACE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
