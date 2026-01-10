@@ -1,0 +1,39 @@
+name: FORCE SOVEREIGN DEPLOY
+on:
+  workflow_dispatch: # Кнопка ручного запуска
+
+permissions:
+  contents: write
+
+jobs:
+  extract-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: UNZIP & OVERWRITE (Вскрываем архив и ставим твой сайт)
+        run: |
+          # 1. Распаковка твоего архива
+          unzip -o "AIUZ Terra codex.zip" -d temp_extract
+          
+          # 2. Поиск твоего главного файла (HTML)
+          # Мы ищем тот самый файл с "ПЛАНЕТАРНАЯ ЭКОСИСТЕМА"
+          find temp_extract -name "*AIUZ TERRA CODEX ПЛАНЕТАРНАЯ ЭКОСИСТЕМА ИСЦЕЛЕНИЯ.html" -exec mv {} index.html \;
+          
+          # 3. Поиск папки с картинками/ресурсами и перенос в корень
+          # (Если они есть рядом с файлом)
+          find temp_extract -type d -name "images" -exec mv {} ./images \; || true
+          
+          # 4. Чистка мусора
+          rm -rf temp_extract
+          
+          # 5. Настройка автора (это ты)
+          git config --global user.name "Secret-Uzbek"
+          git config --global user.email "a.abdukarimov@fractal-metascience.org"
+          
+          # 6. Фиксация изменений (Деплой)
+          git add index.html
+          git add images/* || true
+          git commit -m "SOVEREIGN PROTOCOL: Main Site Restored from Archive"
+          git push
