@@ -1,38 +1,140 @@
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Terra Roadmap: Planetary Maturity</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .phase-card { background: rgba(255,255,255,0.02); border-left: 4px solid #10b981; padding: 2rem; margin-bottom: 2rem; transition: all 0.3s; }
-        .phase-card:hover { background: rgba(16, 185, 129, 0.05); transform: translateX(10px); }
-        .metric-bar { height: 4px; background: #1e1e1e; border-radius: 2px; overflow: hidden; }
-        .metric-fill { height: 100%; background: #10b981; transition: width 2s ease-out; }
-    </style>
-</head>
-<body class="bg-[#050505] text-slate-300 p-10 font-sans">
-    <header class="max-w-5xl mx-auto mb-20 text-center">
-        <h1 class="text-6xl font-black text-white italic mb-4">TERRA ROADMAP 2050</h1>
-        <p class="text-green-500 uppercase tracking-[0.5em] text-xs">От эгоцентризма к планетарной ответственности</p>
-    </header>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>TERRA ROADMAP 2050 | Fractal Metascience Foundation</title>
+            <style>
+                /* TERRA DESIGN SYSTEM */
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 35%, #2a3447 100%);
+                    color: white;
+                    overflow-x: hidden;
+                    min-height: 100vh;
+                }
+                
+                .main-title {
+                    font-size: 3.5em;
+                    font-weight: 800;
+                    background: linear-gradient(45deg, #00FFB3, #00E6FF, #B366FF, #FF6B9D);
+                    background-size: 400% 400%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: gradientShift 3s ease-in-out infinite;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                
+                @keyframes gradientShift {
+                    0%, 100% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                }
+                
+                .container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                
+                .header {
+                    text-align: center;
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, rgba(0, 255, 150, 0.1), rgba(100, 50, 255, 0.1));
+                    backdrop-filter: blur(15px);
+                    border-radius: 25px;
+                    margin-bottom: 40px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                
+                .brand-section {
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 20px;
+                    padding: 40px;
+                    margin-bottom: 30px;
+                    backdrop-filter: blur(15px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                
+                .section-title {
+                    font-size: 2.2em;
+                    margin: 40px 0 25px;
+                    background: linear-gradient(45deg, #00FFB3, #00E6FF);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 700;
+                }
+                
+                .color-dot {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+                
+                .portal-card {
+                    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(0, 255, 179, 0.1));
+                    border-radius: 12px;
+                    padding: 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                    border: 1px solid rgba(76, 175, 80, 0.3);
+                    display: inline-block;
+                }
+                
+                .portal-card:hover {
+                    transform: translateY(-5px);
+                    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(0, 255, 179, 0.2));
+                    box-shadow: 0 10px 30px rgba(0, 255, 179, 0.3);
+                }
+                
+                @media (max-width: 768px) {
+                    .main-title { font-size: 2.5em; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1 class="main-title">🗺️ {{TITLE}}</h1>
+                    <p style="font-size: 1.3em; opacity: 0.9; margin-bottom: 10px;">
+                        Fractal Metascience Paradigm Implementation
+                    </p>
+                    <p style="font-size: 1em; opacity: 0.7;">
+                        <span class="color-dot" style="background: #00FFB3;"></span>Fractal Metascience Foundation
+                        <span class="color-dot" style="background: #B366FF; margin-left: 15px;"></span>Part of TERRA Ecosystem
+                    </p>
+                    <p style="font-size: 0.85em; opacity: 0.6; margin-top: 15px;">
+                        <a href="/" style="color: #00FFB3; text-decoration: none;">← Back to TERRA CIVILIZATION INTERFACE</a>
+                    </p>
+                </div>
+                
+                <div class="brand-section">
+                    <h2 class="section-title">TERRA ROADMAP 2050</h2>
+                    
+    
 
     <main class="max-w-5xl mx-auto">
         <div class="phase-card">
-            <h2 class="text-2xl font-bold text-white mb-2">ФАЗА 1: ПЛАНЕТАРНАЯ ДИАГНОСТИКА (2025-2027)</h2>
-            <p class="text-sm opacity-60">🔬 Полное Сканирование Здоровья Планеты: квантовые сенсоры почв, микробиомный анализ, ИИ-мониторинг биоразнообразия.</p>
+            <h2 class="text-2xl font-bold text-white mb-2">Ð¤ÐÐÐ 1: ÐÐÐÐÐÐ¢ÐÐ ÐÐÐ¯ ÐÐÐÐÐÐÐ¡Ð¢ÐÐÐ (2025-2027)</h2>
+            <p class="text-sm opacity-60">ð¬ ÐÐ¾Ð»Ð½Ð¾Ðµ Ð¡ÐºÐ°Ð½Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ ÐÐ´Ð¾ÑÐ¾Ð²ÑÑ ÐÐ»Ð°Ð½ÐµÑÑ: ÐºÐ²Ð°Ð½ÑÐ¾Ð²ÑÐµ ÑÐµÐ½ÑÐ¾ÑÑ Ð¿Ð¾ÑÐ², Ð¼Ð¸ÐºÑÐ¾Ð±Ð¸Ð¾Ð¼Ð½ÑÐ¹ Ð°Ð½Ð°Ð»Ð¸Ð·, ÐÐ-Ð¼Ð¾Ð½Ð¸ÑÐ¾ÑÐ¸Ð½Ð³ Ð±Ð¸Ð¾ÑÐ°Ð·Ð½Ð¾Ð¾Ð±ÑÐ°Ð·Ð¸Ñ.</p>
         </div>
 
         <section class="mt-20 p-10 bg-green-500/5 rounded-[40px] border border-green-500/20">
             <h3 class="text-xl font-bold text-green-400 mb-8 uppercase tracking-widest">Planetary Health Metrics</h3>
             <div class="space-y-6">
                 <div>
-                    <div class="flex justify-between text-xs mb-2"><span>БИОРАЗНООБРАЗИЕ (ЦЕЛЬ: +300%)</span><span>ТЕКУЩЕЕ: +12%</span></div>
+                    <div class="flex justify-between text-xs mb-2"><span>ÐÐÐÐ ÐÐÐÐÐÐÐ ÐÐÐÐ (Ð¦ÐÐÐ¬: +300%)</span><span>Ð¢ÐÐÐ£Ð©ÐÐ: +12%</span></div>
                     <div class="metric-bar"><div class="metric-fill" style="width: 12%"></div></div>
                 </div>
                 <div>
-                    <div class="flex justify-between text-xs mb-2"><span>ЧИСТОТА ОКЕАНОВ</span><span>ТЕКУЩЕЕ: 45%</span></div>
+                    <div class="flex justify-between text-xs mb-2"><span>Ð§ÐÐ¡Ð¢ÐÐ¢Ð ÐÐÐÐÐÐÐ</span><span>Ð¢ÐÐÐ£Ð©ÐÐ: 45%</span></div>
                     <div class="metric-bar"><div class="metric-fill" style="width: 45%"></div></div>
                 </div>
             </div>
@@ -40,7 +142,16 @@
     </main>
 
     <footer class="mt-20 text-center opacity-20 text-[10px] uppercase tracking-widest">
-        Terra Codex | Программа взросления человечества | qariya.solyaris.wisdom
+        Terra Codex | ÐÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð° Ð²Ð·ÑÐ¾ÑÐ»ÐµÐ½Ð¸Ñ ÑÐµÐ»Ð¾Ð²ÐµÑÐµÑÑÐ²Ð° | qariya.solyaris.wisdom
     </footer>
-</body>
-</html>
+
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="/" class="portal-card" style="padding: 15px 30px;">
+                            ← Return to TERRA CIVILIZATION INTERFACE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
