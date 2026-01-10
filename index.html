@@ -1,325 +1,271 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIUZ TERRA | RESEARCH PIPELINE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-    
+    <title>FRACTAL METASCIENCE FOUNDATION | Global Interface</title>
     <style>
-        /* --- AIUZ BRAND COMPLIANCE --- */
-        :root {
-            --cosmic-bg: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 35%, #2a3447 100%);
-            --terra-green: #2E8B57;
-            --terra-blue: #4A90E2;
-            --terra-gold: #D4AF37;
-            --font-head: 'Montserrat', sans-serif;
-            --font-code: 'Fira Code', monospace;
-            --border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
+        /* --- CLAUDE AI ORIGINAL DESIGN (COSMIC THEME) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--cosmic-bg);
-            color: #e2e8f0;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 35%, #2a3447 100%);
+            color: white;
+            overflow-x: hidden;
             min-height: 100vh;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; }
-
-        .header { text-align: center; margin-bottom: 20px; }
-        .header h1 { 
-            font-family: var(--font-head); 
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, #fff, var(--terra-gold));
+        /* HEADER ANIMATION */
+        .main-title {
+            font-size: 3.0em;
+            font-weight: 800;
+            background: linear-gradient(45deg, #00FFB3, #00E6FF, #B366FF, #FF6B9D);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+        .subtitle { text-align: center; color: #a0aec0; font-size: 1.2em; margin-bottom: 40px; font-weight: 300; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+
+        /* GRID SYSTEM (20 DOMAINS + PRODUCTS) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }
 
-        /* STRICT DOCUMENT STYLE */
-        .doc-viewer {
-            background: #0f172a;
-            border: var(--border);
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-            height: 85vh;
-        }
-
-        .toolbar {
-            padding: 15px;
-            background: rgba(0,0,0,0.3);
-            border-bottom: var(--border);
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .workspace {
-            display: flex;
-            flex: 1;
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            position: relative;
             overflow: hidden;
         }
 
-        /* LIST OF ARTICLES (FROM YOUR DOC) */
-        .article-list {
-            width: 350px;
-            border-right: var(--border);
-            overflow-y: auto;
-            background: rgba(0,0,0,0.2);
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #00FFB3;
+            box-shadow: 0 10px 30px rgba(0, 255, 179, 0.2);
         }
 
-        .article-item {
-            padding: 15px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .article-item:hover { background: rgba(255,255,255,0.05); }
-        .article-item.active { background: rgba(46, 139, 87, 0.1); border-left: 3px solid var(--terra-green); }
-
-        .art-code { font-family: var(--font-code); color: var(--terra-gold); font-size: 0.8em; }
-        .art-title { font-weight: 600; font-size: 0.9em; margin-top: 5px; line-height: 1.4; }
-        .art-status { font-size: 0.75em; color: #94a3b8; margin-top: 5px; }
-
-        /* PREVIEW AREA */
-        .preview-area {
-            flex: 1;
-            padding: 30px;
-            overflow-y: auto;
-            font-family: var(--font-code);
-            font-size: 0.9em;
-            color: #cbd5e1;
-            white-space: pre-wrap;
-        }
-
-        /* AUDIT STAMP */
-        .audit-stamp {
-            border: 1px solid var(--terra-green);
-            color: var(--terra-green);
-            padding: 5px 10px;
-            font-size: 0.8em;
+        .card h3 { font-size: 1.4em; margin-bottom: 10px; color: #e2e8f0; }
+        .card p { font-size: 0.9em; color: #cbd5e1; line-height: 1.5; }
+        .card .tag {
+            display: inline-block; padding: 4px 8px; border-radius: 4px;
+            font-size: 0.7em; margin-top: 10px; font-weight: bold;
             text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 20px;
+        }
+        .tag-core { background: rgba(179, 102, 255, 0.2); color: #B366FF; } /* Foundation */
+        .tag-product { background: rgba(0, 255, 179, 0.2); color: #00FFB3; } /* Product */
+
+        /* CHAT INTERFACE (THE BACKEND CONNECTION) */
+        .interface-panel {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
-        /* ACTIONS */
-        .btn {
-            background: linear-gradient(135deg, var(--terra-blue), #2a5298);
-            color: white; border: none; padding: 10px 20px;
-            font-family: var(--font-head); font-weight: 700;
-            cursor: pointer; font-size: 0.8em;
+        .chat-history {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.95em;
         }
-        .btn:hover { opacity: 0.9; }
 
+        .message { margin-bottom: 15px; padding: 10px; border-radius: 8px; animation: fadeIn 0.3s; }
+        .message.system { background: rgba(0, 255, 179, 0.05); border-left: 3px solid #00FFB3; color: #a7f3d0; }
+        .message.user { background: rgba(179, 102, 255, 0.05); border-left: 3px solid #B366FF; color: #e9d5ff; }
+
+        .input-area {
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            gap: 15px;
+        }
+
+        input {
+            flex: 1;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus { border-color: #00E6FF; background: rgba(255,255,255,0.1); }
+
+        button {
+            padding: 0 30px;
+            background: linear-gradient(45deg, #00FFB3, #00E6FF);
+            border: none;
+            border-radius: 10px;
+            color: #0a0e1a;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { opacity: 0.9; transform: scale(1.05); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="header">
-            <h1>AIUZ TERRA | RESEARCH PIPELINE</h1>
-            <div style="font-family: var(--font-code); font-size: 0.8em; color: var(--terra-blue);">
-                ARCHITECT: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912
+        <h1 class="main-title">FRACTAL METASCIENCE FOUNDATION</h1>
+        <p class="subtitle">Zero-Budget Sovereign Node | Planetary Architecture | Established 2021</p>
+
+        <div class="grid">
+            <div class="card" onclick="querySystem('status')">
+                <h3>🏛️ FMF Core</h3>
+                <p>The holding structure. Governance, Ethics, and Strategic Vision.</p>
+                <span class="tag tag-core">Foundation Layer</span>
+            </div>
+
+            <div class="card" onclick="querySystem('FMP')">
+                <h3>🔬 FMP Paradigm</h3>
+                <p>Fractal Metascience. The recursive epistemological framework (Null0, PLT).</p>
+                <span class="tag tag-core">Theory Layer</span>
+            </div>
+
+            <div class="card" onclick="querySystem('AIUZ')">
+                <h3>🧬 AIUZ Ecosystem</h3>
+                <p>Semantic AI Node. Thesaurus, Translation, and Cultural Memory.</p>
+                <span class="tag tag-product">Product v4.0</span>
+            </div>
+
+            <div class="card" onclick="querySystem('TERRA')">
+                <h3>🌍 Terra Codex</h3>
+                <p>Planetary interface. Education, Tamagotchi, and Eco-Integration.</p>
+                <span class="tag tag-product">Product v1.0</span>
+            </div>
+            
+            <div class="card" onclick="querySystem('CLEANBURN')">
+                <h3>🔥 Cleanburn</h3>
+                <p>Energy recovery systems. Industrial application of Null0 economy.</p>
+                <span class="tag tag-product">Industrial</span>
             </div>
         </div>
 
-        <div class="doc-viewer">
-            <div class="toolbar">
-                <span style="font-family:var(--font-head); font-weight:bold;">PUBLICATION SERIES</span>
-                <div style="flex:1"></div>
-                <button class="btn" onclick="generatePackage()">GENERATE SUBMISSION PACKAGE</button>
-                <button class="btn" style="background:#334155" onclick="runAudit()">RUN AIUZ AUDIT</button>
-            </div>
-
-            <div class="workspace">
-                <div class="article-list" id="artList">
-                    </div>
-
-                <div class="preview-area" id="docPreview">
-                    [SELECT AN ARTICLE TO VIEW DATA]
+        <div class="interface-panel">
+            <div class="chat-history" id="chat">
+                <div class="message system">
+                    <strong>[SYSTEM]:</strong> FMF Node Initialized.<br>
+                    > Architecture: Fractal Metascience Foundation<br>
+                    > Status: Sovereign<br>
+                    > Ready for query...
                 </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="input" placeholder="Query the Foundation (e.g., 'Show AIUZ structure', 'What is Null0?')..." onkeypress="handleKey(event)">
+                <button onclick="sendQuery()">EXECUTE</button>
             </div>
         </div>
     </div>
 
     <script>
-        // ДАННЫЕ СТРОГО ИЗ ТВОЕГО ФАЙЛА "Fractal Metascience Paradigm (FMP) Publication Series.docx"
-        const PUBLICATIONS = [
-            {
-                code: "FMP-ART-01",
-                title: "The Fractal Metascience Paradigm: A Unified Epistemological Framework for 21st Century Science",
-                journal: "Foundations of Science / Philosophy of Science",
-                role: "Core Theory",
-                status: "READY",
-                abstract: "Establishes the theoretical foundation of FMP. Introduces FMP as a new paradigm in the philosophy of science, summarizes its motivation (overcoming reductionism), and details the 'fractal referencing' methodology."
+        // --- SIMULATED PYTHON BACKEND LOGIC (CLIENT-SIDE) ---
+        
+        // 1. DATABASE (Mirrors the Python Class Structure)
+        const FMF_DB = {
+            products: {
+                "AIUZ": { version: "4.0", type: "Semantic Ecosystem", status: "Active" },
+                "TERRA": { version: "1.0", type: "Planetary Interface", status: "Beta" },
+                "CLEANBURN": { version: "Industrial", type: "Energy System", status: "Active" }
             },
-            {
-                code: "FMP-ART-02",
-                title: "Cognitive Architecture of the Terra Ecosystem: From NULLO to L7",
-                journal: "Cognitive Systems Research / J. of Artificial General Intelligence",
-                role: "Cognitive Model",
-                status: "DRAFT",
-                abstract: "Details the 8-layer cognitive model (L0–L7). Explains how 'enactive cognition' scales from a single child to planetary intelligence."
+            artifacts: {
+                "NULL0": "The Ontological Zero. Creating value from residue.",
+                "PLT": "Post-Lingua Trace. Universal semantic bridging.",
+                "UCOM": "Universal Communication Protocols (Bio/Quant)."
             },
-            {
-                code: "FMP-ART-03",
-                title: "NULLO Theory: The Ontological Zero and Zero-Budget Economics",
-                journal: "Ecological Economics / Futures",
-                role: "Economic Model",
-                status: "CONCEPT",
-                abstract: "Validates the economic model of creating value from 'residue' (zero budget). Case study of the prison colony development cycle ($0 -> $1T claim)."
-            },
-            {
-                code: "FMP-ART-04",
-                title: "Post-Lingua Trace (PLT): A Protocol for Semantic Interoperability",
-                journal: "Journal of Semantics / Computational Linguistics",
-                role: "Linguistics/AI",
-                status: "READY",
-                abstract: "Describes the PLT mechanism for preserving meaning across language barriers (Uzbek/Russian/English) and species barriers (AI/Human)."
-            },
-            {
-                code: "FMP-ART-05",
-                title: "UCOM: Bio-Semiotic Protocols for Interspecies Communication",
-                journal: "Biosemiotics / Cybernetics & Human Knowing",
-                role: "Interspecies",
-                status: "DRAFT",
-                abstract: "Explores the Universal Communication layers (Biochemical, Acoustic, Quantum) defined in the FMP ontology."
+            foundation: {
+                "mission": "To create a self-sustaining, recursive knowledge ecosystem.",
+                "origin": "Prison Colony Cycle (2021-2025)",
+                "budget": "$0.00 (Zero Budget Paradigm)"
             }
-        ];
+        };
 
-        let selectedIndex = 0;
+        // 2. KERNEL LOGIC
+        function sendQuery() {
+            const input = document.getElementById('input');
+            const val = input.value.trim();
+            if (!val) return;
 
-        function renderList() {
-            const list = document.getElementById('artList');
-            list.innerHTML = PUBLICATIONS.map((art, index) => `
-                <div class="article-item ${index === 0 ? 'active' : ''}" onclick="selectArt(${index})">
-                    <div class="art-code">${art.code}</div>
-                    <div class="art-title">${art.title}</div>
-                    <div class="art-status">Target: ${art.journal}</div>
-                </div>
-            `).join('');
-            selectArt(0);
+            // User Message
+            addMessage('user', val);
+            input.value = '';
+
+            // Simulate Backend Processing Delay
+            setTimeout(() => {
+                const response = processBackendLogic(val);
+                addMessage('system', response);
+            }, 600);
         }
 
-        function selectArt(index) {
-            selectedIndex = index;
-            document.querySelectorAll('.article-item').forEach((el, i) => {
-                el.classList.toggle('active', i === index);
-            });
-            
-            const art = PUBLICATIONS[index];
-            const preview = document.getElementById('docPreview');
-            
-            // FORMATTING AS PER AIUZ AUDIT REGULATION
-            preview.innerHTML = `
-<span class="audit-stamp">AIUZ AUDIT: COMPLIANT</span>
+        function processBackendLogic(query) {
+            const q = query.toUpperCase();
 
-[DOCUMENT_TYPE]: Article_Metadata
-[VERSION]: 1.0.0
-[AUTHOR_ID]: ORCID-0009-0000-6394-4912
-[HASH]: ${generateHash(art.title)}
-
-> TITLE:
-  ${art.title}
-
-> TARGET JOURNAL:
-  ${art.journal}
-
-> ROLE IN PIPELINE:
-  ${art.role}
-
-> ABSTRACT:
-  ${art.abstract}
-
-> FRACTAL REFERENCES:
-  [1] fmp-site.md (Local)
-  [2] SSRN Abstract 5738885 (Abdukarimov)
-  [3] Academia.edu Artifacts
-
-> STATUS:
-  ${art.status}
-            `;
-        }
-
-        function generatePackage() {
-            const art = PUBLICATIONS[selectedIndex];
-            const preview = document.getElementById('docPreview');
-            const date = new Date().toISOString().split('T')[0];
-            
-            // STRICT SUBMISSION PACKAGE FORMAT
-            preview.innerHTML = `
-<span class="audit-stamp">SUBMISSION PACKAGE GENERATED</span>
-
-[DOCUMENT_TYPE]: Submission_Package
-[VERSION]: 1.0.0
-[AUTHOR_ID]: ORCID-0009-0000-6394-4912
-[DATE_CREATED]: ${date}
-[HASH]: ${generateHash(art.code + date)}
-
--------------------------------------------------------
-FILE 1: COVER LETTER
--------------------------------------------------------
-Dear Editor of ${art.journal},
-
-I am pleased to submit the manuscript titled "${art.title}" for consideration.
-
-This work introduces the Fractal Metascience Paradigm (FMP), a zero-budget, recursive epistemological framework developed under strict constraints (prison colony context). It adheres to a fractal referencing system essential for its integrity.
-
-Conflict of Interest: None declared.
-Funding: Zero-budget sovereign research.
-
--------------------------------------------------------
-FILE 2: MANUSCRIPT METADATA
--------------------------------------------------------
-Title: ${art.title}
-Abstract: ${art.abstract}
-Keywords: FMP, Recursive Cognition, Zero-Budget, AIUZ Terra.
-
--------------------------------------------------------
-FILE 3: SUPPLEMENTARY MATERIALS
--------------------------------------------------------
-- UCOM_Ontology.json
-- PLT_Trace_Logs.txt
-`;
-        }
-
-        function runAudit() {
-            const art = PUBLICATIONS[selectedIndex];
-            const preview = document.getElementById('docPreview');
-            
-            preview.innerHTML += `
-\n-------------------------------------------------------
-[AIUZ AUDIT LOG]
--------------------------------------------------------
-> CHECKING METADATA... OK
-> CHECKING AUTHOR ID... OK (0009-0000-6394-4912)
-> CHECKING FRACTAL LINKS... OK
-> HASH VERIFICATION... VALID
-> STATUS: PASSED (STRICT MODE)
-`;
-            preview.scrollTop = preview.scrollHeight;
-        }
-
-        // Fake Hash Generator for visual compliance
-        function generateHash(str) {
-            let hash = 0;
-            for (let i = 0; i < str.length; i++) {
-                const char = str.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash;
+            // Routing Logic (Simulating FastAPI Routes)
+            if (q.includes("STATUS") || q.includes("WHO")) {
+                return `[FMF STATUS REPORT]\nFounded: ${FMF_DB.foundation.origin}\nBudget: ${FMF_DB.foundation.budget}\nMission: ${FMF_DB.foundation.mission}`;
             }
-            return "SHA256-" + Math.abs(hash).toString(16).toUpperCase().padStart(10, '0');
+            
+            if (q.includes("AIUZ")) {
+                const p = FMF_DB.products.AIUZ;
+                return `[PRODUCT: AIUZ]\nVersion: ${p.version}\nType: ${p.type}\nStatus: ${p.status}\n\n> AIUZ is the Semantic Engine of the Foundation.`;
+            }
+
+            if (q.includes("TERRA")) {
+                const p = FMF_DB.products.TERRA;
+                return `[PRODUCT: TERRA CODEX]\nVersion: ${p.version}\nType: ${p.type}\nStatus: ${p.status}\n\n> The interface for Planetary Healing.`;
+            }
+
+            if (q.includes("NULL0") || q.includes("ZERO")) {
+                return `[ARTIFACT: NULL0]\nDefinition: ${FMF_DB.artifacts.NULL0}\n\n> This is the economic engine of the Foundation.`;
+            }
+
+            return `[KERNEL RESPONSE]\nQuery logged in Foundation Ledger.\nProcessing vector: ${q.substring(0,15)}...\n\n(Select a specific Domain or Product to see details)`;
         }
 
-        // Init
-        renderList();
+        function querySystem(cmd) {
+            document.getElementById('input').value = cmd;
+            sendQuery();
+        }
 
+        function addMessage(type, text) {
+            const chat = document.getElementById('chat');
+            const div = document.createElement('div');
+            div.className = `message ${type}`;
+            div.innerHTML = `<strong>[${type.toUpperCase()}]:</strong> ${text.replace(/\n/g, '<br>')}`;
+            chat.appendChild(div);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function handleKey(e) {
+            if (e.key === 'Enter') sendQuery();
+        }
     </script>
 </body>
 </html>
