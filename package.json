@@ -1,0 +1,14 @@
+{
+  "name": "fmp-data-fetcher",
+  "version": "1.0.0",
+  "description": "Data fetching for FMP ecosystem",
+  "scripts": {
+    "fetch:orcid": "node scripts/fetch-orcid.js",
+    "fetch:github": "node scripts/fetch-github.js",
+    "fetch:all": "npm run fetch:orcid && npm run fetch:github"
+  },
+  "author": "Abdurashid Abdukarimov",
+  "license": "MIT",
+  "engines": { "node": ">=18.0.0" },
+  "type": "commonjs"
+}
