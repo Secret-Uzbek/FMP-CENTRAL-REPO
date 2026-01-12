@@ -1,0 +1,42 @@
+name: Validate Encoding
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check UTF-8
+        run: |
+          echo "Checking text files..."
+          bad_files=()
+          while IFS= read -r file; do
+            encoding=$(file -b --mime-encoding "$file")
+            if [[ "$encoding" != "utf-8" && "$encoding" != "us-ascii" && "$encoding" != "binary" ]]; then
+              bad_files+=("$file ($encoding)")
+            fi
+          done < <(find . -type f \( -name "*.md" -o -name "*.html" -o -name "*.json" \
+            -o -name "*.yml" -o -name "*.yaml" -o -name "*.js" -o -name "*.css" \
+            -o -name "*.txt" \) -not -path "./node_modules/*" -not -path "./.git/*")
+          if [ ${#bad_files[@]} -eq 0 ]; then
+            echo "✅ All files have correct encoding"
+            exit 0
+          else
+            echo "❌ Found files with wrong encoding:"
+            printf '%s\n' "${bad_files[@]}"
+            exit 1
+          fi
+      - name: Check line endings
+        run: |
+          echo "Checking for CRLF..."
+          if grep -r $'\r' --include="*.md" --include="*.html" --include="*.js" \
+            --include="*.css" --include="*.json" --include="*.yml" --include="*.yaml" .; then
+            echo "❌ Found CRLF"
+            exit 1
+          else
+            echo "✅ All files have LF"
+          fi
