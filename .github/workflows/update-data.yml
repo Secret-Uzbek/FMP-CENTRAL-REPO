@@ -1,0 +1,49 @@
+name: Update FMP Data
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/update-data.yml'
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Fetch ORCID data
+        env:
+          ORCID_ID: ${{ secrets.ORCID_ID || '0009-0000-6394-4912' }}
+        run: node scripts/fetch-orcid.js
+      - name: Fetch GitHub data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-github.js
+      - name: Check for changes
+        id: changes
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No data changes"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Commit and push
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "📊 Data update $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
