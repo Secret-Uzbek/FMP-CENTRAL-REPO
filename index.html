@@ -1,62 +1,56 @@
-
-    <style>
-        .brand-section { border-left: 3px solid #00FFB3; padding: 20px; margin: 10px 0; }
-        .institute-panel {
-            position: fixed; top: 0; left: 0; width: 100%; 
-            background: rgba(10, 14, 26, 0.95); border-bottom: 2px solid #00FFB3;
-            padding: 10px 40px; display: flex; justify-content: space-between;
-            z-index: 9999; font-family: monospace;
-        }
-        .fund-value { color: #00FFB3; font-weight: bold; }
-    </style>
-    <div class="institute-panel">
-        <div style="color: white; font-size: 14px;">SOVEREIGN INSTITUTE | ARCHITECT: ABDURASHID ABDUKARIMOV</div>
-        <div style="display: flex; gap: 30px;">
-            <div>FUND (90%): <span class="fund-value" id="fund">$0.00</span></div>
-            <div>OPS (10%): <span style="color: #FFD700;">$0.00</span></div>
-        </div>
-    </div>
-    <div style="margin-top: 80px;"></div>
-    <!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sovereign Institute - Fractal Metascience</title>
+    <title>TERRA CIVILIZATION INTERFACE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --terra-gold: #FFD700; --terra-deep: #0a0e1a; --terra-neon: #00FFB3; }
-        body { background-color: var(--terra-deep); color: white; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        :root { --terra: #00FFB3; --bg: #0a0e1a; }
+        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; }
+        .brand-section { border-left: 4px solid var(--terra); background: rgba(0, 255, 179, 0.05); padding: 20px; }
+        .domain-card { border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; cursor: pointer; }
+        .domain-card:hover { border-color: var(--terra); box-shadow: 0 0 15px var(--terra); }
     </style>
 </head>
 <body class="p-8">
-    <header class="max-w-7xl mx-auto mb-12 glass p-6 rounded-2xl flex justify-between items-center">
+    <header class="max-w-7xl mx-auto mb-10 flex justify-between items-center brand-section">
         <div>
-            <h1 class="text-3xl font-bold uppercase tracking-tighter">FMP <span class="text-yellow-400">Sovereign Institute</span></h1>
-            <p class="text-xs opacity-60">ARCHITECT: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912</p>
+            <h1 class="text-4xl font-black tracking-tighter uppercase">Terra <span style="color:var(--terra)">Sovereign Institute</span></h1>
+            <p class="text-xs opacity-50 font-mono">ARCHITECT: ABDURASHID ABDUKARIMOV | ORCID: 0009-0000-6394-4912</p>
         </div>
-        <div class="text-center">
-            <p class="text-[10px] uppercase opacity-50">Future Generations Fund (90%)</p>
-            <p class="text-2xl font-mono text-green-400" id="fund">$0.00</p>
+        <div class="flex gap-10 font-mono">
+            <div class="text-right">
+                <p class="text-[10px] opacity-40">FUTURE FUND (90%)</p>
+                <p class="text-xl text-green-400" id="fund">$0.00</p>
+            </div>
         </div>
     </header>
-    <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <section class="lg:col-span-2 glass p-8 rounded-3xl">
-            <h2 class="text-xl font-bold mb-4">ð Ð ÐµÐµÑÑÑ ÐÐ°ÑÑÐ½ÑÑ Ð¢ÑÑÐ´Ð¾Ð²</h2>
-            <div class="border-2 border-dashed border-white/20 p-12 text-center rounded-xl hover:border-green-400 cursor-pointer" onclick="alert('UST Pipeline Activated')">
-                ÐÐ°Ð³ÑÑÐ·Ð¸ÑÑ ÑÐ°Ð±Ð¾ÑÑ Ð½Ð° Ð²Ð°Ð»Ð¸Ð´Ð°ÑÐ¸Ñ ($1.00)
+
+    <main class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Governance</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Economics</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Education</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Science</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Technology</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Ecology</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Culture</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Mathematics</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Legal</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Health</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Energy</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Transportation</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Agriculture</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Infrastructure</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Media</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Defense</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Justice</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Arts</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Research</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Space</p></div>
+        </div>
+
+        <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="brand-section">
+                <h2 class="text-lg font-bold mb-4">Knowledge Registry (Pipeline v5.0)</h2>
+                <div class="border-2 border-dashed border-white/10 p-10 text-center rounded-xl hover:border-terra transition-all cursor-pointer" onclick="alert('UST Trace: NULLO/PLT check initiated.')">
+                    Drop document to register in Sigma-Core ($1.00)
+                </div>
+            </div>
+            <div class="p-8 glass bg-white/5 rounded-2xl border border-white/10">
+                <h2 class="text-lg font-bold mb-4" style="color:var(--terra)">Living Index Core</h2>
+                <ul class="text-xs opacity-60 space-y-2 font-mono">
+                    <li>> NULLO-core.md status: ACTIVE</li>
+                    <li>> PLT-integration.md status: ACTIVE</li>
+                    <li>> UCOMM-residual.md status: ACTIVE</li>
+                </ul>
             </div>
         </section>
-        <aside class="glass p-6 rounded-3xl border-yellow-500/30">
-            <h2 class="text-xl font-bold mb-4 text-yellow-400">ðï¸ Ð¢ÐµÑÐ½Ð¾Ð»Ð¾Ð³Ð¸ÑÐµÑÐºÐ¸Ð¹ ÐÑÐºÑÐ¸Ð¾Ð½</h2>
-            <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                <p class="font-bold text-sm">Green Station "Tashkent-1"</p>
-                <p class="text-lg font-mono text-green-400">$100,000.00</p>
-            </div>
-        </aside>
     </main>
-    <footer class="mt-12 text-center opacity-30 text-[10px] font-mono break-all">
-        qDNA_CORE_RESTORE_HASH:09000063944912|NULLO_ACTIVE:TRUE|FMP_SOVEREIGN_V1
+
+    <footer class="mt-20 text-center opacity-20 text-[10px] font-mono">
+        qDNA_RESTORE_HASH:09000063944912 | FMP_SYSTEM_AWAKENED
     </footer>
 </body>
 </html>
