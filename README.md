@@ -1,23 +1,24 @@
-# FMP-CENTRAL-REPO: The Terra Codex Ecosystem
-## Architect: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912
+# Fractal Metascience Foundation
 
-### 🌐 Overview
-The **Fractal Metascience Paradigm (FMP)** is a sovereign framework for 21st-century knowledge management. Built from Zarafshan, Uzbekistan, this system proves that vision and structure override capital.
+🌐 **Live Site:** https://fractal-metascience.org
 
-### 🛡️ Institutional Sovereignty
-- **Lead Architect:** Abdurashid Abdukarimov
-- **Status:** Independent Researcher | Systems Engineer
-- **Experience:** 25+ years in Diplomatic & Industrial Interface (Embassy of Switzerland, ABB, SICPA).
-- **Core Principle:** $0 Budget | Prison-to-Freedom Innovation | Corporate Firewall Resilience.
+## About
 
-### 📊 The 10/90 Economic Logic
-- **90%** of generated value is directed to the **Future Fund** for planetary knowledge preservation.
-- **10%** for operational sustainability.
+Scientific and technological infrastructure for planetary-scale civilization.
 
-### 📂 Portal Infrastructure (Active Nodes)
-1. **Science:** Fractal Epistemology & NULLO Point.
-2. **Legal:** Lex Kyzylkum & Sovereign Claims.
-3. **Economics:** 10/90 Redistribution Engine.
-4. **Energy:** Cleanburn & Solar Decentralization.
+**Key Components:**
+- NULLO (L0: Ontological zero-point)
+- PLT (Post Lingua Trace)
+- UCOMM (Universal Communication)
+- FMP (Fractal Metascience Paradigm)
 
-*Status: Sovereign Research Active*
+## Contact
+
+**Abdurashid Abdukarimov**  
+ORCID: 0009-0000-6394-4912  
+Email: a.abdukarimov@fractal-metascience.org
+
+---
+
+**From Colony 36 • From Zero to Life**  
+© 2025 Licensed under Terra Public License v1.0
