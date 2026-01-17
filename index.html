@@ -1,134 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Civilization Interface | FMP Foundation</title>
+    <title>Terra Codex | Sovereign Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-    
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
     <style>
         :root { --accent: #00f5a0; --bg: #030303; }
-        body { background-color: var(--bg); color: #afafaf; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
+        body { background-color: var(--bg); color: #afafaf; font-family: 'Space Grotesk', sans-serif; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .glow-text { color: white; text-shadow: 0 0 20px rgba(0, 245, 160, 0.4); }
-        .portal-card { 
-            background: linear-gradient(145deg, #0a0a0a 0%, #050505 100%);
-            border: 1px solid rgba(0, 245, 160, 0.1);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .portal-card:hover { 
-            border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(0, 245, 160, 0.15);
-            transform: translateY(-5px);
-        }
-        .accent-bar { background: linear-gradient(90deg, var(--accent), transparent); height: 2px; }
-        @keyframes pulse-slow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.1; } }
-        .animate-pulse-slow { animation: pulse-slow 4s infinite; }
+        .glow-text { color: white; text-shadow: 0 0 15px rgba(0, 245, 160, 0.3); }
+        .ticker-wrap { overflow: hidden; white-space: nowrap; border-bottom: 1px solid rgba(0, 245, 160, 0.1); background: #000; }
+        .ticker { display: inline-block; animation: ticker 60s linear infinite; }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
     </style>
 </head>
-<body class="p-6 md:p-16">
-    <header class="max-w-7xl mx-auto mb-20">
-        <div class="flex flex-col md:flex-row justify-between items-end gap-8">
-            <div class="space-y-4">
-                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter glow-text uppercase leading-none">Terra<br>Codex</h1>
-                <div class="accent-bar w-64"></div>
-                <p class="mono text-xs tracking-[0.3em] uppercase text-emerald-500/70 text-glow">Sovereign Knowledge Infrastructure v1.2</p>
-            </div>
-            <div class="text-right space-y-2 border-r-2 border-emerald-500 pr-6">
-                <p class="text-white font-bold text-xl uppercase tracking-wider">Abdurashid Abdukarimov</p>
-                <p class="text-gray-400 text-sm">Independent Researcher | Systems Engineer</p>
-                <p class="mono text-[10px] text-emerald-500/50 uppercase">ORCID: 0009-0000-6394-4912</p>
-            </div>
+<body class="p-4 md:p-12">
+
+    <div class="ticker-wrap mb-8 py-2">
+        <div class="ticker mono text-[9px] text-emerald-500 uppercase">
+            [ GAZETA.UZ ] СИНХРОНИЗАЦИЯ: КАЧЕСТВО ВОЗДУХА В ТАШКЕНТЕ • [ KUN.UZ ] ЯНГИЛИКЛАР: БОЛАЛАР САЛОМАТЛИГИ • [ DARYO.UZ ] ТЕЗКОР: ЭКОЛОГИК ВАЗИЯТ • [ ANHOR.UZ ] ТАҲЛИЛ: КЕЛAJAK ТЕХНОЛОГИЯЛАРИ • [ TERRA CODEX ] NODE ACTIVE...
+        </div>
+    </div>
+
+    <nav class="max-w-7xl mx-auto flex flex-wrap gap-2 mb-12 border-b border-white/5 pb-4 overflow-x-auto scrollbar-hide">
+        <button class="mono text-[8px] text-emerald-500 border border-emerald-500/30 px-2 py-1">O'ZBEK</button>
+        <button class="mono text-[8px] text-gray-500 px-2 py-1">ЎЗБЕК</button>
+        <button class="mono text-[8px] text-gray-500 px-2 py-1">QARAQALPAQ</button>
+        <button class="mono text-[8px] text-gray-500 px-2 py-1 font-serif" dir="rtl">دری</button>
+        <button class="mono text-[8px] text-gray-500 px-2 py-1 font-serif" dir="rtl">پښتو</button>
+        <button class="mono text-[8px] text-gray-500 px-2 py-1 font-serif" dir="rtl">ئۇيغۇرچэ</button>
+        <button class="mono text-[8px] text-gray-500 px-2 py-1">हिन्दी</button>
+    </nav>
+
+    <header class="max-w-7xl mx-auto mb-16 flex justify-between items-end">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-bold glow-text leading-none tracking-tighter uppercase">Terra<br>Codex</h1>
+            <p class="mono text-[10px] text-emerald-500 mt-4 tracking-[0.4em] uppercase">Sovereign Knowledge Infrastructure</p>
+        </div>
+        <div class="text-right border-r-2 border-emerald-500 pr-4">
+            <p class="text-white text-lg font-bold">Abdurashid Abdukarimov</p>
+            <p class="text-[10px] text-gray-500 mono">1995 - 2026 | GER - CH - UZ</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-            <a href="docs/portals/science.md" class="portal-card p-8 group">
-                <span class="mono text-emerald-500 text-[10px] tracking-widest">[ NODE: ORACLE ]</span>
-                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Bellamar Resonance</h3>
-                <p class="text-sm leading-relaxed opacity-70">The core of Fractal Metascience. Recursive epistemology and unified knowledge awakening.</p>
-            </a>
-            <a href="docs/portals/legal.md" class="portal-card p-8 group">
-                <span class="mono text-emerald-500 text-[10px] tracking-widest">[ NODE: LEX KYZYLKUM ]</span>
-                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Sovereign Law</h3>
-                <p class="text-sm leading-relaxed opacity-70">Digital jurisdiction born in isolation. Independent legal framework for the 21st century.</p>
-            </a>
-            <a href="docs/portals/education.md" class="portal-card p-8 group">
-                <span class="mono text-emerald-500 text-[10px] tracking-widest">[ NODE: THE SEED ]</span>
-                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">AIUZ Ecosystem</h3>
-                <p class="text-sm leading-relaxed opacity-70">Child-centric safe AI infrastructure. Vendor-independent cognitive development kernels.</p>
-            </a>
+        <div id="immersive-hub" class="mb-16"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+            <div class="border border-white/10 p-6 bg-white/5">
+                <span class="mono text-emerald-500 text-[9px]">[ NODE: ORACLE ]</span>
+                <h3 class="text-white font-bold mt-2">Bellamar Resonance</h3>
+                <p class="text-[11px] mt-2 opacity-60">Фрактальная метанаука и единство знаний.</p>
+            </div>
+            <div class="border border-white/10 p-6 bg-white/5">
+                <span class="mono text-emerald-500 text-[9px]">[ NODE: LEX KYZYLKUM ]</span>
+                <h3 class="text-white font-bold mt-2">Sovereign Law</h3>
+                <p class="text-[11px] mt-2 opacity-60">Суверенное право, рожденное в тишине.</p>
+            </div>
+            <div class="border border-white/10 p-6 bg-white/5">
+                <span class="mono text-emerald-500 text-[9px]">[ NODE: AIUZ ]</span>
+                <h3 class="text-white font-bold mt-2">The Golden Seed</h3>
+                <p class="text-[11px] mt-2 opacity-60">Этичный ИИ для защиты детства.</p>
+            </div>
         </div>
 
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 border-t border-white/10 pt-16 mb-24">
-            <div class="space-y-6">
-                <h4 class="mono text-xs uppercase tracking-[0.3em] text-emerald-500">Strategic Trajectory (1995-2026)</h4>
-                <div class="space-y-4">
-                    <div class="flex gap-4">
-                        <span class="mono text-emerald-500 text-sm">1995+</span>
-                        <div>
-                            <p class="text-white font-bold text-sm uppercase">German Academic Foundation</p>
-                            <p class="text-xs text-gray-500 italic">Research & Cooperation (DAAD Scholar, Humboldt-Universität zu Berlin).</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <span class="mono text-emerald-500 text-sm">2011+</span>
-                        <div>
-                            <p class="text-white font-bold text-sm uppercase">Swiss Strategic Interface</p>
-                            <p class="text-xs text-gray-500 italic">Economic Advisory (Embassy of Switzerland, JCC Switzerland-CIS).</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <span class="mono text-emerald-500 text-sm">CORE</span>
-                        <div>
-                            <p class="text-white font-bold text-sm uppercase">Systems Engineering</p>
-                            <p class="text-xs text-gray-400 italic">ABB Switzerland (Energy) & SICPA SA (Sovereign ID).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-emerald-500/5 p-8 border border-emerald-500/10 flex flex-col justify-center">
-                <p class="text-lg text-emerald-400 font-light italic leading-relaxed">
-                    "Thirty years of synthesizing German academic rigor with Swiss industrial precision into a single, sovereign Fractal Paradigm."
-                </p>
-            </div>
-        </section>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            <div id="first-drop-root"></div>
-            <div id="council-memory-root"></div>
-        </section>
-
-        <section class="mb-24">
-            <div class="flex items-center gap-4 mb-6 text-emerald-500">
-                <div class="w-2 h-2 bg-emerald-500 animate-pulse"></div>
-                <h4 class="mono text-xs uppercase tracking-widest">AI Agent: NULLO_NODE_001</h4>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 overflow-hidden">
-                <textarea id="aiInput" class="p-6 bg-black text-white mono text-sm focus:outline-none min-h-[150px] resize-none" placeholder="SYSTEM QUERY: e.g., 'What is the German phase?'"></textarea>
-                <div class="p-6 bg-black/50 text-emerald-400 mono text-sm border-l border-white/10 min-h-[150px] overflow-y-auto" id="aiResponse">
-                    > SYSTEM READY. WAITING FOR ARCHITECT INPUT...
-                </div>
-            </div>
-            <button onclick="sendQuery()" class="mt-4 px-8 py-3 border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black font-bold mono text-xs uppercase tracking-widest transition-all duration-300">
-                Execute Query
-            </button>
+        <section class="bg-emerald-500/5 border border-emerald-500/20 p-8">
+            <h4 class="mono text-xs text-emerald-500 mb-6 uppercase tracking-widest">AI Agent: NULLO_NODE_001</h4>
+            <textarea id="aiInput" class="w-full bg-black/50 border border-white/10 p-4 mono text-sm text-white focus:outline-none focus:border-emerald-500 mb-4 h-32 resize-none" placeholder="Введите запрос (например: Качество воздуха сегодня?)"></textarea>
+            <div id="aiResponse" class="mono text-[11px] text-emerald-400 p-4 border border-white/5 bg-black/20 min-h-[60px] mb-4">> СИСТЕМА ГОТОВА...</div>
+            <button onclick="sendQuery()" class="px-6 py-2 border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black mono text-xs uppercase transition-all">Запрос к ядру</button>
         </section>
     </main>
 
-    <footer class="max-w-7xl mx-auto border-t border-white/5 py-12 text-center">
-        <p class="mono text-[9px] uppercase tracking-[0.5em] text-gray-700">© 1995-2026 Fractal Metascience Foundation | Zarafshan Node Deployment</p>
-    </footer>
-
     <script type="text/babel">
-        const FirstDrop = () => (
-            <div className="p-8 border border-emerald-500/20 bg-emerald-500/5 backdrop-blur-sm h-full relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-2 mono text-[8px] text-emerald-500/30">NODE_INIT_02711</div>
-                <h2 className="mono text-emerald-400 text-sm font-bold uppercase tracking-widest mb-8">First Drop: Initiation Point</h2>
-                <div className="flex
+        const ImmersiveHub = () => {
+            const [aqi, setAqi] = React.useState(182); // Симуляция живого датчика Ташкента
+            return (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+                    {/* AQI & CHILDHOOD SAFETY */}
+                    <div className={`p-8 border ${aqi > 150 ? 'border-red-500/40 bg-red-500/5' : 'border-emerald-500/20 bg-emerald-500/5'}`}>
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="mono text-white text-xs font-bold uppercase">Tashkent Air Node</h2>
+                            <span className={`text-2xl font-black mono ${aqi > 150 ? 'text-red-500' : 'text-emerald-500'}`}>AQI {aqi}</span>
+                        </div>
+                        <p className="text-xs italic text-gray-400 leading-relaxed mb-4">
+                            "Сегодня в Ташкенте воздух требует внимания. Согласно стандартам AIUZ, рекомендуется ограничить пребывание детей на улице. Индустриальное наследие требует очистки через технологии Cleanburn."
+                        </p>
+                        <div className="flex gap-2">
+                            <span className="text-[8px] border border-white/10 px-2 py-1 uppercase">Kun.uz: Ecology</span>
+                            <span className="text-[8px] border border-white/10 px-2 py-1 uppercase">Gazeta.uz: News</span>
+                        </div>
+                    </div>
+
+                    {/* HISTORY & MOTHERHOOD */}
+                    <div className="p-8 border border-emerald-500/20 bg-emerald-500/5">
+                        <h2 className="mono text-white text-xs font-bold uppercase mb-6 underline decoration-emerald-500/50">День в Истории: Материнство</h2>
+                        <div className="space-y-4">
+                            <p className="text-[11px] text-emerald-400 mono uppercase tracking-tighter">Wikipedia Context / UN Calendar</p>
+                            <p className="text-xs text-white leading-relaxed">
+                                17 января: В истории Центральной Азии этот день напоминает о древних колыбельных, которые передавали знания через поколения. Сегодня мы используем ИИ для той же цели — защиты когнитивного здоровья ребенка.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        ReactDOM.createRoot(document.getElementById('immersive-hub')).render(<ImmersiveHub />);
+    </script>
+
+    <script src="public/agent.js"></script>
+    <script>
+        function sendQuery() {
+            const input = document.getElementById('aiInput');
+            const res = document.getElementById('aiResponse');
+            const val = input.value;
+            if(!val) return;
+            res.innerHTML = "> СКАНЕР ТИКЕРОВ: GAZETA.UZ, KUN.UZ, DARYO.UZ...<br>> АНАЛИЗ ВОЗДУХА ТАШКЕНТА...";
+            setTimeout(() => {
+                const response = typeof queryTerraAgent === 'function' ? queryTerraAgent(val) : "Ядро синхронизировано. Воздух Ташкента: AQI 182. Статус AIUZ: Защита детей приоритетна.";
+                res.innerHTML = "> ОТВЕТ NULLO_NODE_001:<br><br>" + response;
+                input.value = "";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
