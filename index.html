@@ -2,130 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AIUZ TERRA CODEX | Sovereign Institute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Civilization Interface | Fractal Metascience Foundation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #0D1B2A; color: white; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
-        .terra-neon { color: #00FFB3; }
-        .terra-gold { color: #D4AF37; }
-        
-        /* First Drop - The Pulsating Heart */
-        #first-drop {
-            width: 80px; height: 80px; background: #00FFB3;
-            border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
-            box-shadow: 0 0 30px #00FFB366;
-            animation: pulse 3s infinite ease-in-out;
-            cursor: pointer; margin: 20px auto;
-        }
-        @keyframes pulse { 0%, 100% { transform: rotate(-45deg) scale(1); } 50% { transform: rotate(-45deg) scale(1.1); } }
-        
-        /* Interactive Dashboard: Council of Memory */
-        .dashboard-node { 
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.3s; cursor: pointer;
-        }
-        .dashboard-node:hover { border-color: #00FFB3; box-shadow: 0 0 15px #00FFB333; }
-        
-        /* Semantic Captcha Overlay */
-        #captcha {
-            position: fixed; inset: 0; background: #0D1B2A; z-index: 10000;
-            display: flex; align-items: center; justify-content: center;
-        }
+        body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        .glow { text-shadow: 0 0 10px rgba(0, 255, 179, 0.5); }
+        .portal-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .portal-card:hover { border-color: #00FFB3; box-shadow: 0 0 15px rgba(0, 255, 179, 0.2); transform: translateY(-2px); }
     </style>
 </head>
-<body class="p-8">
-    <div id="captcha">
-        <div class="text-center p-12 border border-[#00FFB3] rounded-3xl">
-            <h2 class="text-2xl font-bold terra-gold mb-4 uppercase">Semantic Captcha</h2>
-            <p class="opacity-50 mb-6 text-sm">Decode the PLT-trace to access Sigma-Core</p>
-            <input id="q-input" type="text" placeholder="Trace..." class="bg-transparent border-b border-[#00FFB3] p-2 text-center mb-6 outline-none">
-            <br>
-            <button onclick="unlock()" class="px-8 py-2 border border-[#00FFB3] terra-neon uppercase text-xs hover:bg-[#00FFB3] hover:text-black transition">Verify</button>
-        </div>
-    </div>
-
-    <header class="max-w-7xl mx-auto flex justify-between items-center mb-12 border-l-4 border-[#2E8B57] pl-6">
-        <div>
-            <h1 class="text-3xl font-black uppercase tracking-tighter">Living <span class="terra-neon">Terra Codex</span></h1>
-            <p class="text-[10px] opacity-40 font-mono">ARCHITECT: ABDURASHID ABDUKARIMOV | ORCID: 0009-0000-6394-4912</p>
-        </div>
-        <div class="text-right font-mono">
-            <p class="text-[10px] opacity-30 uppercase">Future Fund (90%)</p>
-            <p class="text-xl terra-neon" id="fund">$0.00</p>
+<body class="p-6 md:p-12">
+    <header class="max-w-6xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 glow text-white">TERRA CODEX</h1>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-l-2 border-green-500 pl-6 space-y-4 md:space-y-0">
+            <div>
+                <p class="text-xl font-bold uppercase tracking-widest text-green-400">Fractal Metascience Foundation</p>
+                <p class="text-gray-400">Architect: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912</p>
+                <p class="text-sm text-gray-500 mt-1 uppercase">Independent Researcher | Systems Engineer</p>
+            </div>
+            <div class="text-right">
+                <p class="text-xs font-mono text-gray-500">Status: Sovereign Node Active</p>
+                <p class="text-xs font-mono text-gray-500">Protocol: NULLO-PLT-UCOM</p>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto">
-        <div id="first-drop" onclick="toggleCouncil()"></div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-12">
-            <div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Governance...')"><p class="text-[10px] uppercase font-bold tracking-widest">Governance</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Economics...')"><p class="text-[10px] uppercase font-bold tracking-widest">Economics</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Education...')"><p class="text-[10px] uppercase font-bold tracking-widest">Education</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Science...')"><p class="text-[10px] uppercase font-bold tracking-widest">Science</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Technology...')"><p class="text-[10px] uppercase font-bold tracking-widest">Technology</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Ecology...')"><p class="text-[10px] uppercase font-bold tracking-widest">Ecology</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Culture...')"><p class="text-[10px] uppercase font-bold tracking-widest">Culture</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Mathematics...')"><p class="text-[10px] uppercase font-bold tracking-widest">Mathematics</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Legal...')"><p class="text-[10px] uppercase font-bold tracking-widest">Legal</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Health...')"><p class="text-[10px] uppercase font-bold tracking-widest">Health</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Energy...')"><p class="text-[10px] uppercase font-bold tracking-widest">Energy</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Transportation...')"><p class="text-[10px] uppercase font-bold tracking-widest">Transportation</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Agriculture...')"><p class="text-[10px] uppercase font-bold tracking-widest">Agriculture</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Infrastructure...')"><p class="text-[10px] uppercase font-bold tracking-widest">Infrastructure</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Media...')"><p class="text-[10px] uppercase font-bold tracking-widest">Media</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Defense...')"><p class="text-[10px] uppercase font-bold tracking-widest">Defense</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Justice...')"><p class="text-[10px] uppercase font-bold tracking-widest">Justice</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Arts...')"><p class="text-[10px] uppercase font-bold tracking-widest">Arts</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Research...')"><p class="text-[10px] uppercase font-bold tracking-widest">Research</p></div><div class="dashboard-node p-6 rounded-xl text-center" onclick="alert('Accessing Space...')"><p class="text-[10px] uppercase font-bold tracking-widest">Space</p></div>
-        </div>
+    <main class="max-w-6xl mx-auto">
+        <section class="mb-12">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Active Knowledge Portals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="docs/portals/governance.md" class="portal-card p-6 rounded-lg">
+                    <h3 class="text-lg font-bold text-white mb-2">Governance</h3>
+                    <p class="text-sm text-gray-400">Institutional Charter & 10/90 Ethical Model.</p>
+                </a>
+                <a href="docs/portals/science.md" class="portal-card p-6 rounded-lg">
+                    <h3 class="text-lg font-bold text-white mb-2">Science</h3>
+                    <p class="text-sm text-gray-400">Fractal Metascience Paradigm (FMP) & NULLO Point.</p>
+                </a>
+                <a href="docs/portals/economics.md" class="portal-card p-6 rounded-lg">
+                    <h3 class="text-lg font-bold text-white mb-2">Economics</h3>
+                    <p class="text-sm text-gray-400">The Future Fund & Sovereign Resource Allocation.</p>
+                </a>
+                <a href="docs/portals/legal.md" class="portal-card p-6 rounded-lg">
+                    <h3 class="text-lg font-bold text-white mb-2">Legal</h3>
+                    <p class="text-sm text-gray-400">Lex Kyzylkum & Cryptographic Jurisdiction.</p>
+                </a>
+                <a href="docs/portals/energy.md" class="portal-card p-6 rounded-lg">
+                    <h3 class="text-lg font-bold text-white mb-2">Energy</h3>
+                    <p class="text-sm text-gray-400">Cleanburn Standards & Decentralized Solar Nodes.</p>
+                </a>
+                <a href="docs/portals/education.md" class="portal-card p-6 rounded-lg">
+                    <h3 class="text-lg font-bold text-white mb-2">Education</h3>
+                    <p class="text-sm text-gray-400">AIUZ Project: Child-Centric Ethical AI Systems.</p>
+                </a>
+            </div>
+        </section>
 
-        <section id="council-of-memory" class="mt-12 hidden">
-            <div class="p-8 border border-[#D4AF37] rounded-2xl bg-white/5">
-                <h2 class="text-xl font-bold terra-gold mb-6 uppercase tracking-widest">Council of Memory</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-[10px] font-mono opacity-60">
-                    <div>> Registry: Sigma-Core [ACTIVE]</div>
-                    <div>> Trace: PLT-09000063944912</div>
-                    <div>> Status: SYSTEM AWAKENED</div>
-                </div>
+        <section class="mt-20 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-sm font-bold uppercase text-gray-500 mb-4">Institutional Experience</h3>
+                <ul class="text-sm space-y-2 text-gray-400">
+                    <li>• Strategic Advisor: Embassy of Switzerland (Economic & Trade)</li>
+                    <li>• Industrial Systems: ABB Switzerland Ltd (Energy Sector)</li>
+                    <li>• Sovereign Security: SICPA SA (MRTD & Identification)</li>
+                    <li>• Global Network: Joint Chamber of Commerce (JCC)</li>
+                </ul>
+            </div>
+            <div class="bg-green-500/5 p-6 border border-green-500/20 rounded-lg">
+                <h3 class="text-sm font-bold uppercase text-green-400 mb-2">The 10/90 Mandate</h3>
+                <p class="text-sm text-gray-400">90% of all generated value within the Terra Ecosystem is automatically allocated to the <strong>Future Fund</strong> for the preservation of planetary knowledge.</p>
             </div>
         </section>
     </main>
 
-    <script>
-        function unlock() { document.getElementById('captcha').style.display = 'none'; }
-        function toggleCouncil() { document.getElementById('council-of-memory').classList.toggle('hidden'); }
-    </script>
-
-    <style>
-        #first-drop {
-            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 150px; height: 150px; background: #00FFB3;
-            border-radius: 50% 50% 50% 0; transform: translate(-50%, -50%) rotate(-45deg);
-            box-shadow: 0 0 100px #00FFB344; animation: breathe 5s infinite;
-            z-index: 1000; cursor: pointer;
-        }
-        @keyframes breathe { 0%, 100% { scale: 1; opacity: 0.6; } 50% { scale: 1.1; opacity: 1; box-shadow: 0 0 150px #00FFB3; } }
-        
-        #council-terminal {
-            position: fixed; inset: 20px; background: rgba(13, 27, 42, 0.95);
-            border: 2px solid #D4AF37; display: none; z-index: 1001;
-            padding: 40px; border-radius: 20px; backdrop-filter: blur(20px);
-        }
-        .terminal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
-        .node-link { border: 1px solid #00FFB344; padding: 20px; text-align: center; cursor: pointer; transition: 0.3s; }
-        .node-link:hover { border-color: #00FFB3; background: rgba(0, 255, 179, 0.1); }
-    </style>
-
-    <div id="first-drop" onclick="awakenCouncil()"></div>
-
-    <div id="council-terminal">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-            <h2 style="color: #D4AF37; font-weight: 900; letter-spacing: 5px;">COUNCIL OF MEMORY</h2>
-            <button onclick="closeCouncil()" style="color: #00FFB3; border: 1px solid; padding: 5px 15px;">CLOSE</button>
-        </div>
-        
-        <div class="terminal-grid">
-            <div class="node-link" onclick="window.location.href='dna_engine.html'">
-                <div style="font-size: 24px;">🧬</div><div>DNA ENGINE</div>
-                <div style="font-size: 8px; opacity: 0.5;">Semantic Trace Management</div>
-            </div>
-            <div class="node-link" onclick="window.location.href='summary-map.html'">
-                <div style="font-size: 24px;">🗺️</div><div>SUMMARY MAP</div>
-                <div style="font-size: 8px; opacity: 0.5;">20 Domains Navigation</div>
-            </div>
-            <div class="node-link" onclick="window.location.href='recovery_terminal.html'">
-                <div style="font-size: 24px;">📡</div><div>RECOVERY CORE</div>
-                <div style="font-size: 8px; opacity: 0.5;">qDNA Session Restore</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function awakenCouncil() { document.getElementById('council-terminal').style.display = 'block'; }
-        function closeCouncil() { document.getElementById('council-terminal').style.display = 'none'; }
-    </script>
-    </body>
+    <footer class="max-w-6xl mx-auto mt-20 text-center text-xs text-gray-600 border-t border-white/5 pt-8">
+        <p>© 2026 Fractal Metascience Foundation. Built with 0 budget from Zarafshan, Uzbekistan.</p>
+    </footer>
+</body>
 </html>
