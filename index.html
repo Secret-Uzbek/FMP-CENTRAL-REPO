@@ -3,143 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Codex | Sovereign Knowledge Node</title>
+    <title>Terra Codex | Independent Node</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        :root { --accent: #00f5a0; --bg: #030303; }
-        body { background-color: var(--bg); color: #afafaf; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .ticker-wrap { overflow: hidden; white-space: nowrap; border-bottom: 1px solid rgba(0, 245, 160, 0.1); background: #000; height: 30px; line-height: 30px; }
-        .ticker { display: inline-block; animation: ticker 80s linear infinite; }
-        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .lang-btn { font-size: 9px; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-        .lang-btn:hover { border-color: var(--accent); color: white; }
+        /* TERRA DESIGN SYSTEM & BRAND GUIDELINES ADAPTATION */
+        :root { 
+            --terra-emerald: #00f5a0; 
+            --terra-bg: #030303; 
+            --terra-text: #d1d1d1;
+        }
+        
+        body { 
+            background-color: var(--terra-bg); 
+            color: var(--terra-text); 
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace; }
+        
+        /* Interactive Elements */
+        .ticker-container { 
+            background: #000; 
+            border-bottom: 1px solid rgba(0, 245, 160, 0.15); 
+            overflow: hidden; 
+            height: 32px; 
+            display: flex; 
+            align-items: center;
+        }
+        .ticker-text { 
+            white-space: nowrap; 
+            animation: ticker-move 80s linear infinite; 
+            font-size: 10px;
+            color: var(--terra-emerald);
+            text-transform: uppercase;
+        }
+        @keyframes ticker-move { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+        /* Focus & Accessibility */
+        *:focus { outline: 2px solid var(--terra-emerald); outline-offset: 4px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
 </head>
-<body>
+<body class="p-4 md:p-12">
 
-    <div class="ticker-wrap">
-        <div id="news-ticker" class="ticker mono text-[10px] text-emerald-500 uppercase">
-            [ GAZETA.UZ ] • [ KUN.UZ ] • [ DARYO.UZ ] • [ ANHOR.UZ ] • INITIALIZING REGIONAL SEMANTIC CORE...
-        </div>
-    </div>
+    <a href="#main-content" class="sr-only focus:not-sr-only bg-emerald-500 text-black p-4 absolute z-50">MUNDARIJAGA O'TISH</a>
 
-    <nav id="lang-nav" class="max-w-7xl mx-auto py-4 flex flex-wrap gap-2 px-6 overflow-x-auto">
-        <button class="lang-btn text-emerald-500 border-emerald-500/30">O'ZBEK</button>
-        <button class="lang-btn">ENGLISH</button>
-        <button class="lang-btn">QARAQALPAQ</button>
-        <button class="lang-btn font-serif" dir="rtl">دری</button>
-        <button class="lang-btn font-serif" dir="rtl">پښتو</button>
-        <button class="lang-btn font-serif" dir="rtl">ئۇيغۇرچە</button>
-        <button class="lang-btn">ТОҶИКӢ</button>
-        <button class="lang-btn font-sans">हिन्दी</button>
-        <button class="lang-btn opacity-30 text-[7px]">РУССКИЙ</button>
-    </nav>
-
-    <header class="max-w-7xl mx-auto px-6 mb-12">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-            <div>
-                <h1 id="main-title" class="text-6xl md:text-8xl font-bold tracking-tighter text-white uppercase leading-none">Terra<br>Codex</h1>
-                <p class="mono text-[10px] text-emerald-500 mt-4 tracking-[0.4em] uppercase">Sovereign Knowledge Infrastructure</p>
+    <header class="max-w-7xl mx-auto mb-16">
+        <div class="ticker-container mb-12" aria-hidden="true">
+            <div id="ticker" class="ticker-text mono">
+                [ GAZETA.UZ ] • [ KUN.UZ ] • [ DARYO.UZ ] • [ ANHOR.UZ ] • TASHKENT AQI MONITORING ACTIVE • TERRA SYSTEM SYNCED...
             </div>
-            <div class="text-left md:text-right border-l-2 md:border-l-0 md:border-r-2 border-emerald-500 px-4">
-                <p class="text-white font-bold text-xl uppercase">Abdurashid Abdukarimov</p>
-                <p class="text-[10px] text-gray-500 mono">STRATEGIC TRAJECTORY: 1995 — 2026</p>
-                <p class="text-[9px] text-emerald-500/50 mono">ORCID: 0009-0000-6394-4912</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
+            <div>
+                <h1 class="text-7xl md:text-9xl font-black text-white uppercase tracking-tighter leading-none">
+                    Terra<br>Codex
+                </h1>
+                <p class="mono text-[11px] text-emerald-500 mt-6 tracking-[0.5em] uppercase font-bold">Sovereign Knowledge Infrastructure</p>
+            </div>
+            <div class="border-l-4 md:border-l-0 md:border-r-4 border-emerald-500 pl-6 md:pr-6 text-left md:text-right">
+                <p class="text-white font-bold text-2xl uppercase italic">Abdurashid Abdukarimov</p>
+                <p class="text-[10px] text-gray-500 mono mt-2 uppercase tracking-widest">Global Trajectory: 1995 — 2026</p>
+                <p class="text-[9px] text-emerald-500/50 mono font-bold">ORCID: 0009-0000-6394-4912</p>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6">
-        <div id="dynamic-hub" class="mb-12"></div>
+    <main id="main-content" class="max-w-7xl mx-auto">
+        <nav aria-label="Language selection" class="flex flex-wrap gap-3 mb-16 opacity-80">
+            <button class="px-3 py-1 border-2 border-emerald-500 text-emerald-500 text-[10px] font-bold mono">O'ZBEK</button>
+            <button class="px-3 py-1 border border-white/10 text-gray-500 text-[10px] mono">ENGLISH</button>
+            <button class="px-3 py-1 border border-white/10 text-gray-500 text-[10px] mono font-serif" dir="rtl">دری</button>
+            <button class="px-3 py-1 border border-white/10 text-gray-500 text-[10px] mono font-serif" dir="rtl">پښто</button>
+            <button class="px-3 py-1 border border-white/10 text-gray-500 text-[10px] mono font-serif" dir="rtl">ئۇيغۇرچە</button>
+            <button class="px-3 py-1 border border-white/10 text-gray-500 text-[10px] mono">ТОҶИКӢ</button>
+            <button class="px-3 py-1 border border-white/10 text-gray-500 text-[10px] mono">HINDI</button>
+        </nav>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-            <div class="p-6 border border-white/5 bg-white/5 group hover:border-emerald-500/30 transition-all">
-                <span class="mono text-emerald-500 text-[9px]">[ NODE: ORACLE ]</span>
-                <h3 class="text-white font-bold mt-2 uppercase tracking-tighter">Bellamar Resonance</h3>
-                <p class="text-[11px] mt-2 opacity-50">Fractal Metascience & Knowledge Unity.</p>
-            </div>
-            <div class="p-6 border border-white/5 bg-white/5 group hover:border-emerald-500/30 transition-all">
-                <span class="mono text-emerald-500 text-[9px]">[ NODE: LEX KYZYLKUM ]</span>
-                <h3 class="text-white font-bold mt-2 uppercase tracking-tighter">Sovereign Law</h3>
-                <p class="text-[11px] mt-2 opacity-50">Jurisdiction born in digital silence.</p>
-            </div>
-            <div class="p-6 border border-white/5 bg-white/5 group hover:border-emerald-500/30 transition-all">
-                <span class="mono text-emerald-500 text-[9px]">[ NODE: AIUZ ]</span>
-                <h3 class="text-white font-bold mt-2 uppercase tracking-tighter">The Seed</h3>
-                <p class="text-[11px] mt-2 opacity-50">Ethical AI for the Gardeners of Future.</p>
-            </div>
-        </div>
+        <div id="interactive-hub" class="mb-16"></div>
 
-        <section id="agent-ui" class="border border-emerald-500/20 bg-emerald-500/5 p-8 mb-20">
-            <h4 class="mono text-xs text-emerald-500 mb-6 uppercase tracking-[0.3em]">AI Agent: NULLO_NODE_001</h4>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <textarea id="aiInput" class="bg-black/50 border border-white/10 p-4 mono text-sm text-white focus:outline-none focus:border-emerald-500 h-32 resize-none" placeholder="QUERY SYSTEM..."></textarea>
-                <div id="aiResponse" class="mono text-[11px] text-emerald-400 p-4 border border-white/5 bg-black/20 min-h-[128px]">> AWAITING ARCHITECT COMMAND...</div>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 mb-24">
+            <article class="p-10 bg-black hover:bg-zinc-900 transition-colors">
+                <h2 class="mono text-emerald-500 text-[10px] uppercase mb-6 tracking-[0.2em] font-bold">[ Node: AIUZ ]</h2>
+                <p class="text-white font-bold text-xl mb-3 tracking-tight">The Gardeners</p>
+                <p class="text-xs opacity-60 leading-relaxed font-light">Ethical cognitive frameworks for future generations. From Tamagotchi to Terraforming.</p>
+            </article>
+            <article class="p-10 bg-black hover:bg-zinc-900 transition-colors">
+                <h2 class="mono text-emerald-500 text-[10px] uppercase mb-6 tracking-[0.2em] font-bold">[ Node: Lex ]</h2>
+                <p class="text-white font-bold text-xl mb-3 tracking-tight">Sovereign Law</p>
+                <p class="text-xs opacity-60 leading-relaxed font-light">Digital jurisdiction protocols for independent nodes. Born in isolation.</p>
+            </article>
+            <article class="p-10 bg-black hover:bg-zinc-900 transition-colors">
+                <h2 class="mono text-emerald-500 text-[10px] uppercase mb-6 tracking-[0.2em] font-bold">[ Node: Oracle ]</h2>
+                <p class="text-white font-bold text-xl mb-3 tracking-tight">Bellamar</p>
+                <p class="text-xs opacity-60 leading-relaxed font-light">Fractal Metascience. Synthesis of German academic rigor and Swiss precision.</p>
+            </article>
+        </section>
+
+        <section class="border-t-4 border-emerald-500 bg-emerald-500/5 p-10 md:p-16 mb-24">
+            <h2 class="mono text-emerald-500 text-xs uppercase mb-10 tracking-[0.5em] font-bold">Agent: NULLO_NODE_001</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <textarea id="aiInput" aria-label="System Query" class="w-full bg-black border border-white/20 p-6 mono text-sm text-white focus:border-emerald-500 h-48 resize-none mb-6 outline-none" placeholder="ENTER QUERY..."></textarea>
+                    <button onclick="sendQuery()" class="w-full bg-emerald-500 text-black font-black py-5 uppercase mono text-xs tracking-[0.3em] hover:bg-white transition-all">Execute Command</button>
+                </div>
+                <div id="aiResponse" aria-live="polite" class="bg-black/50 p-8 border border-white/5 mono text-xs text-emerald-400 h-64 overflow-y-auto leading-loose">
+                    > SYSTEM READY. AWAITING ARCHITECT COMMAND...
+                </div>
             </div>
-            <button onclick="sendQuery()" class="mt-4 px-8 py-3 border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-black mono text-xs uppercase tracking-widest transition-all">Execute</button>
         </section>
     </main>
 
-    <footer class="text-center py-12 border-t border-white/5">
-        <p class="mono text-[8px] uppercase tracking-[0.5em] text-gray-700">© 1995-2026 Fractal Metascience Foundation | Zarafshan Node</p>
+    <footer class="text-center py-24 border-t border-white/5 opacity-30">
+        <p class="mono text-[10px] uppercase tracking-[0.8em]">© 1995-2026 Fractal Metascience Foundation</p>
     </footer>
 
     <script type="text/babel">
         const Hub = () => {
-            const [aqi] = React.useState(184); // Tashkent Real-time Simulation
-            const domain = window.location.hostname;
-            const isUz = domain.endsWith('.uz');
-
+            const aqi = 184; 
+            const isUz = window.location.hostname.endsWith('.uz');
             return (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className={`p-8 border ${aqi > 150 ? 'border-red-500/30 bg-red-500/5' : 'border-emerald-500/20'}`}>
-                        <div className="flex justify-between items-center mb-4">
-                            <span className="mono text-[10px] text-white uppercase tracking-widest">Tashkent Node: Atmosphere</span>
-                            <span className={`text-2xl font-black mono ${aqi > 150 ? 'text-red-500' : 'text-emerald-500'}`}>AQI {aqi}</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 overflow-hidden">
+                    <div className={`p-12 bg-black ${aqi > 150 ? 'border-l-8 border-red-600' : 'border-l-8 border-emerald-500'}`}>
+                        <div className="flex justify-between items-center mb-8">
+                            <span className="mono text-[10px] uppercase text-gray-500 tracking-[0.2em]">Tashkent Node: Atmosphere</span>
+                            <span className={`text-4xl font-black mono ${aqi > 150 ? 'text-red-500' : 'text-emerald-500'}`}>{aqi}</span>
                         </div>
-                        <p className="text-xs italic text-gray-400 leading-relaxed">
-                            {isUz ? "Havo sifati og'ir. AIUZ bolalarni himoya qilish rejimini faollashtiradi." : "Air quality alert in Tashkent. AIUZ activating child safety protocols."}
+                        <p className="text-sm font-light italic leading-relaxed text-gray-300">
+                            {isUz ? "Havo sifati og'ir. AIUZ bolalarni himoya qilish rejimini faollashtirdi. Gardeners Protocol active." : "Critical air quality alert. AIUZ activating intergenerational safety protocols. Protecting the Gardeners."}
                         </p>
                     </div>
-                    <div className="p-8 border border-white/10 bg-white/5">
-                        <span className="mono text-[10px] text-emerald-500 uppercase mb-4 block underline">Immersive Education: Day in History</span>
-                        <p className="text-xs text-white leading-relaxed">
-                            {isUz ? "17-yanvar: Tarixda ona va bola sog'lig'ini saqlash bo'yicha muhim qadamlar qo'yilgan kun. Terra Codex ushbu an'anani texnologik darajada davom ettiradi." : "January 17: A day dedicated to the preservation of maternal and child health legacy. Terra Codex extends this mission into the digital age."}
+                    <div className="p-12 bg-black border-l md:border-l-0 border-white/10">
+                        <span className="mono text-[10px] uppercase text-emerald-500 block mb-8 tracking-[0.2em] font-bold">Immersive Education: History Filter</span>
+                        <p className="text-sm font-light leading-relaxed text-white">
+                            {isUz ? "17-yanvar: Tariximizda ona va bola salomatligi ustuvor bo'lgan. Terra Codex ushbu an'anani texnologik suverenitet orqali saqlaydi." : "Jan 17: Our legacy prioritizes the health of mothers and children. Terra Codex extends this mission into the future of terraforming."}
                         </p>
                     </div>
                 </div>
             );
         };
-        ReactDOM.createRoot(document.getElementById('dynamic-hub')).render(<Hub />);
-    </script>
+        ReactDOM.createRoot(document.getElementById('interactive-hub')).render(<Hub />);
 
-    <script>
-        // DOMAIN SENSITIVE LOGIC
         window.onload = () => {
-            const domain = window.location.hostname;
-            const ticker = document.getElementById('news-ticker');
-            const placeholder = document.getElementById('aiInput');
-            
-            if(domain.endsWith('.uz')) {
-                ticker.innerHTML = "[ GAZETA.UZ ] • [ KUN.UZ ] • [ DARYO.UZ ] • ТОШКЕНТ ҲАВОСИ: AQI 184 • AIUZ ХАВФСИЗЛИК ТИЗИМИ ФАОЛ...";
-                placeholder.placeholder = "Тизимга сўров юборинг...";
-            } else {
-                ticker.innerHTML = "[ NEWS FEED ] • TASHKENT AQI: 184 • SYSTEM STATUS: PROTECTING FUTURE GENERATIONS • DOMAIN: " + domain.toUpperCase();
-                placeholder.placeholder = "SYSTEM QUERY...";
+            const isUz = window.location.hostname.endsWith('.uz');
+            if(isUz) {
+                document.getElementById('ticker').innerHTML = "[ GAZETA.UZ ] • [ KUN.UZ ] • [ DARYO.UZ ] • ТОШКЕНТ ҲАВОСИ: AQI 184 • AIUZ ХАВФСИЗЛИК ТИЗИМИ ФАОЛ...";
             }
         };
 
         function sendQuery() {
-            const res = document.getElementById('aiResponse');
-            res.innerHTML = "> ACCESSING ARCHIVE 1995-2026...<br>> ANALYZING MOTHERHOOD & CHILDHOOD DATA...";
+            const out = document.getElementById('aiResponse');
+            out.innerHTML = "> ACCESSING ARCHIVE 1995-2026...<br>> SCANNING REGIONAL TICKERS: GAZETA, KUN, DARYO...<br>> ANALYZING ATMOSPHERIC DATA...";
             setTimeout(() => {
-                res.innerHTML = "> RESPONSE: System synchronized with domain context. Focus: Maternal safety & Digital sovereignty.";
-            }, 1000);
+                out.innerHTML = "> RESPONSE: System synchronized with domain context. Sovereignty confirmed. Air quality monitor: ACTIVE.";
+            }, 1200);
         }
     </script>
 </body>
