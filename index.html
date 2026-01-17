@@ -3,81 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Civilization Interface | Fractal Metascience Foundation</title>
+    <title>Terra Civilization Interface | FMP Foundation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; }
-        .glow { text-shadow: 0 0 10px rgba(0, 255, 179, 0.5); }
-        .portal-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
-        .portal-card:hover { border-color: #00FFB3; box-shadow: 0 0 15px rgba(0, 255, 179, 0.2); transform: translateY(-2px); }
+        :root { --accent: #00f5a0; --bg: #030303; }
+        body { background-color: var(--bg); color: #afafaf; font-family: 'Space Grotesk', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glow-text { color: white; text-shadow: 0 0 20px rgba(0, 245, 160, 0.4); }
+        .portal-card { 
+            background: linear-gradient(145deg, #0a0a0a 0%, #050505 100%);
+            border: 1px solid rgba(0, 245, 160, 0.1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .portal-card:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(0, 245, 160, 0.15);
+            transform: scale(1.02);
+        }
+        .accent-bar { background: linear-gradient(90deg, var(--accent), transparent); height: 2px; }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <header class="max-w-6xl mx-auto mb-16">
-        <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 glow text-white">TERRA CODEX</h1>
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-l-2 border-green-500 pl-6 space-y-4 md:space-y-0">
-            <div>
-                <p class="text-xl font-bold uppercase tracking-widest text-green-400">Fractal Metascience Foundation</p>
-                <p class="text-gray-400">Architect: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912</p>
-                <p class="text-sm text-gray-500 mt-1 uppercase">Independent Researcher | Systems Engineer</p>
+<body class="p-4 md:p-16">
+    <header class="max-w-7xl mx-auto mb-24">
+        <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+            <div class="space-y-4">
+                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter glow-text">TERRA<br>CODEX</h1>
+                <div class="accent-bar w-64"></div>
+                <p class="mono text-sm tracking-widest uppercase text-emerald-500/70">Fractal Metascience Paradigm v1.2</p>
             </div>
-            <div class="text-right">
-                <p class="text-xs font-mono text-gray-500">Status: Sovereign Node Active</p>
-                <p class="text-xs font-mono text-gray-500">Protocol: NULLO-PLT-UCOM</p>
+            <div class="text-right space-y-2 border-r-2 border-emerald-500 pr-6">
+                <p class="text-white font-bold text-xl uppercase tracking-wider">{ ARCHITECT }</p>
+                <p class="text-gray-400">Abdurashid Abdukarimov</p>
+                <p class="mono text-xs text-emerald-500/50">ORCID: 0009-0000-6394-4912</p>
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto">
-        <section class="mb-12">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Active Knowledge Portals</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="docs/portals/governance.md" class="portal-card p-6 rounded-lg">
-                    <h3 class="text-lg font-bold text-white mb-2">Governance</h3>
-                    <p class="text-sm text-gray-400">Institutional Charter & 10/90 Ethical Model.</p>
-                </a>
-                <a href="docs/portals/science.md" class="portal-card p-6 rounded-lg">
-                    <h3 class="text-lg font-bold text-white mb-2">Science</h3>
-                    <p class="text-sm text-gray-400">Fractal Metascience Paradigm (FMP) & NULLO Point.</p>
-                </a>
-                <a href="docs/portals/economics.md" class="portal-card p-6 rounded-lg">
-                    <h3 class="text-lg font-bold text-white mb-2">Economics</h3>
-                    <p class="text-sm text-gray-400">The Future Fund & Sovereign Resource Allocation.</p>
-                </a>
-                <a href="docs/portals/legal.md" class="portal-card p-6 rounded-lg">
-                    <h3 class="text-lg font-bold text-white mb-2">Legal</h3>
-                    <p class="text-sm text-gray-400">Lex Kyzylkum & Cryptographic Jurisdiction.</p>
-                </a>
-                <a href="docs/portals/energy.md" class="portal-card p-6 rounded-lg">
-                    <h3 class="text-lg font-bold text-white mb-2">Energy</h3>
-                    <p class="text-sm text-gray-400">Cleanburn Standards & Decentralized Solar Nodes.</p>
-                </a>
-                <a href="docs/portals/education.md" class="portal-card p-6 rounded-lg">
-                    <h3 class="text-lg font-bold text-white mb-2">Education</h3>
-                    <p class="text-sm text-gray-400">AIUZ Project: Child-Centric Ethical AI Systems.</p>
-                </a>
-            </div>
-        </section>
+    <main class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <a href="docs/portals/governance.md" class="portal-card p-8 rounded-none group">
+                <span class="mono text-emerald-500 text-xs tracking-tighter">[ NODE 01 ]</span>
+                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Governance</h3>
+                <p class="text-sm leading-relaxed">Sovereign Institutional Charter & Ethical 10/90 Mandate for future generations.</p>
+            </a>
+            <a href="docs/portals/science.md" class="portal-card p-8 rounded-none group">
+                <span class="mono text-emerald-500 text-xs">[ NODE 02 ]</span>
+                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Science</h3>
+                <p class="text-sm leading-relaxed">Recursive epistemology and NULLO point logic. Knowledge without boundaries.</p>
+            </a>
+            <a href="docs/portals/economics.md" class="portal-card p-8 rounded-none group">
+                <span class="mono text-emerald-500 text-xs">[ NODE 03 ]</span>
+                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Economics</h3>
+                <p class="text-sm leading-relaxed">The Future Fund. Re-engineering value distribution for planetary stability.</p>
+            </a>
+            <a href="docs/portals/education.md" class="portal-card p-8 rounded-none group">
+                <span class="mono text-emerald-500 text-xs">[ NODE 04 ]</span>
+                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Education</h3>
+                <p class="text-sm leading-relaxed">AIUZ: Child-centric safe AI infrastructure and semantic cognitive kernels.</p>
+            </a>
+            <a href="docs/portals/energy.md" class="portal-card p-8 rounded-none group">
+                <span class="mono text-emerald-500 text-xs">[ NODE 05 ]</span>
+                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Energy</h3>
+                <p class="text-sm leading-relaxed">Decentralized solar networks and Cleanburn industrial heat standards.</p>
+            </a>
+            <a href="docs/portals/legal.md" class="portal-card p-8 rounded-none group">
+                <span class="mono text-emerald-500 text-xs">[ NODE 06 ]</span>
+                <h3 class="text-2xl font-bold text-white mt-4 mb-2 group-hover:text-emerald-400">Legal</h3>
+                <p class="text-sm leading-relaxed">Lex Kyzylkum. Sovereign digital jurisdiction and cryptographic verification.</p>
+            </a>
+        </div>
 
-        <section class="mt-20 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-white/5 pt-16">
             <div>
-                <h3 class="text-sm font-bold uppercase text-gray-500 mb-4">Institutional Experience</h3>
-                <ul class="text-sm space-y-2 text-gray-400">
-                    <li>• Strategic Advisor: Embassy of Switzerland (Economic & Trade)</li>
-                    <li>• Industrial Systems: ABB Switzerland Ltd (Energy Sector)</li>
-                    <li>• Sovereign Security: SICPA SA (MRTD & Identification)</li>
-                    <li>• Global Network: Joint Chamber of Commerce (JCC)</li>
-                </ul>
+                <h4 class="mono text-xs uppercase tracking-widest text-emerald-500 mb-6">Industrial Validation</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between border-b border-white/5 pb-2"><span>ABB Switzerland Ltd</span> <span class="text-white">Energy Infrastructure</span></div>
+                    <div class="flex justify-between border-b border-white/5 pb-2"><span>SICPA SA</span> <span class="text-white">Sovereign Identity</span></div>
+                    <div class="flex justify-between border-b border-white/5 pb-2"><span>Swiss Embassy (UZ)</span> <span class="text-white">Trade & Diplomacy</span></div>
+                </div>
             </div>
-            <div class="bg-green-500/5 p-6 border border-green-500/20 rounded-lg">
-                <h3 class="text-sm font-bold uppercase text-green-400 mb-2">The 10/90 Mandate</h3>
-                <p class="text-sm text-gray-400">90% of all generated value within the Terra Ecosystem is automatically allocated to the <strong>Future Fund</strong> for the preservation of planetary knowledge.</p>
+            <div class="flex items-center justify-center p-8 bg-emerald-500/5 border border-emerald-500/10">
+                <p class="text-center italic text-lg text-emerald-400 font-light italic">"Vision, Structure, and Relentless Execution Over Capital."</p>
             </div>
         </section>
     </main>
 
-    <footer class="max-w-6xl mx-auto mt-20 text-center text-xs text-gray-600 border-t border-white/5 pt-8">
-        <p>© 2026 Fractal Metascience Foundation. Built with 0 budget from Zarafshan, Uzbekistan.</p>
+    <footer class="mt-32 pb-8 text-center">
+        <p class="mono text-[10px] uppercase tracking-[0.4em] text-gray-700">© 2026 Fractal Metascience Foundation | Zarafshan Deployment</p>
     </footer>
 </body>
 </html>
