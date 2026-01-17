@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+
+    <style>
+        .brand-section { border-left: 3px solid #00FFB3; padding: 20px; margin: 10px 0; }
+        .institute-panel {
+            position: fixed; top: 0; left: 0; width: 100%; 
+            background: rgba(10, 14, 26, 0.95); border-bottom: 2px solid #00FFB3;
+            padding: 10px 40px; display: flex; justify-content: space-between;
+            z-index: 9999; font-family: monospace;
+        }
+        .fund-value { color: #00FFB3; font-weight: bold; }
+    </style>
+    <div class="institute-panel">
+        <div style="color: white; font-size: 14px;">SOVEREIGN INSTITUTE | ARCHITECT: ABDURASHID ABDUKARIMOV</div>
+        <div style="display: flex; gap: 30px;">
+            <div>FUND (90%): <span class="fund-value" id="fund">$0.00</span></div>
+            <div>OPS (10%): <span style="color: #FFD700;">$0.00</span></div>
+        </div>
+    </div>
+    <div style="margin-top: 80px;"></div>
+    <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -23,13 +42,13 @@
     </header>
     <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         <section class="lg:col-span-2 glass p-8 rounded-3xl">
-            <h2 class="text-xl font-bold mb-4">📝 Реестр Научных Трудов</h2>
+            <h2 class="text-xl font-bold mb-4">ð Ð ÐµÐµÑÑÑ ÐÐ°ÑÑÐ½ÑÑ Ð¢ÑÑÐ´Ð¾Ð²</h2>
             <div class="border-2 border-dashed border-white/20 p-12 text-center rounded-xl hover:border-green-400 cursor-pointer" onclick="alert('UST Pipeline Activated')">
-                Загрузить работу на валидацию ($1.00)
+                ÐÐ°Ð³ÑÑÐ·Ð¸ÑÑ ÑÐ°Ð±Ð¾ÑÑ Ð½Ð° Ð²Ð°Ð»Ð¸Ð´Ð°ÑÐ¸Ñ ($1.00)
             </div>
         </section>
         <aside class="glass p-6 rounded-3xl border-yellow-500/30">
-            <h2 class="text-xl font-bold mb-4 text-yellow-400">🏛️ Технологический Аукцион</h2>
+            <h2 class="text-xl font-bold mb-4 text-yellow-400">ðï¸ Ð¢ÐµÑÐ½Ð¾Ð»Ð¾Ð³Ð¸ÑÐµÑÐºÐ¸Ð¹ ÐÑÐºÑÐ¸Ð¾Ð½</h2>
             <div class="p-4 bg-white/5 rounded-xl border border-white/10">
                 <p class="font-bold text-sm">Green Station "Tashkent-1"</p>
                 <p class="text-lg font-mono text-green-400">$100,000.00</p>
