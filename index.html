@@ -2,78 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TERRA CIVILIZATION INTERFACE</title>
+    <title>AIUZ TERRA CODEX | Sovereign Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --terra: #00FFB3; --bg: #0a0e1a; }
-        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; }
-        .brand-section { border-left: 4px solid var(--terra); background: rgba(0, 255, 179, 0.05); padding: 20px; }
-        .domain-card { border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; cursor: pointer; }
-        .domain-card:hover { border-color: var(--terra); box-shadow: 0 0 15px var(--terra); }
+        body { background-color: #0D1B2A; color: white; font-family: 'Segoe UI', sans-serif; }
+        .terra-border { border-left: 4px solid #2E8B57; }
+        .quantum-glow { box-shadow: 0 0 15px #00FFB333; border: 1px solid #00FFB355; }
+        .domain-card { background: rgba(255,255,255,0.03); transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .domain-card:hover { border-color: #00FFB3; background: rgba(0, 255, 179, 0.05); }
+        .gold-text { color: #D4AF37; }
     </style>
 </head>
 <body class="p-8">
-    <header class="max-w-7xl mx-auto mb-10 flex justify-between items-center brand-section">
+    <header class="max-w-7xl mx-auto mb-12 flex justify-between items-end terra-border p-6 bg-white/5 rounded-r-xl">
         <div>
-            <h1 class="text-4xl font-black tracking-tighter uppercase">Terra <span style="color:var(--terra)">Sovereign Institute</span></h1>
-            <p class="text-xs opacity-50 font-mono">ARCHITECT: ABDURASHID ABDUKARIMOV | ORCID: 0009-0000-6394-4912</p>
+            <h1 class="text-4xl font-black uppercase tracking-tighter" style="color: #00FFB3">AIUZ Terra Codex</h1>
+            <p class="text-xs font-mono opacity-50 uppercase">Architect: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912</p>
         </div>
-        <div class="flex gap-10 font-mono">
-            <div class="text-right">
-                <p class="text-[10px] opacity-40">FUTURE FUND (90%)</p>
-                <p class="text-xl text-green-400" id="fund">$0.00</p>
-            </div>
+        <div class="text-right font-mono">
+            <p class="text-[10px] opacity-40">FUTURE GENERATIONS FUND (90%)</p>
+            <p class="text-2xl" style="color: #00FFB3">$0.00</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            <div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Governance</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Economics</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Education</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Science</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Technology</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Ecology</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Culture</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Mathematics</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Legal</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Health</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Energy</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Transportation</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Agriculture</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Infrastructure</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Media</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Defense</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Justice</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Arts</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Research</p></div><div class="domain-card p-6 rounded-xl text-center"><p class="text-xs uppercase font-bold tracking-widest">Space</p></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
+            <div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Governance</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Economics</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Education</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Science</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Technology</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Ecology</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Culture</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Mathematics</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Legal</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Health</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Energy</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Transportation</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Agriculture</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Infrastructure</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Media</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Defense</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Justice</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Arts</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Research</p></div><div class="domain-card p-6 rounded-lg text-center"><p class="text-[10px] uppercase font-bold tracking-widest">Space</p></div>
         </div>
 
-        <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="brand-section">
-                <h2 class="text-lg font-bold mb-4">Knowledge Registry (Pipeline v5.0)</h2>
-                <div class="border-2 border-dashed border-white/10 p-10 text-center rounded-xl hover:border-terra transition-all cursor-pointer" onclick="alert('UST Trace: NULLO/PLT check initiated.')">
-                    Drop document to register in Sigma-Core ($1.00)
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section class="md:col-span-2 quantum-glow p-8 rounded-2xl">
+                <h2 class="text-xl font-bold mb-4 uppercase tracking-wider" style="color: #D4AF37">Knowledge Registry</h2>
+                <div class="border-2 border-dashed border-white/10 p-16 text-center rounded-xl hover:border-neon cursor-pointer" onclick="alert('UST Pipeline Active')">
+                    <p class="opacity-40 uppercase text-xs">Deposit data to Sigma-Core ($1.00)</p>
                 </div>
-            </div>
-            <div class="p-8 glass bg-white/5 rounded-2xl border border-white/10">
-                <h2 class="text-lg font-bold mb-4" style="color:var(--terra)">Living Index Core</h2>
-                <ul class="text-xs opacity-60 space-y-2 font-mono">
-                    <li>> NULLO-core.md status: ACTIVE</li>
-                    <li>> PLT-integration.md status: ACTIVE</li>
-                    <li>> UCOMM-residual.md status: ACTIVE</li>
-                </ul>
-            </div>
-        </section>
+            </section>
+            
+            <aside class="space-y-6">
+                <div class="terra-border p-6 bg-white/5 rounded-r-xl">
+                    <h3 class="text-xs font-bold uppercase mb-4" style="color: #D4AF37">Active Indexes</h3>
+                    <ul class="text-[10px] font-mono opacity-60 space-y-2">
+                        <li>> NULLO-core.md</li>
+                        <li>> PLT-integration.md</li>
+                        <li>> UCOMM-residual.md</li>
+                    </ul>
+                </div>
+                <div class="p-6 rounded-xl border border-white/10">
+                    <h3 class="text-xs font-bold uppercase mb-2">Sovereign Auction</h3>
+                    <p class="text-sm gold-text font-bold">Green Station "Tashkent-1"</p>
+                    <p class="text-xl font-mono">$100,000.00</p>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <footer class="mt-20 text-center opacity-20 text-[10px] font-mono">
         qDNA_RESTORE_HASH:09000063944912 | FMP_SYSTEM_AWAKENED
     </footer>
-
-<div id="terra-institute-hub" style="position: fixed; top: 25px; right: 25px; z-index: 99999; background: rgba(10, 14, 26, 0.98); border: 1px solid #00FFB3; padding: 25px; color: white; font-family: 'Segoe UI', Tahoma, sans-serif; box-shadow: 0 0 30px rgba(0, 255, 179, 0.2); border-left: 5px solid #2E8B57; min-width: 280px;">
-    <div style="color: #00FFB3; font-weight: 900; font-size: 14px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px;">
-        Sovereign Institute
-    </div>
-    <div style="font-size: 10px; font-family: monospace; opacity: 0.6; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
-        NODE: 0009-0000-6394-4912<br>
-        STATUS: CORE_SYNCHRONIZED
-    </div>
-    <div style="display: flex; gap: 25px;">
-        <div style="flex: 1;">
-            <div style="font-size: 9px; color: #2E8B57; font-weight: bold; margin-bottom: 5px;">FUTURE FUND (90%)</div>
-            <div style="font-size: 20px; font-family: monospace;">$0.00</div>
-        </div>
-        <div style="flex: 1;">
-            <div style="font-size: 9px; color: #FFD700; font-weight: bold; margin-bottom: 5px;">OPS (10%)</div>
-            <div style="font-size: 20px; font-family: monospace;">$0.00</div>
-        </div>
-    </div>
-    <button onclick="alert('Universal Semantic Decoder Engaged')" style="margin-top: 25px; width: 100%; background: transparent; border: 1px solid #00FFB3; color: #00FFB3; padding: 12px; cursor: pointer; text-transform: uppercase; font-size: 11px; font-weight: bold; transition: 0.4s;" onmouseover="this.style.background='#00FFB3';this.style.color='#0a0e1a'" onmouseout="this.style.background='transparent';this.style.color='#00FFB3'">
-        Access Registry
-    </button>
-</div>
 </body>
 </html>
