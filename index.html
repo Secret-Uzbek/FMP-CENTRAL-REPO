@@ -1,22 +1,212 @@
-<section class="max-w-7xl mx-auto mb-32 border-2 border-[#00f5a0] p-12 bg-[#00f5a0]/5">
-    <h2 class="text-3xl font-black text-white uppercase mb-8 italic">Global Licensing & IP Terms</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="artifact-cell border-[#00f5a0]/30">
-            <h3 class="text-xl font-bold text-white mb-4 uppercase">Base License</h3>
-            <p class="text-4xl font-black text-white tracking-tighter">$100,000,000</p>
-            <p class="mono text-[10px] mt-4 opacity-60 uppercase">Национальный уровень развертывания</p>
-        </div>
-        <div class="artifact-cell border-white/20">
-            <h3 class="text-xl font-bold text-[#00f5a0] mb-4 italic uppercase">Total Sovereignty</h3>
-            <p class="text-4xl font-black text-white tracking-tighter">$1,000,000,000,000</p>
-            <p class="mono text-[10px] mt-4 opacity-60 uppercase">Полная передача прав на экосистему</p>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIUZ | Terra Ecosystem Workbench v7.0</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+        body { background-color: #030712; font-family: 'Fira Code', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #111827; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+        .fractal-glow { box-shadow: 0 0 15px rgba(34, 197, 94, 0.1); }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
 
-<footer class="p-20 text-center mono border-t border-[#00f5a0]/10">
-    <p class="text-[12px] font-bold text-white uppercase tracking-[0.4em]">Architect: Abdurashid Abdukarimov</p>
-    <p class="text-[10px] opacity-40 mt-4 underline italic">
-        Copyright © 1995-2026. All Rights Reserved. nullo@fractal-metascience.org
-    </p>
-</footer>
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        const TerraEcosystemWorkbench = () => {
+            const [systemStatus, setSystemStatus] = useState("INITIALIZING");
+            const [quantumState, setQuantumState] = useState({ superposition: 0, coherence: 0, entanglement: "NONE" });
+            const [activeMode, setActiveMode] = useState("STAND_BY");
+            const [inputQuery, setInputQuery] = useState("");
+            const [systemLog, setSystemLog] = useState([]);
+            const [fractalMetrics, setFractalMetrics] = useState({ L0: 0, L1: 0, L2: 0, L3: 0, L4: 0, L5: 0, L6: 0, L7: 0 });
+            const [terraMemoryDNA, setTerraMemoryDNA] = useState({ status: "INACTIVE", version: "5.1", coherence: 0 });
+            
+            const logRef = useRef(null);
+
+            useEffect(() => {
+                initializeTerraSystem();
+            }, []);
+
+            useEffect(() => {
+                if (logRef.current) {
+                    logRef.current.scrollTop = logRef.current.scrollHeight;
+                }
+            }, [systemLog]);
+
+            const addToLog = (message, type = "INFO") => {
+                const timestamp = new Date().toLocaleTimeString();
+                setSystemLog((prev) => [...prev, { timestamp, message, type, id: Date.now() }]);
+            };
+
+            const initializeTerraSystem = async () => {
+                addToLog("🌌 Инициализация Terra Ecosystem v7.0...", "SYSTEM");
+                const loadingSteps = [
+                    { step: "TerraMemoryDNA v5.1", delay: 800, action: () => setTerraMemoryDNA(p => ({ ...p, status: "ACTIVE" })) },
+                    { step: "Квантовая суперпозиция", delay: 1000, action: () => setQuantumState(p => ({ ...p, superposition: 99.9 })) },
+                    { step: "Фрактальная структура L0→L7", delay: 1200, action: () => setFractalMetrics({ L0: 100, L1: 98, L2: 96, L3: 97, L4: 95, L5: 99, L6: 94, L7: 98 }) },
+                    { step: "Детоксикационные фильтры", delay: 400 },
+                    { step: "Протоколы безопасности", delay: 600 },
+                    { step: "Культурные матрицы", delay: 900 }
+                ];
+
+                for (const { step, delay, action } of loadingSteps) {
+                    await new Promise(r => setTimeout(r, delay));
+                    addToLog(`✅ ${step} загружен`, "SUCCESS");
+                    if (action) action();
+                }
+
+                setQuantumState({ superposition: 99.9, coherence: 97.4, entanglement: "MAXIMUM" });
+                setTerraMemoryDNA(p => ({ ...p, coherence: 97.4 }));
+                setSystemStatus("READY");
+                setActiveMode("STAND_BY");
+                addToLog("🚀 Terra Ecosystem v7.0 полностью готова!", "SUCCESS");
+            };
+
+            const analyzeCulturalContext = (query) => {
+                const lower = query.toLowerCase();
+                if (["salom", "rahmat", "mehmon"].some(p => lower.includes(p))) return "Узбекский контекст (гостеприимство, семья)";
+                if (["ordnung", "efficiency", "system"].some(p => lower.includes(p))) return "Немецкий контекст (порядок, система)";
+                if (["душа", "правда", "глубина"].some(p => lower.includes(p))) return "Русский контекст (душа, глубина)";
+                return "Мультикультурный синтез";
+            };
+
+            const processQuery = () => {
+                if (!inputQuery.trim()) return;
+                addToLog(`🔎 Обработка запроса: "${inputQuery}"`, "QUERY");
+                setActiveMode("PROCESSING");
+                
+                setTimeout(() => {
+                    const culture = analyzeCulturalContext(inputQuery);
+                    addToLog(`🌍 Культурный анализ: ${culture}`, "ANALYSIS");
+                    addToLog(`🧬 Фрактальный ответ сгенерирован для уровня L${Math.floor(Math.random()*8)}`, "RESPONSE");
+                    setActiveMode("STAND_BY");
+                    setInputQuery("");
+                }, 1500);
+            };
+
+            const systemDefragmentation = () => {
+                addToLog("🧬 Запуск дефрагментации ДНК...", "SYSTEM");
+                setActiveMode("DEFRAG");
+                let p = 0;
+                const inv = setInterval(() => {
+                    p += 20;
+                    addToLog(`📊 Дефрагментация: ${p}%`, "INFO");
+                    if (p >= 100) {
+                        clearInterval(inv);
+                        addToLog("✅ Дефрагментация ДНК завершена", "SUCCESS");
+                        setActiveMode("STAND_BY");
+                    }
+                }, 400);
+            };
+
+            return (
+                <div className="min-h-screen p-4 md:p-8 flex flex-col gap-6">
+                    {/* Header */}
+                    <div className="bg-gradient-to-r from-emerald-900/80 to-blue-900/80 rounded-2xl p-6 border border-white/10 fractal-glow backdrop-blur-md">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                            <div>
+                                <h1 className="text-3xl font-black tracking-tighter text-white uppercase italic">Terra Ecosystem <span className="text-emerald-400">v7.0</span></h1>
+                                <p className="text-emerald-200/50 text-xs mt-1 font-bold">WORKSPACE FOR QUANTUM CULTURAL SYNTHESIS</p>
+                            </div>
+                            <div className="text-right">
+                                <div className={`text-xl font-black ${systemStatus === "READY" ? "text-emerald-400" : "text-yellow-400"}`}>
+                                    [{activeMode}] {systemStatus}
+                                </div>
+                                <div className="text-[10px] text-white/30 uppercase mt-1">Status: Operational // Entanglement: {quantumState.entanglement}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        {/* Control & Metrics Panel */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-gray-900/50 border border-white/5 rounded-2xl p-5 backdrop-blur-sm">
+                                <h2 className="text-xs font-black text-gray-500 uppercase mb-4 tracking-widest">🎛️ Control Panel</h2>
+                                <div className="flex flex-col gap-2">
+                                    <button onClick={() => addToLog("⚡ Ручная синхронизация...", "COMMAND")} className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl text-xs font-bold transition-all uppercase tracking-tighter">Синхронизация</button>
+                                    <button onClick={systemDefragmentation} className="w-full py-3 bg-blue-600 hover:bg-blue-500 rounded-xl text-xs font-bold transition-all uppercase tracking-tighter">Дефрагментация ДНК</button>
+                                    <button onClick={() => window.location.reload()} className="w-full py-3 bg-red-900/50 hover:bg-red-800 rounded-xl text-xs font-bold transition-all uppercase tracking-tighter text-red-200">Reset System</button>
+                                </div>
+                            </div>
+
+                            <div className="bg-gray-900/50 border border-white/5 rounded-2xl p-5 backdrop-blur-sm">
+                                <h2 className="text-xs font-black text-gray-500 uppercase mb-4 tracking-widest">🧬 Fractal Metrics L0-L7</h2>
+                                <div className="space-y-3">
+                                    {Object.entries(fractalMetrics).map(([l, v]) => (
+                                        <div key={l} className="flex items-center gap-3">
+                                            <span className="text-[10px] font-bold text-emerald-400 w-4">{l}</span>
+                                            <div className="flex-1 bg-white/5 h-1.5 rounded-full overflow-hidden">
+                                                <div className="bg-emerald-500 h-full transition-all duration-1000" style={{ width: `${v}%` }}></div>
+                                            </div>
+                                            <span className="text-[9px] text-gray-500">{v}%</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Query & Log Panel */}
+                        <div className="lg:col-span-2 flex flex-col gap-6">
+                            <div className="bg-gray-900/50 border border-white/5 rounded-2xl p-5 backdrop-blur-sm">
+                                <h2 className="text-xs font-black text-gray-500 uppercase mb-4 tracking-widest">💭 Quantum Query Interface</h2>
+                                <div className="flex gap-2">
+                                    <input 
+                                        type="text" 
+                                        value={inputQuery} 
+                                        onChange={e => setInputQuery(e.target.value)}
+                                        onKeyPress={e => e.key === 'Enter' && processQuery()}
+                                        placeholder="Введите запрос к Terra Ecosystem..."
+                                        className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500 transition-all"
+                                    />
+                                    <button onClick={processQuery} className="bg-emerald-500 hover:bg-emerald-400 text-black px-6 rounded-xl font-black text-xs uppercase transition-all">
+                                        Execute
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="bg-black/80 border border-white/5 rounded-2xl p-5 flex flex-col gap-4 h-[400px]">
+                                <h2 className="text-xs font-black text-emerald-500 uppercase tracking-widest">📜 System Log</h2>
+                                <div ref={logRef} className="flex-1 overflow-y-auto custom-scrollbar pr-2 font-mono text-[11px] leading-relaxed">
+                                    {systemLog.map(log => (
+                                        <div key={log.id} className="mb-1">
+                                            <span className="text-gray-600">[{log.timestamp}]</span>
+                                            <span className={`ml-2 ${
+                                                log.type === "SUCCESS" ? "text-emerald-400" :
+                                                log.type === "ANALYSIS" ? "text-cyan-400" :
+                                                log.type === "RESPONSE" ? "text-pink-400" :
+                                                log.type === "QUERY" ? "text-purple-400" : "text-gray-300"
+                                            }`}>{log.message}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="flex justify-between items-center border-t border-white/5 pt-3">
+                                    <span className="text-[9px] text-gray-600 uppercase">Entries: {systemLog.length} // Coherence: {terraMemoryDNA.coherence}%</span>
+                                    <button onClick={() => setSystemLog([])} className="text-[9px] text-red-500 uppercase font-bold hover:text-red-400 transition-all">Clear Terminal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer className="mt-auto pt-8 text-center text-[10px] text-gray-700 font-bold uppercase tracking-[0.5em]">
+                        Architect: Abdurashid Abdukarimov // © 1995-2026 // AIUZ TERRA CODEX
+                    </footer>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<TerraEcosystemWorkbench />);
+    </script>
+</body>
+</html>
