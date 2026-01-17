@@ -91,6 +91,40 @@
 
     <footer class="mt-32 pb-8 text-center">
         <p class="mono text-[10px] uppercase tracking-[0.4em] text-gray-700">© 2026 Fractal Metascience Foundation | Zarafshan Deployment</p>
-    </footer>
+    </footer><section class="max-w-7xl mx-auto mt-24">
+        <h4 class="mono text-xs uppercase tracking-widest text-emerald-500 mb-6">AI Agent: NULLO_NODE_001</h4>
+        <div class="bg-gray-900/50 border border-emerald-500/20 p-6 flex flex-col md:flex-row gap-6">
+            <div class="flex-grow">
+                <textarea id="aiInput" class="w-full h-24 p-4 bg-gray-900 border border-gray-700 text-gray-200 mono text-sm focus:outline-none focus:border-emerald-500" placeholder="Ask me about Terra Codex... e.g., 'What is science?'"></textarea>
+                <button onclick="sendQuery()" class="mt-4 px-6 py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-bold mono text-sm transition-colors duration-200">Query Agent</button>
+            </div>
+            <div class="flex-grow bg-gray-900 border border-gray-700 p-4 mono text-sm text-gray-300 overflow-auto h-32" id="aiResponse">
+                Greetings. I am NULLO_NODE_001. How may I assist you regarding the Fractal Metascience Paradigm?
+            </div>
+        </div>
+    </section>
+
+    <script src="public/agent.js"></script>
+    <script>
+        function sendQuery() {
+            const input = document.getElementById('aiInput');
+            const responseDiv = document.getElementById('aiResponse');
+            const query = input.value;
+            
+            if (query.trim() === "") {
+                responseDiv.textContent = "Please enter a query.";
+                return;
+            }
+            
+            responseDiv.textContent = "Processing query...";
+            setTimeout(() => { // Имитация обработки запроса
+                const response = queryTerraAgent(query);
+                responseDiv.textContent = response;
+                input.value = ""; // Очистить поле ввода
+            }, 500);
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
