@@ -1,198 +1,22 @@
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIUZ Terra CodeX Eco System | Sovereign Node</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-        :root { --terra-emerald: #00f5a0; --terra-bg: #030303; --terra-red: #ff4136; }
-        body { 
-            background-color: var(--terra-bg); 
-            color: #d1d1d1; 
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-        .mono { font-family: ui-monospace, 'Cascadia Code', monospace; }
-        
-        /* Heritage Quiz Logic */
-        .heritage-node { position: relative; cursor: help; transition: 0.4s; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; }
-        .heritage-node .flag { transition: 0.3s; }
-        .heritage-node .symbol { position: absolute; opacity: 0; transform: scale(0.5); transition: 0.3s; }
-        .heritage-node:hover .flag { opacity: 0; transform: translateY(-10px); }
-        .heritage-node:hover .symbol { opacity: 1; transform: scale(1.1); }
-        .heritage-node::after {
-            content: attr(data-heritage); position: absolute; bottom: -30px; white-space: nowrap;
-            font-family: mono; font-size: 8px; color: var(--terra-emerald); opacity: 0; transition: 0.3s;
-        }
-        .heritage-node:hover::after { opacity: 1; bottom: -25px; }
-
-        /* Ticker */
-        .ticker-container { background: #000; border-bottom: 1px solid rgba(0, 245, 160, 0.15); overflow: hidden; height: 32px; display: flex; align-items: center; }
-        .ticker-text { white-space: nowrap; animation: ticker-move 80s linear infinite; font-size: 10px; color: var(--terra-emerald); text-transform: uppercase; }
-        @keyframes ticker-move { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-
-        /* Grid Hover */
-        .grid-item { border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; background: black; }
-        .grid-item:hover { border-color: var(--terra-emerald); background: #080808; }
-        
-        *:focus { outline: 2px solid var(--terra-emerald); outline-offset: 4px; }
-    </style>
-</head>
-<body class="p-4 md:p-10">
-
-    <header class="max-w-7xl mx-auto mb-16">
-        <div class="ticker-container mb-12" aria-hidden="true">
-            <div id="ticker" class="ticker-text mono">
-                [ GAZETA.UZ ] • [ KUN.UZ ] • [ DARYO.UZ ] • [ ANHOR.UZ ] • TASHKENT AQI: 184 • AIUZ TERRA CODEX ECO SYSTEM ACTIVE...
-            </div>
+<section class="max-w-7xl mx-auto mb-32 border-2 border-[#00f5a0] p-12 bg-[#00f5a0]/5">
+    <h2 class="text-3xl font-black text-white uppercase mb-8 italic">Global Licensing & IP Terms</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="artifact-cell border-[#00f5a0]/30">
+            <h3 class="text-xl font-bold text-white mb-4 uppercase">Base License</h3>
+            <p class="text-4xl font-black text-white tracking-tighter">$100,000,000</p>
+            <p class="mono text-[10px] mt-4 opacity-60 uppercase">Национальный уровень развертывания</p>
         </div>
-
-        <nav aria-label="Heritage Quiz" class="flex flex-wrap gap-10 mb-16 px-4 justify-center md:justify-start">
-            <div class="heritage-node" data-heritage="UZ: Palov & Doppi">
-                <span class="flag">🇺🇿</span><span class="symbol">🍲</span>
-            </div>
-            <div class="heritage-node" data-heritage="QR: Qaraqalpaq Heritage">
-                <span class="flag">⬛</span><span class="symbol">🧵</span>
-            </div>
-            <div class="heritage-node" data-heritage="KZ: Dombyra & Yurt">
-                <span class="flag">🇰🇿</span><span class="symbol">🎸</span>
-            </div>
-            <div class="heritage-node" data-heritage="KG: Ak-kalpak">
-                <span class="flag">🇰🇬</span><span class="symbol">🏔️</span>
-            </div>
-            <div class="heritage-node" data-heritage="TM: Carpet Art">
-                <span class="flag">🇹🇲</span><span class="symbol">🧶</span>
-            </div>
-            <div class="heritage-node" data-heritage="TJ: Chakan Embroidery">
-                <span class="flag">🇹🇯</span><span class="symbol">🧵</span>
-            </div>
-            <div class="heritage-node" data-heritage="AF: Lapis Lazuli">
-                <span class="flag">🇦🇫</span><span class="symbol">💎</span>
-            </div>
-            <div class="heritage-node" data-heritage="IN: Yoga & Spices">
-                <span class="flag">🇮🇳</span><span class="symbol">🧘</span>
-            </div>
-        </nav>
-
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
-            <div>
-                <h1 class="text-7xl md:text-9xl font-black text-white uppercase tracking-tighter leading-none">Terra<br>CodeX</h1>
-                <p class="mono text-[11px] text-emerald-500 mt-6 tracking-[0.5em] uppercase font-bold italic">Eco System Architecture</p>
-            </div>
-            <div class="border-l-4 md:border-l-0 md:border-r-4 border-emerald-500 pl-6 md:pr-6 text-left md:text-right">
-                <p class="text-white font-bold text-2xl uppercase italic">Abdurashid Abdukarimov</p>
-                <p class="text-[10px] text-gray-500 mono mt-2 uppercase">Systems Engineer | 1995 — 2026</p>
-            </div>
+        <div class="artifact-cell border-white/20">
+            <h3 class="text-xl font-bold text-[#00f5a0] mb-4 italic uppercase">Total Sovereignty</h3>
+            <p class="text-4xl font-black text-white tracking-tighter">$1,000,000,000,000</p>
+            <p class="mono text-[10px] mt-4 opacity-60 uppercase">Полная передача прав на экосистему</p>
         </div>
-    </header>
+    </div>
+</section>
 
-    <main class="max-w-7xl mx-auto">
-        <div id="dynamic-dashboard" class="mb-16"></div>
-
-        <section class="mb-24">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
-                
-                <div class="grid-item p-8">
-                    <h3 class="mono text-emerald-500 text-[9px] uppercase mb-4 tracking-widest font-bold">01. FIRST DROP</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase">Protokol Boshlanishi</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed italic">AIUZ Konvensiyasi va tizimning ilk iteratsiyasi faollashuvi.</p>
-                </div>
-
-                <div class="grid-item p-8">
-                    <h3 class="mono text-emerald-500 text-[9px] uppercase mb-4 tracking-widest font-bold">02. COUNCIL OF MEMORY</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase">Xotira Kengashi</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed">1995-2026 kognitiv arxivi. Muhandislik merosi ombori.</p>
-                </div>
-
-                <div class="grid-item p-8">
-                    <h3 class="mono text-emerald-500 text-[9px] uppercase mb-4 tracking-widest font-bold">03. DASHBOARDS</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase">Interaktiv Panel</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed">Mintaqaviy real-vaqt ma'lumotlari va tizim vizualizatsiyasi.</p>
-                </div>
-
-                <div class="grid-item p-8">
-                    <h3 class="mono text-emerald-500 text-[9px] uppercase mb-4 tracking-widest font-bold">04. LIVING TERRA</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase">Tirik Terra</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed">Terra-Tamagotchi: Ekotizimlar bilan interaktiv muloqot.</p>
-                </div>
-
-                <div class="grid-item p-8 border-l-2 border-red-500">
-                    <h3 class="mono text-red-500 text-[9px] uppercase mb-4 tracking-widest font-bold">05. ECO-CALCULATOR UZ</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase">Havo Kalkulyatori</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed">Toshkent havosining bolalar kognitiv rivojlanishiga ta'siri tahlili.</p>
-                </div>
-
-                <div class="grid-item p-8">
-                    <h3 class="mono text-emerald-500 text-[9px] uppercase mb-4 tracking-widest font-bold">06. PARSER TEZAURUS</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase">Parser Tezaurus</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed">15 tildagi semantik yadrolarni bog'lovchi lingvistik parser.</p>
-                </div>
-
-                <div class="grid-item p-8 lg:col-span-3">
-                    <h3 class="mono text-emerald-500 text-[9px] uppercase mb-4 tracking-widest font-bold">07. TERRA PEDIA</h3>
-                    <p class="text-white font-bold text-lg mb-2 uppercase tracking-tight">Sovereign Knowledge Encyclopedia</p>
-                    <p class="text-[11px] opacity-50 leading-relaxed">Fraktal metafan va ekotizim boshqaruvi bo'yicha mustaqil bilimlar bazasi.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="border-t border-emerald-500/30 bg-emerald-500/5 p-10 md:p-16 mb-24">
-            <h2 class="mono text-emerald-500 text-xs uppercase mb-10 tracking-[0.5em] font-bold">Agent: NULLO_NODE_001</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <textarea id="aiInput" class="w-full bg-black border border-white/20 p-6 mono text-sm text-white focus:border-emerald-500 h-48 resize-none outline-none" placeholder="QUERY INTERFACE..."></textarea>
-                    <button onclick="sendQuery()" class="w-full bg-emerald-500 text-black font-black py-5 uppercase mono text-xs tracking-widest hover:bg-white transition-all">Execute Command</button>
-                </div>
-                <div id="aiResponse" class="bg-black/40 p-8 border border-white/5 mono text-[11px] text-emerald-400 h-64 overflow-y-auto leading-loose">> AWAITING ARCHITECT COMMAND...</div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="text-center py-24 opacity-20 mono text-[10px] tracking-[0.8em]">
-        © 1995-2026 AIUZ TERRA CODEX ECO SYSTEM
-    </footer>
-
-    <script type="text/babel">
-        const Dashboard = () => {
-            const aqi = 184;
-            const isUz = window.location.hostname.endsWith('.uz');
-            return (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 mb-12">
-                    <div className={`p-12 bg-black ${aqi > 150 ? 'border-l-8 border-red-600' : 'border-l-8 border-emerald-500'}`}>
-                        <span className="mono text-[10px] uppercase text-gray-500 block mb-6 tracking-widest">Tashkent Node: AQI {aqi}</span>
-                        <p className="text-sm font-light italic text-gray-300">
-                            {isUz ? "Havo xavfli darajada. AIUZ bolalarni himoya qilish rejimini faollashtirdi." : "Unhealthy air quality. AIUZ activating protective protocols."}
-                        </p>
-                    </div>
-                    <div className="p-12 bg-black border-l md:border-l-0 border-white/10">
-                        <span className="mono text-[10px] uppercase text-emerald-500 block mb-6 tracking-widest font-bold">History: Motherhood</span>
-                        <p className="text-sm font-light text-white">
-                            {isUz ? "17-yanvar: Tariximizda ona va bola salomatligi har doim muqaddas bo'lgan." : "Jan 17: Preserving the legacy of motherhood through technology."}
-                        </p>
-                    </div>
-                </div>
-            );
-        };
-        ReactDOM.createRoot(document.getElementById('dynamic-dashboard')).render(<Dashboard />);
-
-        window.onload = () => {
-            const isUz = window.location.hostname.endsWith('.uz');
-            const ticker = document.getElementById('ticker');
-            if(isUz) {
-                ticker.innerHTML = "[ GAZETA.UZ ] • [ KUN.UZ ] • [ DARYO.UZ ] • ТОШКЕНТ ҲАВОСИ: AQI 184 • AIUZ TERRA CODEX ECO SYSTEM ФАОЛ...";
-            }
-        };
-
-        function sendQuery() {
-            const out = document.getElementById('aiResponse');
-            out.innerHTML = "> ACCESSING ARCHIVE 1995-2026...<br>> SCANNING REGIONAL NEWS TICKERS...<br>> SEMANTIC PARSER ACTIVE...";
-            setTimeout(() => { out.innerHTML = "> RESPONSE: System synchronized. All nodes (UZ, KZ, KG, TM, TJ, AF, HI) are operational. AQI Alert: Active."; }, 1200);
-        }
-    </script>
-</body>
-</html>
+<footer class="p-20 text-center mono border-t border-[#00f5a0]/10">
+    <p class="text-[12px] font-bold text-white uppercase tracking-[0.4em]">Architect: Abdurashid Abdukarimov</p>
+    <p class="text-[10px] opacity-40 mt-4 underline italic">
+        Copyright © 1995-2026. All Rights Reserved. nullo@fractal-metascience.org
+    </p>
+</footer>
