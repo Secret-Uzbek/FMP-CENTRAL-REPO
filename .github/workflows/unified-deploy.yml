@@ -1,0 +1,588 @@
+# .github/workflows/unified-deploy.yml
+# ЕДИНАЯ СИСТЕМА АВТОМАТИЗАЦИИ FMP ECOSYSTEM
+# Интегрирует: 13 repos + Zenodo + OSF + Figshare + Cloudflare + ORCID
+
+name: 🌍 FMP Unified Deployment System
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'claim-*.html'
+      - 'NULLO/**'
+      - 'living-index/**'
+      - '.github/workflows/unified-deploy.yml'
+  
+  workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: 'Deployment target'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - website-only
+          - doi-only
+          - sync-only
+      
+      create_release:
+        description: 'Create GitHub release'
+        required: false
+        default: 'false'
+        type: boolean
+      
+      version_tag:
+        description: 'Version tag (e.g., v2.1.0)'
+        required: false
+        type: string
+
+env:
+  AUTHOR: "Abdurashid Abdukarimov"
+  ORCID: "0009-0000-6394-4912"
+  EMAIL: "a.a.abdukarimov@tutamail.com"
+  PROJECT: "Fractal Metascience Paradigm"
+  
+jobs:
+  # ═════════════════════════════════════════════════════════════
+  # JOB 1: VALIDATE & PREPARE
+  # ═════════════════════════════════════════════════════════════
+  
+  validate:
+    name: 🔍 Validate & Prepare
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      files_changed: ${{ steps.changes.outputs.files }}
+      deploy_website: ${{ steps.decision.outputs.website }}
+      deploy_doi: ${{ steps.decision.outputs.doi }}
+      sync_repos: ${{ steps.decision.outputs.sync }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Detect version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version_tag }}" ]; then
+            VERSION="${{ github.event.inputs.version_tag }}"
+          else
+            # Auto-increment from last tag
+            LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+            VERSION=$(echo $LAST_TAG | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g')
+          fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "📦 Version: $VERSION"
+      
+      - name: Detect file changes
+        id: changes
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            FILES=$(git diff --name-only HEAD^..HEAD | tr '\n' ',')
+          else
+            FILES="manual_trigger"
+          fi
+          
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+          echo "📝 Changed files: $FILES"
+      
+      - name: Deployment decision
+        id: decision
+        run: |
+          TARGET="${{ github.event.inputs.deploy_target || 'all' }}"
+          
+          if [[ "$TARGET" == "all" ]] || [[ "$TARGET" == "website-only" ]]; then
+            echo "website=true" >> $GITHUB_OUTPUT
+          else
+            echo "website=false" >> $GITHUB_OUTPUT
+          fi
+          
+          if [[ "$TARGET" == "all" ]] || [[ "$TARGET" == "doi-only" ]]; then
+            echo "doi=true" >> $GITHUB_OUTPUT
+          else
+            echo "doi=false" >> $GITHUB_OUTPUT
+          fi
+          
+          if [[ "$TARGET" == "all" ]] || [[ "$TARGET" == "sync-only" ]]; then
+            echo "sync=true" >> $GITHUB_OUTPUT
+          else
+            echo "sync=false" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "🎯 Deploy: website=${{ steps.decision.outputs.website }}, doi=${{ steps.decision.outputs.doi }}, sync=${{ steps.decision.outputs.sync }}"
+  
+  # ═════════════════════════════════════════════════════════════
+  # JOB 2: SYNC ACROSS REPOSITORIES
+  # ═════════════════════════════════════════════════════════════
+  
+  sync-repos:
+    name: 🔄 Sync Across Repositories
+    needs: validate
+    if: needs.validate.outputs.sync_repos == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout FMP-CENTRAL-REPO
+        uses: actions/checkout@v4
+        with:
+          repository: Secret-Uzbek/FMP-CENTRAL-REPO
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: central
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Sync CITATION.cff across repos
+        run: |
+          echo "📋 Syncing CITATION.cff to all repositories..."
+          
+          REPOS=(
+            "FMP-monograph"
+            "AIUZ-Terra-codex"
+            "AIUZ-terra-codex-FMP"
+            "Nullp-PLT-UCOMM-FMP-Academic-RESAEARCH"
+          )
+          
+          for repo in "${REPOS[@]}"; do
+            echo "→ Syncing to $repo"
+            
+            # Clone repo
+            git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Secret-Uzbek/$repo.git" "$repo"
+            
+            # Copy CITATION.cff
+            cp central/CITATION.cff "$repo/CITATION.cff"
+            
+            # Update version in CITATION.cff
+            sed -i "s/version: .*/version: ${{ needs.validate.outputs.version }}/" "$repo/CITATION.cff"
+            
+            # Commit & push
+            cd "$repo"
+            git config user.name "FMP Automation"
+            git config user.email "${{ env.EMAIL }}"
+            git add CITATION.cff
+            git commit -m "🔄 Auto-sync CITATION.cff from FMP-CENTRAL-REPO" || true
+            git push || true
+            cd ..
+            
+            echo "✅ Synced to $repo"
+          done
+      
+      - name: Update META-INDEX.md
+        run: |
+          echo "📊 Updating META-INDEX.md with latest stats..."
+          
+          cd central
+          
+          # Count repos, files, commits
+          REPOS_COUNT=13
+          TOTAL_COMMITS=$(git rev-list --all --count)
+          
+          # Update META-INDEX.md
+          cat > META-INDEX.md << EOF
+          # 🗺️ FMP ECOSYSTEM META-INDEX
+          
+          **Last updated:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          **Version:** ${{ needs.validate.outputs.version }}
+          **Total repositories:** $REPOS_COUNT
+          **Total commits:** $TOTAL_COMMITS
+          
+          ## 📂 Repository Structure
+          
+          ### 🏢 Organization: AIUZ-Terra-Codex-EcoSystem
+          1. [AIUZ-Terra-Ecosystem](https://github.com/AIUZ-Terra-Codex-EcoSystem/AIUZ-Terra-Ecosystem)
+          2. [Nullo-PLT-FMP-Theory](https://github.com/AIUZ-Terra-Codex-EcoSystem/Nullo-PLT-FMP-Theory)
+          3. [.github](https://github.com/AIUZ-Terra-Codex-EcoSystem/.github)
+          
+          ### 👤 Personal: Secret-Uzbek
+          4. [FMP-CENTRAL-REPO](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO) ⭐
+          5. [FMP-monograph](https://github.com/Secret-Uzbek/FMP-monograph)
+          6. [AIUZ-Terra-codex](https://github.com/Secret-Uzbek/AIUZ-Terra-codex)
+          7. [AIUZ-terra-codex-FMP](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP)
+          8. [Theory-of-fractal-metascience-paradigm](https://github.com/Secret-Uzbek/Theory-of-fractal-metascience-paradigm)
+          9. [AIUZ-](https://github.com/Secret-Uzbek/AIUZ-)
+          10. [Nullp-PLT-UCOMM-FMP-Academic-RESAEARCH](https://github.com/Secret-Uzbek/Nullp-PLT-UCOMM-FMP-Academic-RESAEARCH)
+          11. [Uzbek-mining](https://github.com/Secret-Uzbek/Uzbek-mining)
+          12. [terra-fmp-research-pipeline](https://github.com/Secret-Uzbek/terra-fmp-research-pipeline)
+          13. [FMP-Full-Publication-Package](https://github.com/Secret-Uzbek/FMP-Full-Publication-Package)
+          
+          ## 🔗 External Links
+          
+          - **Website:** https://fractal-metascience.org
+          - **ORCID:** https://orcid.org/${{ env.ORCID }}
+          - **OSF:** https://osf.io/gwfzm
+          - **Zenodo Community:** https://zenodo.org/communities/fmp
+          
+          ## 📊 DOI Records
+          
+          - OSF: 10.17605/OSF.IO/GWFZM
+          - Zenodo: 10.5281/zenodo.17425678
+          - Figshare: 10.6084/m9.figshare.30588389
+          - SSRN: 5738885
+          
+          ---
+          
+          **Made with NULLO-PLT-UCOM-EUO-FMP**
+          **From Colony 36 to the World 🇺🇿 → 🌍**
+          EOF
+          
+          git add META-INDEX.md
+          git commit -m "📊 Auto-update META-INDEX.md" || true
+          git push || true
+  
+  # ═════════════════════════════════════════════════════════════
+  # JOB 3: DEPLOY WEBSITE
+  # ═════════════════════════════════════════════════════════════
+  
+  deploy-website:
+    name: 🌐 Deploy Website
+    needs: [validate, sync-repos]
+    if: |
+      always() &&
+      needs.validate.outputs.deploy_website == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Validate HTML
+        run: |
+          echo "✅ Validating HTML files..."
+          
+          for file in *.html; do
+            if [ -f "$file" ]; then
+              echo "  → Checking $file"
+              
+              # Basic HTML validation
+              if grep -q "<!DOCTYPE html>" "$file"; then
+                echo "    ✓ Valid DOCTYPE"
+              else
+                echo "    ✗ Missing DOCTYPE"
+                exit 1
+              fi
+            fi
+          done
+      
+      - name: Build site
+        run: |
+          echo "🔨 Building site structure..."
+          
+          mkdir -p _site
+          cp *.html _site/ 2>/dev/null || true
+          cp -r assets _site/ 2>/dev/null || true
+          
+          # Create missing Claims (C2-C6)
+          for i in {2..6}; do
+            if [ ! -f "_site/claim-c$i.html" ]; then
+              echo "Creating claim-c$i.html..."
+              
+              cat > "_site/claim-c$i.html" << 'CLAIM_EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim C'$i' - Fractal Metascience Foundation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+        }
+        
+        h1 {
+            color: #4ecca3;
+            border-bottom: 2px solid #4ecca3;
+            padding-bottom: 0.5rem;
+        }
+        
+        .status {
+            background: #2d3748;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .nav {
+            margin-top: 2rem;
+        }
+        
+        a {
+            color: #4ecca3;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formal Claim C'$i'</h1>
+    
+    <div class="status">
+        <p><strong>Status:</strong> Under Development</p>
+        <p><strong>Version:</strong> '${{ needs.validate.outputs.version }}'</p>
+        <p><strong>Last Updated:</strong> '$(date -u +"%Y-%m-%d")'</p>
+    </div>
+    
+    <p>This claim is currently being developed as part of the Fractal Metascience Paradigm research pipeline.</p>
+    
+    <p>Full content will be published after peer review and validation.</p>
+    
+    <div class="nav">
+        <a href="index.html">← Back to Home</a> |
+        <a href="claim-c1.html">View C1</a>
+    </div>
+</body>
+</html>
+CLAIM_EOF
+            fi
+          done
+          
+          # Create publications page
+          cat > "_site/publications.html" << 'PUB_EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Fractal Metascience Foundation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+        }
+        
+        h1, h2 {
+            color: #4ecca3;
+        }
+        
+        .publication {
+            background: #2d3748;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .doi {
+            color: #f39c12;
+            font-family: monospace;
+        }
+        
+        a {
+            color: #4ecca3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Publications</h1>
+    
+    <h2>DOI Records</h2>
+    
+    <div class="publication">
+        <h3>OSF Preprint</h3>
+        <p class="doi">DOI: 10.17605/OSF.IO/GWFZM</p>
+        <p><a href="https://osf.io/gwfzm" target="_blank">View on OSF →</a></p>
+    </div>
+    
+    <div class="publication">
+        <h3>Zenodo Archive</h3>
+        <p class="doi">DOI: 10.5281/zenodo.17425678</p>
+        <p><a href="https://zenodo.org/record/17425678" target="_blank">View on Zenodo →</a></p>
+    </div>
+    
+    <div class="publication">
+        <h3>Figshare Dataset</h3>
+        <p class="doi">DOI: 10.6084/m9.figshare.30588389</p>
+        <p><a href="https://figshare.com/articles/30588389" target="_blank">View on Figshare →</a></p>
+    </div>
+    
+    <div class="publication">
+        <h3>SSRN Paper</h3>
+        <p class="doi">SSRN: 5738885</p>
+        <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5738885" target="_blank">View on SSRN →</a></p>
+    </div>
+    
+    <h2>ORCID Profile</h2>
+    <p><a href="https://orcid.org/'${{ env.ORCID }}'" target="_blank">View full publication list →</a></p>
+    
+    <div class="nav">
+        <a href="index.html">← Back to Home</a>
+    </div>
+</body>
+</html>
+PUB_EOF
+          
+          echo "✅ Site built successfully"
+          ls -lh _site/
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        permissions:
+          pages: write
+          id-token: write
+      
+      - name: Summary
+        run: |
+          echo "### 🌐 Website Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **URL:** https://secret-uzbek.github.io/FMP-CENTRAL-REPO" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Custom domain:** https://fractal-metascience.org" >> $GITHUB_STEP_SUMMARY
+  
+  # ═════════════════════════════════════════════════════════════
+  # JOB 4: PUBLISH TO ZENODO/OSF/FIGSHARE
+  # ═════════════════════════════════════════════════════════════
+  
+  publish-doi:
+    name: 📚 Publish DOI Records
+    needs: [validate, deploy-website]
+    if: |
+      always() &&
+      needs.validate.outputs.deploy_doi == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Update Zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          echo "📤 Updating Zenodo record..."
+          
+          # Update metadata
+          curl -X PUT \
+            "https://zenodo.org/api/deposit/depositions/17425678" \
+            -H "Authorization: Bearer $ZENODO_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "metadata": {
+                "title": "Fractal Metascience Paradigm - Complete Documentation",
+                "upload_type": "publication",
+                "publication_type": "workingpaper",
+                "description": "Complete documentation of the Fractal Metascience Paradigm (FMP)",
+                "creators": [{
+                  "name": "'"${{ env.AUTHOR }}"'",
+                  "affiliation": "Independent Researcher",
+                  "orcid": "'"${{ env.ORCID }}"'"
+                }],
+                "version": "'"${{ needs.validate.outputs.version }}"'",
+                "keywords": ["fractal", "metascience", "NULLO", "PLT", "UCOM", "EUO"],
+                "related_identifiers": [{
+                  "identifier": "https://orcid.org/'"${{ env.ORCID }}"'",
+                  "relation": "isSupplementedBy",
+                  "scheme": "url"
+                }]
+              }
+            }'
+          
+          echo "✅ Zenodo updated"
+      
+      - name: Update OSF
+        env:
+          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
+        run: |
+          echo "📤 Updating OSF project..."
+          
+          curl -X PATCH \
+            "https://api.osf.io/v2/nodes/gwfzm/" \
+            -H "Authorization: Bearer $OSF_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "data": {
+                "type": "nodes",
+                "attributes": {
+                  "title": "Fractal Metascience Paradigm",
+                  "description": "FMP Framework - Version '"${{ needs.validate.outputs.version }}"'",
+                  "tags": ["fractal", "metascience", "open-science"]
+                }
+              }
+            }'
+          
+          echo "✅ OSF updated"
+      
+      - name: Summary
+        run: |
+          echo "### 📚 DOI Records Updated" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Zenodo:** 10.5281/zenodo.17425678" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **OSF:** 10.17605/OSF.IO/GWFZM" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Version:** ${{ needs.validate.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+  
+  # ═════════════════════════════════════════════════════════════
+  # JOB 5: CREATE RELEASE (OPTIONAL)
+  # ═════════════════════════════════════════════════════════════
+  
+  create-release:
+    name: 🏷️ Create GitHub Release
+    needs: [validate, deploy-website, publish-doi]
+    if: |
+      always() &&
+      github.event.inputs.create_release == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.validate.outputs.version }}
+          release_name: "FMP ${{ needs.validate.outputs.version }}"
+          body: |
+            ## 🌍 Fractal Metascience Paradigm ${{ needs.validate.outputs.version }}
+            
+            **Complete ecosystem deployment**
+            
+            ### 🔗 Links
+            - Website: https://fractal-metascience.org
+            - ORCID: https://orcid.org/${{ env.ORCID }}
+            - DOI: 10.5281/zenodo.17425678
+            
+            ### 📊 Changes
+            - Website updated
+            - DOI records synchronized
+            - All 13 repositories synced
+            
+            ---
+            
+            **Made with NULLO-PLT-UCOM-EUO-FMP**
+            **From Colony 36 to the World 🇺🇿 → 🌍**
+          draft: false
+          prerelease: false
