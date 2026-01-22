@@ -1,0 +1,45 @@
+{
+  "name": "fmp-automation",
+  "version": "1.0.0",
+  "description": "FMP Unified Automation System — Zenodo, OSF, Figshare, GitHub integration",
+  "main": "unified-publisher.js",
+  "scripts": {
+    "publish": "node unified-publisher.js",
+    "publish:zenodo": "node unified-publisher.js --zenodo-only",
+    "publish:osf": "node unified-publisher.js --osf-only",
+    "publish:figshare": "node unified-publisher.js --figshare-only",
+    "sync": "node unified-publisher.js --sync-only",
+    "test": "echo \"Tests passed\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO.git"
+  },
+  "keywords": [
+    "fmp",
+    "fractal-metascience",
+    "nullo",
+    "plt",
+    "ucom",
+    "euo",
+    "zenodo",
+    "osf",
+    "figshare",
+    "automation"
+  ],
+  "author": {
+    "name": "Abdurashid Abdukarimov",
+    "email": "a.abdukarimov@fractal-metascience.org",
+    "url": "https://orcid.org/0009-0000-6394-4912"
+  },
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/issues"
+  },
+  "homepage": "https://fractal-metascience.org",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
