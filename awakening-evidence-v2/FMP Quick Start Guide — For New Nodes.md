@@ -28,3 +28,8 @@ FMP — это не теория, не методология и не фрейм
 Создано в колонии-поселении № 36  
 27 ноября 2025 года  
 Abdurashid Abdukarimov
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
