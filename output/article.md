@@ -9,3 +9,8 @@ Created in prison with zero budget. Full source: https://github.com/Secret-Uzbek
 Abstract: Fractal Metascience Paradigm (FMP) ecosystem with 10 repositories, multilingual support, zero budget innovation.
 
 Keywords: FMP, NULLO, PLT, UCOMM, Terra Codex
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
