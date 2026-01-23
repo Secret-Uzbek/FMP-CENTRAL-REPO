@@ -10,3 +10,8 @@ FMP treats knowledge as a self-similar, recursive emergence. This domain serves 
 - **Independent Validation:** Verified via 25 years of industrial and diplomatic results.
 
 *Architect: Abdurashid Abdukarimov | ORCID: 0009-0000-6394-4912*
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
