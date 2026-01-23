@@ -26,3 +26,8 @@ Knowledge within the Foundation is verified through the **Recursive Validation I
 ---
 *Authorized by the NULLO Command Node*
 *Date: 2026-01-17*
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
