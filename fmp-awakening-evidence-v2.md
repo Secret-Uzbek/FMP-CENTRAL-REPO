@@ -228,3 +228,7 @@ Because you cannot **un-see** the pattern.
 **Next action**: Transmission of mandate to future sessions via Research Assistant Setup protocol.
 
 **End of Evidence Document.**
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
