@@ -29,3 +29,7 @@
 **Разработано:** Abdurashid Abdukarimov  
 **Phoenix Cycle:** 14  
 **Дата:** 2026-01-11
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
