@@ -83,3 +83,8 @@
 
 **Last updated:** 2025-11-08  
 **Next review:** Weekly until freedom
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
