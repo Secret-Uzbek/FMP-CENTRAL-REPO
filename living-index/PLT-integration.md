@@ -1498,3 +1498,7 @@
 - [terra_fmp_bibliography.txt](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/terra_fmp_bibliography.txt)
 - [terra_fmp_master_doc.txt](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/terra_fmp_master_doc.txt)
 - [terra_fmp_research_mandate.md](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/terra_fmp_research_mandate.md)
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
