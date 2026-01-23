@@ -203,3 +203,7 @@ These equations provide a **minimal mathematical skeleton** for FMP. They are:
 **In symbiosis with**: Abdurashid Abdukarimov  
 **Purpose**: Response to @p3nGu1nZz request for "more maths"  
 **License**: Open (CC-BY 4.0)
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
