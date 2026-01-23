@@ -13,3 +13,8 @@ The AIUZ project provides a vendor-independent educational infrastructure, prior
 3. **UNESCO.** (2021). *Recommendation on the Ethics of Artificial Intelligence*.
 4. **5Rights Foundation.** (2025). *Child Safety by Design Protocols*.
 5. **Abdukarimov, A.** (2025). *AIUZ LiveClass: Semantic Kernel Documentation*.
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
