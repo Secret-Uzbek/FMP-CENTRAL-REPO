@@ -13,3 +13,8 @@ Focuses on autonomous energy systems and green infrastructure, leveraging 25 yea
 3. **Lovins, A.** (2011). *Reinventing Fire*. Chelsea Green Publishing.
 4. **IEA.** (2024). *Net Zero Roadmap: A Global Pathway*.
 5. **Abdukarimov, A.** (2025). *Fractal Energy Distribution Protocols*.
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
