@@ -698,3 +698,7 @@
 - [aiuz_clean_core_structure.md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/aiuz_clean_core_structure.md)
 - [aiuz_cleancore_index (4).md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/aiuz_cleancore_index (4).md)
 - [aiuz_comparative_analysis.md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/aiuz_comparative_analysis.md)
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
