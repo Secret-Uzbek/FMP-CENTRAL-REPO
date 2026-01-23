@@ -273,3 +273,8 @@ How can I help you today?
 
 Session limit reached ∙ resets 2:00 PM
 Upgrade
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
