@@ -13,3 +13,8 @@ This domain implements a self-sustaining economic engine where scientific value 
 3. **Buterin, V.** (2024). *On DAO Governance and Reciprocity*.
 4. **Stiglitz, J.** (2002). *Information and the Change in the Paradigm in Economics*.
 5. **Abdukarimov, A.** (2025). *The 10/90 Redistribution Engine Logic*.
+
+
+---
+**Contact:** a.abdukarimov@fractal-metascience.org  
+**ORCID:** 0009-0000-6394-4912
