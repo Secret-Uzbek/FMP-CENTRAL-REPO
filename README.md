@@ -1,24 +1,36 @@
-# Fractal Metascience Foundation
+[![License: Terra Public v1.0](https://img.shields.io/badge/license-Terra%20Public%20v1.0-4cc61e)](./LICENSE.md)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Days to Freedom](https://img.shields.io/badge/freedom%20in-46%20days-red)
 
-🌐 **Live Site:** https://fractal-metascience.org
+# FMP CENTRAL REPOSITORY
 
-## About
+## Цель
+Централизовать все репозитории FMP в одной фрактальной структуре.
 
-Scientific and technological infrastructure for planetary-scale civilization.
+## Структура
+- **NULLO**: ядро и живые протоколы
+- **PLT**: экосистемы и приложения
+- **UCOMM**: аудитории и коммуникации
+- **FMP**: теория и публикации
 
-**Key Components:**
-- NULLO (L0: Ontological zero-point)
-- PLT (Post Lingua Trace)
-- UCOMM (Universal Communication)
-- FMP (Fractal Metascience Paradigm)
-
-## Contact
-
-**Abdurashid Abdukarimov**  
-ORCID: 0009-0000-6394-4912  
-Email: a.abdukarimov@fractal-metascience.org
+## Ссылки на репозитории
+- [AIUZ-Terra-codex](https://github.com/Secret-Uzbek/AIUZ-Terra-codex)
+- [FMP-monograph](https://github.com/Secret-Uzbek/FMP-monograph)
+- [AIUZ-terra-codex-FMP](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP)
+- [Theory-of-fractal-metascience-paradigm](https://github.com/Secret-Uzbek/Theory-of-fractal-metascience-paradigm)
+- [AIUZ-](https://github.com/Secret-Uzbek/AIUZ-)
+- [Nullo-PLT-UCOMM-FMP-Academic-Research](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research)
+- [AIUZ-Terra-Ecosystem](https://github.com/Secret-Uzbek/AIUZ-Terra-Ecosystem)
+- [Uzbek-mining](https://github.com/Secret-Uzbek/Uzbek-mining)
 
 ---
+Фрактальная структура создана для мгновенного доступа ко всем твоим разработкам без потери оригинальных репозиториев.
 
-**From Colony 36 • From Zero to Life**  
-© 2025 Licensed under Terra Public License v1.0
+[![FMP Sync](https://img.shields.io/badge/FMP-Sync%20All-00C853?style=flat-square)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/sync-all.yml)
+[![OSF Project](https://img.shields.io/badge/OSF-Project-blue?logo=openscienceframework)](https://osf.io/du8xn/)
+
+> **FMP Sync Status**: GitHub ✓ | OSF ✓ | Zenodo ✓ | Figshare ✓ | DOI #8 ✓  
+> **Latest DOI**: [10.17605/OSF.IO/GWFZM](https://doi.org/10.17605/OSF.IO/GWFZM) (OSF Registration)  
+> **Terra Proof Ledger**: [FMP-001](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/NULLO/terra_proof_ledger_FMP-001.json)  
+> **SHA256**: `6209f3721eef6a1d3ed69d845c34483e0293dd6782f71d6fcd749d3cffffe878`
