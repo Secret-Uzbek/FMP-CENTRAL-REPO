@@ -1,0 +1,30 @@
+name: CENTRAL System Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run audit
+        run: node scripts/central_system_audit.js
+
+      - name: Commit audit output (if changed)
+        run: |
+          git config user.name "fmp-audit-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add output/system_audit.json PUBLICATION_RULE.md || true
+          git diff --cached --quiet || git commit -m "chore(audit): update system audit output"
+          git push
