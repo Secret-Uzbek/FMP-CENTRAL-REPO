@@ -1,0 +1,28 @@
+name: Root Guard
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  root-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run root guard
+        run: node scripts/root_guard.js
+      - name: Commit report (if changed)
+        run: |
+          git config user.name "fmp-root-guard-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add output/root_guard_report.json || true
+          git diff --cached --quiet || git commit -m "chore(audit): update root guard report"
+          git push
