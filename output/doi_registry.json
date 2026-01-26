@@ -1,0 +1,83 @@
+{
+  "generated_utc": "2026-01-26T16:13:31.504Z",
+  "unique_urls": 12,
+  "urls": [
+    {
+      "url": "https://doi.org/10.5281/zenodo.17597945",
+      "files": [
+        "README.md",
+        "public/pages/pitch.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.17598487",
+      "files": [
+        "README.md",
+        "public/pages/pitch.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.17632584",
+      "files": [
+        "README.md",
+        "public/pages/pitch.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.17632584\"",
+      "files": [
+        "public/pages/fractal-metascience-org.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.6084/m9.figshare.30588389",
+      "files": [
+        "README.md",
+        "public/pages/pitch.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\"",
+      "files": [
+        "public/pages/fractal-metascience-org.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.6084/m9.figshare.30648455",
+      "files": [
+        "README.md",
+        "public/pages/pitch.html"
+      ]
+    },
+    {
+      "url": "https://figshare.com/articles/30588389",
+      "files": [
+        ".github/workflows/unified-deploy.yml"
+      ]
+    },
+    {
+      "url": "https://figshare.com/articles/software/30588389",
+      "files": [
+        "META-INDEX.md"
+      ]
+    },
+    {
+      "url": "https://zenodo.org/record/17425678",
+      "files": [
+        ".github/workflows/unified-deploy.yml"
+      ]
+    },
+    {
+      "url": "https://zenodo.org/records/17425678",
+      "files": [
+        "META-INDEX.md"
+      ]
+    }
+  ]
+}
