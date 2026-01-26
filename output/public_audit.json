@@ -1,0 +1,32 @@
+{
+  "generated_utc": "2026-01-26T14:44:53.081Z",
+  "public_rule": "public/ contains only publishable artifacts. No dev/internal dirs. No archives/executables.",
+  "counts": {
+    "public_files": 21,
+    "violations": 0
+  },
+  "violations": [],
+  "public_files_sample": [
+    "public/README.md",
+    "public/agent.js",
+    "public/index.html",
+    "public/pages/README.md",
+    "public/pages/comparison.html",
+    "public/pages/compliance.html",
+    "public/pages/convention.html",
+    "public/pages/dna-archive.html",
+    "public/pages/dna_engine.html",
+    "public/pages/experimental_program.html",
+    "public/pages/fractal-metascience-org.html",
+    "public/pages/identity_node.html",
+    "public/pages/manifesto-fmp-education.html",
+    "public/pages/nullo-codex.html",
+    "public/pages/philosophy.html",
+    "public/pages/pitch.html",
+    "public/pages/recovery_terminal.html",
+    "public/pages/roadmap.html",
+    "public/pages/science.html",
+    "public/pages/summary-map.html",
+    "public/pages/terra-codex-live.html"
+  ]
+}
