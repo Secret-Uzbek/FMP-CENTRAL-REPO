@@ -1,15 +1,22 @@
 /**
  * ROOT GUARD (FMP-CENTRAL-REPO)
  * Rule: repository root is frozen. No new root files.
- * Allowlist is stored in control/root_allowlist.json
+ * Allowlist: control/root_allowlist.json
+ * Special-case: ROOT_MINIMAL_RULE.md is always allowed.
  */
 const fs = require("fs");
-const path = require("path");
 
-const allow = JSON.parse(fs.readFileSync("control/root_allowlist.json", "utf8"));
-const allowed = new Set(allow.allowed_root_files);
-allowed.add("ROOT_MINIMAL_RULE.md"); // system rule file (always allowed)
+let allow = { allowed_root_files: [] };
+try {
+  allow = JSON.parse(fs.readFileSync("control/root_allowlist.json", "utf8"));
+} catch (e) {
+  // if allowlist missing, fail hard
+  console.error("Missing or invalid control/root_allowlist.json");
+  process.exit(1);
+}
 
+const allowed = new Set(allow.allowed_root_files || []);
+allowed.add("ROOT_MINIMAL_RULE.md"); // always allowed (system rule file)
 
 const entries = fs.readdirSync(".", { withFileTypes: true });
 const rootFiles = entries.filter(e => e.isFile()).map(e => e.name).sort();
