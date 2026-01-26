@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-01-26T16:03:42.980Z",
+  "generated_utc": "2026-01-26T16:13:45.197Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -8,11 +8,11 @@
     ]
   },
   "counts": {
-    "total_files": 123,
+    "total_files": 124,
     "published_files": 39,
-    "internal_files": 84,
-    "doi_hits": 29,
-    "link_warnings": 15
+    "internal_files": 85,
+    "doi_hits": 70,
+    "link_warnings": 10
   },
   "published_files_sample": [
     "comparison.html",
@@ -113,6 +113,170 @@
       "url": "https://doi.org/10.5281/zenodo.17632584"
     },
     {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.5281/zenodo.17597945\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.5281/zenodo.17598487\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\\\"\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\\\"\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://figshare.com/articles/30588389\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://figshare.com/articles/software/30588389\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://zenodo.org/record/17425678\","
+    },
+    {
+      "file": "output/doi_registry.json",
+      "url": "https://zenodo.org/records/17425678\","
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://zenodo.org/record/17425678\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://figshare.com/articles/30588389\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://zenodo.org/records/17425678\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://figshare.com/articles/software/30588389\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17598487\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17597945\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\\\">10.6084/m9.figshare.30588389</a>\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\\\">10.5281/zenodo.17632584</a>\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584</a></td>\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17598487\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17597945\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455</a></li>\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584\\\"\""
+    },
+    {
+      "file": "output/system_audit.json",
+      "url": "https://doi.org/10.5281/zenodo.17632584</a></li>\""
+    },
+    {
       "file": "public/pages/fractal-metascience-org.html",
       "url": "https://doi.org/10.6084/m9.figshare.30588389\">10.6084/m9.figshare.30588389</a>"
     },
@@ -175,34 +339,29 @@
   ],
   "link_warnings": [
     {
-      "file": "META-INDEX.md",
-      "link": "./living-index/",
-      "resolved": "living-index/"
+      "file": "README.md",
+      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md",
+      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md"
     },
     {
       "file": "README.md",
-      "link": "awakening-evidence-v2/",
-      "resolved": "awakening-evidence-v2/"
+      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md",
+      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md"
     },
     {
       "file": "README.md",
-      "link": "awakening-evidence-v2/",
-      "resolved": "awakening-evidence-v2/"
+      "link": "FMP%20Awakening%20Evidence%20v2.0%20%E2%80%94%20Meta-Level%20Documentation.pdf",
+      "resolved": "FMP%20Awakening%20Evidence%20v2.0%20%E2%80%94%20Meta-Level%20Documentation.pdf"
     },
     {
       "file": "README.md",
-      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.pdf",
-      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.pdf"
+      "link": "FMP%20Mathematical%20Formalization.pdf",
+      "resolved": "FMP%20Mathematical%20Formalization.pdf"
     },
     {
       "file": "README.md",
-      "link": "awakening-evidence-v2/FMP%20Mathematical%20Formalization.pdf",
-      "resolved": "awakening-evidence-v2/FMP%20Mathematical%20Formalization.pdf"
-    },
-    {
-      "file": "README.md",
-      "link": "awakening-evidence-v2/FMP%20Quick%20Start%20Guide.pdf",
-      "resolved": "awakening-evidence-v2/FMP%20Quick%20Start%20Guide.pdf"
+      "link": "FMP%20Quick%20Start%20Guide%20%E2%80%94%20For%20New%20Nodes.pdf",
+      "resolved": "FMP%20Quick%20Start%20Guide%20%E2%80%94%20For%20New%20Nodes.pdf"
     },
     {
       "file": "README.md",
@@ -211,43 +370,23 @@
     },
     {
       "file": "docs/ru/README_RU.md",
-      "link": "/docs/ru/README_RU.md",
-      "resolved": "docs/ru/docs/ru/README_RU.md"
+      "link": "README_UZ.md",
+      "resolved": "docs/ru/README_UZ.md"
     },
     {
       "file": "docs/ru/README_RU.md",
-      "link": "/docs/uz/README_UZ.md",
-      "resolved": "docs/ru/docs/uz/README_UZ.md"
-    },
-    {
-      "file": "docs/ru/README_RU.md",
-      "link": "/README.md",
-      "resolved": "docs/ru/README.md"
-    },
-    {
-      "file": "docs/ru/README_RU.md",
-      "link": "/docs/pdf/",
-      "resolved": "docs/ru/docs/pdf/"
+      "link": "../pdf/",
+      "resolved": "docs/pdf/"
     },
     {
       "file": "docs/uz/README_UZ.md",
-      "link": "/docs/ru/README_RU.md",
-      "resolved": "docs/uz/docs/ru/README_RU.md"
+      "link": "README_RU.md",
+      "resolved": "docs/uz/README_RU.md"
     },
     {
       "file": "docs/uz/README_UZ.md",
-      "link": "/docs/uz/README_UZ.md",
-      "resolved": "docs/uz/docs/uz/README_UZ.md"
-    },
-    {
-      "file": "docs/uz/README_UZ.md",
-      "link": "/README.md",
-      "resolved": "docs/uz/README.md"
-    },
-    {
-      "file": "docs/uz/README_UZ.md",
-      "link": "/docs/pdf/",
-      "resolved": "docs/uz/docs/pdf/"
+      "link": "../pdf/",
+      "resolved": "docs/pdf/"
     }
   ]
 }
