@@ -1,5 +1,5 @@
 {
-  "generated": "2026-01-26T15:26:25.433Z",
+  "generated": "2026-01-26T15:32:41.946Z",
   "files": [
     ".automation/README.md",
     ".automation/package.json",
@@ -43,7 +43,6 @@
     "awakening-evidence-v2/FMP Awakening Evidence v2.0.md",
     "awakening-evidence-v2/FMP Quick Start Guide — For New Nodes.md",
     "comparison.html",
-    "comparison.html.",
     "competitions-log/2025-11-08_UNESCO-Uzbekistan_Beruniy_Prize.json",
     "competitions-log/2025-11-08_first-competition.json",
     "compliance.html",
@@ -87,6 +86,7 @@
     "output/public_audit.json",
     "output/root_cleanup_report.md",
     "output/root_guard_report.json",
+    "output/system_audit.json",
     "output/title.txt",
     "package.json",
     "philosophy.html",
