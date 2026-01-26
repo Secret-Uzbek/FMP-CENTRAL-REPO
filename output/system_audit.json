@@ -1,94 +1,31 @@
 {
-  "generated": "2026-01-26T15:32:41.946Z",
-  "files": [
-    ".automation/README.md",
-    ".automation/package.json",
-    ".automation/unified-publisher.js",
-    ".editorconfig",
-    ".gitattributes",
-    ".github/SECURITY.md",
-    ".github/dependabot.yml",
-    ".github/scripts/generate_article.py",
-    ".github/scripts/publish_figshare.py",
-    ".github/scripts/publish_osf.py",
-    ".github/scripts/publish_zenodo.py",
-    ".github/workflows/central-system-audit.yml",
-    ".github/workflows/codeql.yml",
-    ".github/workflows/deploy.yml",
-    ".github/workflows/force-sovereign.yml",
-    ".github/workflows/latex_build.yml",
-    ".github/workflows/public-guard.yml",
-    ".github/workflows/root-guard.yml",
-    ".github/workflows/security-audit.yml",
-    ".github/workflows/sync-all.yml",
-    ".github/workflows/unified-deploy.yml",
-    ".github/workflows/validate-encoding.yml",
-    ".nojekyll",
-    ".publisher/output/.gitkeep",
-    ".publisher/publish.js",
-    "CITATION.cff",
-    "CONTRIBUTING.md",
-    "FMP Awakening Evidence v2.0 — Meta-Level Documentation.pdf",
-    "FMP Mathematical Formalization.pdf",
-    "FMP Quick Start Guide — For New Nodes.pdf",
-    "META-INDEX.md",
-    "NULLO/FMP-001_CLOSED.pdf",
-    "NULLO/terra_proof_ledger_FMP-001.json",
-    "PUBLICATION_RULE.md",
-    "README.md",
-    "README_RU.md",
-    "README_UZ.md",
-    "ROADMAP.md",
-    "ROOT_MINIMAL_RULE.md",
-    "awakening-evidence-v2/FMP Awakening Evidence v2.0.md",
-    "awakening-evidence-v2/FMP Quick Start Guide — For New Nodes.md",
+  "repo": "FMP-CENTRAL-REPO",
+  "generated_utc": "2026-01-26T16:03:42.980Z",
+  "publication_rule": {
+    "published": [
+      "public/**",
+      "root/*.html"
+    ]
+  },
+  "counts": {
+    "total_files": 123,
+    "published_files": 39,
+    "internal_files": 84,
+    "doi_hits": 29,
+    "link_warnings": 15
+  },
+  "published_files_sample": [
     "comparison.html",
-    "competitions-log/2025-11-08_UNESCO-Uzbekistan_Beruniy_Prize.json",
-    "competitions-log/2025-11-08_first-competition.json",
     "compliance.html",
-    "control/root_allowlist.json",
     "convention.html",
-    "data/README.md",
-    "demos/.gitkeep",
-    "demos/terra-ubique/.gitkeep",
-    "demos/terra-ubique/README.md",
-    "demos/terra-ubique/assets/.gitkeep",
-    "demos/terra-ubique/index.html",
     "dna-archive.html",
     "dna_engine.html",
-    "docs/portals/economics.md",
-    "docs/portals/education.md",
-    "docs/portals/energy.md",
-    "docs/portals/governance.md",
-    "docs/portals/legal.md",
-    "docs/portals/science.md",
-    "docs/ru/README_RU.md",
-    "docs/uz/README_UZ.md",
     "experimental_program.html",
-    "fmp-architecture-viz.tsx",
-    "fmp-awakening-evidence-v2.md",
-    "fmp-math-formalization.md",
-    "fmp-quickstart-guide.md",
-    "fmp-submission-generator.tsx",
     "fractal-metascience-org.html",
-    "fulchat_claudeAI_27.11.2025.md",
     "identity_node.html",
     "index.html",
-    "institutional_pitch.md",
-    "living-index/NULLO-core.md",
-    "living-index/PLT-integration.md",
-    "living-index/UCOMM-residual.md",
-    "living-index/UCOMM.md",
     "manifesto-fmp-education.html",
     "nullo-codex.html",
-    "output/README.md",
-    "output/article.md",
-    "output/public_audit.json",
-    "output/root_cleanup_report.md",
-    "output/root_guard_report.json",
-    "output/system_audit.json",
-    "output/title.txt",
-    "package.json",
     "philosophy.html",
     "pitch.html",
     "public/README.md",
@@ -115,14 +52,202 @@
     "recovery_terminal.html",
     "roadmap.html",
     "science.html",
-    "scripts/central_system_audit.js",
-    "scripts/fetch-github.js",
-    "scripts/fetch-orcid.js",
-    "scripts/public_guard.js",
-    "scripts/root_guard.js",
-    "src/App.js",
     "summary-map.html",
-    "terra-codex-live.html",
-    "wrangler.jsonc"
+    "terra-codex-live.html"
+  ],
+  "doi_hits": [
+    {
+      "file": ".github/workflows/unified-deploy.yml",
+      "url": "https://zenodo.org/record/17425678\""
+    },
+    {
+      "file": ".github/workflows/unified-deploy.yml",
+      "url": "https://figshare.com/articles/30588389\""
+    },
+    {
+      "file": "META-INDEX.md",
+      "url": "https://zenodo.org/records/17425678"
+    },
+    {
+      "file": "META-INDEX.md",
+      "url": "https://figshare.com/articles/software/30588389"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17632584"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17598487"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17597945"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17632584"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455"
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17632584"
+    },
+    {
+      "file": "public/pages/fractal-metascience-org.html",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\">10.6084/m9.figshare.30588389</a>"
+    },
+    {
+      "file": "public/pages/fractal-metascience-org.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584\">10.5281/zenodo.17632584</a>"
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584</a></td>"
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17598487\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17597945\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.6084/m9.figshare.30588389\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.6084/m9.figshare.30648455</a></li>"
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584\""
+    },
+    {
+      "file": "public/pages/pitch.html",
+      "url": "https://doi.org/10.5281/zenodo.17632584</a></li>"
+    }
+  ],
+  "link_warnings": [
+    {
+      "file": "META-INDEX.md",
+      "link": "./living-index/",
+      "resolved": "living-index/"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/",
+      "resolved": "awakening-evidence-v2/"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/",
+      "resolved": "awakening-evidence-v2/"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.pdf",
+      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.pdf"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/FMP%20Mathematical%20Formalization.pdf",
+      "resolved": "awakening-evidence-v2/FMP%20Mathematical%20Formalization.pdf"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/FMP%20Quick%20Start%20Guide.pdf",
+      "resolved": "awakening-evidence-v2/FMP%20Quick%20Start%20Guide.pdf"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/Theory-of-Objectivity-Invitation.png",
+      "resolved": "awakening-evidence-v2/Theory-of-Objectivity-Invitation.png"
+    },
+    {
+      "file": "docs/ru/README_RU.md",
+      "link": "/docs/ru/README_RU.md",
+      "resolved": "docs/ru/docs/ru/README_RU.md"
+    },
+    {
+      "file": "docs/ru/README_RU.md",
+      "link": "/docs/uz/README_UZ.md",
+      "resolved": "docs/ru/docs/uz/README_UZ.md"
+    },
+    {
+      "file": "docs/ru/README_RU.md",
+      "link": "/README.md",
+      "resolved": "docs/ru/README.md"
+    },
+    {
+      "file": "docs/ru/README_RU.md",
+      "link": "/docs/pdf/",
+      "resolved": "docs/ru/docs/pdf/"
+    },
+    {
+      "file": "docs/uz/README_UZ.md",
+      "link": "/docs/ru/README_RU.md",
+      "resolved": "docs/uz/docs/ru/README_RU.md"
+    },
+    {
+      "file": "docs/uz/README_UZ.md",
+      "link": "/docs/uz/README_UZ.md",
+      "resolved": "docs/uz/docs/uz/README_UZ.md"
+    },
+    {
+      "file": "docs/uz/README_UZ.md",
+      "link": "/README.md",
+      "resolved": "docs/uz/README.md"
+    },
+    {
+      "file": "docs/uz/README_UZ.md",
+      "link": "/docs/pdf/",
+      "resolved": "docs/uz/docs/pdf/"
+    }
   ]
 }
