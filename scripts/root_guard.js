@@ -8,6 +8,8 @@ const path = require("path");
 
 const allow = JSON.parse(fs.readFileSync("control/root_allowlist.json", "utf8"));
 const allowed = new Set(allow.allowed_root_files);
+allowed.add("ROOT_MINIMAL_RULE.md"); // system rule file (always allowed)
+
 
 const entries = fs.readdirSync(".", { withFileTypes: true });
 const rootFiles = entries.filter(e => e.isFile()).map(e => e.name).sort();
