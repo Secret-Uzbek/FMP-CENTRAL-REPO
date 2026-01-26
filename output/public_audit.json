@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-01-26T14:44:53.081Z",
+  "generated_utc": "2026-01-26T14:49:39.531Z",
   "public_rule": "public/ contains only publishable artifacts. No dev/internal dirs. No archives/executables.",
   "counts": {
     "public_files": 21,
