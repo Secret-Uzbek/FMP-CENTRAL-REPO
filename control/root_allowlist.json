@@ -17,6 +17,7 @@
     "README_RU.md",
     "README_UZ.md",
     "ROADMAP.md",
+    "ROOT_MINIMAL_RULE.md",
     "comparison.html",
     "comparison.html.",
     "compliance.html",
@@ -45,5 +46,7 @@
     "summary-map.html",
     "terra-codex-live.html",
     "wrangler.jsonc"
-  ]
+  ],
+  "updated_utc": "2026-01-26T15:01:51.453Z",
+  "note": "Allowlist updated to include ROOT_MINIMAL_RULE.md (system rule file)."
 }
