@@ -51,7 +51,7 @@
 ---
 
 ### 4️⃣ **Living Index (1300+ files)**
-**Location:** [`living-index/`](./living-index/)
+**Location:** [`living-index/`](./living-index/UCOMM.md)
 
 **Structure:**
 - `NULLO-core.md` — Core protocols
