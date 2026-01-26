@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-01-26T16:21:04.231Z",
+  "generated_utc": "2026-01-26T16:40:04.791Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -12,7 +12,7 @@
     "published_files": 39,
     "internal_files": 78,
     "doi_hits": 29,
-    "link_warnings": 3
+    "link_warnings": 1
   },
   "published_files_sample": [
     "comparison.html",
@@ -178,16 +178,6 @@
       "file": "README.md",
       "link": "awakening-evidence-v2/Theory-of-Objectivity-Invitation.png",
       "resolved": "awakening-evidence-v2/Theory-of-Objectivity-Invitation.png"
-    },
-    {
-      "file": "docs/ru/README_RU.md",
-      "link": "../pdf/",
-      "resolved": "docs/pdf/"
-    },
-    {
-      "file": "docs/uz/README_UZ.md",
-      "link": "../pdf/",
-      "resolved": "docs/pdf/"
     }
   ]
 }
