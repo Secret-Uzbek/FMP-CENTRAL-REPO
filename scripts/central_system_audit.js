@@ -11,6 +11,9 @@ const path = require("path");
 
 const ROOT = process.cwd();
 
+const IGNORE_PREFIXES = ["output/"]; // do not scan generated artifacts
+
+
 function walk(dir) {
   let out = [];
   for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -47,6 +50,8 @@ const REL_LINK_RE = /\]\((?!https?:\/\/)(?!mailto:)([^)#\s]+)\)/gi;
 const fileSet = new Set(files);
 
 for (const r of files) {
+  if (IGNORE_PREFIXES.some(p => r.startsWith(p))) continue;
+
   (isPublished(r) ? published : internal).push(r);
 
   if (!/\.(md|html|txt|cff|json|yml|yaml|js|ts|tsx|csv)$/i.test(r)) continue;
