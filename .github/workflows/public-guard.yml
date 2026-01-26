@@ -1,0 +1,27 @@
+name: Public Guard
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run public guard
+        run: node scripts/public_guard.js
+      - name: Commit audit output (if changed)
+        run: |
+          git config user.name "fmp-public-guard-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add output/public_audit.json public/README.md || true
+          git diff --cached --quiet || git commit -m "chore(audit): update public audit"
+          git push
