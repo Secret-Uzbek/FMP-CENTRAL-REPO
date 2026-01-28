@@ -1,4 +1,140 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Terra Ecosystem</title><script src="https://cdn.tailwindcss.com"></script></head><body class="bg-slate-900 text-white p-20 text-center"><h1 class="text-5xl font-bold text-purple-500">🌍 TERRA ECOSYSTEM LIVE</h1><p class="mt-4 text-xl">ORCID: 0009-0000-6394-4912</p><div class="mt-10 p-10 border-2 border-dashed border-purple-500 rounded-3xl">СИСТЕМА АКТИВИРОВАНА. ИДЕТ СИНХРОНИЗАЦИЯ С SIGMA CORE L7...</div></body></html>
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Terra Ecosystem</title><script src="https://cdn.tailwindcss.com"></script></head><body class="bg-slate-900 text-white p-20 text-center"><h1 class="text-5xl font-bold text-purple-500">🌍 TERRA ECOSYSTEM LIVE</h1><p class="mt-4 text-xl">ORCID: 0009-0000-6394-4912</p><div class="mt-10 p-10 border-2 border-dashed border-purple-500 rounded-3xl">СИСТЕМА АКТИВИРОВАНА. ИДЕТ СИНХРОНИЗАЦИЯ С SIGMA CORE L7...</div><!-- TERRA_ROUTER_START -->
+<style>
+  .terra-router {
+    margin: 18px auto;
+    max-width: 1120px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 16px;
+    background: rgba(0,0,0,.18);
+    backdrop-filter: blur(8px);
+  }
+  .terra-router h2 { margin: 0 0 10px; font-size: 16px; letter-spacing: .2px; }
+  .terra-router .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .terra-router input {
+    flex: 1 1 360px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.16);
+    background: rgba(255,255,255,.06);
+    color: inherit;
+    outline: none;
+  }
+  .terra-router .pill {
+    padding: 7px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14);
+    cursor: pointer;
+    user-select: none;
+    font-size: 12px;
+    opacity: .9;
+  }
+  .terra-router .pill.active {
+    border-color: rgba(122,162,255,.55);
+    box-shadow: 0 0 0 2px rgba(122,162,255,.18) inset;
+    opacity: 1;
+  }
+  .terra-router .grid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+  }
+  .terra-router a.node {
+    display:block;
+    padding: 12px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.04);
+    text-decoration: none;
+    color: inherit;
+  }
+  .terra-router a.node:hover {
+    border-color: rgba(110,231,255,.35);
+    background: rgba(255,255,255,.06);
+  }
+  .terra-router .t { font-size: 13px; font-weight: 600; margin: 0 0 4px; }
+  .terra-router .m { font-size: 12px; opacity: .75; margin: 0; }
+  .terra-router .small { margin-top: 10px; font-size: 12px; opacity: .7; }
+</style>
+
+<section class="terra-router" id="terra-router">
+  <h2>Node Selector (Living DNA Router)</h2>
+  <div class="row">
+    <input id="terra-q" placeholder="Type to navigate nodes… (e.g., dna, compliance, science, manifesto)" />
+    <span class="pill active" data-cat="ALL">ALL</span>
+  </div>
+  <div class="row" id="terra-cats" style="margin-top:8px"></div>
+  <div class="grid" id="terra-grid"></div>
+  <div class="small">Source: <code>public/_meta/nodes.json</code> • This router does not change content — only makes the existing nodes addressable.</div>
+</section>
+
+<script>
+(async () => {
+  const q = document.getElementById('terra-q');
+  const grid = document.getElementById('terra-grid');
+  const cats = document.getElementById('terra-cats');
+  const basePill = document.querySelector('.terra-router .pill[data-cat="ALL"]');
+  let activeCat = 'ALL';
+
+  function el(tag, attrs={}, text='') {
+    const e = document.createElement(tag);
+    Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  function render(nodes) {
+    const query = (q.value || '').trim().toLowerCase();
+    const filtered = nodes.filter(n => {
+      const catOk = (activeCat === 'ALL') || (n.category === activeCat);
+      const qOk = !query || (n.title + ' ' + n.file + ' ' + n.category).toLowerCase().includes(query);
+      return catOk && qOk;
+    });
+
+    grid.innerHTML = '';
+    filtered.forEach(n => {
+      const a = el('a', { class: 'node', href: n.href });
+      const t = el('p', { class:'t' }, n.title);
+      const m = el('p', { class:'m' }, n.category + ' • ' + n.file);
+      a.appendChild(t); a.appendChild(m);
+      grid.appendChild(a);
+    });
+  }
+
+  function setActive(cat) {
+    activeCat = cat;
+    [...document.querySelectorAll('.terra-router .pill')].forEach(p => p.classList.toggle('active', p.dataset.cat === cat));
+  }
+
+  async function load() {
+    const res = await fetch('/_meta/nodes.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Cannot load /_meta/nodes.json');
+    const data = await res.json();
+    const nodes = data.nodes || [];
+
+    // categories
+    const uniq = [...new Set(nodes.map(n => n.category).filter(Boolean))].sort();
+    cats.innerHTML = '';
+    uniq.forEach(cat => {
+      const p = el('span', { class:'pill', 'data-cat': cat }, cat);
+      p.addEventListener('click', () => { setActive(cat); render(nodes); });
+      cats.appendChild(p);
+    });
+    basePill.addEventListener('click', () => { setActive('ALL'); render(nodes); });
+
+    q.addEventListener('input', () => render(nodes));
+    render(nodes);
+  }
+
+  try { await load(); } catch (e) {
+    grid.innerHTML = '<div style="opacity:.75;font-size:12px">Router failed to load nodes.json. Check deployment path: public/_meta/nodes.json</div>';
+    console.error(e);
+  }
+})();
+</script>
+<!-- TERRA_ROUTER_END -->
+</body></html>
 <!-- TERRA: canonical identifiers -->
 <hr>
 <p><strong>Contact:</strong> <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a><br>
