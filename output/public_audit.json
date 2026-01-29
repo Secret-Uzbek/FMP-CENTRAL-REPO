@@ -1,13 +1,14 @@
 {
-  "generated_utc": "2026-01-26T17:29:45.821Z",
+  "generated_utc": "2026-01-29T00:11:38.314Z",
   "public_rule": "public/ contains only publishable artifacts. No dev/internal dirs. No archives/executables.",
   "counts": {
-    "public_files": 21,
+    "public_files": 22,
     "violations": 0
   },
   "violations": [],
   "public_files_sample": [
     "public/README.md",
+    "public/_meta/nodes.json",
     "public/agent.js",
     "public/index.html",
     "public/pages/README.md",
