@@ -6,7 +6,6 @@
 
 const https = require('https');
 const fs = require('fs');
-const path = require('path');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const ORCID_ID = '0009-0000-6394-4912';
