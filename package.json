@@ -5,10 +5,16 @@
   "scripts": {
     "fetch:orcid": "node scripts/fetch-orcid.js",
     "fetch:github": "node scripts/fetch-github.js",
-    "fetch:all": "npm run fetch:orcid && npm run fetch:github"
+    "fetch:all": "npm run fetch:orcid && npm run fetch:github",
+    "publish:zenodo": "node .automation/unified-publisher.js --zenodo-only",
+    "publish:all": "node .automation/unified-publisher.js",
+    "audit": "node scripts/central_system_audit.js",
+    "update:meta": "node scripts/update-meta-index.js"
   },
   "author": "Abdurashid Abdukarimov",
   "license": "MIT",
-  "engines": { "node": ">=18.0.0" },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "type": "commonjs"
 }

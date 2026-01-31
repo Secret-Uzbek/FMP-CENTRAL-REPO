@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-01-28T23:21:47.043Z",
+  "generated_utc": "2026-01-31T03:04:33.157Z",
   "repo": "Secret-Uzbek/FMP-CENTRAL-REPO",
   "branch": "main",
   "source": "public/ directory listing",
@@ -9,6 +9,96 @@
       "href": "/index.html",
       "title": "Terra Ecosystem",
       "category": "System Map"
+    },
+    {
+      "file": "pages/comparison.html",
+      "href": "/pages/comparison.html",
+      "title": "FMP vs Billions",
+      "category": "Economics"
+    },
+    {
+      "file": "pages/compliance.html",
+      "href": "/pages/compliance.html",
+      "title": "Compliance",
+      "category": "Legal"
+    },
+    {
+      "file": "pages/convention.html",
+      "href": "/pages/convention.html",
+      "title": "Convention",
+      "category": "Governance"
+    },
+    {
+      "file": "pages/dna-archive.html",
+      "href": "/pages/dna-archive.html",
+      "title": "DNA Archive",
+      "category": "NULLO"
+    },
+    {
+      "file": "pages/dna_engine.html",
+      "href": "/pages/dna_engine.html",
+      "title": "DNA Engine",
+      "category": "NULLO"
+    },
+    {
+      "file": "pages/experimental_program.html",
+      "href": "/pages/experimental_program.html",
+      "title": "Experimental Program",
+      "category": "Science"
+    },
+    {
+      "file": "pages/fractal-metascience-org.html",
+      "href": "/pages/fractal-metascience-org.html",
+      "title": "Fractal Metascience",
+      "category": "Theory"
+    },
+    {
+      "file": "pages/identity_node.html",
+      "href": "/pages/identity_node.html",
+      "title": "Identity Node",
+      "category": "System"
+    },
+    {
+      "file": "pages/manifesto-fmp-education.html",
+      "href": "/pages/manifesto-fmp-education.html",
+      "title": "Education Manifesto",
+      "category": "Education"
+    },
+    {
+      "file": "pages/nullo-codex.html",
+      "href": "/pages/nullo-codex.html",
+      "title": "NULLO Codex",
+      "category": "NULLO"
+    },
+    {
+      "file": "pages/philosophy.html",
+      "href": "/pages/philosophy.html",
+      "title": "Philosophy",
+      "category": "Theory"
+    },
+    {
+      "file": "pages/pitch.html",
+      "href": "/pages/pitch.html",
+      "title": "Pitch",
+      "category": "Business"
+    },
+    {
+      "file": "pages/recovery_terminal.html",
+      "href": "/pages/recovery_terminal.html",
+      "title": "Recovery Terminal",
+      "category": "System"
+    },
+    {
+      "file": "pages/roadmap.html",
+      "href": "/pages/roadmap.html",
+      "title": "Roadmap",
+      "category": "Planning"
+    },
+    {
+      "file": "pages/science.html",
+      "href": "/pages/science.html",
+      "title": "Science",
+      "category": "Science"
     }
   ]
 }
