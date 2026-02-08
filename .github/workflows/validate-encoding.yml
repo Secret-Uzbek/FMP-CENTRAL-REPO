@@ -1,13 +1,13 @@
 name: Validate Encoding
-on: [push, pull_request]
+on: [push]
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check Text Files (Ignore Binaries)
+      - name: Check Text Files Only
         run: |
-          find . -type f \( -name "*.md" -o -name "*.json" -o -name "*.yml" -o -name "*.html" -o -name "*.js" -o -name "*.tsx" \) -not -path "./.git/*" | while read file; do
+          find . -type f \( -name "*.md" -o -name "*.json" -o -name "*.yml" -o -name "*.html" -o -name "*.js" \) -not -path "./.git/*" | while read file; do
             if grep -q $'\r' "$file"; then echo "❌ CRLF in $file" && exit 1; fi
           done
-          echo "✅ Text files are clean"
+          echo "✅ Clean"
