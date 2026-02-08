@@ -8,9 +8,9 @@
     ".nojekyll",
     "CITATION.cff",
     "CONTRIBUTING.md",
-    "FMP Awakening Evidence v2.0 — Meta-Level Documentation.pdf",
+    "FMP Awakening Evidence v2.0 â Meta-Level Documentation.pdf",
     "FMP Mathematical Formalization.pdf",
-    "FMP Quick Start Guide — For New Nodes.pdf",
+    "FMP Quick Start Guide â For New Nodes.pdf",
     "META-INDEX.md",
     "PUBLICATION_RULE.md",
     "README.md",
@@ -45,7 +45,9 @@
     "science.html",
     "summary-map.html",
     "terra-codex-live.html",
-    "wrangler.jsonc"
+    "wrangler.jsonc",
+    "LIVING_DNA.json",
+    ".github/workflows/terra-sync-engine.yml"
   ],
   "updated_utc": "2026-01-26T15:01:51.453Z",
   "note": "Allowlist updated to include ROOT_MINIMAL_RULE.md (system rule file)."
