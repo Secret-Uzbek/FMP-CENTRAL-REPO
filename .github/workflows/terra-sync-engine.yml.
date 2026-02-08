@@ -1,0 +1,44 @@
+name: TERRA SYNC CAROUSEL (EUO-L3)
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  detox_and_coherence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: NULLO_Detox_Filter
+        run: |
+          # Поиск запрещенной терминологии (канон, манифест и т.д.)
+          grep -rnE "канон|манифест|manifesto|canon" . && exit 1 || echo "✅ Clean"
+      - name: Coherence_Check
+        run: |
+          # Сверка с LIVING_DNA.json
+          python .automation/coherence_validator.py
+
+  deploy_external_nodes:
+    needs: detox_and_coherence
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Синхронизация с Zenodo
+      - name: Zenodo_Push
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          curl -H "Content-Type: application/json" -X POST -d '{"metadata": {"title": "FMP Layer: Visualization"}}' https://zenodo.org/api/deposit/depositions
+
+      # Синхронизация с Cloudflare (Обновление Живой ДНК на сайте)
+      - name: Cloudflare_qDNA_Update
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: pages deploy dist --project-name=fractal-metascience-org
+
+      # Обновление ORCID (через API при наличии разрешений)
+      - name: ORCID_Update_Signal
+        run: |
+          echo "Sending metadata update to ORCID for ID: 0009-0000-6394-4912"
