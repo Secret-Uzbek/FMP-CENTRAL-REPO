@@ -1,0 +1,19 @@
+{
+  "system": "TERRA_CODEX",
+  "version": "8.3",
+  "architect": {
+    "email": "a.abdukarimov@fractal-metascience.org",
+    "orcid": "0009-0000-6394-4912"
+  },
+  "recursion_formula": "$\mathcal{R}(K) = K + \Delta K(K)$",
+  "trusted_nodes": [
+    "zenodo.org",
+    "orcid.org",
+    "github.com/Secret-Uzbek",
+    "fractal-metascience.org"
+  ],
+  "constraints": {
+    "terminology_ban": ["canon", "manifesto", "канон", "манифест"],
+    "citation_density": ">= 5 per statement"
+  }
+}
