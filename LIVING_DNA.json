@@ -1,1 +1,7 @@
-{"dna_id":"urn:terra:dna:v8.5","architect":"a.abdukarimov@fractal-metascience.org","status":"STABILIZED","recursion":"R(K) = K + dK(K)"}
+{
+  "id": "urn:terra:dna:v8.5",
+  "architect": "a.abdukarimov@fractal-metascience.org",
+  "orcid": "0009-0000-6394-4912",
+  "status": "STABILIZED",
+  "logic": "NULLO-PLT-UCOMM"
+}
