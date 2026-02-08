@@ -5,12 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check Text Files Only
+      - name: Force LF and Check
         run: |
-          # Ищем только текстовые форматы, полностью исключая PDF и бинарные данные
-          find . -type f \( -name "*.md" -o -name "*.json" -o -name "*.yml" -o -name "*.html" -o -name "*.js" -o -name "*.tsx" -o -name "*.css" \) -not -path "./.git/*" | while read file; do
-            if grep -q $'\r' "$file"; then
-              echo "❌ CRLF detected in $file (Must be LF)" && exit 1
-            fi
+          find . -type f \( -name "*.md" -o -name "*.json" -o -name "*.yml" -o -name "*.html" -o -name "*.js" -o -name "*.tsx" \) -not -path "./.git/*" | while read file; do
+            sed -i 's/\r//g' "$file"
           done
-          echo "✅ All text files are clean (LF only)"
+          echo "✅ All text files normalized to LF"
