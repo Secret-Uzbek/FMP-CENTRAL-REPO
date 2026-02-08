@@ -1,5 +1,1 @@
-{
-  "last_sync": "2026-02-08T21:04:21.394Z",
-  "architect_email": "a.abdukarimov@fractal-metascience.org",
-  "status": "STABILIZED"
-}
+{"dna_id":"urn:terra:dna:v8.5","architect":"a.abdukarimov@fractal-metascience.org","status":"STABILIZED","recursion":"R(K) = K + dK(K)"}
