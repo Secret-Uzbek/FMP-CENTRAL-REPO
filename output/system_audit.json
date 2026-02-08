@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-01-31T00:28:33.291Z",
+  "generated_utc": "2026-02-08T21:04:32.864Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -8,26 +8,14 @@
     ]
   },
   "counts": {
-    "total_files": 127,
-    "published_files": 40,
-    "internal_files": 79,
-    "doi_hits": 32,
-    "link_warnings": 0
+    "total_files": 115,
+    "published_files": 25,
+    "internal_files": 82,
+    "doi_hits": 34,
+    "link_warnings": 5
   },
   "published_files_sample": [
-    "comparison.html",
-    "compliance.html",
-    "convention.html",
-    "dna-archive.html",
-    "dna_engine.html",
-    "experimental_program.html",
-    "fractal-metascience-org.html",
-    "identity_node.html",
     "index.html",
-    "manifesto-fmp-education.html",
-    "nullo-codex.html",
-    "philosophy.html",
-    "pitch.html",
     "public/README.md",
     "public/_meta/nodes.json",
     "public/agent.js",
@@ -50,9 +38,6 @@
     "public/pages/science.html",
     "public/pages/summary-map.html",
     "public/pages/terra-codex-live.html",
-    "recovery_terminal.html",
-    "roadmap.html",
-    "science.html",
     "summary-map.html",
     "terra-codex-live.html"
   ],
@@ -75,7 +60,7 @@
     },
     {
       "file": "README.md",
-      "url": "https://doi.org/10.6084/m9.figshare.30588389"
+      "url": "https://doi.org/10.6084/m9.figshare.30648455"
     },
     {
       "file": "README.md",
@@ -100,6 +85,14 @@
     {
       "file": "README.md",
       "url": "https://doi.org/10.5281/zenodo.17632584"
+    },
+    {
+      "file": "README.md",
+      "url": "https://zenodo.org/records/17632584"
+    },
+    {
+      "file": "README.md",
+      "url": "https://figshare.com/articles/dataset/30588389"
     },
     {
       "file": "README.md",
@@ -186,5 +179,31 @@
       "url": "https://doi.org/10.5281/zenodo.17632584</a></li>"
     }
   ],
-  "link_warnings": []
+  "link_warnings": [
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md",
+      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md"
+    },
+    {
+      "file": "README.md",
+      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md",
+      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md"
+    },
+    {
+      "file": "README.md",
+      "link": "FMP%20Awakening%20Evidence%20v2.0%20—%20Meta-Level%20Documentation.pdf",
+      "resolved": "FMP%20Awakening%20Evidence%20v2.0%20—%20Meta-Level%20Documentation.pdf"
+    },
+    {
+      "file": "README.md",
+      "link": "FMP%20Mathematical%20Formalization.pdf",
+      "resolved": "FMP%20Mathematical%20Formalization.pdf"
+    },
+    {
+      "file": "README.md",
+      "link": "FMP%20Quick%20Start%20Guide%20—%20For%20New%20Nodes.pdf",
+      "resolved": "FMP%20Quick%20Start%20Guide%20—%20For%20New%20Nodes.pdf"
+    }
+  ]
 }
