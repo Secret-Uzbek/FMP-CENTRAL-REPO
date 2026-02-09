@@ -5,15 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate Root Files
+      - name: Diagnostic Root Check
         run: |
-          ALLOWED=$(jq -r '.allowed_root_files[]' control/root_allowlist.json)
-          FOUND=$(find . -maxdepth 1 -type f -not -path '*/.*' | sed 's|./||' | sort)
+          # 1. Получаем список разрешенных файлов из JSON
+          ALLOWED=$(jq -r '.allowed_root_files[]' control/root_allowlist.json | sort)
           
-          for file in $FOUND; do
-            if [[ ! " ${ALLOWED[@]} " =~ " ${file} " ]]; then
-              echo "❌ ОШИБКА: Файл [$file] не зарегистрирован в allowlist!"
-              exit 1
-            fi
-          done
-          echo "✅ Все файлы в корне легальны."
+          # 2. Смотрим, что реально лежит в корне (игнорируем папки и скрытые файлы на .)
+          FOUND=$(ls -p | grep -v / | grep -v '^\.' | sort)
+          
+          # 3. Сравниваем списки
+          DIFF=$(comm -23 <(echo "$FOUND") <(echo "$ALLOWED"))
+          
+          if [ -n "$DIFF" ]; then
+            echo "❌ ОШИБКА: Найдены незарегистрированные файлы в корне:"
+            echo "$DIFF"
+            echo "-------------------------------------------------------"
+            echo "Архитектор, добавь эти имена в control/root_allowlist.json"
+            exit 1
+          else
+            echo "✅ Все файлы в корне легальны."
+          fi
