@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-02-09T12:35:46.714Z",
+  "generated_utc": "2026-02-09T12:48:38.886Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -11,8 +11,8 @@
     "total_files": 114,
     "published_files": 25,
     "internal_files": 81,
-    "doi_hits": 20,
-    "link_warnings": 0
+    "doi_hits": 21,
+    "link_warnings": 2
   },
   "published_files_sample": [
     "index.html",
@@ -49,6 +49,10 @@
     {
       "file": ".github/workflows/unified-deploy.yml",
       "url": "https://figshare.com/articles/30588389\""
+    },
+    {
+      "file": "README.md",
+      "url": "https://doi.org/10.5281/zenodo.17632584"
     },
     {
       "file": "index.html",
@@ -123,5 +127,16 @@
       "url": "https://doi.org/10.5281/zenodo.17632584</a></li>"
     }
   ],
-  "link_warnings": []
+  "link_warnings": [
+    {
+      "file": "README.md",
+      "link": "FMP_Awakening_Evidence_v2.0.pdf",
+      "resolved": "FMP_Awakening_Evidence_v2.0.pdf"
+    },
+    {
+      "file": "README.md",
+      "link": ".github/workflows/",
+      "resolved": ".github/workflows/"
+    }
+  ]
 }
