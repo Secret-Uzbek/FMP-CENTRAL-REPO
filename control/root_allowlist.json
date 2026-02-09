@@ -7,10 +7,8 @@
     "CITATION.cff",
     "CONTRIBUTING.md",
     "FMP_Awakening_Evidence_v2.0_Meta-Level_Documentation.pdf",
-    "FMP_Awakening_Evidence_v2.0_-_Meta-Level_Documentation.pdf",
     "FMP_Mathematical_Formalization.pdf",
     "FMP_Quick_Start_Guide_For_New_Nodes.pdf",
-    "FMP_Quick_Start_Guide_-_For_New_Nodes.pdf",
     "LIVING_DNA.json",
     "META-INDEX.md",
     "PUBLICATION_RULE.md",
@@ -32,5 +30,5 @@
     "terra-codex-live.html",
     "wrangler.jsonc"
   ],
-  "updated_utc": "2026-02-09T05:10:00Z"
+  "updated_utc": "2026-02-09T05:30:00Z"
 }
