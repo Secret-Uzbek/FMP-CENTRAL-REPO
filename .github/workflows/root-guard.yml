@@ -1,28 +1,19 @@
 name: Root Guard
-
-on:
-  workflow_dispatch:
-  push:
-    branches: [ "main" ]
-  pull_request:
-
-permissions:
-  contents: write
-
+on: [push]
 jobs:
-  root-guard:
+  check-root:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
-        with:
-          node-version: "20"
-      - name: Run root guard
-        run: node scripts/root_guard.js
-      - name: Commit report (if changed)
+      - uses: actions/checkout@v4
+      - name: Validate Root Files
         run: |
-          git config user.name "fmp-root-guard-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add output/root_guard_report.json || true
-          git diff --cached --quiet || git commit -m "chore(audit): update root guard report"
-          git push
+          ALLOWED=$(jq -r '.allowed_root_files[]' control/root_allowlist.json)
+          FOUND=$(find . -maxdepth 1 -type f -not -path '*/.*' | sed 's|./||' | sort)
+          
+          for file in $FOUND; do
+            if [[ ! " ${ALLOWED[@]} " =~ " ${file} " ]]; then
+              echo "❌ ОШИБКА: Файл [$file] не зарегистрирован в allowlist!"
+              exit 1
+            fi
+          done
+          echo "✅ Все файлы в корне легальны."
