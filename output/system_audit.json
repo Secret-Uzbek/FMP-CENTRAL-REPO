@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-02-09T12:32:03.592Z",
+  "generated_utc": "2026-02-09T12:35:46.714Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -11,8 +11,8 @@
     "total_files": 114,
     "published_files": 25,
     "internal_files": 81,
-    "doi_hits": 34,
-    "link_warnings": 5
+    "doi_hits": 20,
+    "link_warnings": 0
   },
   "published_files_sample": [
     "index.html",
@@ -49,62 +49,6 @@
     {
       "file": ".github/workflows/unified-deploy.yml",
       "url": "https://figshare.com/articles/30588389\""
-    },
-    {
-      "file": "META-INDEX.md",
-      "url": "https://zenodo.org/records/17425678"
-    },
-    {
-      "file": "META-INDEX.md",
-      "url": "https://figshare.com/articles/software/30588389"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.6084/m9.figshare.30648455"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.5281/zenodo.17632584"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.6084/m9.figshare.30588389"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.5281/zenodo.17598487"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.5281/zenodo.17597945"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.5281/zenodo.17632584"
-    },
-    {
-      "file": "README.md",
-      "url": "https://zenodo.org/records/17632584"
-    },
-    {
-      "file": "README.md",
-      "url": "https://figshare.com/articles/dataset/30588389"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.6084/m9.figshare.30588389"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.6084/m9.figshare.30648455"
-    },
-    {
-      "file": "README.md",
-      "url": "https://doi.org/10.5281/zenodo.17632584"
     },
     {
       "file": "index.html",
@@ -179,31 +123,5 @@
       "url": "https://doi.org/10.5281/zenodo.17632584</a></li>"
     }
   ],
-  "link_warnings": [
-    {
-      "file": "README.md",
-      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md",
-      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md"
-    },
-    {
-      "file": "README.md",
-      "link": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md",
-      "resolved": "awakening-evidence-v2/FMP%20Awakening%20Evidence%20v2.0.md"
-    },
-    {
-      "file": "README.md",
-      "link": "FMP%20Awakening%20Evidence%20v2.0%20Ã¢ÂÂ%20Meta-Level%20Documentation.pdf",
-      "resolved": "FMP%20Awakening%20Evidence%20v2.0%20Ã¢ÂÂ%20Meta-Level%20Documentation.pdf"
-    },
-    {
-      "file": "README.md",
-      "link": "FMP%20Mathematical%20Formalization.pdf",
-      "resolved": "FMP%20Mathematical%20Formalization.pdf"
-    },
-    {
-      "file": "README.md",
-      "link": "FMP%20Quick%20Start%20Guide%20Ã¢ÂÂ%20For%20New%20Nodes.pdf",
-      "resolved": "FMP%20Quick%20Start%20Guide%20Ã¢ÂÂ%20For%20New%20Nodes.pdf"
-    }
-  ]
+  "link_warnings": []
 }
