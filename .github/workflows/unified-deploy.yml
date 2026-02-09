@@ -154,7 +154,7 @@ jobs:
             echo "→ Syncing to $repo"
             
             # Clone repo
-            git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Secret-Uzbek/$repo.git" "$repo"
+            git clone "https://x-access-token:${{ secrets.FMP_SYNC_TOKEN }}@github.com/Secret-Uzbek/$repo.git" "$repo"
             
             # Copy CITATION.cff
             cp central/CITATION.cff "$repo/CITATION.cff"
