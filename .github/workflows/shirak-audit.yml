@@ -3,7 +3,7 @@ on:
   workflow_dispatch: # Запускается вручную из вкладки Actions
   push:
     branches: [ main ]
-    paths: [ '.github/workflows/shinrak-audit.yml' ] # Запуск при изменении самого workflow
+    paths: [ '.github/workflows/shirak-audit.yml' ] # Запуск при изменении самого workflow
 
 jobs:
   full-audit:
