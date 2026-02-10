@@ -26,26 +26,28 @@
       "date": "2025-11-12"
     }
   ],
+  "additional_proofs": [
+    {
+      "type": "GitHub Release",
+      "doi": "pending Zenodo #9",
+      "title": "L7 Research Assistant Mandate v1.0 (Terra Setup)",
+      "url": "https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate",
+      "date": "2025-11-13"
+    },
+    {
+      "type": "LaTeX Source",
+      "doi": "pending Zenodo #10",
+      "title": "FMP_EUO_PLT.tex v1.1 (Fundamental Artifacts)",
+      "url": "https://github.com/Secret-Uzbek/FMP-monograph/blob/main/FMP_EUO_PLT.tex",
+      "date": "2025-11-13"
+    },
+    {
+      "type": "React JSX",
+      "doi": "pending Zenodo #11",
+      "title": "terra_detox_engine_v_1.jsx v1.1",
+      "url": "https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.1-detox",
+      "date": "2025-11-13"
+    }
+  ],
   "verification": "✓ Zenodo | ⏳ OSF | ✓ Figshare | FMP-001 CLOSED"
-}
-{
-  "type": "GitHub Release",
-  "doi": "pending Zenodo #9",
-  "title": "L7 Research Assistant Mandate v1.0 (Terra Setup)",
-  "url": "https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.0-mandate",
-  "date": "2025-11-13"
-}
-{
-  "type": "LaTeX Source",
-  "doi": "pending Zenodo #10",
-  "title": "FMP_EUO_PLT.tex v1.1 (Fundamental Artifacts)",
-  "url": "https://github.com/Secret-Uzbek/FMP-monograph/blob/main/FMP_EUO_PLT.tex",
-  "date": "2025-11-13"
-}
-{
-  "type": "React JSX",
-  "doi": "pending Zenodo #11",
-  "title": "terra_detox_engine_v_1.jsx v1.1",
-  "url": "https://github.com/Secret-Uzbek/FMP-monograph/releases/tag/v1.1-detox",
-  "date": "2025-11-13"
 }
