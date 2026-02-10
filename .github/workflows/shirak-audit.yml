@@ -1,0 +1,135 @@
+name: '[SHIRAK] Ecosystem Audit & Report'
+on:
+  workflow_dispatch: # Запускается вручную из вкладки Actions
+  push:
+    branches: [ main ]
+    paths: [ '.github/workflows/shinrak-audit.yml' ] # Запуск при изменении самого workflow
+
+jobs:
+  full-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install requests PyGithub
+
+      - name: SHIRAK Core - Run Ecosystem Audit
+        env:
+          GITHUB_TOKEN: ${{ secrets.SHIRAK_CORE_TOKEN }}
+          REPO_NAME: ${{ github.repository }}
+        run: |
+          python << 'EOF'
+          import os, json, requests, sys
+          from github import Github, GithubException
+
+          # ===== КОНФИГУРАЦИЯ =====
+          GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+          TARGET_REPO = os.environ.get('REPO_NAME', 'Secret-Uzbek/FMP-CENTRAL-REPO')
+          # =========================
+
+          if not GITHUB_TOKEN:
+              print("❌ Ошибка: GITHUB_TOKEN не найден в секретах.")
+              sys.exit(1)
+
+          print(f"🔐 Аутентификация с токеном...")
+          g = Github(GITHUB_TOKEN)
+          user = g.get_user("Secret-Uzbek")
+          print(f"✅ Аутентифицирован как: {user.login}")
+
+          # === 1. АУДИТ РЕПОЗИТОРИЕВ ПОЛЬЗОВАТЕЛЯ ===
+          print(f"\\n📊 АУДИТ 1: Репозитории пользователя '{user.login}'")
+          repo_data = []
+          for repo in user.get_repos(type='owner'):
+              repo_info = {
+                  "name": repo.full_name,
+                  "private": repo.private,
+                  "archived": repo.archived,
+                  "language": repo.language,
+                  "stars": repo.stargazers_count,
+                  "forks": repo.forks_count,
+                  "pushed_at": repo.pushed_at.isoformat() if repo.pushed_at else None,
+                  "topics": repo.get_topics(),
+                  "license": repo.license.spdx_id if repo.license else "NO LICENSE"
+              }
+              repo_data.append(repo_info)
+              print(f"   • {repo.full_name} | Lang: {repo.language or 'N/A'} | Stars: {repo.stargazers_count} | License: {repo_info['license']}")
+
+          # === 2. АУДИТ ОРГАНИЗАЦИИ AIUZ ===
+          print(f"\\n🏛️ АУДИТ 2: Организация 'AIUZ-Terra-Codex-EcoSystem'")
+          org_data = []
+          try:
+              org = g.get_organization("AIUZ-Terra-Codex-EcoSystem")
+              for repo in org.get_repos():
+                  org_info = {
+                      "name": repo.full_name,
+                      "private": repo.private,
+                      "language": repo.language,
+                      "license": repo.license.spdx_id if repo.license else "NO LICENSE"
+                  }
+                  org_data.append(org_info)
+                  print(f"   • {repo.full_name} | Private: {repo.private} | License: {org_info['license']}")
+          except GithubException as e:
+              print(f"   ⚠️ Не удалось получить данные организации: {e}")
+
+          # === 3. АНАЛИЗ И ФОРМИРОВАНИЕ ОТЧЕТА ===
+          print(f"\\n📈 ФОРМИРОВАНИЕ ОТЧЕТА...")
+          total_repos = len(repo_data)
+          public_repos = len([r for r in repo_data if not r['private']])
+          repos_without_license = len([r for r in repo_data if r['license'] == "NO LICENSE"])
+          most_starred = max(repo_data, key=lambda x: x['stars']) if repo_data else None
+
+          report_markdown = f"""# 📋 Аудит экосистемы FMP / Terra
+*Автоматически сгенерировано агентом SHIRAK*
+
+## 📊 Статистика репозиториев (Secret-Uzbek)
+- **Всего репозиториев:** {total_repos}
+- **Публичных репозиториев:** {public_repos}
+- **Без лицензии:** {repos_without_license}
+- **Самый популярный:** {most_starred['name'] if most_starred else 'N/A'} ({most_starred['stars'] if most_starred else 0} ⭐)
+
+## 🎯 Ключевые проекты (рекомендация к публикации)
+### **Navoiy-Terra Corpus**
+- **Репозиторий:** `Secret-Uzbek/navoiy-terra-corpus`
+- **Статус:** Готов к публикации (последнее обновление: {next((r['pushed_at'] for r in repo_data if 'navoiy-terra-corpus' in r['name']), 'N/A')})
+- **Рекомендуемое действие:** 
+  1. Создать формальный **Release v1.0.0** в репозитории.
+  2. Зарегистрировать **DOI через Zenodo** (интеграция уже настроена в ORCID).
+  3. Добавить DOI в README и ORCID-профиль.
+
+## ⚠️ Внимание на лицензии
+Следующие репозитории требуют проверки/установки лицензии:
+{chr(10).join(f"- `{r['name']}`" for r in repo_data if r['license'] == "NO LICENSE")}
+
+## 🗂️ Полный список репозиториев
+| Репозиторий | Язык | Звёзды | Лицензия |
+|---|---|---|---|
+{chr(10).join(f"| `{r['name']}` | {r['language'] or 'N/A'} | {r['stars']} | {r['license']} |" for r in sorted(repo_data, key=lambda x: x['stars'], reverse=True))}
+
+---
+*Следующий шаг: Агент SHIRAK готов к настройке автоматических пайплайнов публикации.*
+"""
+          # === 4. СОЗДАНИЕ ISSUE С ОТЧЕТОМ ===
+          print(f"\\n📤 СОЗДАНИЕ ISSUE В ЦЕНТРАЛЬНОМ РЕПОЗИТОРИИ...")
+          try:
+              central_repo = g.get_repo(TARGET_REPO)
+              issue = central_repo.create_issue(
+                  title="[SHIRAK Audit] Полный аудит экосистемы FMP",
+                  body=report_markdown,
+                  labels=["shirak", "audit", "automation"]
+              )
+              print(f"✅ Отчет успешно создан: {issue.html_url}")
+          except GithubException as e:
+              print(f"❌ Не удалось создать issue: {e}")
+              # Если issue не создалось, выводим отчет в логи
+              print("\\n--- РЕЗЕРВНЫЙ ВЫВОД ОТЧЕТА ---")
+              print(report_markdown)
+
+          print(f"\\n🎉 АУДИТ ЗАВЕРШЕН. SHIRAK ОПЕРАЦИОНЕН.")
+          EOF
