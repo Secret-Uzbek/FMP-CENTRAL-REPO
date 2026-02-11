@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-02-11T02:45:40.275Z",
+  "generated_utc": "2026-02-11T02:46:26.738Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -8,9 +8,9 @@
     ]
   },
   "counts": {
-    "total_files": 117,
+    "total_files": 118,
     "published_files": 25,
-    "internal_files": 84,
+    "internal_files": 85,
     "doi_hits": 22,
     "link_warnings": 0
   },
