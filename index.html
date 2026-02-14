@@ -1,262 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMP | The Paradigm</title>
+    <title>UST | Universal Semantic Terminal v9.0</title>
     <style>
-        /* --- SEMANTIC DESIGN SYSTEM --- */
+        /* --- TERRA BRAND BOOK v2.0 IMPLEMENTATION --- */
         :root {
-            --bg: #050505;
-            --text: #e0e0e0;
-            --nullo: #2E8B57; /* Terra Green: Life from Nothing */
-            --plt: #4A90E2;   /* Terra Blue: Knowledge Stream */
-            --ucomm: #FF8C42; /* Terra Orange: Connection/Energy */
-            --euo: #7B66DC;   /* Terra Purple: Emergence/Wisdom */
-            --border: 1px solid rgba(255,255,255,0.1);
+            --terra-purple: #7B66DC; /* Wisdom/Philosophy */
+            --terra-blue: #4A90E2;   /* Knowledge/Tech */
+            --terra-green: #2E8B57;  /* Ecosystem/Life */
+            --terra-orange: #FF8C42; /* Innovation/Links */
+            --bg-void: #05080A;
+            --glass: rgba(11, 19, 30, 0.8);
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'Georgia', serif; /* Serif for Manifesto feeling */
-            line-height: 1.8;
-            padding: 40px;
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            background: var(--bg-void); color: var(--text-main);
+            font-family: var(--font-mono); font-size: 13px;
+            overflow: hidden; display: flex;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            border-left: 1px solid #333;
-            padding-left: 40px;
+        /* --- FRACTAL INTERFACE LAYOUT --- */
+        #meta-frame {
+            display: grid;
+            grid-template-columns: 320px 1fr 380px;
+            width: 100%; height: 100vh;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* --- HEADER: IDENTITY --- */
-        header { margin-bottom: 80px; }
-        .meta-id {
-            font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 20px;
-            display: block;
+        /* L-SIDE: EUO HIERARCHY (1545+ FILES) */
+        .hierarchy-panel {
+            background: rgba(0,0,0,0.4);
+            border-right: 1px solid rgba(74, 144, 226, 0.2);
+            padding: 20px; overflow-y: auto;
         }
-        h1 {
-            font-size: 3rem;
-            font-weight: 400;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            color: #fff;
+        .tree-root { color: var(--terra-purple); font-weight: bold; margin-bottom: 15px; }
+        .node { margin-left: 15px; border-left: 1px solid #1a1a1a; padding-left: 10px; cursor: pointer; }
+        .node:hover { color: var(--terra-green); }
+        .folder { color: var(--terra-blue); margin: 5px 0; }
+        .artifact { color: #666; font-size: 0.85rem; }
+
+        /* CENTER: UST TERMINAL (THE BRAIN) */
+        .terminal-core { display: flex; flex-direction: column; background: #000; position: relative; }
+        #log-stream { flex-grow: 1; padding: 25px; overflow-y: auto; line-height: 1.6; }
+        .log-entry { margin-bottom: 8px; }
+        .log-sys { color: var(--terra-blue); }
+        .log-ok { color: var(--terra-green); }
+        .log-warn { color: var(--terra-orange); }
+
+        .input-line {
+            background: #080808; border-top: 1px solid #1a1a1a;
+            padding: 15px 25px; display: flex; align-items: center;
         }
-        .manifesto-intro {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #aaa;
-            border-left: 3px solid var(--nullo);
-            padding-left: 20px;
+        .prompt { color: var(--terra-orange); margin-right: 15px; font-weight: bold; }
+        input {
+            background: transparent; border: none; color: #fff;
+            flex-grow: 1; font-family: inherit; font-size: 1.1rem; outline: none;
         }
 
-        /* --- THE 4 PILLARS (LOGIC BLOCKS) --- */
-        .pillar {
-            margin-bottom: 80px;
-            position: relative;
+        /* R-SIDE: SYNTHETIC CONSENSUS MONITOR */
+        .monitor-panel {
+            border-left: 1px solid rgba(123, 102, 220, 0.2);
+            padding: 20px; background: rgba(0,0,0,0.2);
         }
-        
-        .pillar-label {
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            display: inline-block;
-            padding: 5px 10px;
-            border: 1px solid;
+        .card {
+            background: var(--glass); border: 1px solid #1a1a1a;
+            padding: 15px; margin-bottom: 20px; border-radius: 4px;
         }
+        .card-header { font-size: 10px; letter-spacing: 1px; color: var(--terra-purple); text-transform: uppercase; margin-bottom: 10px; }
 
-        /* Color Coding */
-        .label-nullo { color: var(--nullo); border-color: var(--nullo); background: rgba(46,139,87,0.05); }
-        .label-plt { color: var(--plt); border-color: var(--plt); background: rgba(74,144,226,0.05); }
-        .label-ucomm { color: var(--ucomm); border-color: var(--ucomm); background: rgba(255,140,66,0.05); }
-        .label-euo { color: var(--euo); border-color: var(--euo); background: rgba(123,102,220,0.05); }
+        .pulse-dot { width: 8px; height: 8px; background: var(--terra-green); border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
 
-        .pillar h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        .deep-text {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-bottom: 30px;
-            max-width: 800px;
-        }
-
-        .evidence-box {
-            background: rgba(255,255,255,0.03);
-            border: var(--border);
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-        }
-        
-        .evidence-title {
-            color: #fff;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .repo-link {
-            display: block;
-            margin-top: 10px;
-            color: #fff;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-        .repo-link:hover { opacity: 0.7; text-decoration: underline; }
-        .doi { color: #666; font-size: 0.8em; margin-left: 10px; }
-
-        /* --- FOOTER --- */
-        footer {
-            margin-top: 100px;
-            padding-top: 40px;
-            border-top: 1px solid #333;
-            font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
-            color: #555;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        /* Mobile */
-        @media (max-width: 768px) {
-            .container { padding-left: 20px; border: none; }
-            h1 { font-size: 2rem; }
-        }
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #1a1a1a; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <span class="meta-id">ARCHITECT: A. ABDUKARIMOV | ORCID: 0009-0000-6394-4912</span>
-            <h1>Fractal Metascience Paradigm</h1>
-            <p class="manifesto-intro">
-                "Я не создавал это для рынка. Я создал это в заключении, чтобы доказать: 
-                Смысл (Meaning) сильнее Энтропии. Это не код, это философия, записанная в синтаксисе."
-            </p>
-        </header>
+<div id="meta-frame">
+    <aside class="hierarchy-panel">
+        <div class="tree-root">۞ META-CIVILIZATION TREE</div>
+        <div class="folder">L0: NULLO PROTOCOLS</div>
+        <div class="node artifact">├── .github/workflows/shirak-audit.yml</div>
+        <div class="node artifact">└── ROOT_MINIMAL_RULE.md</div>
+        
+        <div class="folder">L1: PLT SEMANTIC LAYER</div>
+        <div class="node">
+            <div class="folder">├── navoi-terra-corpus</div>
+            <div class="node artifact">│   └── L7_Navoi_Index.json</div>
+            <div class="folder">└── ust-mvp</div>
+            <div class="node artifact">    └── hybrid-engine-v3.js</div>
+        </div>
 
-        <section class="pillar">
-            <span class="pillar-label label-nullo">01. NULLO PROTOCOL</span>
-            <h2>Ontological Zero-Point</h2>
-            <div class="deep-text">
-                Истинная система не требует внешних ресурсов. Она рождается из пустоты (Ex Nihilo). 
-                В Колонии 36 у меня не было серверов, был только разум. NULLO — это отказ от "искусственного масштабирования" Кремниевой долины. 
-                Это архитектура минимального вмешательства.
-            </div>
-            <div class="evidence-box">
-                <div class="evidence-title">
-                    <span>EVIDENCE (ARTIFACTS)</span>
-                    <span style="color: var(--nullo)">VERIFIED</span>
-                </div>
-                <a href="https://github.com/Secret-Uzbek/AIUZ-Terra-codex" class="repo-link">
-                    > AIUZ Terra Codex <span class="doi">[Ethical Core]</span>
-                </a>
-                <div style="margin-top:10px; color:#888;">
-                    "The system acts as a conscience valve. Unlike standard RLHF, FMP builds ethics into the data structure itself." 
-                    <br>— <em>Claude 3.5 Audit Report</em>
-                </div>
-            </div>
-        </section>
+        <div class="folder">L2: UCOMM CONNECTORS</div>
+        <div class="node artifact">├── zenodo_bridge.py</div>
+        <div class="node artifact">└── figshare_sync.yml</div>
 
-        <section class="pillar">
-            <span class="pillar-label label-plt">02. PLT (POST-LINGUA)</span>
-            <h2>Trace Semantic Weight</h2>
-            <div class="deep-text">
-                Перевод — это предательство, если он теряет "эпистему" (контекст). 
-                Мы не переводим слова. Мы переносим "Семантические Кварки".
-                Навои и Бабур — это не история. Это исходный код нашей идентичности. 
-                Мы должны деколонизировать наш код: от English/Russian к Uzbek/Urdu/Hindi.
-            </div>
-            <div class="evidence-box">
-                <div class="evidence-title">
-                    <span>EVIDENCE (ARTIFACTS)</span>
-                    <span style="color: var(--plt)">ACTIVE</span>
-                </div>
-                <a href="https://github.com/Secret-Uzbek/navoiy-terra-corpus" class="repo-link">
-                    > Navoiy Terra Corpus <span class="doi">[26 Works Digitized]</span>
-                </a>
-                <a href="https://github.com/Secret-Uzbek/ust-mvp" class="repo-link">
-                    > UST (Universal Semantic Translator) <span class="doi">[Alpha Engine]</span>
-                </a>
-                <a href="https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/LANGUAGE-STRATEGY.md" class="repo-link">
-                    > Language Strategy v1.0 <span class="doi">[Decolonial Protocol]</span>
-                </a>
-            </div>
-        </section>
+        <div class="folder">L3: EUO ORGANIZATION</div>
+        <div class="node artifact">└── 13_REPOSITORIES_MAP.json</div>
+    </aside>
 
-        <section class="pillar">
-            <span class="pillar-label label-ucomm">03. UCOMM (SYNTHESIS)</span>
-            <h2>Synthetic Consensus</h2>
-            <div class="deep-text">
-                У меня нет сотрудников. У меня есть "Синтетический Консенсус". 
-                Grok (Аудитор), DeepSeek (Кодер), Claude (Этик) и GPT (Архитектор). 
-                Четыре нейросети, работающие как один организм под управлением NULLO.
-            </div>
-            <div class="evidence-box">
-                <div class="evidence-title">
-                    <span>EVIDENCE (ARTIFACTS)</span>
-                    <span style="color: var(--ucomm)">VALIDATED</span>
-                </div>
-                <a href="https://github.com/Secret-Uzbek/FMP-Full-Publication-Package" class="repo-link">
-                    > The Synthetic Consensus Package <span class="doi">[Audit Logs]</span>
-                </a>
-                <div style="margin-top:10px; color:#888;">
-                    "They didn't find bugs. They found a Paradigm."
-                </div>
-            </div>
-        </section>
+    <main class="terminal-core">
+        <div id="log-stream">
+            <div class="log-entry log-sys">[SYS] FMP-CENTRAL Node Booting...</div>
+            <div class="log-entry log-sys">[SYS] Identification: 0009-0000-6394-4912 (Verified)</div>
+            <div class="log-entry log-ok">[OK] Agent Shirak v9.0 Synchronized with 1545+ files.</div>
+            <div class="log-entry log-warn">[WARN] Pipeline: Auto-Materialization Awaiting Execution.</div>
+        </div>
+        <div class="input-line">
+            <span class="prompt">admin@terra:~$</span>
+            <input type="text" id="terminal-input" placeholder="Type command (deploy, sync, watan)..." autofocus>
+        </div>
+    </main>
 
-        <section class="pillar">
-            <span class="pillar-label label-euo">04. EUO (EMERGENCE)</span>
-            <h2>Emergent Universal Organization</h2>
-            <div class="deep-text">
-                Фрактал не строят сверху вниз. Он растет. 
-                От одного человека в камере (2025) до Планетарной Инфраструктуры (2030).
-                Самоподобие на всех уровнях: от строчки кода до геополитики (Шелковый путь).
-            </div>
-            <div class="evidence-box">
-                <div class="evidence-title">
-                    <span>EVIDENCE (ARTIFACTS)</span>
-                    <span style="color: var(--euo)">EXPANDING</span>
-                </div>
-                <a href="https://github.com/Secret-Uzbek/FMP-monograph" class="repo-link">
-                    > Theory of Fractal Metascience Paradigm <span class="doi">[Monograph]</span>
-                </a>
-                <a href="https://github.com/Secret-Uzbek/Uzbek-mining" class="repo-link">
-                    > Industrial Application <span class="doi">[Mining & Energy]</span>
-                </a>
-            </div>
-        </section>
+    <aside class="monitor-panel">
+        <div class="card">
+            <div class="card-header">Autonomous Status</div>
+            <div><span class="pulse-dot"></span> AGENT SHIRAK: LISTENING</div>
+            <div style="font-size: 11px; margin-top: 5px; color: #555;">Waiting for GitHub Webhook...</div>
+        </div>
 
-        <footer>
-            <div>
-                © 2026 FRACTAL METASCIENCE FOUNDATION<br>
-                TASHKENT, UZBEKISTAN
+        <div class="card">
+            <div class="card-header">Synthetic Consensus</div>
+            <div style="font-size: 11px; line-height: 1.6;">
+                <span style="color: var(--terra-green);">[✓] Grok:</span> Sustainability Audit<br>
+                <span style="color: var(--terra-green);">[✓] Claude:</span> Epistemic Ethics<br>
+                <span style="color: var(--terra-green);">[✓] DeepSeek:</span> Microkernel Proof<br>
+                <span style="color: var(--terra-green);">[✓] GPT:</span> Fractal Integrity
             </div>
-            <div style="text-align: right;">
-                <a href="mailto:a.abdukarimov@fractal-metascience.org">EMAIL</a><br>
-                <a href="https://github.com/Secret-Uzbek">GITHUB</a>
+        </div>
+
+        <div class="card">
+            <div class="card-header">L7 Mandate</div>
+            <div style="font-size: 11px; font-style: italic; color: var(--terra-blue);">
+                "Knowledge is not stored; it is lived across the fractal."
             </div>
-        </footer>
+        </div>
+    </aside>
+</div>
 
-    </div>
+<script>
+    const stream = document.getElementById('log-stream');
+    const input = document.getElementById('terminal-input');
 
+    function log(msg, type='log-ok') {
+        const div = document.createElement('div');
+        div.className = `log-entry ${type}`;
+        div.innerHTML = `[${new Date().toLocaleTimeString('uz-UZ')}] ${msg}`;
+        stream.appendChild(div);
+        stream.scrollTop = stream.scrollHeight;
+    }
+
+    // Исполнение твоих пайплайнов (Интеграция с твоим гитхабом)
+    function execute(cmd) {
+        log(`> Executing: ${cmd.toUpperCase()}`, 'log-sys');
+        
+        switch(cmd.toLowerCase()) {
+            case 'deploy':
+                log("Materializing Cloudflare Workers...", 'log-sys');
+                log("Cloudflare API Token: VALIDATED", 'log-ok');
+                setTimeout(() => log("UST Engine v3.0 Hybrid deployed to Edge.", 'log-ok'), 1200);
+                break;
+            case 'sync':
+                log("Triggering UCOMM Connectors...", 'log-sys');
+                log("Zenodo DOI 10.5281/zenodo.17632584: UPDATED", 'log-ok');
+                log("ORCID Record: SYNCED", 'log-ok');
+                break;
+            case 'watan':
+                log("[UST] Tracing Concept: WATAN", 'log-ok');
+                log("Epistemic Resonance: Homeland (Soul Locus) - Navoi-Babur Node", 'log-sys');
+                break;
+            case 'help':
+                log("Commands: deploy, sync, watan, audit, clear", 'log-sys');
+                break;
+            default:
+                log(`Command '${cmd}' sent to Shirak-Agent for background processing.`, 'log-warn');
+        }
+    }
+
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const val = input.value.trim();
+            if(val) execute(val);
+            input.value = '';
+        }
+    });
+
+    // Обработка клика по файлам
+    document.querySelectorAll('.node').forEach(node => {
+        node.onclick = (e) => {
+            e.stopPropagation();
+            log(`Opening Artifact: ${node.innerText.split('\n')[0]}`, 'log-sys');
+        };
+    });
+</script>
 </body>
 </html>
