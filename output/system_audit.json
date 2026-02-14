@@ -1,6 +1,6 @@
 {
   "repo": "FMP-CENTRAL-REPO",
-  "generated_utc": "2026-02-14T04:43:56.489Z",
+  "generated_utc": "2026-02-14T05:08:41.495Z",
   "publication_rule": {
     "published": [
       "public/**",
@@ -11,7 +11,7 @@
     "total_files": 120,
     "published_files": 25,
     "internal_files": 87,
-    "doi_hits": 19,
+    "doi_hits": 22,
     "link_warnings": 0
   },
   "published_files_sample": [
@@ -57,6 +57,18 @@
     {
       "file": "README.md",
       "url": "https://doi.org/10.5281/zenodo.17632584"
+    },
+    {
+      "file": "index.html",
+      "url": "https://doi.org/10.5281/ZENODO.18602635\""
+    },
+    {
+      "file": "index.html",
+      "url": "https://doi.org/10.5281/ZENODO.18155672\""
+    },
+    {
+      "file": "index.html",
+      "url": "https://doi.org/10.5281/ZENODO.18134544\""
     },
     {
       "file": "public/pages/fractal-metascience-org.html",
