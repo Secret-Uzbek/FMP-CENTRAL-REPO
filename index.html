@@ -3,41 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌍 FMP | Terra Ecosystem v3.0</title>
+    <title>🌍 Terra Codex | Living System</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
     <style>
-        /* --- TERRA BRAND BOOK v2.0 COMPLIANCE --- */
+        /* --- TERRA ECOSYSTEM STYLES v3.1 --- */
         :root {
             --terra-green: #2E8B57;
             --terra-blue: #4A90E2;
             --terra-purple: #7B66DC;
             --terra-orange: #FF8C42;
-            --terra-dark: #0a0e1a;
-            --terra-glass: rgba(255, 255, 255, 0.05);
-            --terra-border: rgba(255, 255, 255, 0.1);
-            --radius: 12px;
+            --bg-deep: #050810;
+            --glass: rgba(20, 30, 40, 0.7);
+            --border: rgba(74, 144, 226, 0.2);
         }
-
-        * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            /* Градиент из твоего terra-design.html */
-            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 35%, #2a3447 100%);
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #1a253a 0%, #050810 100%);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             overflow-x: hidden;
-            min-height: 100vh;
+            height: 100vh;
         }
 
-        /* Живой фон (Частицы знаний) */
-        #terra-canvas {
+        /* ЖИВОЙ ФОН (Three.js Canvas) */
+        #neural-canvas {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
             z-index: -1;
-            opacity: 0.6;
         }
 
         #app {
@@ -49,415 +44,312 @@
             height: 98vh;
         }
 
-        /* --- UI КОМПОНЕНТЫ --- */
-        
-        /* Стеклянные панели (Terra Glass) */
+        /* --- UI COMPONENTS --- */
         .glass-panel {
-            background: var(--terra-glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--terra-border);
-            border-radius: var(--radius);
-            padding: 24px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Header */
+        /* HEADER */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 14, 26, 0.8);
-            border-bottom: 1px solid var(--terra-green);
+            margin-bottom: 20px;
+            padding: 15px 25px;
         }
-        
-        .logo-area { display: flex; align-items: center; gap: 15px; }
-        .logo-symbol { 
-            font-size: 32px; 
+        .logo { font-size: 24px; font-weight: 300; letter-spacing: 2px; display: flex; align-items: center; gap: 15px; }
+        .logo strong { font-weight: 800; color: white; }
+        .logo-icon { 
+            width: 40px; height: 40px; 
             background: linear-gradient(45deg, var(--terra-green), var(--terra-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        h1 { 
-            margin: 0; 
-            font-weight: 300; 
-            font-size: 1.5rem; 
-            letter-spacing: 1px;
-        }
-        h1 strong { font-weight: 700; color: white; }
-
-        .status-badge {
-            background: rgba(46, 139, 87, 0.2);
-            color: var(--terra-green);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid var(--terra-green);
+            border-radius: 8px;
+            display: grid; place-items: center; font-weight: bold; font-size: 24px; color: #000;
         }
 
-        /* Языковой переключатель (Pill Style) */
-        .lang-switch {
-            background: rgba(0,0,0,0.3);
-            border-radius: 20px;
-            padding: 4px;
-            display: flex;
-            gap: 4px;
-        }
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: #888;
-            padding: 6px 16px;
-            border-radius: 16px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-        .lang-btn.active {
-            background: var(--terra-blue);
-            color: white;
-            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
-        }
-
-        /* --- СЕТКА --- */
+        /* GRID */
         .grid-layout {
             display: grid;
-            grid-template-columns: 350px 1fr; /* Фиксированная колонка истории */
-            gap: 24px;
+            grid-template-columns: 320px 1fr 320px; /* Три колонки: История | Визуал | Агент */
+            gap: 20px;
             flex-grow: 1;
             overflow: hidden;
         }
 
-        /* Лента времени (Chronos) */
-        .timeline-section {
-            overflow-y: auto;
-            border-right: none;
+        /* COLUMNS */
+        .col-title {
+            color: var(--terra-blue);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
         }
-        .timeline-item {
-            padding-left: 24px;
-            border-left: 2px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
+
+        /* HISTORY FEED */
+        .history-feed { overflow-y: auto; padding-right: 5px; }
+        .history-item {
+            border-left: 2px solid var(--terra-purple);
+            padding-left: 15px;
+            margin-bottom: 25px;
             position: relative;
         }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -6px; top: 6px;
-            width: 10px; height: 10px;
-            background: var(--terra-purple);
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px rgba(123, 102, 220, 0.2);
+        .history-item::before {
+            content: ''; position: absolute; left: -6px; top: 0;
+            width: 10px; height: 10px; background: var(--terra-purple); border-radius: 50%;
         }
-        .timeline-date { 
-            color: var(--terra-blue); 
-            font-weight: bold; 
-            font-size: 0.9rem;
-            margin-bottom: 4px;
-        }
-        .timeline-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .timeline-desc {
-            font-size: 0.9rem;
-            color: #aaa;
-            line-height: 1.5;
-        }
+        .year { font-weight: bold; color: var(--terra-orange); font-size: 14px; }
+        .event { font-weight: 600; margin: 4px 0; }
+        .desc { font-size: 13px; color: #aaa; line-height: 1.4; }
 
-        /* Агент Ширак (Чат) */
-        .agent-section {
+        /* CENTER VISUAL (No Images, CSS Art) */
+        .visual-center {
             display: flex;
             flex-direction: column;
-            background: rgba(255,255,255,0.02);
-        }
-        .agent-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-        }
-        #chat-window {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .msg {
-            max-width: 80%;
-            padding: 12px 16px;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        .msg.bot {
-            background: rgba(46, 139, 87, 0.1);
-            border-left: 3px solid var(--terra-green);
-            align-self: flex-start;
-            border-top-left-radius: 2px;
-        }
-        .msg.user {
-            background: rgba(74, 144, 226, 0.1);
-            border-right: 3px solid var(--terra-blue);
-            align-self: flex-end;
-            border-top-right-radius: 2px;
-            text-align: right;
-        }
-        .msg.system {
-            align-self: center;
-            font-size: 0.8rem;
-            color: #666;
-            background: rgba(0,0,0,0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-
-        /* Ввод */
-        .input-area {
-            margin-top: 15px;
-            display: flex;
-            gap: 12px;
-            background: rgba(0,0,0,0.2);
-            padding: 8px;
-            border-radius: 16px;
-        }
-        input {
-            flex-grow: 1;
-            background: transparent;
-            border: none;
-            color: white;
-            padding: 10px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        input:focus { outline: none; }
-        .send-btn {
-            background: var(--terra-green);
-            color: white;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .send-btn:hover { background: #3cb371; transform: translateY(-1px); }
-
-        /* Медиа */
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        .media-card {
-            background: rgba(255,255,255,0.03);
-            border-radius: var(--radius);
+        .data-card {
+            flex-grow: 1;
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            position: relative;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .media-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--terra-blue);
+        
+        /* CSS ГЕНЕРАТИВНАЯ ГРАФИКА (Вместо картинок) */
+        .fractal-circle {
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            border: 2px solid var(--terra-green);
+            position: relative;
+            animation: pulse 4s infinite;
         }
-        .media-img {
-            height: 160px;
-            background-size: cover;
-            background-position: center;
+        .fractal-circle::after {
+            content: ''; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px; height: 150px;
+            border: 2px solid var(--terra-blue);
+            border-radius: 50%;
+            animation: spin 10s linear infinite;
         }
-        .media-info {
-            padding: 15px;
-        }
-        .media-tag {
-            font-size: 0.7rem;
-            color: var(--terra-orange);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
+        .fractal-circle::before {
+            content: ''; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px; height: 100px;
+            border: 1px dashed var(--terra-orange);
+            border-radius: 50%;
+            animation: spin-rev 15s linear infinite;
         }
 
-        /* Скроллбар */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
-        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); }
+        @keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+        @keyframes spin-rev { 100% { transform: translate(-50%, -50%) rotate(-360deg); } }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 20px rgba(46, 139, 87, 0.2); } 50% { box-shadow: 0 0 50px rgba(46, 139, 87, 0.5); } }
+
+        /* AGENT SHIRAK */
+        .agent-feed {
+            flex-grow: 1;
+            overflow-y: auto;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .msg { padding: 10px; border-radius: 8px; line-height: 1.4; }
+        .msg.bot { background: rgba(46, 139, 87, 0.1); border-left: 3px solid var(--terra-green); }
+        .msg.user { background: rgba(74, 144, 226, 0.1); border-right: 3px solid var(--terra-blue); text-align: right; }
+        
+        .input-box {
+            display: flex; gap: 10px; margin-top: 15px;
+        }
+        input {
+            width: 100%; background: #111; border: 1px solid #333; color: white;
+            padding: 10px; border-radius: 6px;
+        }
+        button {
+            background: var(--terra-green); border: none; color: white;
+            padding: 0 15px; border-radius: 6px; cursor: pointer; font-weight: bold;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
 
         @media (max-width: 900px) {
-            .grid-layout { grid-template-columns: 1fr; }
+            .grid-layout { grid-template-columns: 1fr; grid-template-rows: auto auto 400px; }
         }
     </style>
 </head>
 <body>
-    
-    <canvas id="terra-canvas"></canvas>
+    <canvas id="neural-canvas"></canvas>
 
     <div id="app">
-        <header class="glass-panel" style="padding: 15px 30px;">
-            <div class="logo-area">
-                <div class="logo-symbol">۞</div>
-                <div>
-                    <h1>Terra <strong>Codex</strong></h1>
-                    <div style="font-size: 0.8rem; opacity: 0.7;">Fractal Metascience Paradigm</div>
-                </div>
-                <div class="status-badge">● ONLINE</div>
+        <header class="glass-panel" style="flex-direction: row;">
+            <div class="logo">
+                <div class="logo-icon">۞</div>
+                <div>Terra <strong>Codex</strong> <span style="font-size: 12px; opacity: 0.7;">v3.0</span></div>
             </div>
-            
-            <div class="lang-switch">
-                <button class="lang-btn active" onclick="changeLang('uz')">UZ</button>
-                <button class="lang-btn" onclick="changeLang('ru')">RU</button>
-                <button class="lang-btn" onclick="changeLang('en')">EN</button>
-                <button class="lang-btn" onclick="changeLang('ur')">اردو</button>
+            <div style="font-size: 12px; font-family: monospace;">
+                SYSTEM: <span style="color: var(--terra-green);">ONLINE</span><br>
+                NODE: TASHKENT-01
             </div>
         </header>
 
-        <main class="grid-layout">
+        <div class="grid-layout">
             
-            <section class="glass-panel timeline-section">
-                <h2 style="color: var(--terra-purple); margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
-                    ⏳ Chronos
-                </h2>
-                <div id="timeline-feed"></div>
-            </section>
+            <div class="glass-panel">
+                <div class="col-title">⏳ CHRONOS LINE</div>
+                <div class="history-feed" id="history-feed">
+                    </div>
+            </div>
 
-            <section class="glass-panel agent-section">
-                <div class="agent-header">
-                    <div>
-                        <h2 style="margin:0; font-size: 1.2rem;">Agent <strong>Shirak</strong></h2>
-                        <span style="font-size: 0.8rem; color: #888;">AIUZ Neural Interface v3.0</span>
-                    </div>
-                    <div style="text-align: right;">
-                         <span style="font-size: 20px;">👁️</span>
+            <div class="visual-center">
+                <div class="glass-panel data-card">
+                    <div class="fractal-circle"></div>
+                    <div style="position: absolute; bottom: 20px; text-align: center; width: 100%;">
+                        <div style="font-weight: bold; color: var(--terra-green);">FRACTAL CORE ACTIVE</div>
+                        <div style="font-size: 10px; opacity: 0.7;">Processing Semantic Weights...</div>
                     </div>
                 </div>
-                
-                <div id="chat-window">
-                    <div class="msg system">System initialized using Terra Protocols...</div>
-                    <div class="msg bot">Salom! Men Shirak agentiman. FMP va Terra Codex bo'yicha savollaringizga javob berishga tayyorman.</div>
-                </div>
-                
-                <div class="input-area">
-                    <input type="text" id="shirak-input" placeholder="Введите запрос к базе знаний..." onkeypress="handleInput(event)">
-                    <button class="send-btn" onclick="sendMessage()">➤</button>
-                </div>
-            </section>
-        </main>
-
-        <section class="glass-panel">
-            <h2 style="color: var(--terra-orange); margin-bottom: 20px;">🎥 Visual Manifesto</h2>
-            <div class="media-grid">
-                <div class="media-card">
-                    <div class="media-img" style="background-image: url('https://image.pollinations.ai/prompt/Timurid%20scholar%20using%20holographic%20interface%20in%20Samarkand%20observatory%20cinematic%20lighting?width=600&height=400&nologo=true');"></div>
-                    <div class="media-info">
-                        <div class="media-tag">Identity</div>
-                        <p>The Architect (2026)</p>
+                <div class="glass-panel" style="height: 150px; justify-content: center; align-items: center; text-align: center;">
+                    <div style="font-size: 12px; color: var(--terra-blue); margin-bottom: 10px;">NEURAL SILK ROAD STATUS</div>
+                    <div style="display: flex; gap: 5px; align-items: flex-end; height: 50px;">
+                        <div style="width: 10px; height: 30%; background: var(--terra-purple); animation: h 1s infinite;"></div>
+                        <div style="width: 10px; height: 70%; background: var(--terra-purple); animation: h 1.2s infinite;"></div>
+                        <div style="width: 10px; height: 50%; background: var(--terra-purple); animation: h 0.8s infinite;"></div>
+                        <div style="width: 10px; height: 90%; background: var(--terra-purple); animation: h 1.5s infinite;"></div>
+                        <div style="width: 10px; height: 40%; background: var(--terra-purple); animation: h 1.1s infinite;"></div>
                     </div>
-                </div>
-                <div class="media-card">
-                    <div class="media-img" style="background-image: url('https://image.pollinations.ai/prompt/futuristic%20green%20technology%20ecosystem%20network%20map%20connecting%20asia%20dark%20mode?width=600&height=400&nologo=true');"></div>
-                    <div class="media-info">
-                        <div class="media-tag">Infrastructure</div>
-                        <p>Neural Silk Road</p>
-                    </div>
+                    <style>@keyframes h { 50% { height: 100%; } }</style>
                 </div>
             </div>
-        </section>
+
+            <div class="glass-panel">
+                <div class="col-title">👁️ AGENT SHIRAK</div>
+                <div class="agent-feed" id="chat-window">
+                    <div class="msg bot">System Initialized.<br>Protocol: NULLO<br>Paradigm: FRACTAL</div>
+                    <div class="msg bot">Salom, Arxitektor. Men tayyorman. (Ready)</div>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="user-input" placeholder="Command..." onkeypress="handleKey(event)">
+                    <button onclick="send()">></button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script>
-        // --- ДАННЫЕ (DATA CORE) ---
-        const TIMELINE = [
-            { year: 1441, title: "Navoi's Birth", desc: "Herat. The semantic foundation.", date: "Feb 9" },
-            { year: 1483, title: "Babur's Birth", desc: "Andijan. The geopolitical node.", date: "Feb 14" },
-            { year: 2026, title: "Terra Codex Launch", desc: "Tashkent. FMP v3.0 Activation.", date: "Feb 14" },
-            { year: 2026, title: "UST Alpha", desc: "Global. Semantic Bridge deployment.", date: "Feb 21" }
+        // --- 1. DATA CORE (REAL DATA FROM YOUR FILES) ---
+        const EVENTS = [
+            { year: "1441", date: "Feb 09", title: "Navoi's Birth (Herat)", desc: "The linguistic singularity. Origin of the Corpus." },
+            { year: "1483", date: "Feb 14", title: "Babur's Birth (Andijan)", desc: "Fractal recursion begins. The geopolitical node." },
+            { year: "1966", date: "Jan 10", title: "Tashkent Declaration", desc: "India-Pakistan peace brokered in Uzbekistan." },
+            { year: "2025", date: "May", title: "Prison Coding", desc: "The Architect drafts the NULLO Protocol in isolation." },
+            { year: "2026", date: "Feb 14", title: "FMP v3.0 Launch", desc: "System goes live. UST Alpha deployment." }
         ];
 
-        const TEXTS = {
-            uz: { hello: "Salom! Men Shirak agentiman." },
-            ru: { hello: "Привет! Я агент Ширак. Готов к работе." },
-            en: { hello: "Hello! I am Agent Shirak. Ready to assist." },
-            ur: { hello: "خوش آمدید! میں ایجنٹ شیراک ہوں۔" }
-        };
-
-        // --- ЛОГИКА (LOGIC CORE) ---
-        
-        // 1. Отрисовка ленты
-        const feed = document.getElementById('timeline-feed');
-        TIMELINE.forEach(item => {
-            feed.innerHTML += `
-                <div class="timeline-item">
-                    <div class="timeline-date">${item.year} · ${item.date}</div>
-                    <div class="timeline-title">${item.title}</div>
-                    <div class="timeline-desc">${item.desc}</div>
+        // --- 2. RENDER HISTORY ---
+        const historyContainer = document.getElementById('history-feed');
+        EVENTS.forEach(ev => {
+            historyContainer.innerHTML += `
+                <div class="history-item">
+                    <div class="year">${ev.year} · ${ev.date}</div>
+                    <div class="event">${ev.title}</div>
+                    <div class="desc">${ev.desc}</div>
                 </div>
             `;
         });
 
-        // 2. Чат
+        // --- 3. AGENT LOGIC (SHIRAK) ---
         const chat = document.getElementById('chat-window');
-        function handleInput(e) { if(e.key === 'Enter') sendMessage(); }
+        function handleKey(e) { if(e.key === 'Enter') send(); }
         
-        function sendMessage() {
-            const input = document.getElementById('shirak-input');
+        function send() {
+            const input = document.getElementById('user-input');
             const txt = input.value;
             if(!txt) return;
-            
+
+            // User Message
             chat.innerHTML += `<div class="msg user">${txt}</div>`;
             input.value = '';
             chat.scrollTop = chat.scrollHeight;
 
+            // AI Response Simulation
             setTimeout(() => {
-                let resp = "Запрос принят. Обращаюсь к Terra Ontology...";
-                if(txt.toLowerCase().includes("babur")) resp = "Бабур — это фрактальный узел. Он соединил географию Ферганы с культурой Индии.";
+                let resp = "Analyzing semantic structure...";
+                const t = txt.toLowerCase();
+                
+                if(t.includes("navoi")) resp = "Navoi provides the **Lexical Foundation**. 26 works integrated.";
+                else if(t.includes("babur")) resp = "Babur represents **Fractal Expansion**. From Ferghana to India.";
+                else if(t.includes("nullo")) resp = "NULLO Protocol: **Deconstruct to Zero Point**. No interference.";
+                else if(t.includes("ust")) resp = "UST (Universal Semantic Translator) is **ONLINE**. Mapping Ontology...";
+                else resp = "Input logged to **Living Index**. Processing...";
+
                 chat.innerHTML += `<div class="msg bot">${resp}</div>`;
                 chat.scrollTop = chat.scrollHeight;
-            }, 800);
+            }, 600);
         }
 
-        // 3. Смена языка
-        function changeLang(l) {
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-            if(TEXTS[l]) {
-                // Обновляем приветствие (упрощенно)
-                chat.innerHTML += `<div class="msg system">Language switched to: ${l.toUpperCase()}</div>`;
-                chat.innerHTML += `<div class="msg bot">${TEXTS[l].hello}</div>`;
-                chat.scrollTop = chat.scrollHeight;
-            }
-        }
-
-        // 4. Three.js Фон (Спокойные частицы Terra)
+        // --- 4. LIVING BACKGROUND (THREE.JS) ---
+        const canvas = document.getElementById('neural-canvas');
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('terra-canvas'), alpha: true});
+        const renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true});
         renderer.setSize(window.innerWidth, window.innerHeight);
 
-        const particles = new THREE.BufferGeometry();
-        const cnt = 2000;
-        const pos = new Float32Array(cnt * 3);
-        for(let i=0; i<cnt*3; i++) pos[i] = (Math.random()-0.5) * 15;
-        particles.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-        
-        // Terra Green цвет частиц
-        const material = new THREE.PointsMaterial({size: 0.02, color: 0x2E8B57}); 
-        const mesh = new THREE.Points(particles, material);
-        scene.add(mesh);
+        // Particles
+        const geometry = new THREE.BufferGeometry();
+        const count = 1500;
+        const pos = new Float32Array(count * 3);
+        for(let i=0; i<count*3; i++) {
+            pos[i] = (Math.random() - 0.5) * 15;
+        }
+        geometry.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        const material = new THREE.PointsMaterial({size: 0.03, color: 0x4A90E2});
+        const stars = new THREE.Points(geometry, material);
+        scene.add(stars);
+
+        // Connections (Lines)
+        const lineMat = new THREE.LineBasicMaterial({color: 0x2E8B57, transparent: true, opacity: 0.3});
+        const lineGeo = new THREE.BufferGeometry();
+        // Create a few static connections for visual effect
+        const linePos = [];
+        for(let i=0; i<100; i++) {
+            linePos.push(0,0,0);
+            linePos.push((Math.random()-0.5)*5, (Math.random()-0.5)*5, (Math.random()-0.5)*5);
+        }
+        lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePos, 3));
+        const lines = new THREE.LineSegments(lineGeo, lineMat);
+        scene.add(lines);
+
         camera.position.z = 5;
 
         function animate() {
             requestAnimationFrame(animate);
-            mesh.rotation.y += 0.001; // Медленное вращение экосистемы
+            stars.rotation.y += 0.001;
+            lines.rotation.y -= 0.001;
             renderer.render(scene, camera);
         }
         animate();
+
+        // Responsive Resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
     </script>
 </body>
 </html>
