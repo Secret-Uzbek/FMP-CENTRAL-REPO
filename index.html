@@ -3,295 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdurashid Abdukarimov | Fractal Metascience Paradigm</title>
+    <title>FMP | The Paradigm</title>
     <style>
-        /* --- TERRA ACADEMIC THEME v5.0 --- */
+        /* --- SEMANTIC DESIGN SYSTEM --- */
         :root {
-            --bg-dark: #0b1120;
-            --bg-card: #151e32;
-            --accent-green: #2E8B57; /* Terra Green */
-            --accent-blue: #4A90E2;  /* Terra Blue */
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border: rgba(255,255,255,0.08);
+            --bg: #050505;
+            --text: #e0e0e0;
+            --nullo: #2E8B57; /* Terra Green: Life from Nothing */
+            --plt: #4A90E2;   /* Terra Blue: Knowledge Stream */
+            --ucomm: #FF8C42; /* Terra Orange: Connection/Energy */
+            --euo: #7B66DC;   /* Terra Purple: Emergence/Wisdom */
+            --border: 1px solid rgba(255,255,255,0.1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Georgia', serif; /* Serif for Manifesto feeling */
+            line-height: 1.8;
+            padding: 40px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
+            border-left: 1px solid #333;
+            padding-left: 40px;
         }
 
-        a { text-decoration: none; transition: 0.2s; color: inherit; }
-        a:hover { color: var(--accent-green); }
-
-        /* --- HERO SECTION --- */
-        header {
-            padding: 80px 0 60px;
-            border-bottom: 1px solid var(--border);
-            background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(46,139,87,0.05) 100%);
+        /* --- HEADER: IDENTITY --- */
+        header { margin-bottom: 80px; }
+        .meta-id {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 20px;
+            display: block;
         }
-
-        .hero-content { text-align: center; }
-        
         h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            color: #fff;
         }
-        h1 strong { font-weight: 700; color: #fff; }
+        .manifesto-intro {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #aaa;
+            border-left: 3px solid var(--nullo);
+            padding-left: 20px;
+        }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--accent-blue);
+        /* --- THE 4 PILLARS (LOGIC BLOCKS) --- */
+        .pillar {
+            margin-bottom: 80px;
+            position: relative;
+        }
+        
+        .pillar-label {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid;
+        }
+
+        /* Color Coding */
+        .label-nullo { color: var(--nullo); border-color: var(--nullo); background: rgba(46,139,87,0.05); }
+        .label-plt { color: var(--plt); border-color: var(--plt); background: rgba(74,144,226,0.05); }
+        .label-ucomm { color: var(--ucomm); border-color: var(--ucomm); background: rgba(255,140,66,0.05); }
+        .label-euo { color: var(--euo); border-color: var(--euo); background: rgba(123,102,220,0.05); }
+
+        .pillar h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .deep-text {
+            font-size: 1.1rem;
+            color: #ccc;
             margin-bottom: 30px;
-        }
-
-        .id-badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-family: 'Consolas', monospace;
-            font-size: 0.85rem;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border);
-            padding: 6px 14px;
-            border-radius: 20px;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .badge:hover { border-color: var(--accent-green); color: #fff; background: rgba(46,139,87,0.1); }
-        .orcid-icon { color: #A6CE39; }
-
-        /* --- BIO SECTION --- */
-        .bio-section { padding: 50px 0; border-bottom: 1px solid var(--border); }
-        .section-title {
-            font-size: 1.4rem;
-            color: #fff;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .section-title::before {
-            content: ''; width: 4px; height: 24px; background: var(--accent-green); border-radius: 2px;
-        }
-
-        .bio-text {
-            color: var(--text-muted);
-            font-size: 1.05rem;
             max-width: 800px;
         }
 
-        /* --- SYSTEM ARCHITECTURE (From ORCID) --- */
-        .architecture-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .arch-card {
-            background: var(--bg-card);
+        .evidence-box {
+            background: rgba(255,255,255,0.03);
+            border: var(--border);
             padding: 20px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
         }
-        .arch-card h3 { color: var(--accent-blue); font-size: 0.9rem; margin-bottom: 10px; letter-spacing: 1px; }
-        .arch-card p { font-size: 0.9rem; color: var(--text-muted); }
-
-        /* --- WORKS LIST (Real Data) --- */
-        .work-item {
-            background: var(--bg-card);
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid var(--border);
+        
+        .evidence-title {
+            color: #fff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 15px;
         }
-        .work-item:hover { transform: translateY(-2px); border-color: var(--accent-blue); }
 
-        .work-content { flex: 1; min-width: 300px; }
-        .work-type {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            color: var(--accent-green);
-            font-weight: 700;
-            margin-bottom: 5px;
+        .repo-link {
             display: block;
-        }
-        .work-title {
-            font-size: 1.15rem;
-            font-weight: 600;
+            margin-top: 10px;
             color: #fff;
-            margin-bottom: 8px;
-            display: block;
+            text-decoration: none;
+            transition: 0.2s;
         }
-        .work-meta { font-size: 0.9rem; color: var(--text-muted); font-family: 'Consolas', monospace; }
-        
-        .doi-badge {
-            background: #000;
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            border: 1px solid #333;
-        }
+        .repo-link:hover { opacity: 0.7; text-decoration: underline; }
+        .doi { color: #666; font-size: 0.8em; margin-left: 10px; }
 
         /* --- FOOTER --- */
         footer {
-            text-align: center;
-            padding: 50px 0;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
         }
-        .contact-links a { margin: 0 10px; }
-
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container { padding-left: 20px; border: none; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container hero-content">
-            <h1>Abdurashid <strong>Abdukarimov</strong></h1>
-            <div class="subtitle">Independent Researcher • Systems Architect • Philologist</div>
-            
-            <div class="id-badges">
-                <a href="https://orcid.org/0009-0000-6394-4912" target="_blank" class="badge">
-                    <svg class="orcid-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M12 0H4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
-                    0009-0000-6394-4912
-                </a>
-                <a href="https://www.webofscience.com/wos/author/record/OIT-6569-2025" target="_blank" class="badge">
-                    ResearcherID: OIT-6569-2025
-                </a>
-                <a href="https://github.com/Secret-Uzbek" target="_blank" class="badge">
-                    GitHub: Secret-Uzbek
-                </a>
-            </div>
-        </div>
-    </header>
-
     <div class="container">
-        
-        <section class="bio-section">
-            <h2 class="section-title">Biography & Vision</h2>
-            <p class="bio-text">
-                Multilingual systems engineer and conceptual architect operating at the intersection of linguistic culture, international development, and advanced meta-scientific frameworks. 
-                <br><br>
-                <strong>Academic Foundation:</strong> German philology at UzSWLU (Tashkent), followed by DAAD-sponsored programs at Humboldt University Berlin and Justus-Liebig University Giessen.
-                <br><br>
-                <strong>Professional Trajectory:</strong> Served as Trade Advisor at the Swiss Embassy in Uzbekistan (2011-2017), deploying expertise in cross-border communication and institutional networks. Currently developing the <strong>Fractal Metascience Paradigm (FMP)</strong> — a unified open-science architecture created under "zero budget" conditions to demonstrate high-impact research capability without conventional funding dependencies.
+        <header>
+            <span class="meta-id">ARCHITECT: A. ABDUKARIMOV | ORCID: 0009-0000-6394-4912</span>
+            <h1>Fractal Metascience Paradigm</h1>
+            <p class="manifesto-intro">
+                "Я не создавал это для рынка. Я создал это в заключении, чтобы доказать: 
+                Смысл (Meaning) сильнее Энтропии. Это не код, это философия, записанная в синтаксисе."
             </p>
-        </section>
+        </header>
 
-        <section class="bio-section">
-            <h2 class="section-title">FMP Ecosystem Architecture</h2>
-            <div class="architecture-grid">
-                <div class="arch-card">
-                    <h3>NULLO</h3>
-                    <p>Foundational "zero budget" protocol layer. Radical openness and minimal infrastructure.</p>
+        <section class="pillar">
+            <span class="pillar-label label-nullo">01. NULLO PROTOCOL</span>
+            <h2>Ontological Zero-Point</h2>
+            <div class="deep-text">
+                Истинная система не требует внешних ресурсов. Она рождается из пустоты (Ex Nihilo). 
+                В Колонии 36 у меня не было серверов, был только разум. NULLO — это отказ от "искусственного масштабирования" Кремниевой долины. 
+                Это архитектура минимального вмешательства.
+            </div>
+            <div class="evidence-box">
+                <div class="evidence-title">
+                    <span>EVIDENCE (ARTIFACTS)</span>
+                    <span style="color: var(--nullo)">VERIFIED</span>
                 </div>
-                <div class="arch-card">
-                    <h3>PLT</h3>
-                    <p>Plural-Lingual Translation layer. Semantic mapping across German-English-Uzbek-Russian cognitive boundaries.</p>
-                </div>
-                <div class="arch-card">
-                    <h3>UCOMM</h3>
-                    <p>User Communication layer. Managing living-lab interactions and community engagement.</p>
-                </div>
-                <div class="arch-card">
-                    <h3>FMP-CENTRAL</h3>
-                    <p>The "Engine Room". Where monographs, artifacts, and tools are versioned and archived.</p>
+                <a href="https://github.com/Secret-Uzbek/AIUZ-Terra-codex" class="repo-link">
+                    > AIUZ Terra Codex <span class="doi">[Ethical Core]</span>
+                </a>
+                <div style="margin-top:10px; color:#888;">
+                    "The system acts as a conscience valve. Unlike standard RLHF, FMP builds ethics into the data structure itself." 
+                    <br>— <em>Claude 3.5 Audit Report</em>
                 </div>
             </div>
         </section>
 
-        <section class="bio-section" style="border-bottom: none;">
-            <h2 class="section-title">Selected Works & Data</h2>
-            
-            <a href="https://doi.org/10.5281/ZENODO.18602635" target="_blank" class="work-item">
-                <div class="work-content">
-                    <span class="work-type">Dataset / Corpus</span>
-                    <span class="work-title">NAVOIY-TERRA Corpus v1.0</span>
-                    <div class="work-meta">
-                        First Computational Corpus of Alisher Navoi's Works with Nine-Language Semantic Annotations.
-                        <br>Released: 2026-02-09
-                    </div>
+        <section class="pillar">
+            <span class="pillar-label label-plt">02. PLT (POST-LINGUA)</span>
+            <h2>Trace Semantic Weight</h2>
+            <div class="deep-text">
+                Перевод — это предательство, если он теряет "эпистему" (контекст). 
+                Мы не переводим слова. Мы переносим "Семантические Кварки".
+                Навои и Бабур — это не история. Это исходный код нашей идентичности. 
+                Мы должны деколонизировать наш код: от English/Russian к Uzbek/Urdu/Hindi.
+            </div>
+            <div class="evidence-box">
+                <div class="evidence-title">
+                    <span>EVIDENCE (ARTIFACTS)</span>
+                    <span style="color: var(--plt)">ACTIVE</span>
                 </div>
-                <span class="doi-badge">DOI: 10.5281/ZENODO.18602635</span>
-            </a>
-
-            <a href="https://doi.org/10.5281/ZENODO.18155672" target="_blank" class="work-item">
-                <div class="work-content">
-                    <span class="work-type">Preprint / Theory</span>
-                    <span class="work-title">Fractal Metascience: Foundations of a New Scientific Paradigm</span>
-                    <div class="work-meta">
-                        Core theoretical framework for recursive knowledge systems.
-                        <br>Released: 2026-01-05
-                    </div>
-                </div>
-                <span class="doi-badge">DOI: 10.5281/ZENODO.18155672</span>
-            </a>
-
-            <a href="https://doi.org/10.5281/ZENODO.18134544" target="_blank" class="work-item">
-                <div class="work-content">
-                    <span class="work-type">Preprint / Protocol</span>
-                    <span class="work-title">NULLO: The Ontological Zero-Point</span>
-                    <div class="work-meta">
-                        Holographic Emergence of the Fractal Metascience Paradigm.
-                        <br>Released: 2026-01-02
-                    </div>
-                </div>
-                <span class="doi-badge">DOI: 10.5281/ZENODO.18134544</span>
-            </a>
-
-            <a href="https://github.com/Secret-Uzbek/AIUZ-Terra-codex" target="_blank" class="work-item">
-                <div class="work-content">
-                    <span class="work-type">Ecosystem / Code</span>
-                    <span class="work-title">AIUZ Terra Codex</span>
-                    <div class="work-meta">
-                        The development of the "Terra" ecosystem and living-lab protocols.
-                    </div>
-                </div>
-                <span class="doi-badge">GITHUB: Secret-Uzbek</span>
-            </a>
-
+                <a href="https://github.com/Secret-Uzbek/navoiy-terra-corpus" class="repo-link">
+                    > Navoiy Terra Corpus <span class="doi">[26 Works Digitized]</span>
+                </a>
+                <a href="https://github.com/Secret-Uzbek/ust-mvp" class="repo-link">
+                    > UST (Universal Semantic Translator) <span class="doi">[Alpha Engine]</span>
+                </a>
+                <a href="https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/blob/main/LANGUAGE-STRATEGY.md" class="repo-link">
+                    > Language Strategy v1.0 <span class="doi">[Decolonial Protocol]</span>
+                </a>
+            </div>
         </section>
+
+        <section class="pillar">
+            <span class="pillar-label label-ucomm">03. UCOMM (SYNTHESIS)</span>
+            <h2>Synthetic Consensus</h2>
+            <div class="deep-text">
+                У меня нет сотрудников. У меня есть "Синтетический Консенсус". 
+                Grok (Аудитор), DeepSeek (Кодер), Claude (Этик) и GPT (Архитектор). 
+                Четыре нейросети, работающие как один организм под управлением NULLO.
+            </div>
+            <div class="evidence-box">
+                <div class="evidence-title">
+                    <span>EVIDENCE (ARTIFACTS)</span>
+                    <span style="color: var(--ucomm)">VALIDATED</span>
+                </div>
+                <a href="https://github.com/Secret-Uzbek/FMP-Full-Publication-Package" class="repo-link">
+                    > The Synthetic Consensus Package <span class="doi">[Audit Logs]</span>
+                </a>
+                <div style="margin-top:10px; color:#888;">
+                    "They didn't find bugs. They found a Paradigm."
+                </div>
+            </div>
+        </section>
+
+        <section class="pillar">
+            <span class="pillar-label label-euo">04. EUO (EMERGENCE)</span>
+            <h2>Emergent Universal Organization</h2>
+            <div class="deep-text">
+                Фрактал не строят сверху вниз. Он растет. 
+                От одного человека в камере (2025) до Планетарной Инфраструктуры (2030).
+                Самоподобие на всех уровнях: от строчки кода до геополитики (Шелковый путь).
+            </div>
+            <div class="evidence-box">
+                <div class="evidence-title">
+                    <span>EVIDENCE (ARTIFACTS)</span>
+                    <span style="color: var(--euo)">EXPANDING</span>
+                </div>
+                <a href="https://github.com/Secret-Uzbek/FMP-monograph" class="repo-link">
+                    > Theory of Fractal Metascience Paradigm <span class="doi">[Monograph]</span>
+                </a>
+                <a href="https://github.com/Secret-Uzbek/Uzbek-mining" class="repo-link">
+                    > Industrial Application <span class="doi">[Mining & Energy]</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                © 2026 FRACTAL METASCIENCE FOUNDATION<br>
+                TASHKENT, UZBEKISTAN
+            </div>
+            <div style="text-align: right;">
+                <a href="mailto:a.abdukarimov@fractal-metascience.org">EMAIL</a><br>
+                <a href="https://github.com/Secret-Uzbek">GITHUB</a>
+            </div>
+        </footer>
 
     </div>
-
-    <footer>
-        <div class="container">
-            <div class="contact-links">
-                <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
-                <a href="mailto:a.a.abdukarimov@tutamail.com">a.a.abdukarimov@tutamail.com</a>
-            </div>
-            <p style="margin-top: 20px;">© 2026 Fractal Metascience Foundation. Built on NULLO Protocol.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
