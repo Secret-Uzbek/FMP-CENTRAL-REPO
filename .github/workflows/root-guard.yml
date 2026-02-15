@@ -1,4 +1,7 @@
 name: Root Guard
+permissions:
+  contents: read
+  security-events: write
 on: [push]
 jobs:
   check-root:
