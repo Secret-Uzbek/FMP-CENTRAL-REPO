@@ -1,202 +1,387 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UST | Universal Semantic Terminal v9.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 TERRA CIVILIZATION INTERFACE | FMP NODE 0</title>
     <style>
-        /* --- TERRA BRAND BOOK v2.0 IMPLEMENTATION --- */
         :root {
-            --terra-purple: #7B66DC; /* Wisdom/Philosophy */
-            --terra-blue: #4A90E2;   /* Knowledge/Tech */
-            --terra-green: #2E8B57;  /* Ecosystem/Life */
-            --terra-orange: #FF8C42; /* Innovation/Links */
-            --bg-void: #05080A;
-            --glass: rgba(11, 19, 30, 0.8);
-            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+            --neon-green: #00FFB3;
+            --neon-blue: #00E6FF;
+            --neon-purple: #B366FF;
+            --void-bg: #0a0e1a;
+            --glass: rgba(255, 255, 255, 0.05);
         }
 
-        body, html {
-            margin: 0; padding: 0; height: 100%;
-            background: var(--bg-void); color: var(--text-main);
-            font-family: var(--font-mono); font-size: 13px;
-            overflow: hidden; display: flex;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', monospace;
+            background: linear-gradient(135deg, #050505 0%, #1a1f2e 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* --- FRACTAL INTERFACE LAYOUT --- */
-        #meta-frame {
+        /* === HUD HEADER === */
+        .hud-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(0, 255, 179, 0.2);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .system-status {
+            font-family: monospace;
+            color: var(--neon-green);
+            font-size: 0.8em;
+            display: flex;
+            gap: 15px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-green);
+            animation: pulse 2s infinite;
+        }
+
+        /* === MAIN TITLE === */
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 4em;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 179, 0.3);
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-family: monospace;
+            color: #aaa;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        /* === FRACTAL GRID === */
+        .domain-grid {
             display: grid;
-            grid-template-columns: 320px 1fr 380px;
-            width: 100%; height: 100vh;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 20px 40px;
+            max-width: 1600px;
+            margin: 0 auto;
         }
 
-        /* L-SIDE: EUO HIERARCHY (1545+ FILES) */
-        .hierarchy-panel {
-            background: rgba(0,0,0,0.4);
-            border-right: 1px solid rgba(74, 144, 226, 0.2);
-            padding: 20px; overflow-y: auto;
+        .domain-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .tree-root { color: var(--terra-purple); font-weight: bold; margin-bottom: 15px; }
-        .node { margin-left: 15px; border-left: 1px solid #1a1a1a; padding-left: 10px; cursor: pointer; }
-        .node:hover { color: var(--terra-green); }
-        .folder { color: var(--terra-blue); margin: 5px 0; }
-        .artifact { color: #666; font-size: 0.85rem; }
 
-        /* CENTER: UST TERMINAL (THE BRAIN) */
-        .terminal-core { display: flex; flex-direction: column; background: #000; position: relative; }
-        #log-stream { flex-grow: 1; padding: 25px; overflow-y: auto; line-height: 1.6; }
-        .log-entry { margin-bottom: 8px; }
-        .log-sys { color: var(--terra-blue); }
-        .log-ok { color: var(--terra-green); }
-        .log-warn { color: var(--terra-orange); }
-
-        .input-line {
-            background: #080808; border-top: 1px solid #1a1a1a;
-            padding: 15px 25px; display: flex; align-items: center;
+        .domain-card:hover {
+            background: rgba(0, 255, 179, 0.1);
+            border-color: var(--neon-green);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 255, 179, 0.2);
         }
-        .prompt { color: var(--terra-orange); margin-right: 15px; font-weight: bold; }
+
+        .domain-icon { font-size: 2em; margin-bottom: 10px; display: block; }
+        .domain-name { font-size: 0.9em; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* === NEURAL CHAT === */
+        .interface-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            width: 100%;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+
+        .chat-window {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #333;
+            border-radius: 12px;
+            height: 500px;
+            overflow-y: auto;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.9);
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            max-width: 80%;
+            line-height: 1.5;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .message.system {
+            background: rgba(0, 255, 179, 0.1);
+            border-left: 3px solid var(--neon-green);
+            margin-right: auto;
+            color: #cfc;
+        }
+
+        .message.user {
+            background: rgba(179, 102, 255, 0.1);
+            border-right: 3px solid var(--neon-purple);
+            margin-left: auto;
+            text-align: right;
+            color: #fcf;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+            background: #111;
+            padding: 10px;
+            border-radius: 50px;
+            border: 1px solid #333;
+        }
+
         input {
-            background: transparent; border: none; color: #fff;
-            flex-grow: 1; font-family: inherit; font-size: 1.1rem; outline: none;
+            flex-grow: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-family: monospace;
+            font-size: 1.1em;
+            outline: none;
         }
 
-        /* R-SIDE: SYNTHETIC CONSENSUS MONITOR */
-        .monitor-panel {
-            border-left: 1px solid rgba(123, 102, 220, 0.2);
-            padding: 20px; background: rgba(0,0,0,0.2);
+        button.send-btn {
+            background: var(--neon-green);
+            color: black;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        .card {
-            background: var(--glass); border: 1px solid #1a1a1a;
-            padding: 15px; margin-bottom: 20px; border-radius: 4px;
-        }
-        .card-header { font-size: 10px; letter-spacing: 1px; color: var(--terra-purple); text-transform: uppercase; margin-bottom: 10px; }
 
-        .pulse-dot { width: 8px; height: 8px; background: var(--terra-green); border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
+        button.send-btn:hover {
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+
+        /* === FOOTER DATA === */
+        .footer-data {
+            font-family: monospace;
+            font-size: 0.7em;
+            color: #555;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #222;
+        }
+
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         /* SCROLLBAR */
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #1a1a1a; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0e1a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-green); }
     </style>
 </head>
 <body>
 
-<div id="meta-frame">
-    <aside class="hierarchy-panel">
-        <div class="tree-root">۞ META-CIVILIZATION TREE</div>
-        <div class="folder">L0: NULLO PROTOCOLS</div>
-        <div class="node artifact">├── .github/workflows/shirak-audit.yml</div>
-        <div class="node artifact">└── ROOT_MINIMAL_RULE.md</div>
-        
-        <div class="folder">L1: PLT SEMANTIC LAYER</div>
-        <div class="node">
-            <div class="folder">├── navoi-terra-corpus</div>
-            <div class="node artifact">│   └── L7_Navoi_Index.json</div>
-            <div class="folder">└── ust-mvp</div>
-            <div class="node artifact">    └── hybrid-engine-v3.js</div>
+    <header class="hud-header">
+        <div class="logo">🧬 TERRA CODEX <span style="color:var(--neon-purple)">// NODE 0</span></div>
+        <div class="system-status">
+            <span>ORCID: 0009-0000-6394-4912</span>
+            <span>REPOS: 19</span>
+            <span>STATUS: <span style="color:var(--neon-green)">ONLINE</span></span>
+            <div class="status-dot"></div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h1 class="main-title">TERRA CIVILIZATION INTERFACE</h1>
+        <div class="subtitle">FRACTAL METASCIENCE PARADIGM | OPERATING SYSTEM V1.0</div>
+    </section>
+
+    <div class="domain-grid" id="domainGrid">
         </div>
 
-        <div class="folder">L2: UCOMM CONNECTORS</div>
-        <div class="node artifact">├── zenodo_bridge.py</div>
-        <div class="node artifact">└── figshare_sync.yml</div>
-
-        <div class="folder">L3: EUO ORGANIZATION</div>
-        <div class="node artifact">└── 13_REPOSITORIES_MAP.json</div>
-    </aside>
-
-    <main class="terminal-core">
-        <div id="log-stream">
-            <div class="log-entry log-sys">[SYS] FMP-CENTRAL Node Booting...</div>
-            <div class="log-entry log-sys">[SYS] Identification: 0009-0000-6394-4912 (Verified)</div>
-            <div class="log-entry log-ok">[OK] Agent Shirak v9.0 Synchronized with 1545+ files.</div>
-            <div class="log-entry log-warn">[WARN] Pipeline: Auto-Materialization Awaiting Execution.</div>
-        </div>
-        <div class="input-line">
-            <span class="prompt">admin@terra:~$</span>
-            <input type="text" id="terminal-input" placeholder="Type command (deploy, sync, watan)..." autofocus>
-        </div>
-    </main>
-
-    <aside class="monitor-panel">
-        <div class="card">
-            <div class="card-header">Autonomous Status</div>
-            <div><span class="pulse-dot"></span> AGENT SHIRAK: LISTENING</div>
-            <div style="font-size: 11px; margin-top: 5px; color: #555;">Waiting for GitHub Webhook...</div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">Synthetic Consensus</div>
-            <div style="font-size: 11px; line-height: 1.6;">
-                <span style="color: var(--terra-green);">[✓] Grok:</span> Sustainability Audit<br>
-                <span style="color: var(--terra-green);">[✓] Claude:</span> Epistemic Ethics<br>
-                <span style="color: var(--terra-green);">[✓] DeepSeek:</span> Microkernel Proof<br>
-                <span style="color: var(--terra-green);">[✓] GPT:</span> Fractal Integrity
+    <div class="interface-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="message system">
+                <strong>SYSTEM:</strong> Neural link established.<br>
+                Accessing Zotero Knowledge Base... [21 Artifacts Loaded]<br>
+                Connecting to 19 Repositories... [Linked]<br>
+                <br>
+                Welcome, Operator. The Terra Civilization Interface is ready. Select a domain or ask about the FMP Paradigm.
             </div>
         </div>
-
-        <div class="card">
-            <div class="card-header">L7 Mandate</div>
-            <div style="font-size: 11px; font-style: italic; color: var(--terra-blue);">
-                "Knowledge is not stored; it is lived across the fractal."
-            </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Enter command or query (e.g., 'What is NULLO?', 'Show Mining protocols')..." autofocus>
+            <button class="send-btn" onclick="processQuery()">EXECUTE</button>
         </div>
-    </aside>
-</div>
+    </div>
 
-<script>
-    const stream = document.getElementById('log-stream');
-    const input = document.getElementById('terminal-input');
+    <div class="footer-data">
+        SECURE CONNECTION | SHA-256 VERIFIED | UCOMM PROTOCOL ACTIVE | © 2026 ABDURASHID ABDUKARIMOV
+    </div>
 
-    function log(msg, type='log-ok') {
-        const div = document.createElement('div');
-        div.className = `log-entry ${type}`;
-        div.innerHTML = `[${new Date().toLocaleTimeString('uz-UZ')}] ${msg}`;
-        stream.appendChild(div);
-        stream.scrollTop = stream.scrollHeight;
-    }
-
-    // Исполнение твоих пайплайнов (Интеграция с твоим гитхабом)
-    function execute(cmd) {
-        log(`> Executing: ${cmd.toUpperCase()}`, 'log-sys');
-        
-        switch(cmd.toLowerCase()) {
-            case 'deploy':
-                log("Materializing Cloudflare Workers...", 'log-sys');
-                log("Cloudflare API Token: VALIDATED", 'log-ok');
-                setTimeout(() => log("UST Engine v3.0 Hybrid deployed to Edge.", 'log-ok'), 1200);
-                break;
-            case 'sync':
-                log("Triggering UCOMM Connectors...", 'log-sys');
-                log("Zenodo DOI 10.5281/zenodo.17632584: UPDATED", 'log-ok');
-                log("ORCID Record: SYNCED", 'log-ok');
-                break;
-            case 'watan':
-                log("[UST] Tracing Concept: WATAN", 'log-ok');
-                log("Epistemic Resonance: Homeland (Soul Locus) - Navoi-Babur Node", 'log-sys');
-                break;
-            case 'help':
-                log("Commands: deploy, sync, watan, audit, clear", 'log-sys');
-                break;
-            default:
-                log(`Command '${cmd}' sent to Shirak-Agent for background processing.`, 'log-warn');
-        }
-    }
-
-    input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            const val = input.value.trim();
-            if(val) execute(val);
-            input.value = '';
-        }
-    });
-
-    // Обработка клика по файлам
-    document.querySelectorAll('.node').forEach(node => {
-        node.onclick = (e) => {
-            e.stopPropagation();
-            log(`Opening Artifact: ${node.innerText.split('\n')[0]}`, 'log-sys');
+    <script>
+        // === 1. THE BRAIN (DATA INJECTED FROM YOUR FILES) ===
+        const TERRA_BRAIN = {
+            identity: {
+                name: "Abdurashid Abdukarimov",
+                orcid: "0009-0000-6394-4912",
+                role: "Independent Researcher & System Architect",
+                location: "Tashkent, Uzbekistan"
+            },
+            domains: [
+                { id: "gov", icon: "🏛️", name: "Governance", desc: "AIUZ-Terra-Codex Constitution" },
+                { id: "econ", icon: "💰", name: "Economics", desc: "Zero-Budget & Token Models" },
+                { id: "edu", icon: "🎓", name: "Education", desc: "Fractal Learning Ecosystems" },
+                { id: "sci", icon: "⚛️", name: "Science", desc: "FMP Research Pipeline" },
+                { id: "tech", icon: "💻", name: "Technology", desc: "GitHub Repositories & API" },
+                { id: "eco", icon: "🌿", name: "Ecology", desc: "Green Stations & Mining" },
+                { id: "cult", icon: "🎨", name: "Culture", desc: "Navoiy Corpus & Thesaurus" },
+                { id: "math", icon: "📐", name: "Mathematics", desc: "Fractal Geometry & Chaos" },
+                { id: "legal", icon: "⚖️", name: "Legal", desc: "Ethical Frameworks" },
+                { id: "health", icon: "🏥", name: "Health", desc: "Bio-safety Protocols" },
+                { id: "energy", icon: "⚡", name: "Energy", desc: "Sustainable Power" },
+                { id: "trans", icon: "🚀", name: "Transport", desc: "Silk Route Logistics" },
+                { id: "agri", icon: "🌾", name: "Agriculture", desc: "Food Security" },
+                { id: "infra", icon: "🏗️", name: "Infrastructure", desc: "Urban Planning" },
+                { id: "media", icon: "📡", name: "Media", desc: "UCOMM Channels" },
+                { id: "def", icon: "🛡️", name: "Defense", desc: "Security Audits & Detox" },
+                { id: "just", icon: "⚖️", name: "Justice", desc: "Algorithmic Fairness" },
+                { id: "arts", icon: "🎭", name: "Arts", desc: "Creative Synthesis" },
+                { id: "res", icon: "🔬", name: "Research", desc: "Laboratory Modules" },
+                { id: "space", icon: "🌌", name: "Space", desc: "Cosmic Semiotics" }
+            ],
+            // EXTRACTED FROM YOUR 'all_repos_full.json'
+            repos: [
+                "AIUZ-Terra-Codex-EcoSystem", "FMP-CENTRAL-REPO", "terra-translation-api",
+                "Uzbek-mining", "Theory-of-fractal-metascience-paradigm", "terra-fmp-research-pipeline",
+                "NAVOIY-TERRA-Corpus", "FMP-monograph"
+            ],
+            // EXTRACTED FROM YOUR 'export.bib' & 'library.bib'
+            library: [
+                "NULLO: The Ontological Zero-Point (2025)",
+                "Fractal Metascience Paradigm v1.0.0 (Zenodo)",
+                "Terra Clean Core v1.0 — FMP Monograph",
+                "AIUZ Terra Codex — Living Knowledge Ecosystem",
+                "Fundamental Artifacts of FMP (ScienceOpen)"
+            ],
+            concepts: {
+                "nullo": "The ontological zero-point. Not emptiness, but primordial potential before language.",
+                "plt": "Post Lingua Trace. Meaning that survives translation and time.",
+                "ucomm": "Universal Communication. Protocol for ants, whales, AI, and humans.",
+                "fractal": "Self-similarity across scales. As above, so below.",
+                "terra": "The living ecosystem of knowledge and biology."
+            }
         };
-    });
-</script>
+
+        // === 2. INITIALIZATION ===
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDomains();
+            document.getElementById('userInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') processQuery();
+            });
+        });
+
+        // === 3. RENDER LOGIC ===
+        function renderDomains() {
+            const grid = document.getElementById('domainGrid');
+            TERRA_BRAIN.domains.forEach(d => {
+                const card = document.createElement('div');
+                card.className = 'domain-card';
+                card.innerHTML = `<span class="domain-icon">${d.icon}</span><div class="domain-name">${d.name}</div>`;
+                card.onclick = () => handleDomainClick(d);
+                grid.appendChild(card);
+            });
+        }
+
+        // === 4. NEURAL PROCESSING (THE "SHIRAK" LOGIC) ===
+        function processQuery() {
+            const input = document.getElementById('userInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            addMessage('user', text);
+            input.value = '';
+
+            // SIMULATED AI LATENCY
+            setTimeout(() => {
+                const response = generateResponse(text.toLowerCase());
+                addMessage('system', response);
+            }, 600);
+        }
+
+        function generateResponse(query) {
+            // A. CONCEPT SEARCH
+            for (let [key, val] of Object.entries(TERRA_BRAIN.concepts)) {
+                if (query.includes(key)) return `<strong>[DEFINITION FOUND]</strong><br>${val}`;
+            }
+
+            // B. REPO SEARCH
+            if (query.includes("repo") || query.includes("code") || query.includes("git")) {
+                return `<strong>[ACCESSING GITHUB NODE]</strong><br>Linked Repositories:<br>- ${TERRA_BRAIN.repos.join('<br>- ')}`;
+            }
+
+            // C. BIBLIOGRAPHY SEARCH
+            if (query.includes("book") || query.includes("paper") || query.includes("publication")) {
+                return `<strong>[ZOTERO LIBRARY]</strong><br>Authored Artifacts:<br>- ${TERRA_BRAIN.library.join('<br>- ')}`;
+            }
+
+            // D. IDENTITY
+            if (query.includes("who") || query.includes("creator") || query.includes("author")) {
+                return `<strong>[IDENTITY VERIFIED]</strong><br>${TERRA_BRAIN.identity.name}<br>ORCID: ${TERRA_BRAIN.identity.orcid}<br>Role: ${TERRA_BRAIN.identity.role}`;
+            }
+
+            // E. DEFAULT FMP RESPONSE
+            return `<strong>[TERRA SYSTEM]</strong><br>Query received. Analyzing semantic trace...<br>To access specific knowledge, try keywords: 'NULLO', 'Repo', 'Publications', or select a Domain Card above.`;
+        }
+
+        function handleDomainClick(domain) {
+            addMessage('user', `Access domain: ${domain.name}`);
+            setTimeout(() => {
+                addMessage('system', `<strong>[DOMAIN: ${domain.name.toUpperCase()}]</strong><br>Status: Active<br>Protocol: ${domain.desc}<br>Accessing associated repositories...`);
+            }, 400);
+        }
+
+        function addMessage(type, html) {
+            const win = document.getElementById('chatWindow');
+            const div = document.createElement('div');
+            div.className = `message ${type}`;
+            div.innerHTML = html;
+            win.appendChild(div);
+            win.scrollTop = win.scrollHeight;
+        }
+    </script>
 </body>
 </html>
