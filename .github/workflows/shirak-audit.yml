@@ -1,4 +1,7 @@
 name: '[SHIRAK] Ecosystem Audit & Report'
+permissions:
+  contents: read
+  security-events: write
 on:
   workflow_dispatch: # Запускается вручную из вкладки Actions
   push:
