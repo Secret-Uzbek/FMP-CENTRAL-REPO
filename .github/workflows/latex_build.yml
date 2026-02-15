@@ -1,5 +1,8 @@
 name: Build LaTeX -> PDF
 
+permissions:
+  contents: read
+  security-events: write
 on:
   workflow_dispatch:  # Only manual trigger (no .tex files in repo)
 
