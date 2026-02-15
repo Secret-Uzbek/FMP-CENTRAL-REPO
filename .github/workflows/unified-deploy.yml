@@ -446,6 +446,8 @@ PUB_EOF
         id: deployment
         uses: actions/deploy-pages@v4
         permissions:
+  security-events: write
+  contents: read
           pages: write
           id-token: write
       
