@@ -1,4 +1,7 @@
 name: Public Guard
+permissions:
+  contents: read
+  security-events: write
 on: [push]
 jobs:
   check-public:
