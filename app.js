@@ -3,7 +3,7 @@ const TIMELINE_DATA = [
     { year: 1441, type: "ORIGIN", title: "Navoi's Birth", desc: "The semantic seed is planted in Herat." },
     { year: 1483, type: "RECURSION", title: "Babur's Birth", desc: "Andijan. The algorithm begins." },
     { year: 1526, type: "SYNTHESIS", title: "Empire of Meaning", desc: "Babur connects Central Asia and India." },
-    { year: 2025, type: "INCUBATION", title: "Prison Coding", desc: "The Architect writes the Codex in isolation." },
+    { year: 2025, type: "INCUBATION", title: "isolation Coding", desc: "The Architect writes the Codex in isolation." },
     { year: 2026, type: "ACTIVATION", title: "FMP Launch", desc: "Babur-Terra Codex v3.0 goes live." },
     { year: 2026, type: "FUTURE", title: "Feb 21: UST Beta", desc: "Universal Semantic Translator release." }
 ];
