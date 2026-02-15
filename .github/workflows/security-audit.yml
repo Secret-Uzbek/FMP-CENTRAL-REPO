@@ -30,7 +30,7 @@ jobs:
       - name: "Initialize CodeQL"
         uses: github/codeql-action/init@9e35307e363a0276221030027ee0979d0cb74444 # v3.28.10
         with:
-          languages: javascript, python
+          languages: javascript
           # Настройка для NULLO/UCOMM: сканируем только важные директории
           queries: security-extended,security-and-quality
 
