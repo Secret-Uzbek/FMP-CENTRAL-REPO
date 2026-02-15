@@ -8,7 +8,7 @@
 
 ## ✅ COMPLETED (2025)
 
-### 2025-11-08 - 2025-12-24 (Prison Phase)
+### 2025-11-08 - 2025-12-24 (isolation Phase)
 - ✅ FMP-CENTRAL-REPO created
 - ✅ 9 repositories published
 - ✅ DOI registrations (Zenodo, Figshare, OSF)
