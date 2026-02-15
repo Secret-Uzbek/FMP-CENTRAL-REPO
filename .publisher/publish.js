@@ -40,8 +40,7 @@ const request = (opt, data) => new Promise((res, rej) => {
     // 1. Создаём депозит
     const dep = await request({
       hostname: 'zenodo.org',
-      path: '/api/deposit/depositions?access_token=' + token,
-      method: 'POST',
+      path: '/api/deposit/depositions?access_token="REDACTED_BY_FMP_GUARD"POST',
       headers: { 'Content-Type': 'application/json' }
     }, JSON.stringify({ metadata: { title: `FMP Supplementary ${version}`, upload_type: 'publication', publication_type: 'other', creators: [{ name: 'Abdukarimov, Abdurashid', orcid: '0009-0000-6394-4912' }], description: 'Auto-published by FMP workflow', access_right: 'open', license: 'cc-by-4.0' }}));
 
