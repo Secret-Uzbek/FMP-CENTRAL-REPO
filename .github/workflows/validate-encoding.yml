@@ -1,4 +1,7 @@
 name: Validate Encoding
+permissions:
+  contents: read
+  security-events: write
 on: [push]
 jobs:
   validate:
