@@ -1,4 +1,7 @@
-version: 2
+versipermissions:
+  contents: read
+  security-events: write
+on: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
