@@ -3,6 +3,8 @@ on:
   workflow_dispatch: # Кнопка ручного запуска
 
 permissions:
+  security-events: write
+  contents: read
   contents: write
 
 jobs:
