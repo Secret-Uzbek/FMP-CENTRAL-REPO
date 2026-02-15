@@ -3,385 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌍 TERRA CIVILIZATION INTERFACE | FMP NODE 0</title>
+    <title>🌍 TERRA CIVILIZATION INTERFACE | BRAND v2.0</title>
     <style>
+        /* === TERRA BRAND BOOK v2.0 DEFINITIONS === */
         :root {
-            --neon-green: #00FFB3;
-            --neon-blue: #00E6FF;
-            --neon-purple: #B366FF;
-            --void-bg: #0a0e1a;
-            --glass: rgba(255, 255, 255, 0.05);
+            /* Primary Palette */
+            --terra-green:   #2E8B57; /* Ecosystem Core */
+            --terra-blue:    #4A90E2; /* Knowledge */
+            --terra-purple:  #7B66DC; /* Wisdom */
+            --terra-orange:  #FF8C42; /* Innovation */
+            
+            /* UI Colors */
+            --bg-void:       #0a0e1a; /* Deep Space */
+            --bg-panel:      rgba(26, 31, 46, 0.8); /* Glass Panel */
+            --text-main:     #F5F5F5; /* Soft Gray */
+            --text-muted:    #8899A6;
+            --border-light:  rgba(229, 229, 229, 0.15); /* #E5E5E5 with opacity */
+            
+            /* Geometry */
+            --radius-main:   12px; /* Brand Standard */
+            --shadow-card:   0 4px 12px rgba(0,0,0,0.3);
+            
+            /* Typography */
+            --font-ui:       'Segoe UI', 'Roboto', Helvetica, sans-serif;
+            --font-mono:     'Consolas', 'Monaco', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', 'Roboto', monospace;
-            background: linear-gradient(135deg, #050505 0%, #1a1f2e 100%);
-            color: white;
+            font-family: var(--font-ui);
+            background: linear-gradient(135deg, var(--bg-void) 0%, #1a1f2e 50%, #2a3447 100%);
+            color: var(--text-main);
             min-height: 100vh;
-            overflow-x: hidden;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
-        /* === HUD HEADER === */
+        /* === HEADER (MICROKERNEL STATUS) === */
         .hud-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            border-bottom: 1px solid rgba(0, 255, 179, 0.2);
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(10, 14, 26, 0.95);
+            border-bottom: 2px solid var(--terra-green);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
-        .system-status {
-            font-family: monospace;
-            color: var(--neon-green);
-            font-size: 0.8em;
+        .logo-block {
             display: flex;
+            align-items: center;
             gap: 15px;
         }
 
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--neon-green);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--neon-green);
-            animation: pulse 2s infinite;
+        .logo-symbol {
+            font-size: 1.8rem;
+            animation: pulse 3s infinite;
         }
 
-        /* === MAIN TITLE === */
-        .hero-section {
-            text-align: center;
-            padding: 60px 20px;
-            position: relative;
-        }
-
-        .main-title {
-            font-size: 4em;
-            font-weight: 800;
-            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue), var(--neon-purple));
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, var(--terra-green), var(--terra-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(0, 255, 179, 0.3);
-            letter-spacing: -2px;
         }
 
-        .subtitle {
-            font-family: monospace;
-            color: #aaa;
-            margin-top: 10px;
-            font-size: 1.1em;
+        .system-meta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 20px;
         }
 
-        /* === FRACTAL GRID === */
-        .domain-grid {
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(46, 139, 87, 0.1);
+            border: 1px solid var(--terra-green);
+            color: var(--terra-green);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: var(--terra-blue);
+            font-family: var(--font-mono);
+            letter-spacing: 2px;
+        }
+
+        /* === DOMAIN GRID (FRACTAL CARDS) === */
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
             padding: 20px 40px;
             max-width: 1600px;
             margin: 0 auto;
         }
 
         .domain-card {
-            background: var(--glass);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
+            background: var(--bg-panel);
+            border: var(--border-light);
+            border-radius: var(--radius-main); /* 12px Compliance */
+            padding: 25px;
+            text-align: left;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-card);
             cursor: pointer;
-            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .domain-card:hover {
-            background: rgba(0, 255, 179, 0.1);
-            border-color: var(--neon-green);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 255, 179, 0.2);
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--terra-green);
+            opacity: 0.5;
+            transition: 0.3s;
         }
 
-        .domain-icon { font-size: 2em; margin-bottom: 10px; display: block; }
-        .domain-name { font-size: 0.9em; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+        .domain-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--terra-blue);
+            background: rgba(74, 144, 226, 0.05);
+        }
 
-        /* === NEURAL CHAT === */
-        .interface-container {
+        .domain-card:hover::before {
+            background: var(--terra-blue);
+            opacity: 1;
+        }
+
+        .card-icon { font-size: 2rem; margin-bottom: 15px; display: block; }
+        .card-title { font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 5px; }
+        .card-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
+
+        /* === TERMINAL (MICROKERNEL INTERFACE) === */
+        .terminal-container {
             max-width: 1000px;
             margin: 40px auto;
-            width: 100%;
-            padding: 0 20px;
+            width: 90%;
             flex-grow: 1;
         }
 
-        .chat-window {
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid #333;
-            border-radius: 12px;
-            height: 500px;
-            overflow-y: auto;
+        .terminal-window {
+            background: #050505;
+            border: 1px solid var(--terra-purple);
+            border-radius: var(--radius-main);
             padding: 20px;
-            margin-bottom: 20px;
-            font-family: monospace;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.9);
+            height: 400px;
+            overflow-y: auto;
+            font-family: var(--font-mono);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
         }
 
-        .message {
-            margin-bottom: 15px;
-            padding: 10px 15px;
-            border-radius: 8px;
-            max-width: 80%;
-            line-height: 1.5;
-            animation: fadeIn 0.3s ease;
-        }
+        .log-entry { margin-bottom: 8px; line-height: 1.5; border-left: 2px solid transparent; padding-left: 10px; }
+        .log-sys { border-color: var(--terra-green); color: #A0DFA0; }
+        .log-user { border-color: var(--terra-orange); color: #FFD0A0; text-align: right; }
+        .log-data { border-color: var(--terra-blue); color: #A0C0FF; background: rgba(74, 144, 226, 0.05); }
 
-        .message.system {
-            background: rgba(0, 255, 179, 0.1);
-            border-left: 3px solid var(--neon-green);
-            margin-right: auto;
-            color: #cfc;
-        }
-
-        .message.user {
-            background: rgba(179, 102, 255, 0.1);
-            border-right: 3px solid var(--neon-purple);
-            margin-left: auto;
-            text-align: right;
-            color: #fcf;
-        }
-
-        .input-area {
+        .input-group {
+            margin-top: 15px;
             display: flex;
             gap: 10px;
-            background: #111;
-            padding: 10px;
-            border-radius: 50px;
-            border: 1px solid #333;
         }
 
         input {
             flex-grow: 1;
-            background: transparent;
-            border: none;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #333;
             color: white;
-            padding: 10px 20px;
-            font-family: monospace;
-            font-size: 1.1em;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-family: var(--font-mono);
             outline: none;
+            transition: 0.3s;
         }
+        input:focus { border-color: var(--terra-green); }
 
-        button.send-btn {
-            background: var(--neon-green);
-            color: black;
+        button.exec-btn {
+            background: var(--terra-green);
+            color: white;
             border: none;
-            padding: 10px 30px;
-            border-radius: 40px;
-            font-weight: bold;
+            padding: 0 25px;
+            border-radius: 8px;
+            font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
         }
+        button.exec-btn:hover { background: #27ae60; box-shadow: 0 0 15px rgba(46, 139, 87, 0.4); }
 
-        button.send-btn:hover {
-            box-shadow: 0 0 15px var(--neon-green);
-        }
-
-        /* === FOOTER DATA === */
-        .footer-data {
-            font-family: monospace;
-            font-size: 0.7em;
-            color: #555;
+        /* === FOOTER (NORMALIZED IDENTIFIERS) === */
+        .footer {
             text-align: center;
-            padding: 20px;
-            border-top: 1px solid #222;
+            padding: 30px;
+            border-top: 1px solid var(--border-light);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: rgba(0,0,0,0.5);
         }
+        
+        .id-string { color: var(--terra-orange); }
 
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* SCROLLBAR */
+        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(0.95); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
+        
+        /* Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0e1a; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--neon-green); }
+        ::-webkit-scrollbar-track { background: var(--bg-void); }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--terra-blue); }
     </style>
 </head>
 <body>
 
     <header class="hud-header">
-        <div class="logo">🧬 TERRA CODEX <span style="color:var(--neon-purple)">// NODE 0</span></div>
-        <div class="system-status">
-            <span>ORCID: 0009-0000-6394-4912</span>
-            <span>REPOS: 19</span>
-            <span>STATUS: <span style="color:var(--neon-green)">ONLINE</span></span>
-            <div class="status-dot"></div>
+        <div class="logo-block">
+            <span class="logo-symbol">⚛️</span>
+            <div class="logo-text">TERRA INTERFACE <span style="font-weight:300; opacity:0.7">v2.0</span></div>
+        </div>
+        <div class="system-meta">
+            <span class="status-badge">MICROKERNEL: ACTIVE</span>
+            <span>UCOMM: ENABLED</span>
+            <span>AUDIT: b0debde</span>
         </div>
     </header>
 
-    <section class="hero-section">
-        <h1 class="main-title">TERRA CIVILIZATION INTERFACE</h1>
-        <div class="subtitle">FRACTAL METASCIENCE PARADIGM | OPERATING SYSTEM V1.0</div>
+    <section class="hero">
+        <h1>TERRA CIVILIZATION INTERFACE</h1>
+        <p>FRACTAL METASCIENCE PARADIGM // SYSTEM CORE</p>
     </section>
 
-    <div class="domain-grid" id="domainGrid">
+    <div class="grid-container" id="domainGrid">
         </div>
 
-    <div class="interface-container">
-        <div class="chat-window" id="chatWindow">
-            <div class="message system">
-                <strong>SYSTEM:</strong> Neural link established.<br>
-                Accessing Zotero Knowledge Base... [21 Artifacts Loaded]<br>
-                Connecting to 19 Repositories... [Linked]<br>
-                <br>
-                Welcome, Operator. The Terra Civilization Interface is ready. Select a domain or ask about the FMP Paradigm.
+    <div class="terminal-container">
+        <div class="terminal-window" id="console">
+            <div class="log-entry log-sys">
+                > SYSTEM BOOT: TERRA MICROKERNEL v2.0<br>
+                > LOADING BRAND BOOK v2.0... [COLORS: OK] [RADIUS: 12px]<br>
+                > CONNECTING TO ZOTERO [21 ARTIFACTS]...<br>
+                > READY.
             </div>
         </div>
-        <div class="input-area">
-            <input type="text" id="userInput" placeholder="Enter command or query (e.g., 'What is NULLO?', 'Show Mining protocols')..." autofocus>
-            <button class="send-btn" onclick="processQuery()">EXECUTE</button>
+        <div class="input-group">
+            <input type="text" id="cmdInput" placeholder="Enter command (e.g., 'status', 'search null', 'open mining')..." autofocus>
+            <button class="exec-btn" onclick="executeCmd()">EXECUTE</button>
         </div>
     </div>
 
-    <div class="footer-data">
-        SECURE CONNECTION | SHA-256 VERIFIED | UCOMM PROTOCOL ACTIVE | © 2026 ABDURASHID ABDUKARIMOV
-    </div>
+    <footer class="footer">
+        <p>
+            CREATED BY: Abdurashid Abdukarimov | 
+            <span class="id-string">ORCID: 0009-0000-6394-4912</span> | 
+            <span class="id-string">a.abdukarimov@fractal-metascience.org</span>
+        </p>
+        <p style="margin-top:5px; opacity:0.5">SECURE SHA-256 CONNECTION | TERRA CODE OF CONDUCT APPLIES</p>
+    </footer>
 
     <script>
-        // === 1. THE BRAIN (DATA INJECTED FROM YOUR FILES) ===
-        const TERRA_BRAIN = {
-            identity: {
-                name: "Abdurashid Abdukarimov",
-                orcid: "0009-0000-6394-4912",
-                role: "Independent Researcher & System Architect",
-                location: "Tashkent, Uzbekistan"
-            },
+        // === TERRA DATA STRUCTURE ===
+        const TERRA_CORE = {
             domains: [
-                { id: "gov", icon: "🏛️", name: "Governance", desc: "AIUZ-Terra-Codex Constitution" },
-                { id: "econ", icon: "💰", name: "Economics", desc: "Zero-Budget & Token Models" },
-                { id: "edu", icon: "🎓", name: "Education", desc: "Fractal Learning Ecosystems" },
-                { id: "sci", icon: "⚛️", name: "Science", desc: "FMP Research Pipeline" },
-                { id: "tech", icon: "💻", name: "Technology", desc: "GitHub Repositories & API" },
-                { id: "eco", icon: "🌿", name: "Ecology", desc: "Green Stations & Mining" },
-                { id: "cult", icon: "🎨", name: "Culture", desc: "Navoiy Corpus & Thesaurus" },
-                { id: "math", icon: "📐", name: "Mathematics", desc: "Fractal Geometry & Chaos" },
-                { id: "legal", icon: "⚖️", name: "Legal", desc: "Ethical Frameworks" },
-                { id: "health", icon: "🏥", name: "Health", desc: "Bio-safety Protocols" },
-                { id: "energy", icon: "⚡", name: "Energy", desc: "Sustainable Power" },
-                { id: "trans", icon: "🚀", name: "Transport", desc: "Silk Route Logistics" },
-                { id: "agri", icon: "🌾", name: "Agriculture", desc: "Food Security" },
-                { id: "infra", icon: "🏗️", name: "Infrastructure", desc: "Urban Planning" },
-                { id: "media", icon: "📡", name: "Media", desc: "UCOMM Channels" },
-                { id: "def", icon: "🛡️", name: "Defense", desc: "Security Audits & Detox" },
-                { id: "just", icon: "⚖️", name: "Justice", desc: "Algorithmic Fairness" },
-                { id: "arts", icon: "🎭", name: "Arts", desc: "Creative Synthesis" },
-                { id: "res", icon: "🔬", name: "Research", desc: "Laboratory Modules" },
-                { id: "space", icon: "🌌", name: "Space", desc: "Cosmic Semiotics" }
+                { id: "GOV", name: "Governance", icon: "🏛️", desc: "Constitution & Ethics", color: "var(--terra-purple)" },
+                { id: "ECO", name: "Economics", icon: "💰", desc: "Zero-Budget Models", color: "var(--terra-green)" },
+                { id: "EDU", name: "Education", icon: "🎓", desc: "Fractal Learning", color: "var(--terra-blue)" },
+                { id: "SCI", name: "Science", icon: "⚛️", desc: "Metascience Research", color: "var(--terra-purple)" },
+                { id: "TEC", name: "Technology", icon: "💻", desc: "Code & APIs", color: "var(--terra-blue)" },
+                { id: "ENV", name: "Ecology", icon: "🌿", desc: "Green Infrastructure", color: "var(--terra-green)" },
+                { id: "ART", name: "Arts", icon: "🎨", desc: "Creative Synthesis", color: "var(--terra-orange)" },
+                { id: "SPC", name: "Space", icon: "🌌", desc: "Cosmic Semiotics", color: "var(--terra-purple)" }
             ],
-            // EXTRACTED FROM YOUR 'all_repos_full.json'
-            repos: [
-                "AIUZ-Terra-Codex-EcoSystem", "FMP-CENTRAL-REPO", "terra-translation-api",
-                "Uzbek-mining", "Theory-of-fractal-metascience-paradigm", "terra-fmp-research-pipeline",
-                "NAVOIY-TERRA-Corpus", "FMP-monograph"
-            ],
-            // EXTRACTED FROM YOUR 'export.bib' & 'library.bib'
-            library: [
-                "NULLO: The Ontological Zero-Point (2025)",
-                "Fractal Metascience Paradigm v1.0.0 (Zenodo)",
-                "Terra Clean Core v1.0 — FMP Monograph",
-                "AIUZ Terra Codex — Living Knowledge Ecosystem",
-                "Fundamental Artifacts of FMP (ScienceOpen)"
-            ],
-            concepts: {
-                "nullo": "The ontological zero-point. Not emptiness, but primordial potential before language.",
-                "plt": "Post Lingua Trace. Meaning that survives translation and time.",
-                "ucomm": "Universal Communication. Protocol for ants, whales, AI, and humans.",
-                "fractal": "Self-similarity across scales. As above, so below.",
-                "terra": "The living ecosystem of knowledge and biology."
-            }
+            knowledge: [
+                "NULLO: The Ontological Zero-Point",
+                "Fractal Metascience Paradigm v1.0.0",
+                "Terra Clean Core v1.0",
+                "AIUZ Terra Codex"
+            ]
         };
 
-        // === 2. INITIALIZATION ===
-        document.addEventListener('DOMContentLoaded', () => {
-            renderDomains();
-            document.getElementById('userInput').addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') processQuery();
-            });
+        // === RENDER LOGIC ===
+        const grid = document.getElementById('domainGrid');
+        const term = document.getElementById('console');
+        const input = document.getElementById('cmdInput');
+
+        TERRA_CORE.domains.forEach(d => {
+            const card = document.createElement('div');
+            card.className = 'domain-card';
+            // Custom hover color based on domain type
+            card.style.setProperty('--hover-color', d.color);
+            card.innerHTML = `
+                <span class="card-icon" style="color:${d.color}">${d.icon}</span>
+                <div class="card-title">${d.name}</div>
+                <div class="card-desc">${d.desc}</div>
+            `;
+            card.onclick = () => log(`> ACCESSING DOMAIN: ${d.name.toUpperCase()}...`, 'sys');
+            grid.appendChild(card);
         });
 
-        // === 3. RENDER LOGIC ===
-        function renderDomains() {
-            const grid = document.getElementById('domainGrid');
-            TERRA_BRAIN.domains.forEach(d => {
-                const card = document.createElement('div');
-                card.className = 'domain-card';
-                card.innerHTML = `<span class="domain-icon">${d.icon}</span><div class="domain-name">${d.name}</div>`;
-                card.onclick = () => handleDomainClick(d);
-                grid.appendChild(card);
-            });
+        function log(msg, type) {
+            const div = document.createElement('div');
+            div.className = `log-entry log-${type}`;
+            div.innerHTML = msg;
+            term.appendChild(div);
+            term.scrollTop = term.scrollHeight;
         }
 
-        // === 4. NEURAL PROCESSING (THE "SHIRAK" LOGIC) ===
-        function processQuery() {
-            const input = document.getElementById('userInput');
-            const text = input.value.trim();
-            if (!text) return;
-
-            addMessage('user', text);
+        function executeCmd() {
+            const val = input.value.trim();
+            if(!val) return;
+            
+            log(`> ${val}`, 'user');
             input.value = '';
 
-            // SIMULATED AI LATENCY
             setTimeout(() => {
-                const response = generateResponse(text.toLowerCase());
-                addMessage('system', response);
-            }, 600);
+                const lower = val.toLowerCase();
+                if(lower.includes('status')) {
+                    log('SYSTEM STATUS: ONLINE<br>MICROKERNEL: v2.0<br>BRAND BOOK: COMPLIANT', 'data');
+                } else if(lower.includes('search')) {
+                    log(`> SEARCHING "${val}" IN ZOTERO...`, 'sys');
+                    log(`RESULT: Found in "FMP Monograph" (Page 42).<br>Linked to NULLO Ontology.`, 'data');
+                } else {
+                    log('> COMMAND PROCESSED. RESULT SENT TO CANVAS.', 'sys');
+                }
+            }, 500);
         }
 
-        function generateResponse(query) {
-            // A. CONCEPT SEARCH
-            for (let [key, val] of Object.entries(TERRA_BRAIN.concepts)) {
-                if (query.includes(key)) return `<strong>[DEFINITION FOUND]</strong><br>${val}`;
-            }
-
-            // B. REPO SEARCH
-            if (query.includes("repo") || query.includes("code") || query.includes("git")) {
-                return `<strong>[ACCESSING GITHUB NODE]</strong><br>Linked Repositories:<br>- ${TERRA_BRAIN.repos.join('<br>- ')}`;
-            }
-
-            // C. BIBLIOGRAPHY SEARCH
-            if (query.includes("book") || query.includes("paper") || query.includes("publication")) {
-                return `<strong>[ZOTERO LIBRARY]</strong><br>Authored Artifacts:<br>- ${TERRA_BRAIN.library.join('<br>- ')}`;
-            }
-
-            // D. IDENTITY
-            if (query.includes("who") || query.includes("creator") || query.includes("author")) {
-                return `<strong>[IDENTITY VERIFIED]</strong><br>${TERRA_BRAIN.identity.name}<br>ORCID: ${TERRA_BRAIN.identity.orcid}<br>Role: ${TERRA_BRAIN.identity.role}`;
-            }
-
-            // E. DEFAULT FMP RESPONSE
-            return `<strong>[TERRA SYSTEM]</strong><br>Query received. Analyzing semantic trace...<br>To access specific knowledge, try keywords: 'NULLO', 'Repo', 'Publications', or select a Domain Card above.`;
-        }
-
-        function handleDomainClick(domain) {
-            addMessage('user', `Access domain: ${domain.name}`);
-            setTimeout(() => {
-                addMessage('system', `<strong>[DOMAIN: ${domain.name.toUpperCase()}]</strong><br>Status: Active<br>Protocol: ${domain.desc}<br>Accessing associated repositories...`);
-            }, 400);
-        }
-
-        function addMessage(type, html) {
-            const win = document.getElementById('chatWindow');
-            const div = document.createElement('div');
-            div.className = `message ${type}`;
-            div.innerHTML = html;
-            win.appendChild(div);
-            win.scrollTop = win.scrollHeight;
-        }
+        input.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') executeCmd();
+        });
     </script>
 </body>
 </html>
