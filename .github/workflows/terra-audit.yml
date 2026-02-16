@@ -1,0 +1,8 @@
+name: Terra Audit
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Status
+        run: echo 'NULLO-POINT REACHED'
