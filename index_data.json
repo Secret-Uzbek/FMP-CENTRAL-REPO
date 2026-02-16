@@ -1,0 +1,3406 @@
+{
+  "generated_at": "Mon Feb 16 01:01:51 UTC 2026",
+  "system_status": "ONLINE",
+  "repositories": [{"name":"AIUZ-","url":"https://github.com/Secret-Uzbek/AIUZ-","desc":"First ethics based ecosystem","updated":"2026-02-15T14:01:12Z"},{"name":"AIUZ-Terra-codex","url":"https://github.com/Secret-Uzbek/AIUZ-Terra-codex","desc":"Ecosystem","updated":"2026-02-15T14:02:18Z"},{"name":"AIUZ-terra-codex-FMP","url":"https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP","desc":"# AIUZ Ecosystem Repository  Welcome to the AIUZ Ecosystem repository!  ## Overview  This repository is a central archive for files, documents, source code, and materials related to the AIUZ project—a child-centric, ethical, multilingual educational platform for the future.","updated":"2026-02-15T14:06:44Z"},{"name":"FMP-CENTRAL-REPO","url":"https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO","desc":"Центральный фрактальный репозиторий для всех FMP проектов","updated":"2026-02-15T19:49:55Z"},{"name":"FMP-Full-Publication-Package","url":"https://github.com/Secret-Uzbek/FMP-Full-Publication-Package","desc":"The Fractal Metascience Paradigm — Full Publication Package","updated":"2026-02-15T14:07:19Z"},{"name":"FMP-monograph","url":"https://github.com/Secret-Uzbek/FMP-monograph","desc":"This is full monograph \"Theory of fractal metascience paradigm\"","updated":"2026-02-15T14:07:32Z"},{"name":"navoiy-terra-corpus","url":"https://github.com/Secret-Uzbek/navoiy-terra-corpus","desc":null,"updated":"2026-02-15T14:07:38Z"},{"name":"Nullo-PLT-UCOMM-FMP-Academic-Research","url":"https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research","desc":"This archive contains reseaarch data, articles, books and publications about NULLO-PLT-UCOMM-FMP","updated":"2026-02-15T14:08:34Z"},{"name":"terra-fmp-research-pipeline","url":"https://github.com/Secret-Uzbek/terra-fmp-research-pipeline","desc":"Fractal Metascience Paradigm — research pipeline integrating theory, code, and live semantic systems.","updated":"2026-02-15T14:32:55Z"},{"name":"terra-translation-api","url":"https://github.com/Secret-Uzbek/terra-translation-api","desc":"Production-ready Terra Translation Parser API built on FMP principles","updated":"2026-01-31T00:28:38Z"},{"name":"terra-ust-autobuild","url":"https://github.com/Secret-Uzbek/terra-ust-autobuild","desc":"Auto-built Terra UST from FMP ecosystem","updated":"2026-02-14T20:12:20Z"},{"name":"Theory-of-fractal-metascience-paradigm","url":"https://github.com/Secret-Uzbek/Theory-of-fractal-metascience-paradigm","desc":"Theory for new eepistimiologic fractal metascientifical paradigm.","updated":"2026-02-15T16:01:37Z"},{"name":"ust-mvp","url":"https://github.com/Secret-Uzbek/ust-mvp","desc":"UST MVP — Quantum Foundation / Fractal Metascience Foundation","updated":"2026-02-15T14:08:56Z"},{"name":"Uzbek-mining","url":"https://github.com/Secret-Uzbek/Uzbek-mining","desc":"This archive contains books and publications about Uzbek mining industry","updated":"2026-02-15T13:38:03Z"}],
+  "library": 
+[
+    {
+        "key": "7VLLCTW7",
+        "version": 3663,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/7VLLCTW7",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/7VLLCTW7",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Zotero",
+            "numChildren": 2
+        },
+        "data": {
+            "key": "7VLLCTW7",
+            "version": 3663,
+            "itemType": "blogPost",
+            "title": "Zotero Blog » Blog Archive » A Unified Zotero Experience",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "name": "Zotero"
+                }
+            ],
+            "abstractNote": "Zotero is a powerful, easy-to-use research tool that helps you gather, organize, and analyze sources and then share the results of your research.",
+            "blogTitle": "",
+            "websiteType": "",
+            "date": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://www.zotero.org/blog/a-unified-zotero-experience/",
+            "accessDate": "2017-08-22T15:14:21Z",
+            "ISSN": "",
+            "shortTitle": "",
+            "language": "",
+            "rights": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC-BY-NC-ND)",
+            "extra": "",
+            "inPublications": true,
+            "tags": [],
+            "collections": [],
+            "relations": {},
+            "dateAdded": "2017-08-22T15:14:21Z",
+            "dateModified": "2017-08-22T16:20:02Z"
+        }
+    },
+    {
+        "key": "AQZALWL9",
+        "version": 3663,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/AQZALWL9",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/AQZALWL9",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Zotero",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "AQZALWL9",
+            "version": 3663,
+            "itemType": "blogPost",
+            "title": "Zotero Blog » Blog Archive » Zotero 5.0",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "name": "Zotero"
+                }
+            ],
+            "abstractNote": "Zotero is a powerful, easy-to-use research tool that helps you gather, organize, and analyze sources and then share the results of your research.",
+            "blogTitle": "",
+            "websiteType": "",
+            "date": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://www.zotero.org/blog/zotero-5-0/",
+            "accessDate": "2017-08-22T15:14:11Z",
+            "ISSN": "",
+            "shortTitle": "",
+            "language": "",
+            "rights": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC-BY-NC-ND)",
+            "extra": "",
+            "inPublications": true,
+            "tags": [],
+            "collections": [],
+            "relations": {},
+            "dateAdded": "2017-08-22T15:14:11Z",
+            "dateModified": "2017-08-22T16:19:57Z"
+        }
+    },
+    {
+        "key": "E4TD9XGL",
+        "version": 3662,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/E4TD9XGL",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/E4TD9XGL",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/7VLLCTW7",
+                "type": "application/json"
+            }
+        },
+        "meta": {
+            "numChildren": false
+        },
+        "data": {
+            "key": "E4TD9XGL",
+            "version": 3662,
+            "parentItem": "7VLLCTW7",
+            "itemType": "attachment",
+            "linkMode": "imported_file",
+            "title": "Zotero Blog » Blog Archive » A Unified Zotero Experience.pdf",
+            "accessDate": "",
+            "url": "",
+            "note": "",
+            "contentType": "application/pdf",
+            "charset": "",
+            "filename": "Zotero Blog » Blog Archive » A Unified Zotero Experience.pdf",
+            "md5": "fb8537e562048fc14b4fc9b637e195de",
+            "mtime": 1503415007000,
+            "inPublications": true,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2017-08-22T15:16:47Z",
+            "dateModified": "2017-08-22T15:16:47Z"
+        }
+    },
+    {
+        "key": "E8F2U8TT",
+        "version": 3662,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/E8F2U8TT",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/E8F2U8TT",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/7VLLCTW7",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "E8F2U8TT",
+            "version": 3662,
+            "parentItem": "7VLLCTW7",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Snapshot",
+            "accessDate": "2017-08-22T15:14:22Z",
+            "url": "https://www.zotero.org/blog/a-unified-zotero-experience/",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "a-unified-zotero-experience.html",
+            "md5": "19011d45bf66c41e9dc32dfe7e39f11c",
+            "mtime": 1503414862000,
+            "inPublications": true,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2017-08-22T15:14:22Z",
+            "dateModified": "2017-08-22T15:14:23Z"
+        }
+    },
+    {
+        "key": "DSFR9P6M",
+        "version": 3662,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/DSFR9P6M",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/DSFR9P6M",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/AQZALWL9",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "DSFR9P6M",
+            "version": 3662,
+            "parentItem": "AQZALWL9",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Snapshot",
+            "accessDate": "2017-08-22T15:14:14Z",
+            "url": "https://www.zotero.org/blog/zotero-5-0/",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "zotero-5-0.html",
+            "md5": "8200b1674316f9bedc3a6b30f223da5a",
+            "mtime": 1503414854000,
+            "inPublications": true,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2017-08-22T15:14:14Z",
+            "dateModified": "2017-08-22T15:14:15Z"
+        }
+    },
+    {
+        "key": "TTJFTW87",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/TTJFTW87",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/TTJFTW87",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/KWENT2ZM",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "TTJFTW87",
+            "version": 1,
+            "parentItem": "KWENT2ZM",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Zotero | Home",
+            "accessDate": "2011-06-28T19:15:38Z",
+            "url": "http://staging.zotero.net/",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "staging.zotero.net.html",
+            "md5": null,
+            "mtime": 1309288537000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-06-28T19:15:38Z",
+            "dateModified": "2011-06-28T19:16:03Z"
+        }
+    },
+    {
+        "key": "KWENT2ZM",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/KWENT2ZM",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/KWENT2ZM",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "KWENT2ZM",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Zotero | Home",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://staging.zotero.net/",
+            "accessDate": "2011-06-28T19:15:37Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [
+                "N7W92H48"
+            ],
+            "relations": {},
+            "dateAdded": "2011-06-28T19:15:37Z",
+            "dateModified": "2011-06-28T19:15:37Z"
+        }
+    },
+    {
+        "key": "D32BIEQS",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/D32BIEQS",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/D32BIEQS",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/2SS8NXZI",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "D32BIEQS",
+            "version": 1,
+            "parentItem": "2SS8NXZI",
+            "itemType": "attachment",
+            "linkMode": "imported_file",
+            "title": "Clipart-Cartoon-Design-05.gif",
+            "accessDate": "",
+            "url": "",
+            "note": "",
+            "contentType": "image/gif",
+            "charset": "",
+            "filename": "Clipart-Cartoon-Design-05.gif",
+            "md5": "b1fee33d5d517a85af3cc3c836f947ab",
+            "mtime": 1305557153000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-05-16T14:45:53Z",
+            "dateModified": "2011-05-16T14:46:19Z"
+        }
+    },
+    {
+        "key": "HFPQDBMD",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/HFPQDBMD",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/HFPQDBMD",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Schroeder",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "HFPQDBMD",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Sonatine Nr. 3 in c-moll [für] Klavier : Sontina no. 3 in C-minor [for] piano solo",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Hermann",
+                    "lastName": "Schroeder"
+                }
+            ],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "c1972",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "shortTitle": "Sonatine Nr. 3 in c-moll [für] Klavier",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [
+                "BX9965IJ"
+            ],
+            "relations": {},
+            "dateAdded": "2011-05-16T14:36:12Z",
+            "dateModified": "2011-05-16T14:36:12Z"
+        }
+    },
+    {
+        "key": "J6NP6VJW",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/J6NP6VJW",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/J6NP6VJW",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Orwell",
+            "parsedDate": "1984",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "J6NP6VJW",
+            "version": 1,
+            "itemType": "book",
+            "title": "1984",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "George",
+                    "lastName": "Orwell"
+                }
+            ],
+            "abstractNote": "",
+            "series": "",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1984",
+            "publisher": "Index",
+            "place": "",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [
+                "BX9965IJ"
+            ],
+            "relations": {},
+            "dateAdded": "2011-05-16T14:36:12Z",
+            "dateModified": "2011-05-16T14:36:12Z"
+        }
+    },
+    {
+        "key": "HZ6UIXXF",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/HZ6UIXXF",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/HZ6UIXXF",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/NM66T6EF",
+                "type": "application/json"
+            }
+        },
+        "meta": {
+            "numChildren": false
+        },
+        "data": {
+            "key": "HZ6UIXXF",
+            "version": 1,
+            "parentItem": "NM66T6EF",
+            "itemType": "attachment",
+            "linkMode": "imported_file",
+            "title": "R-intro.pdf",
+            "accessDate": "",
+            "url": "",
+            "note": "",
+            "contentType": "application/pdf",
+            "charset": "",
+            "filename": "R-intro.pdf",
+            "md5": "114ebbf5ea7b3b55417a27a312942905",
+            "mtime": 1305149292000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-05-11T21:28:12Z",
+            "dateModified": "2011-05-11T21:30:11Z"
+        }
+    },
+    {
+        "key": "2R4DDQF7",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/2R4DDQF7",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/2R4DDQF7",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/PQKBRC33",
+                "type": "application/json"
+            }
+        },
+        "meta": {
+            "numChildren": false
+        },
+        "data": {
+            "key": "2R4DDQF7",
+            "version": 1,
+            "parentItem": "PQKBRC33",
+            "itemType": "attachment",
+            "linkMode": "imported_file",
+            "title": "R-intro.pdf",
+            "accessDate": "",
+            "url": "",
+            "note": "",
+            "contentType": "application/pdf",
+            "charset": "",
+            "filename": "R-intro.pdf",
+            "md5": "114ebbf5ea7b3b55417a27a312942905",
+            "mtime": 1305149277000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-05-11T21:27:57Z",
+            "dateModified": "2011-05-11T21:30:11Z"
+        }
+    },
+    {
+        "key": "3RIEVNTT",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/3RIEVNTT",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/3RIEVNTT",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": false
+        },
+        "data": {
+            "key": "3RIEVNTT",
+            "version": 1,
+            "itemType": "attachment",
+            "linkMode": "imported_file",
+            "title": "Hoyts_Dinner_Menu_-_0328112052e6837ea9.pdf",
+            "accessDate": "",
+            "url": "",
+            "note": "",
+            "contentType": "application/pdf",
+            "charset": "",
+            "filename": "Hoyts_Dinner_Menu_-_0328112052e6837ea9.pdf",
+            "md5": "4cbe298a3e5f3ee3c8a6d462c51f02c4",
+            "mtime": 1305149064000,
+            "tags": [],
+            "collections": [],
+            "relations": {},
+            "dateAdded": "2011-05-11T21:24:24Z",
+            "dateModified": "2011-05-11T21:24:56Z"
+        }
+    },
+    {
+        "key": "NAF6D27N",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/NAF6D27N",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/NAF6D27N",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/PQKBRC33",
+                "type": "application/json"
+            }
+        },
+        "meta": {
+            "numChildren": false
+        },
+        "data": {
+            "key": "NAF6D27N",
+            "version": 1,
+            "parentItem": "PQKBRC33",
+            "itemType": "attachment",
+            "linkMode": "imported_file",
+            "title": "Hoyts_Dinner_Menu_-_0328112052e6837ea9.pdf",
+            "accessDate": "",
+            "url": "",
+            "note": "",
+            "contentType": "application/pdf",
+            "charset": "",
+            "filename": "Hoyts_Dinner_Menu_-_0328112052e6837ea9.pdf",
+            "md5": "4cbe298a3e5f3ee3c8a6d462c51f02c4",
+            "mtime": 1305149052000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-05-11T21:24:12Z",
+            "dateModified": "2011-05-11T21:24:56Z"
+        }
+    },
+    {
+        "key": "7DTHXBKK",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/7DTHXBKK",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/7DTHXBKK",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Mann",
+            "parsedDate": "2008",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "7DTHXBKK",
+            "version": 1,
+            "itemType": "journalArticle",
+            "title": "The Peloponnesian War and the future of reference, cataloging, and scholarship in research libraries",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "T.",
+                    "lastName": "Mann"
+                }
+            ],
+            "abstractNote": "",
+            "publicationTitle": "Journal of Library Metadata",
+            "publisher": "",
+            "place": "",
+            "date": "2008",
+            "volume": "8",
+            "issue": "1",
+            "section": "",
+            "partNumber": "",
+            "partTitle": "",
+            "pages": "53–100",
+            "series": "",
+            "seriesTitle": "",
+            "seriesText": "",
+            "journalAbbreviation": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "PMID": "",
+            "PMCID": "",
+            "ISSN": "1938-6389",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "Google Scholar",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [
+                "QM6T3KHX"
+            ],
+            "relations": {},
+            "dateAdded": "2011-04-23T16:44:59Z",
+            "dateModified": "2011-04-23T16:44:59Z"
+        }
+    },
+    {
+        "key": "VVFTFJS4",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/VVFTFJS4",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/VVFTFJS4",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/7DTHXBKK",
+                "type": "application/json"
+            }
+        },
+        "meta": {
+            "numChildren": false
+        },
+        "data": {
+            "key": "VVFTFJS4",
+            "version": 1,
+            "parentItem": "7DTHXBKK",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Mann - 2008 - The Peloponnesian War and the future of reference,.pdf",
+            "accessDate": "2011-02-02T03:13:18Z",
+            "url": "http://www.guild2910.org/Pelopponesian%20War%20June%2013%202007.pdf",
+            "note": "",
+            "contentType": "application/pdf",
+            "charset": "",
+            "filename": "Mann - 2008 - The Peloponnesian War and the future of reference,.pdf",
+            "md5": "42f2ec5c634a0173a636bd271e952c17",
+            "mtime": 1303577148000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-02-02T03:13:18Z",
+            "dateModified": "2011-04-23T16:43:00Z"
+        }
+    },
+    {
+        "key": "54QV68M6",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/54QV68M6",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/54QV68M6",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Lan Levengood et al.",
+            "parsedDate": "2010-08",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "54QV68M6",
+            "version": 1,
+            "itemType": "journalArticle",
+            "title": "The effect of BMP-2 on micro- and macroscale osteointegration of biphasic calcium phosphate scaffolds with multiscale porosity",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Sheeny K",
+                    "lastName": "Lan Levengood"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "Samantha J",
+                    "lastName": "Polak"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "Michael J",
+                    "lastName": "Poellmann"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "David J",
+                    "lastName": "Hoelzle"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "Aaron J",
+                    "lastName": "Maki"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "Sherrie G",
+                    "lastName": "Clark"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "Matthew B",
+                    "lastName": "Wheeler"
+                },
+                {
+                    "creatorType": "author",
+                    "firstName": "Amy J",
+                    "lastName": "Wagoner Johnson"
+                }
+            ],
+            "abstractNote": "It is well established that scaffolds for applications in bone tissue engineering require interconnected pores on the order of 100 microm for bone in growth and nutrient and waste transport. As a result, most studies have focused on scaffold macroporosity (>100 microm). More recently researchers have investigated the role of microporosity in calcium phosphate -based scaffolds. Osteointegration into macropores improves when scaffold rods or struts contain micropores, typically defined as pores less than approximately 50 microm. We recently demonstrated multiscale osteointegration, or growth into both macropores and intra-red micropores (<10 microm), of biphasic calcium phosphate (BCP) scaffolds. The combined effect of BMP-2, a potent osteoinductive growth factor, and multiscale porosity has yet to be investigated. In this study we implanted BCP scaffolds into porcine mandibular defects for 3, 6, 12 and 24 weeks and evaluated the effect of BMP-2 on multiscale osteointegration. The results showed that given this in vivo model BMP-2 influences osteointegration at the microscale, but not at the macroscale, but not at the macroscale. Cell density was higher in the rod micropores for scaffolds containing BMP-2 compared with controls at all time points, but BMP-2 was not required for bone formation in micropores. In contrast, there was essentially no difference in the fraction of bone in macropores for scaffolds with BMP-2 compared with controls. Additionally, bone in macropores seemed to have reached steady-state by 3 weeks. Multiscale osteointegration results in bone-scaffold composites that are fully osteointegrated, with no 'dead space'. These composites are likely to contain a continuous cell network as well as the potential for enhanced load transfer and improved mechanical properties.",
+            "publicationTitle": "Acta Biomaterialia",
+            "publisher": "",
+            "place": "",
+            "date": "Aug 2010",
+            "volume": "6",
+            "issue": "8",
+            "section": "",
+            "partNumber": "",
+            "partTitle": "",
+            "pages": "3283-3291",
+            "series": "",
+            "seriesTitle": "",
+            "seriesText": "",
+            "journalAbbreviation": "Acta Biomater",
+            "DOI": "10.1016/j.actbio.2010.02.026",
+            "citationKey": "",
+            "url": "http://www.ncbi.nlm.nih.gov/pubmed/20176148",
+            "accessDate": "2011-01-13T02:46:37Z",
+            "PMID": "",
+            "PMCID": "",
+            "ISSN": "1878-7568",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "NCBI PubMed",
+            "callNumber": "",
+            "rights": "",
+            "extra": "Hey, this is the best article here!",
+            "tags": [
+                {
+                    "tag": "Animals",
+                    "type": 1
+                },
+                {
+                    "tag": "Bone Morphogenetic Protein 2",
+                    "type": 1
+                },
+                {
+                    "tag": "Bone and Bones",
+                    "type": 1
+                },
+                {
+                    "tag": "Calcium Phosphates",
+                    "type": 1
+                },
+                {
+                    "tag": "Cell Count",
+                    "type": 1
+                },
+                {
+                    "tag": "Gelatin",
+                    "type": 1
+                },
+                {
+                    "tag": "Humans",
+                    "type": 1
+                },
+                {
+                    "tag": "Microscopy, Electron, Scanning",
+                    "type": 1
+                },
+                {
+                    "tag": "Microspheres",
+                    "type": 1
+                },
+                {
+                    "tag": "Organ Size",
+                    "type": 1
+                },
+                {
+                    "tag": "Osseointegration",
+                    "type": 1
+                },
+                {
+                    "tag": "Osteogenesis",
+                    "type": 1
+                },
+                {
+                    "tag": "Porosity",
+                    "type": 1
+                },
+                {
+                    "tag": "Robotics",
+                    "type": 1
+                },
+                {
+                    "tag": "Sus scrofa",
+                    "type": 1
+                },
+                {
+                    "tag": "Tissue Scaffolds",
+                    "type": 1
+                },
+                {
+                    "tag": "Tomography, X-Ray Computed",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "2GUIGKC9"
+            ],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/H35VBPPB"
+            },
+            "dateAdded": "2011-01-13T02:46:37Z",
+            "dateModified": "2011-04-11T19:28:58Z"
+        }
+    },
+    {
+        "key": "G2IT8SNK",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/G2IT8SNK",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/G2IT8SNK",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "A. C.",
+            "parsedDate": "1681",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "G2IT8SNK",
+            "version": 1,
+            "itemType": "book",
+            "title": "An answer to a late treasonable pamphlet, entituled, Treason in grain, &c. for which pamphlet Edward Fitz-Harris lies condemned..",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "",
+                    "lastName": "A. C."
+                }
+            ],
+            "abstractNote": "",
+            "series": "",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1681",
+            "publisher": "London: : Printed by N.T. next the Cross-Keys in Fetter-lane., 1681..",
+            "place": "",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://eebo.chadwyck.com/search/full_rec?SOURCE=pgimages.cfg&ACTION=ByID&ID=99890767&FILE=../session/1190302085_15129&SEARCHSCREEN=CITATIONS&SEARCHCONFIG=config.cfg&DISPLAY=ALPHA",
+            "accessDate": "2011-04-11T16:37:49Z",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "Early English Books Online",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Fitzharris, Edward, 1648?-1681 -- Early works to 1800. ; Great Britain -- History -- Charles II, 1660-1685 -- Early works to 1800.",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "2GUIGKC9"
+            ],
+            "relations": {},
+            "dateAdded": "2011-04-11T16:37:49Z",
+            "dateModified": "2011-04-11T16:37:49Z"
+        }
+    },
+    {
+        "key": "K4U39GFI",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/K4U39GFI",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/K4U39GFI",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "A. C.",
+            "parsedDate": "1681",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "K4U39GFI",
+            "version": 1,
+            "itemType": "book",
+            "title": "An answer to a late treasonable pamphlet, entituled, Treason in grain, &c. for which pamphlet Edward Fitz-Harris lies condemned..",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "",
+                    "lastName": "A. C."
+                }
+            ],
+            "abstractNote": "",
+            "series": "Early English Books Online",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1681",
+            "publisher": "London: : Printed by N.T. next the Cross-Keys in Fetter-lane., 1681..",
+            "place": "",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://eebo.chadwyck.com/search/full_rec?SOURCE=pgimages.cfg&ACTION=ByID&ID=99890767&FILE=../session/1190302085_15129&SEARCHSCREEN=CITATIONS&SEARCHCONFIG=config.cfg&DISPLAY=ALPHA",
+            "accessDate": "2011-04-11T16:37:23Z",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "Early English Books Online",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Fitzharris, Edward, 1648?-1681 -- Early works to 1800. ; Great Britain -- History -- Charles II, 1660-1685 -- Early works to 1800.",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "2GUIGKC9"
+            ],
+            "relations": {},
+            "dateAdded": "2011-04-11T16:37:23Z",
+            "dateModified": "2011-04-11T16:37:23Z"
+        }
+    },
+    {
+        "key": "HGAXPFAT",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/HGAXPFAT",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/HGAXPFAT",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "A. C.",
+            "parsedDate": "1681",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "HGAXPFAT",
+            "version": 1,
+            "itemType": "book",
+            "title": "An answer to a late treasonable pamphlet, entituled, Treason in grain, &c. for which pamphlet Edward Fitz-Harris lies condemned..",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "",
+                    "lastName": "A. C."
+                }
+            ],
+            "abstractNote": "",
+            "series": "Early English Books Online",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1681",
+            "publisher": "London: : Printed by N.T. next the Cross-Keys in Fetter-lane., 1681..",
+            "place": "",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://eebo.chadwyck.com/search/full_rec?SOURCE=pgimages.cfg&ACTION=ByID&ID=99890767&FILE=../session/1190302085_15129&SEARCHSCREEN=CITATIONS&SEARCHCONFIG=config.cfg&DISPLAY=ALPHA",
+            "accessDate": "2011-04-11T16:36:59Z",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "Early English Books Online",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Fitzharris, Edward, 1648?-1681 -- Early works to 1800. ; Great Britain -- History -- Charles II, 1660-1685 -- Early works to 1800.",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "2GUIGKC9"
+            ],
+            "relations": {},
+            "dateAdded": "2011-04-11T16:36:59Z",
+            "dateModified": "2011-04-11T16:36:59Z"
+        }
+    },
+    {
+        "key": "KUI94JXQ",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/KUI94JXQ",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/KUI94JXQ",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "A. C.",
+            "parsedDate": "1681",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "KUI94JXQ",
+            "version": 1,
+            "itemType": "book",
+            "title": "An answer to a late treasonable pamphlet, entituled, Treason in grain, &c. for which pamphlet Edward Fitz-Harris lies condemned..",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "",
+                    "lastName": "A. C."
+                }
+            ],
+            "abstractNote": "",
+            "series": "Early English Books Online",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1681",
+            "publisher": "London: : Printed by N.T. next the Cross-Keys in Fetter-lane., 1681..",
+            "place": "",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://eebo.chadwyck.com/search/full_rec?SOURCE=pgimages.cfg&ACTION=ByID&ID=99890767&FILE=../session/1190302085_15129&SEARCHSCREEN=CITATIONS&SEARCHCONFIG=config.cfg&DISPLAY=ALPHA",
+            "accessDate": "2011-04-11T16:28:58Z",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "Early English Books Online",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Fitzharris, Edward, 1648?-1681 -- Early works to 1800. ; Great Britain -- History -- Charles II, 1660-1685 -- Early works to 1800.",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "2GUIGKC9"
+            ],
+            "relations": {},
+            "dateAdded": "2011-04-11T16:28:58Z",
+            "dateModified": "2011-04-11T16:28:58Z"
+        }
+    },
+    {
+        "key": "8TEWBV2I",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/8TEWBV2I",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/8TEWBV2I",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/XPX7KWG3",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "8TEWBV2I",
+            "version": 1,
+            "parentItem": "XPX7KWG3",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "The DOM and JavaScript - MDC Doc Center",
+            "accessDate": "2011-04-10T19:45:43Z",
+            "url": "https://developer.mozilla.org/en/The_DOM_and_JavaScript",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "The_DOM_and_JavaScript.html",
+            "md5": null,
+            "mtime": 1302464742000,
+            "tags": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/3F2FPKTQ"
+            },
+            "dateAdded": "2011-04-10T19:45:43Z",
+            "dateModified": "2011-04-10T19:56:32Z"
+        }
+    },
+    {
+        "key": "KZR66ZTX",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/KZR66ZTX",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/KZR66ZTX",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/K9AQJJGG",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "KZR66ZTX",
+            "version": 1,
+            "parentItem": "K9AQJJGG",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "JavaScript - MDC Doc Center",
+            "accessDate": "2011-04-10T19:45:09Z",
+            "url": "https://developer.mozilla.org/en/JavaScript",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "JavaScript.html",
+            "md5": null,
+            "mtime": 1302464707000,
+            "tags": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/BQZ6WRJN"
+            },
+            "dateAdded": "2011-04-10T19:45:09Z",
+            "dateModified": "2011-04-10T19:45:55Z"
+        }
+    },
+    {
+        "key": "G26VHRTF",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/G26VHRTF",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/G26VHRTF",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/763QIEXT",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "G26VHRTF",
+            "version": 1,
+            "parentItem": "763QIEXT",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Extensions - MDC Doc Center",
+            "accessDate": "2011-04-10T19:44:06Z",
+            "url": "https://developer.mozilla.org/en/Extensions",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "Extensions.html",
+            "md5": null,
+            "mtime": 1302464644000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-04-10T19:44:06Z",
+            "dateModified": "2011-04-10T19:45:55Z"
+        }
+    },
+    {
+        "key": "FHCSUTJ7",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/FHCSUTJ7",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/FHCSUTJ7",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/TWZWDCXM",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "FHCSUTJ7",
+            "version": 1,
+            "parentItem": "TWZWDCXM",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "JavaScript: The Good Parts: Proquest Tech & Business Books",
+            "accessDate": "2011-04-10T19:42:57Z",
+            "url": "http://proquestcombo.safaribooksonline.com.proxy2.library.illinois.edu/book/programming/javascript/9780596517748",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "9780596517748.html",
+            "md5": null,
+            "mtime": 1302464576000,
+            "tags": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/PIQTI4QF"
+            },
+            "dateAdded": "2011-04-10T19:42:57Z",
+            "dateModified": "2011-04-10T19:45:55Z"
+        }
+    },
+    {
+        "key": "XPX7KWG3",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/XPX7KWG3",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/XPX7KWG3",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "XPX7KWG3",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "The DOM and JavaScript - MDC Doc Center",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://developer.mozilla.org/en/The_DOM_and_JavaScript",
+            "accessDate": "2011-04-10T19:45:41Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/F2EVBMUC"
+            },
+            "dateAdded": "2011-04-10T19:45:41Z",
+            "dateModified": "2011-04-10T19:45:41Z"
+        }
+    },
+    {
+        "key": "K9AQJJGG",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/K9AQJJGG",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/K9AQJJGG",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "K9AQJJGG",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "JavaScript - MDC Doc Center",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://developer.mozilla.org/en/JavaScript",
+            "accessDate": "2011-04-10T19:45:07Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/R66VC6T5"
+            },
+            "dateAdded": "2011-04-10T19:45:07Z",
+            "dateModified": "2011-04-10T19:45:07Z"
+        }
+    },
+    {
+        "key": "763QIEXT",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/763QIEXT",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/763QIEXT",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "763QIEXT",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Extensions - MDC Doc Center",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://developer.mozilla.org/en/Extensions",
+            "accessDate": "2011-04-10T19:44:04Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {},
+            "dateAdded": "2011-04-10T19:44:04Z",
+            "dateModified": "2011-04-10T19:44:04Z"
+        }
+    },
+    {
+        "key": "TWZWDCXM",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/TWZWDCXM",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/TWZWDCXM",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Crockford",
+            "parsedDate": "2008-05-08",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "TWZWDCXM",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "JavaScript: The Good Parts: Proquest Tech & Business Books",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Douglas",
+                    "lastName": "Crockford"
+                }
+            ],
+            "abstractNote": "",
+            "websiteTitle": "Safari Books Online",
+            "websiteType": "",
+            "date": "May 8, 2008.",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://proquestcombo.safaribooksonline.com.proxy2.library.illinois.edu/book/programming/javascript/9780596517748",
+            "accessDate": "2011-04-10T19:42:55Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/9SU2H7B9"
+            },
+            "dateAdded": "2011-04-10T19:42:55Z",
+            "dateModified": "2011-04-10T19:43:42Z"
+        }
+    },
+    {
+        "key": "MUJAJTMZ",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/MUJAJTMZ",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/MUJAJTMZ",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/33HJB7J2",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "MUJAJTMZ",
+            "version": 1,
+            "parentItem": "33HJB7J2",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Head First JavaScript: Proquest Tech & Business Books",
+            "accessDate": "2011-04-10T19:39:53Z",
+            "url": "http://proquestcombo.safaribooksonline.com.proxy2.library.illinois.edu/book/programming/javascript/9780596527747",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "9780596527747.html",
+            "md5": null,
+            "mtime": 1302464392000,
+            "tags": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/34HGJBW8"
+            },
+            "dateAdded": "2011-04-10T19:39:53Z",
+            "dateModified": "2011-04-10T19:40:46Z"
+        }
+    },
+    {
+        "key": "33HJB7J2",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/33HJB7J2",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/33HJB7J2",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Morrison",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "33HJB7J2",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Head First JavaScript: Proquest Tech & Business Books",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Michael",
+                    "lastName": "Morrison"
+                }
+            ],
+            "abstractNote": "",
+            "websiteTitle": "Safari Books Online",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://proquestcombo.safaribooksonline.com.proxy2.library.illinois.edu/book/programming/javascript/9780596527747",
+            "accessDate": "2011-04-10T19:39:51Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/CIM6D59C"
+            },
+            "dateAdded": "2011-04-10T19:39:51Z",
+            "dateModified": "2011-04-10T19:40:17Z"
+        }
+    },
+    {
+        "key": "9N26TUXB",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/9N26TUXB",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/9N26TUXB",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/XTPACXZJ",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "9N26TUXB",
+            "version": 1,
+            "parentItem": "XTPACXZJ",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Learning JavaScript, Second Edition: Proquest Tech & Business Books",
+            "accessDate": "2011-04-10T19:38:17Z",
+            "url": "http://proquestcombo.safaribooksonline.com.proxy2.library.illinois.edu/book/programming/javascript/9780596155636",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "9780596155636.html",
+            "md5": null,
+            "mtime": 1302464297000,
+            "tags": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/VCMHR2FT"
+            },
+            "dateAdded": "2011-04-10T19:38:17Z",
+            "dateModified": "2011-04-10T19:38:56Z"
+        }
+    },
+    {
+        "key": "XTPACXZJ",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/XTPACXZJ",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/XTPACXZJ",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Powers",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "XTPACXZJ",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Learning JavaScript, Second Edition: Proquest Tech & Business Books",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Shelley",
+                    "lastName": "Powers"
+                }
+            ],
+            "abstractNote": "",
+            "websiteTitle": "Safari Books Online",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://proquestcombo.safaribooksonline.com.proxy2.library.illinois.edu/book/programming/javascript/9780596155636",
+            "accessDate": "2011-04-10T19:38:15Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {
+                "owl:sameAs": "http://zotero.org/groups/36222/items/GXDPR6RQ"
+            },
+            "dateAdded": "2011-04-10T19:38:15Z",
+            "dateModified": "2011-04-10T19:38:56Z"
+        }
+    },
+    {
+        "key": "H8TE688M",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/H8TE688M",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/H8TE688M",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/CC7XPCC2",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "H8TE688M",
+            "version": 1,
+            "parentItem": "CC7XPCC2",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Zotero | Settings > Zotero Commons",
+            "accessDate": "2011-03-30T13:25:55Z",
+            "url": "https://www.zotero.org/settings/commons",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "commons.html",
+            "md5": null,
+            "mtime": 1301491555000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-03-30T13:25:55Z",
+            "dateModified": "2011-03-30T13:26:26Z"
+        }
+    },
+    {
+        "key": "CC7XPCC2",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/CC7XPCC2",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/CC7XPCC2",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "CC7XPCC2",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Zotero | Settings > Zotero Commons",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://www.zotero.org/settings/commons",
+            "accessDate": "2011-03-30T13:25:54Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [],
+            "relations": {},
+            "dateAdded": "2011-03-30T13:25:54Z",
+            "dateModified": "2011-03-30T13:25:54Z"
+        }
+    },
+    {
+        "key": "HZBVJ5IM",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/HZBVJ5IM",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/HZBVJ5IM",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/U4TU25IC",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "HZBVJ5IM",
+            "version": 1,
+            "parentItem": "U4TU25IC",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "New York Times Snapshot",
+            "accessDate": "2011-03-29T17:48:57Z",
+            "url": "http://www.nytimes.com/2011/03/28/opinion/l28times.html?_r=1",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "l28times.html",
+            "md5": null,
+            "mtime": 1301420937000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:48:57Z",
+            "dateModified": "2011-03-29T17:49:24Z"
+        }
+    },
+    {
+        "key": "U4TU25IC",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/U4TU25IC",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/U4TU25IC",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "parsedDate": "2011-03-28",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "U4TU25IC",
+            "version": 1,
+            "itemType": "newspaperArticle",
+            "title": "A Letter to Our Readers About Digital Subscriptions",
+            "creators": [],
+            "abstractNote": "",
+            "publicationTitle": "The New York Times",
+            "publisher": "",
+            "place": "",
+            "date": "March 28, 2011",
+            "volume": "",
+            "issue": "",
+            "edition": "",
+            "section": "Opinion",
+            "pages": "",
+            "ISSN": "0362-4331",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://www.nytimes.com/2011/03/28/opinion/l28times.html?_r=1",
+            "accessDate": "2011-03-29T17:48:57Z",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "NYTimes.com",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Computers and the Internet",
+                    "type": 1
+                },
+                {
+                    "tag": "New York Times",
+                    "type": 1
+                },
+                {
+                    "tag": "Newspapers",
+                    "type": 1
+                },
+                {
+                    "tag": "Prices (Fares, Fees and Rates)",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "3DKBJE5C"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:48:57Z",
+            "dateModified": "2011-03-29T17:48:57Z"
+        }
+    },
+    {
+        "key": "SR6VJMFG",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/SR6VJMFG",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/SR6VJMFG",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/59PI7GIU",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "SR6VJMFG",
+            "version": 1,
+            "parentItem": "59PI7GIU",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "A Letter to Our Readers About Digital Subscriptions - NYTimes.com",
+            "accessDate": "2011-03-29T17:47:04Z",
+            "url": "http://www.nytimes.com/2011/03/28/opinion/l28times.html?_r=1",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "l28times.html",
+            "md5": null,
+            "mtime": 1301420823000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:47:04Z",
+            "dateModified": "2011-03-29T17:47:31Z"
+        }
+    },
+    {
+        "key": "59PI7GIU",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/59PI7GIU",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/59PI7GIU",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "59PI7GIU",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "A Letter to Our Readers About Digital Subscriptions - NYTimes.com",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://www.nytimes.com/2011/03/28/opinion/l28times.html?_r=1",
+            "accessDate": "2011-03-29T17:47:02Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [
+                "3DKBJE5C"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:47:02Z",
+            "dateModified": "2011-03-29T17:47:02Z"
+        }
+    },
+    {
+        "key": "VWV9T4ZN",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/VWV9T4ZN",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/VWV9T4ZN",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/HVRBWBTK",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "VWV9T4ZN",
+            "version": 1,
+            "parentItem": "HVRBWBTK",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "New York Times Snapshot",
+            "accessDate": "2011-03-29T17:41:41Z",
+            "url": "http://www.nytimes.com/2011/03/28/opinion/l28times.html?_r=1",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "l28times.html",
+            "md5": null,
+            "mtime": 1301420502000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:41:41Z",
+            "dateModified": "2011-03-29T17:42:14Z"
+        }
+    },
+    {
+        "key": "HVRBWBTK",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/HVRBWBTK",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/HVRBWBTK",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "parsedDate": "2011-03-28",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "HVRBWBTK",
+            "version": 1,
+            "itemType": "newspaperArticle",
+            "title": "A Letter to Our Readers About Digital Subscriptions",
+            "creators": [],
+            "abstractNote": "",
+            "publicationTitle": "The New York Times",
+            "publisher": "",
+            "place": "",
+            "date": "March 28, 2011",
+            "volume": "",
+            "issue": "",
+            "edition": "",
+            "section": "Opinion",
+            "pages": "",
+            "ISSN": "0362-4331",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://www.nytimes.com/2011/03/28/opinion/l28times.html?_r=1",
+            "accessDate": "2011-03-29T17:41:41Z",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "NYTimes.com",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Computers and the Internet",
+                    "type": 1
+                },
+                {
+                    "tag": "New York Times",
+                    "type": 1
+                },
+                {
+                    "tag": "Newspapers",
+                    "type": 1
+                },
+                {
+                    "tag": "Prices (Fares, Fees and Rates)",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "3DKBJE5C"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:41:41Z",
+            "dateModified": "2011-03-29T17:41:41Z"
+        }
+    },
+    {
+        "key": "2RDP6ESA",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/2RDP6ESA",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/2RDP6ESA",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/85TCTCXT",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "2RDP6ESA",
+            "version": 1,
+            "parentItem": "85TCTCXT",
+            "itemType": "attachment",
+            "linkMode": "linked_url",
+            "title": "25599047",
+            "accessDate": "2011-03-29T17:36:26Z",
+            "url": "http://www.jstor.org/stable/25599047",
+            "note": "",
+            "contentType": "",
+            "charset": "",
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:36:26Z",
+            "dateModified": "2011-03-29T17:36:26Z"
+        }
+    },
+    {
+        "key": "85TCTCXT",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/85TCTCXT",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/85TCTCXT",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Kirsch",
+            "parsedDate": "2009-12-01",
+            "numChildren": 1
+        },
+        "data": {
+            "key": "85TCTCXT",
+            "version": 1,
+            "itemType": "journalArticle",
+            "title": "Moral Dilemmas and Ethical Controversies",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Stuart",
+                    "lastName": "Kirsch"
+                }
+            ],
+            "abstractNote": "",
+            "publicationTitle": "Anthropology Today",
+            "publisher": "",
+            "place": "",
+            "date": "December 01, 2009",
+            "volume": "25",
+            "issue": "6",
+            "section": "",
+            "partNumber": "",
+            "partTitle": "",
+            "pages": "1-2",
+            "series": "",
+            "seriesTitle": "",
+            "seriesText": "",
+            "journalAbbreviation": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "http://www.jstor.org/stable/25599047",
+            "accessDate": "",
+            "PMID": "",
+            "PMCID": "",
+            "ISSN": "0268540X",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "",
+            "callNumber": "",
+            "rights": "",
+            "extra": "ArticleType: research-article / Full publication date: Dec., 2009 / Copyright © 2009 Royal Anthropological Institute of Great Britain and Ireland",
+            "tags": [],
+            "collections": [
+                "3DKBJE5C"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-29T17:36:26Z",
+            "dateModified": "2011-03-29T17:36:26Z"
+        }
+    },
+    {
+        "key": "3RDD646E",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/3RDD646E",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/3RDD646E",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Confederate History Symposium",
+            "parsedDate": "1984",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "3RDD646E",
+            "version": 1,
+            "itemType": "book",
+            "title": "1984 Confederate History Symposium: Hill Junior College, Hillsboro, Texas, April 14, 1984",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "name": "Confederate History Symposium"
+                }
+            ],
+            "abstractNote": "",
+            "series": "",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1984",
+            "publisher": "Hill Junior College",
+            "place": "[Hillsboro, Tex",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "117",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "1984 Confederate History Symposium",
+            "language": "",
+            "libraryCatalog": "i-share.carli.illinois.edu Library Catalog",
+            "callNumber": "E487",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Civil War, 1861-1865",
+                    "type": 1
+                },
+                {
+                    "tag": "Confederate States of America",
+                    "type": 1
+                },
+                {
+                    "tag": "History",
+                    "type": 1
+                },
+                {
+                    "tag": "Lee, Robert E",
+                    "type": 1
+                },
+                {
+                    "tag": "Robert Edward",
+                    "type": 1
+                },
+                {
+                    "tag": "United States",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "9MK5KS97"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-20T17:07:22Z",
+            "dateModified": "2011-03-20T17:07:22Z"
+        }
+    },
+    {
+        "key": "W4JCMTXI",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/W4JCMTXI",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/W4JCMTXI",
+                "type": "text/html"
+            },
+            "up": {
+                "href": "https://api.zotero.org/users/475425/items/83ETEQVI",
+                "type": "application/json"
+            }
+        },
+        "meta": {},
+        "data": {
+            "key": "W4JCMTXI",
+            "version": 1,
+            "parentItem": "83ETEQVI",
+            "itemType": "attachment",
+            "linkMode": "imported_url",
+            "title": "Web Development - MDC Doc Center",
+            "accessDate": "2011-03-17T16:46:49Z",
+            "url": "https://developer.mozilla.org/en/Web_Development",
+            "note": "",
+            "contentType": "text/html",
+            "charset": "utf-8",
+            "filename": "Web_Development.html",
+            "md5": null,
+            "mtime": 1300380407000,
+            "tags": [],
+            "relations": {},
+            "dateAdded": "2011-03-17T16:46:49Z",
+            "dateModified": "2011-03-17T16:47:15Z"
+        }
+    },
+    {
+        "key": "83ETEQVI",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/83ETEQVI",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/83ETEQVI",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "numChildren": 1
+        },
+        "data": {
+            "key": "83ETEQVI",
+            "version": 1,
+            "itemType": "webpage",
+            "title": "Web Development - MDC Doc Center",
+            "creators": [],
+            "abstractNote": "",
+            "websiteTitle": "",
+            "websiteType": "",
+            "date": "",
+            "publisher": "",
+            "place": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "https://developer.mozilla.org/en/Web_Development",
+            "accessDate": "2011-03-17T16:46:47Z",
+            "shortTitle": "",
+            "language": "",
+            "rights": "",
+            "extra": "",
+            "tags": [],
+            "collections": [
+                "3DKBJE5C"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-17T16:46:47Z",
+            "dateModified": "2011-03-17T16:46:47Z"
+        }
+    },
+    {
+        "key": "TTJIV28N",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/TTJIV28N",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/TTJIV28N",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Perry et al.",
+            "parsedDate": "2003",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "TTJIV28N",
+            "version": 1,
+            "itemType": "film",
+            "title": "Nineteen Eighty-Four",
+            "creators": [
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Simon",
+                    "lastName": "Perry"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Michael",
+                    "lastName": "Radford"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "John",
+                    "lastName": "Hurt"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Richard",
+                    "lastName": "Burton"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Suzanna",
+                    "lastName": "Hamilton"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Cyril",
+                    "lastName": "Cusack"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Roger A",
+                    "lastName": "Deakins"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Tom",
+                    "lastName": "Priestly"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Dominic",
+                    "lastName": "Muldowney"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "George",
+                    "lastName": "Orwell"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Virgin Films"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Umbrella Films"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Rosenblum Films"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "MGM Home Entertainment Inc"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Eurythmics (Musical group)"
+                }
+            ],
+            "abstractNote": "",
+            "distributor": "Distributed by MGM Home Entertainment",
+            "place": "",
+            "date": "2003",
+            "genre": "",
+            "videoRecordingFormat": "",
+            "runningTime": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "magik.gmu.edu Library Catalog",
+            "callNumber": "PR6029.R8",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Dystopias",
+                    "type": 1
+                },
+                {
+                    "tag": "Feature films",
+                    "type": 1
+                },
+                {
+                    "tag": "Films for the hearing impaired",
+                    "type": 1
+                },
+                {
+                    "tag": "Science fiction films",
+                    "type": 1
+                },
+                {
+                    "tag": "Totalitarianism",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "PMJDJ4D8"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-08T19:04:17Z",
+            "dateModified": "2011-03-08T19:04:17Z"
+        }
+    },
+    {
+        "key": "TZFPVNV4",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/TZFPVNV4",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/TZFPVNV4",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Quiñones",
+            "parsedDate": "1985",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "TZFPVNV4",
+            "version": 1,
+            "itemType": "book",
+            "title": "Water Resources Investigations in Puerto Rico and the U.S. Virgin Islands 1984-1985 Programs and Activities of the U.S. Geological Survey, Water Resources Division, Caribbean District",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "F.",
+                    "lastName": "Quiñones"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Gilberto",
+                    "lastName": "Peña-Cruz"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Geological Survey (U.S.)"
+                }
+            ],
+            "abstractNote": "",
+            "series": "",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1985",
+            "publisher": "U.S. Geological Survey",
+            "place": "San Juan, P.R",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "1",
+            "ISBN": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "magik.gmu.edu Library Catalog",
+            "callNumber": "",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Puerto Rico",
+                    "type": 1
+                },
+                {
+                    "tag": "Virgin Islands of the United States",
+                    "type": 1
+                },
+                {
+                    "tag": "Water resources development",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "PMJDJ4D8"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-08T19:03:39Z",
+            "dateModified": "2011-03-08T19:03:39Z"
+        }
+    },
+    {
+        "key": "T43ZZ3P3",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/T43ZZ3P3",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/T43ZZ3P3",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "Reilly",
+            "parsedDate": "1989",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "T43ZZ3P3",
+            "version": 1,
+            "itemType": "book",
+            "title": "Nineteen Eighty-Four: Past, Present, and Future",
+            "creators": [
+                {
+                    "creatorType": "author",
+                    "firstName": "Patrick",
+                    "lastName": "Reilly"
+                }
+            ],
+            "abstractNote": "",
+            "series": "",
+            "seriesNumber": "",
+            "volume": "",
+            "numberOfVolumes": "",
+            "edition": "",
+            "date": "1989",
+            "publisher": "Twayne Publishers",
+            "place": "Boston",
+            "originalDate": "",
+            "originalPublisher": "",
+            "originalPlace": "",
+            "format": "",
+            "numPages": "159",
+            "ISBN": "0805780653",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "ISSN": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "Nineteen Eighty-Four",
+            "language": "",
+            "libraryCatalog": "magik.gmu.edu Library Catalog",
+            "callNumber": "PR6029.R8 N666 1989",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Nineteen eighty-four",
+                    "type": 1
+                },
+                {
+                    "tag": "Orwell, George",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "PMJDJ4D8"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-08T19:03:33Z",
+            "dateModified": "2011-03-08T19:03:33Z"
+        }
+    },
+    {
+        "key": "TM5P86UX",
+        "version": 1,
+        "library": {
+            "type": "user",
+            "id": 475425,
+            "name": "Z public library",
+            "links": {
+                "alternate": {
+                    "href": "https://www.zotero.org/z_public_library",
+                    "type": "text/html"
+                }
+            }
+        },
+        "links": {
+            "self": {
+                "href": "https://api.zotero.org/users/475425/items/TM5P86UX",
+                "type": "application/json"
+            },
+            "alternate": {
+                "href": "https://www.zotero.org/z_public_library/items/TM5P86UX",
+                "type": "text/html"
+            }
+        },
+        "meta": {
+            "creatorSummary": "O'Brien et al.",
+            "parsedDate": "2000",
+            "numChildren": 0
+        },
+        "data": {
+            "key": "TM5P86UX",
+            "version": 1,
+            "itemType": "film",
+            "title": "1984",
+            "creators": [
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Edmond",
+                    "lastName": "O'Brien"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Michael",
+                    "lastName": "Redgrave"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Jan",
+                    "lastName": "Sterling"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "David",
+                    "lastName": "Kossoff"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Donald",
+                    "lastName": "Pleasence"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Mervyn",
+                    "lastName": "Johns"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Carol",
+                    "lastName": "Wolveridge"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "William P",
+                    "lastName": "Templeton"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Ralph",
+                    "lastName": "Bettinson"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Malcolm",
+                    "lastName": "Arnold"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "N. Peter",
+                    "lastName": "Rathvon"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "Michael",
+                    "lastName": "Anderson"
+                },
+                {
+                    "creatorType": "contributor",
+                    "firstName": "George",
+                    "lastName": "Orwell"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Columbia Pictures Corporation"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Holiday Film Productions"
+                },
+                {
+                    "creatorType": "contributor",
+                    "name": "Nostalgia Family Video (Firm)"
+                }
+            ],
+            "abstractNote": "",
+            "distributor": "Nostalgia Family Video",
+            "place": "",
+            "date": "2000",
+            "genre": "",
+            "videoRecordingFormat": "",
+            "runningTime": "",
+            "DOI": "",
+            "citationKey": "",
+            "url": "",
+            "accessDate": "",
+            "archive": "",
+            "archiveLocation": "",
+            "shortTitle": "",
+            "language": "",
+            "libraryCatalog": "magik.gmu.edu Library Catalog",
+            "callNumber": "PN1997",
+            "rights": "",
+            "extra": "",
+            "tags": [
+                {
+                    "tag": "Dystopias",
+                    "type": 1
+                },
+                {
+                    "tag": "Feature films",
+                    "type": 1
+                },
+                {
+                    "tag": "Totalitarianism",
+                    "type": 1
+                }
+            ],
+            "collections": [
+                "PMJDJ4D8"
+            ],
+            "relations": {},
+            "dateAdded": "2011-03-08T19:03:29Z",
+            "dateModified": "2011-03-08T19:03:29Z"
+        }
+    }
+]}
