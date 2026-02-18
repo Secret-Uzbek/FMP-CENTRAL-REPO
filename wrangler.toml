@@ -1,0 +1,15 @@
+name = "terra-codex-worker"
+main = "worker.js"
+compatibility_date = "2026-02-01"
+
+[env.production]
+account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"   # ← твой secret из GitHub
+route = "api.terra.fractal-metascience.org/*"
+zone_id = "${{ secrets.CLOUDFLARE_ZONE_ID }}"        # ← твой secret
+
+[vars]
+TERRA_VERSION = "4.2"
+ARCHITECT = "Abdurashid Abdukarimov"
+ORCID = "0009-0000-6394-4912"
+EMAIL = "a.abdukarimov@fractal-metascience.org"
+DID = "aiuz:did:aiuz:stakeholder:abdukarimov_aaahash1234567890"
