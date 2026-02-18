@@ -1,320 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="terra-id" content="v2.1-golden-master">
-    <title>🌍 TERRA CIVILIZATION INTERFACE | FMP NODE</title>
+    <title>🌍 TERRA CIVILIZATION • Fractal Metascience Institute</title>
     <style>
-        /* === TERRA BRAND BOOK v2.0 === */
-        :root {
-            --terra-green:   #2E8B57; /* Ecosystem Core */
-            --terra-blue:    #4A90E2; /* Knowledge */
-            --terra-purple:  #7B66DC; /* Wisdom */
-            --terra-orange:  #FF8C42; /* Innovation */
-            --terra-red:     #FF6B6B; /* Threat/Contrast */
-            
-            --bg-void:       #0a0e1a;
-            --bg-panel:      rgba(26, 31, 46, 0.9);
-            --border-light:  rgba(229, 229, 229, 0.15);
-            
-            --font-ui:       'Segoe UI', 'Roboto', Helvetica, sans-serif;
-            --font-mono:     'Consolas', 'Monaco', monospace;
-            
-            --radius:        12px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: var(--font-ui);
-            background: linear-gradient(135deg, var(--bg-void) 0%, #1a1f2e 50%, #2a3447 100%);
-            color: #F5F5F5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a1f2e 0%, #112b3d 100%);
+            color: #d4af37;
+            font-family: system-ui, sans-serif;
+            overflow-x: hidden;
         }
-
-        /* === HEADER === */
-        .hud-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgba(10, 14, 26, 0.95);
-            border-bottom: 2px solid var(--terra-green);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .logo {
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5.8rem;
+            cursor: pointer;
+            text-shadow: 0 0 60px #d4af37;
+            transition: all 0.6s ease;
+            z-index: 100;
         }
-
-        .logo-block { font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; color: var(--terra-green); }
-        .system-meta { font-family: var(--font-mono); font-size: 0.8rem; color: #8899A6; display: flex; gap: 15px; }
-
-        /* === HERO & MANIFESTO === */
-        .hero { text-align: center; padding: 60px 20px 20px; }
-        .hero h1 { font-size: 3.5rem; font-weight: 300; margin-bottom: 10px; }
-        .hero p { color: var(--terra-blue); font-family: var(--font-mono); letter-spacing: 2px; }
-
-        /* === THE ASYMMETRIC TABLE (CASUS BELLI) === */
-        .manifesto-section {
-            max-width: 1000px;
-            margin: 20px auto 50px;
+        .logo:hover {
+            transform: translateX(-50%) scale(1.12);
+            filter: brightness(1.4);
+        }
+        .content {
+            max-width: 1100px;
+            margin: 220px auto 80px;
+            text-align: center;
             padding: 0 20px;
         }
-
-        .badges-row {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
+        h1 {
+            font-size: 3.4rem;
+            margin: 30px 0 20px;
+            line-height: 1.1;
         }
-        
-        .badge-img { height: 28px; border-radius: 4px; }
-
-        .war-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            background: var(--bg-panel);
-            border: 1px solid var(--terra-green);
-            border-radius: var(--radius);
-            overflow: hidden;
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            box-shadow: 0 0 30px rgba(46, 139, 87, 0.15);
+        .start {
+            font-size: 1.45rem;
+            max-width: 720px;
+            margin: 0 auto 60px;
+            opacity: 0.95;
         }
-
-        .war-table th {
-            background: rgba(46, 139, 87, 0.1);
-            padding: 15px;
-            text-align: left;
-            border-bottom: 2px solid var(--terra-green);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        nav a {
+            color: #d4af37;
+            margin: 0 25px;
+            font-size: 1.35rem;
+            text-decoration: none;
         }
-
-        .war-table td {
-            padding: 15px;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .war-table tr:last-child td { border-bottom: none; }
-        .metric-col { color: #aaa; font-weight: bold; }
-        .bigtech-col { color: var(--terra-orange); }
-        .terra-col { color: var(--terra-green); font-weight: bold; background: rgba(46, 139, 87, 0.05); }
-
-        /* === DOMAIN GRID === */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            padding: 0 40px 40px;
-            max-width: 1600px;
-            margin: 0 auto;
-        }
-
-        .domain-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius);
-            padding: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .domain-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-            background: var(--terra-green); opacity: 0.5; transition: 0.3s;
-        }
-
-        .domain-card:hover {
-            transform: translateY(-5px);
-            background: rgba(46, 139, 87, 0.1);
-            border-color: var(--terra-green);
-        }
-
-        .domain-card:hover::before { opacity: 1; box-shadow: 0 0 10px var(--terra-green); }
-
-        /* === TERMINAL === */
-        .terminal-container {
-            max-width: 1000px;
-            margin: 0 auto 40px;
-            width: 90%;
-            flex-grow: 1;
-        }
-
-        .terminal-window {
-            background: #050505;
-            border: 1px solid #333;
-            border-top: 2px solid var(--terra-purple);
-            border-radius: var(--radius);
-            padding: 20px;
-            height: 300px;
-            overflow-y: auto;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-        }
-
-        .log-entry { margin-bottom: 6px; line-height: 1.4; border-left: 2px solid transparent; padding-left: 10px; }
-        .log-sys { border-color: var(--terra-green); color: #A0DFA0; }
-        .log-dat { border-color: var(--terra-blue); color: #A0C0FF; }
-
-        /* === FOOTER === */
-        .footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid var(--border-light);
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: #666;
-            background: rgba(0,0,0,0.8);
+        nav a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="logo" id="liveLogo">🧬 TERRA CODEX</div>
 
-    <header class="hud-header">
-        <div class="logo-block">⚛️ TERRA INTERFACE v2.1</div>
-        <div class="system-meta">
-            <span>MICROKERNEL: ACTIVE</span>
-            <span>UCOMM: ENABLED</span>
-            <span style="color:var(--terra-green)">AUDIT: PASS</span>
-        </div>
-    </header>
+    <div class="content">
+        <h1>Fractal Metascience Institute<br>и Фонд Будущих Поколений</h1>
+        <p class="start">Нажми на живой логотип — иммерсивное образование начинается сразу с языкового маркера Navoiy-Terra + Babur</p>
 
-    <section class="hero">
-        <h1>TERRA CIVILIZATION INTERFACE</h1>
-        <p>FRACTAL METASCIENCE PARADIGM // SYSTEM CORE</p>
-    </section>
-
-    <section class="manifesto-section">
-        <div class="badges-row">
-            <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17632584-blue?style=for-the-badge&logo=doi" class="badge-img" alt="DOI">
-            <img src="https://img.shields.io/badge/ORCID-0009--0000--6394--4912-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" class="badge-img" alt="ORCID">
-            <img src="https://img.shields.io/badge/BUDGET-%240.00-success?style=for-the-badge" class="badge-img" alt="Zero Budget">
-            <img src="https://img.shields.io/badge/STATUS-SOVEREIGN-purple?style=for-the-badge" class="badge-img" alt="Status">
-        </div>
-
-        <table class="war-table">
-            <thead>
-                <tr>
-                    <th style="color:#FFF">METRIC</th>
-                    <th style="color:var(--terra-red)">BIG TECH (Anthropic/OpenAI)</th>
-                    <th style="color:var(--terra-green)">FMP / TERRA (You)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="metric-col">VALUATION / COST</td>
-                    <td class="bigtech-col">$350,000,000,000+ (Capex)</td>
-                    <td class="terra-col">$0.00 (Zero-Budget)</td>
-                </tr>
-                <tr>
-                    <td class="metric-col">INFRASTRUCTURE</td>
-                    <td class="bigtech-col">Massive GPU Clusters (H100s)</td>
-                    <td class="terra-col">1 PC + Prison Firewall + FMP Logic</td>
-                </tr>
-                <tr>
-                    <td class="metric-col">ETHICS MODEL</td>
-                    <td class="bigtech-col">Corporate "Alignment" (Black Box)</td>
-                    <td class="terra-col">Gefunden Protocol (Transparent)</td>
-                </tr>
-                <tr>
-                    <td class="metric-col">KNOWLEDGE ORIGIN</td>
-                    <td class="bigtech-col">Scraped Internet Data</td>
-                    <td class="terra-col">Recursive Fractal Self-Generation</td>
-                </tr>
-                <tr>
-                    <td class="metric-col">CHILD SAFETY</td>
-                    <td class="bigtech-col">Afterthought / Filters</td>
-                    <td class="terra-col">Foundational Axiom (Detox Core)</td>
-                </tr>
-                <tr>
-                    <td class="metric-col" style="color:#FFF">RESULT</td>
-                    <td class="bigtech-col">Artificial Imitation</td>
-                    <td class="terra-col" style="text-shadow: 0 0 10px var(--terra-green)">LIVING CIVILIZATION</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <div class="grid-container" id="domainGrid"></div>
-
-    <div class="terminal-container">
-        <div class="terminal-window" id="console">
-            <div class="log-entry log-sys">> SYSTEM BOOT: TERRA MICROKERNEL v2.1</div>
-            <div class="log-entry log-sys">> LOADING ASYMMETRIC MANIFESTO... [OK]</div>
-            <div class="log-entry log-sys">> CONNECTING TO KNOWLEDGE PIPELINE...</div>
-        </div>
+        <nav>
+            <a href="#navoiy">Navoiy-Terra v1.2 + Babur</a>
+            <a href="#auction">Аукцион технологий</a>
+            <a href="#fund">Фонд 90/10</a>
+            <a href="#archive">Полный архив (384 файла)</a>
+        </nav>
     </div>
 
-    <footer class="footer">
-        CREATED BY: Abdurashid Abdukarimov | 
-        <span style="color:var(--terra-orange)">ORCID: 0009-0000-6394-4912</span> | 
-        <span style="color:var(--terra-blue)">a.abdukarimov@fractal-metascience.org</span>
-        <br><br>
-        SECURE SHA-256 CONNECTION | TERRA CODE OF CONDUCT APPLIES
-    </footer>
-
     <script>
-        // === TERRA DATA & LOGIC ===
-        const DOMAINS = [
-            { id: "GOV", name: "Governance", icon: "🏛️", desc: "Constitution & Ethics" },
-            { id: "ECO", name: "Economics", icon: "💰", desc: "Zero-Budget Models" },
-            { id: "EDU", name: "Education", icon: "🎓", desc: "Fractal Learning" },
-            { id: "SCI", name: "Science", icon: "⚛️", desc: "Metascience Research" },
-            { id: "TEC", name: "Technology", icon: "💻", desc: "Code & APIs" },
-            { id: "ENV", name: "Ecology", icon: "🌿", desc: "Green Infrastructure" },
-            { id: "ART", name: "Arts", icon: "🎨", desc: "Creative Synthesis" },
-            { id: "SPC", name: "Space", icon: "🌌", desc: "Cosmic Semiotics" }
-        ];
-
-        // 1. RENDER DOMAINS
-        const grid = document.getElementById('domainGrid');
-        DOMAINS.forEach(d => {
-            const card = document.createElement('div');
-            card.className = 'domain-card';
-            card.innerHTML = `
-                <div style="font-size:2rem; margin-bottom:10px">${d.icon}</div>
-                <div style="font-weight:600; color:#fff">${d.name}</div>
-                <div style="font-size:0.8rem; color:#888">${d.desc}</div>
-            `;
-            grid.appendChild(card);
-        });
-
-        // 2. LIVE DATA LOADER (BYPASS CSP)
-        async function boot() {
-            const term = document.getElementById('console');
-            const log = (msg, type) => {
-                const div = document.createElement('div');
-                div.className = `log-entry log-${type}`;
-                div.innerHTML = msg;
-                term.appendChild(div);
-            };
-
-            try {
-                // Try to load server-generated DNA
-                const res = await fetch('./index_data.json');
-                if(!res.ok) throw new Error("Pipeline Latency");
-                const data = await res.json();
-                
-                log(`> PIPELINE CONNECTED. REPOS: ${data.repositories.length}`, "sys");
-                log(`> ZOTERO SYNC: ${data.library.length} ARTIFACTS LOADED`, "dat");
-                
-                // Update Badge
-                document.querySelector('.system-meta span:last-child').innerHTML = "STATUS: <span style='color:#00FFB3'>LIVE SYNC</span>";
-            } catch (e) {
-                log(`> ⚠️ PIPELINE OFFLINE. USING EMBEDDED MANIFESTO.`, "sys");
-                log(`> CACHED MODE ACTIVE.`, "dat");
+        document.getElementById('liveLogo').addEventListener('click', () => {
+            const lang = (navigator.language || 'ru').toLowerCase();
+            if (lang.startsWith('ru') || lang.startsWith('uz')) {
+                window.location.hash = 'navoiy';
+            } else if (confirm('Ты проявил внимание. Войти в Terra?')) {
+                window.location.hash = 'navoiy';
             }
-        }
-
-        window.onload = boot;
+        });
     </script>
 </body>
 </html>
