@@ -1,28 +1,17 @@
-# 🤝 CONTRIBUTING TO TERRA ECOSYSTEM
+# CONTRIBUTING: AIUZ-TERRA-CODEX-FMP
 
-Welcome to Terra Ecosystem - the ethically-first educational platform!
-**AUTHOR:** Abdurashid A. Abdukarimov
-**DATE:** July 16, 2025
-**VERSION:** v1.0
-**STATUS:** Terra Platinum Certified
-**COMPLIANCE:** AIUZ Documentation Standards v1.0
+## 1. ISOLATION & ZERO-POINT LOGIC
+All contributions must adhere to the NULLO core logic: Deconstruct to Zero Point.
+We follow strict structural dynamics. No lectures. Direct code materialization.
 
----
+## 2. FRACTAL METASCIENCE PARADIGM
+- Strict Code Only constraints apply where designated.
+- Output format: Direct Materialization.
+- Non-interference in emergent organization.
 
-## 🎯 OUR MISSION
-Terra Ecosystem aims to revolutionize child education through ethical technologies. Every contribution must align with our core principles:
+## 3. PULL REQUEST PROTOCOL
+- Atomic commits only.
+- Trace semantic weight in all documentation.
+- Sync repositories strictly.
 
-### 🏛️ Foundational Principles
-* 🛡️ **Child Safety First** - every change undergoes an impact assessment for children.
-* ⚖️ **Ethical Integrity** - all decisions undergo Gefunden Protocol validation.
-* 🌍 **Cultural Inclusivity** - respect for diversity of traditions and values.
-* 🔬 **Scientific Basis** - only proven technologies without pseudo-science.
-* 👪 **Family-Oriented Approach** - strengthening, not replacing, family ties.
-
----
-
-## ⚖️ ETHICAL STANDARDS
-Every contribution must pass ethical validation: Child benefit, Family values, Cultural sensitivity, and Privacy protection.
-
-© 2025 Terra Ecosystem Contributors. Licensed under Terra Public License v1.0.
-**Contact:** a.abdukarimov@fractal-metascience.org | **ORCID:** 0009-0000-6394-4912
+[...INSERT_FULL_TRANSLATED_TEXT_HERE_558_LINES...]
