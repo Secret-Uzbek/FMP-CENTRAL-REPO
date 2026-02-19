@@ -1,47 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌍 TERRA CIVILIZATION INTERFACE — Fractal Metascience Foundation</title>
+    <title>Fractal Metascience Foundation | Terra Ecosystem</title>
     <style>
-        body { margin:0; padding:0; background: linear-gradient(135deg, #0a0e1a, #1a2a47); color: #eaeaea; font-family: system-ui, sans-serif; }
-        .header { text-align:center; padding:100px 20px 60px; }
-        .title { font-size:3.8rem; font-weight:900; background:linear-gradient(90deg,#00ff41,#00bfff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:30px; padding:40px 20px; max-width:1200px; margin:0 auto; }
-        .product { background:rgba(255,255,255,0.06); border:1px solid #00ff41; border-radius:20px; padding:35px; transition:0.4s; }
-        .product:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(0,255,65,0.2); }
-        .auction { background:#ffd700; color:#000; padding:12px 28px; border-radius:50px; font-weight:700; display:inline-block; margin:18px 0; }
-        .btn { background:#00ff41; color:#000; padding:16px 36px; border:none; border-radius:14px; font-weight:700; cursor:pointer; font-size:1.1rem; }
-        .btn:hover { background:#00e633; transform:scale(1.05); }
-        footer { text-align:center; padding:80px 20px; opacity:0.8; font-size:0.98rem; }
+        body { margin:0; padding:0; background:#0a0f1c; color:#e0e7ff; font-family:'Inter', system-ui, sans-serif; line-height:1.7; overflow-x:hidden; }
+        .header { background:#111827; padding:30px 20px; position:sticky; top:0; z-index:100; border-bottom:1px solid #334155; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.6rem; font-weight:800; color:#f1f5f9; }
+        .lang-switch button { background:none; border:none; color:#94a3b8; margin:0 8px; cursor:pointer; font-size:0.95rem; }
+        .lang-switch button.active { color:#00b4d8; font-weight:600; }
+        .hero { height:100vh; display:flex; align-items:center; justify-content:center; position:relative; background:radial-gradient(circle at center, #1e2937 0%, #0a0f1c 70%); }
+        .nullo-drop { width:280px; height:280px; border-radius:50%; background:radial-gradient(circle at 40% 40%, #334155, #0a0f1c); border:3px solid #00b4d8; box-shadow:0 0 80px #00b4d8; animation:pulse 8s infinite ease-in-out; cursor:pointer; }
+        @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.08);} }
+        .hero-text { position:absolute; bottom:120px; text-align:center; }
+        .section { max-width:1100px; margin:80px auto; padding:0 20px; }
+        h2 { font-size:2.2rem; color:#c4d0ff; border-bottom:1px solid #334155; padding-bottom:15px; }
+        .agents { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
+        .agent-card { background:#1e2937; border:1px solid #475569; border-radius:12px; padding:30px; text-align:center; }
+        .product { background:#1e2937; border:1px solid #475569; border-radius:12px; padding:35px; margin:25px 0; }
+        .auction { background:#1e2937; border:1px solid #64748b; padding:20px; border-radius:12px; text-align:center; margin:30px 0; }
+        .btn { background:#334155; color:#e0e7ff; padding:16px 36px; border:none; border-radius:8px; font-weight:600; cursor:pointer; }
+        footer { background:#0f172a; padding:70px 20px; text-align:center; color:#64748b; }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="title">TERRA CIVILIZATION INTERFACE</div>
-        <p style="font-size:1.45rem;">Fractal Metascience Foundation • Abdurashid Abdukarimov</p>
-        <p style="color:#00ff41;">Zero Budget • Sovereign • Child-Safe • Global Auction</p>
+        <div class="logo">Fractal Metascience Foundation</div>
+        <div class="lang-switch">
+            <button class="active" onclick="switchLang('ru')">RU</button>
+            <button onclick="switchLang('uz')">UZ</button>
+            <button onclick="switchLang('en')">EN</button>
+        </div>
     </div>
 
-    <div class="products">
+    <!-- ПЕРВОРОДНАЯ КАПЛЯ NULLO -->
+    <div class="hero">
+        <div class="nullo-drop" onclick="nulloClick()"></div>
+        <div class="hero-text">
+            <h1 style="font-size:3.1rem; margin-bottom:10px;">NULLO</h1>
+            <p style="font-size:1.35rem; color:#94a3b8;">Онтологическая нулевая точка всех возможностей</p>
+        </div>
+    </div>
+
+    <!-- СОВЕТ ВЕЛИКИХ УМОВ -->
+    <div class="section">
+        <h2>Совет великих умов</h2>
+        <div class="agents">
+            <div class="agent-card">Ширак — семантический поиск и реконструкция</div>
+            <div class="agent-card">Томирис — иммерсивное образование и Terra Points</div>
+            <div class="agent-card">Роксана — этическая валидация и фонд будущих поколений</div>
+        </div>
+    </div>
+
+    <!-- ПРОДУКТЫ И АУКЦИОН -->
+    <div class="section">
+        <h2>Каталог продуктов — Первый аукцион</h2>
         <div class="product">
-            <h3>🌐 Terra Translation Parser v5.0</h3>
-            <p>Semantic decompositor. Reconstructs dead languages from real scientific data, Wikipedia and artifacts.</p>
-            <div class="auction">AUCTION • Starting Price $100,000,000</div>
-            <button class="btn" onclick="window.location='mailto:a.abdukarimov@fractal-metascience.org?subject=Translation Parser Auction'">Participate in Auction</button>
+            <h3>Terra Translation Parser v5.0</h3>
+            <p>Семантический декомпозитор и живой тезаурус. Реконструирует смысл по всем языкам и доменам на основе реальных научных источников.</p>
+            <div class="auction">
+                <strong>Аукцион • Стартовая цена: $100 000 000</strong><br>
+                10/90 модель — 10 % архитектору, 90 % в Фонд будущих поколений
+            </div>
+            <button class="btn" onclick="window.location='mailto:a.abdukarimov@fractal-metascience.org?subject=Terra Translation Parser Auction'">Участвовать в аукционе</button>
         </div>
         <div class="product">
-            <h3>🏗️ Green Station Planner v6.0</h3>
-            <p>Regenerative station designer for Uzbekistan and the world.</p>
-            <div class="auction">AUCTION • Starting Price $100,000,000</div>
-            <button class="btn" onclick="window.location='mailto:a.abdukarimov@fractal-metascience.org?subject=Green Station Auction'">Participate in Auction</button>
+            <h3>Green Station Planner v6.0</h3>
+            <p>Профессиональный планировщик регенеративной инфраструктуры для Узбекистана и мира.</p>
+            <div class="auction">
+                <strong>Аукцион • Стартовая цена: $100 000 000</strong><br>
+                10/90 модель — 10 % архитектору, 90 % в Фонд будущих поколений
+            </div>
+            <button class="btn" onclick="window.location='mailto:a.abdukarimov@fractal-metascience.org?subject=Green Station Planner Auction'">Участвовать в аукционе</button>
         </div>
     </div>
 
     <footer>
-        Built by one man in Tashkent • From Colony-36 • 2021–2026<br>
-        Architect: Abdurashid Abdukarimov • ORCID 0009-0000-6394-4912
+        Fractal Metascience Foundation • Terra Ecosystem<br>
+        Архитектор: Абдурашид Абдукаримов • ORCID 0009-0000-6394-4912<br>
+        Контакт: a.abdukarimov@fractal-metascience.org
     </footer>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            alert('Язык изменён на ' + lang.toUpperCase() + ' (реализация в следующих итерациях по протоколу)');
+        }
+        function nulloClick() {
+            alert('Первородная капля NULLO активирована. Вход в иммерсивный режим Terra Ecosystem (по протоколу L0)');
+        }
+    </script>
 </body>
 </html>
