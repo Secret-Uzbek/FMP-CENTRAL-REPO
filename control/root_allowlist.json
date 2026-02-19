@@ -10,6 +10,7 @@
     "FMP_Mathematical_Formalization.pdf",
     "FMP_Quick_Start_Guide_For_New_Nodes.pdf",
     "LIVING_DNA.json",
+    "MASTER_MAP.md",
     "META-INDEX.md",
     "PUBLICATION_RULE.md",
     "README.md",
@@ -17,6 +18,7 @@
     "README_UZ.md",
     "ROADMAP.md",
     "ROOT_MINIMAL_RULE.md",
+    "app.js",
     "fmp-architecture-viz.tsx",
     "fmp-awakening-evidence-v2.md",
     "fmp-math-formalization.md",
@@ -24,18 +26,16 @@
     "fmp-submission-generator.tsx",
     "fulchat_claudeAI_27.11.2025.md",
     "index.html",
+    "index_data.json",
     "institutional_pitch.md",
     "package.json",
+    "shirak-agent.js",
+    "style.css",
     "summary-map.html",
     "terra-codex-live.html",
-    "wrangler.jsonc",
-    "shirak-agent.js"
-    "MASTER_MAP.md",
-    "app.js",
-    "index_data.json",
-    "style.css",
     "worker.js",
+    "wrangler.jsonc",
     "wrangler.toml"
   ],
-  "updated_utc": "2026-02-09T05:30:00Z"
+  "updated_utc": "2026-02-19T05:30:00Z"
 }
