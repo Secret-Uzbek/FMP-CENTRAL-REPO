@@ -1,11 +1,10 @@
 name = "terra-codex-worker"
 main = "worker.js"
 compatibility_date = "2026-02-01"
+account_id = "c6b63a2d52d28f1d47ba7c63e4a00d9e"
 
 [env.production]
-account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"   # ← твой secret из GitHub
 route = "api.terra.fractal-metascience.org/*"
-zone_id = "${{ secrets.CLOUDFLARE_ZONE_ID }}"        # ← твой secret
 
 [vars]
 TERRA_VERSION = "4.2"
