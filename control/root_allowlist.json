@@ -30,6 +30,12 @@
     "terra-codex-live.html",
     "wrangler.jsonc",
     "shirak-agent.js"
+    "MASTER_MAP.md",
+    "app.js",
+    "index_data.json",
+    "style.css",
+    "worker.js",
+    "wrangler.toml"
   ],
   "updated_utc": "2026-02-09T05:30:00Z"
 }
