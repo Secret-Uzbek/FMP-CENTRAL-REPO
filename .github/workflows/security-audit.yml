@@ -1,4 +1,4 @@
-name:" "FMP: Security Audit""
+name: "FMP: Security Audit"
 
 on:
   push:
@@ -40,4 +40,4 @@ jobs:
       - name: "Perform Analysis"
         uses: github/codeql-action/analyze@9e35307e363a0276221030027ee0979d0cb74444 # v3.28.10
         with:
-          category: "/language:javascript-python"
+          category: "/language:javascript"
