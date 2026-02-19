@@ -1,55 +1,47 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌍 TERRA CIVILIZATION INTERFACE — Fractal Metascience Foundation</title>
     <style>
-        body { margin:0; padding:0; background:linear-gradient(135deg,#0a0e1a,#1a2a47); color:#eaeaea; font-family:'Space Grotesk',sans-serif; }
-        .header { text-align:center; padding:80px 20px; background:rgba(0,255,65,0.08); }
-        .title { font-size:4.2rem; font-weight:900; background:linear-gradient(90deg,#00ff41,#00bfff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        .section { padding:60px 20px; max-width:1200px; margin:0 auto; }
-        .product-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:30px; }
-        .product { background:rgba(255,255,255,0.06); border:1px solid #00ff41; border-radius:20px; padding:30px; transition:0.3s; }
-        .product:hover { transform:translateY(-10px); box-shadow:0 20px 50px rgba(0,255,65,0.2); }
-        .auction { background:#ffd700; color:#000; padding:14px; border-radius:12px; text-align:center; font-weight:700; margin:15px 0; }
-        .btn { background:#00ff41; color:#000; padding:14px 32px; border:none; border-radius:10px; font-weight:700; cursor:pointer; margin:10px; }
+        body { margin:0; padding:0; background: linear-gradient(135deg, #0a0e1a, #1a2a47); color: #eaeaea; font-family: system-ui, sans-serif; }
+        .header { text-align:center; padding:100px 20px 60px; }
+        .title { font-size:3.8rem; font-weight:900; background:linear-gradient(90deg,#00ff41,#00bfff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:30px; padding:40px 20px; max-width:1200px; margin:0 auto; }
+        .product { background:rgba(255,255,255,0.06); border:1px solid #00ff41; border-radius:20px; padding:35px; transition:0.4s; }
+        .product:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(0,255,65,0.2); }
+        .auction { background:#ffd700; color:#000; padding:12px 28px; border-radius:50px; font-weight:700; display:inline-block; margin:18px 0; }
+        .btn { background:#00ff41; color:#000; padding:16px 36px; border:none; border-radius:14px; font-weight:700; cursor:pointer; font-size:1.1rem; }
+        .btn:hover { background:#00e633; transform:scale(1.05); }
+        footer { text-align:center; padding:80px 20px; opacity:0.8; font-size:0.98rem; }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="title">TERRA CIVILIZATION INTERFACE</div>
-        <p style="font-size:1.5rem;margin:25px 0;">Fractal Metascience Foundation • Abdurashid Abdukarimov</p>
-        <p style="color:#00ff41;font-size:1.1rem;">ORCID 0009-0000-6394-4912 • Zero Budget • Sovereign • Child-Safe</p>
+        <p style="font-size:1.45rem;">Fractal Metascience Foundation • Abdurashid Abdukarimov</p>
+        <p style="color:#00ff41;">Zero Budget • Sovereign • Child-Safe • Global Auction</p>
     </div>
 
-    <div class="section">
-        <h2 style="text-align:center;color:#00ff41;">📋 Новые Стандарты Документации v1.0 (13 июля 2025)</h2>
-        <p style="text-align:center;max-width:800px;margin:0 auto 40px;">Все документы AIUZ Terra Codex теперь проходят автоматическую валидацию по протоколу автора. Единообразие, качество и преемственность гарантированы.</p>
-    </div>
-
-    <div class="section">
-        <h2 style="text-align:center;">🛍️ Каталог Продуктов — Первый Аукцион</h2>
-        <div class="product-grid">
-            <div class="product">
-                <h3>🌐 Terra Translation Parser v5.0</h3>
-                <p>Семантический декомпозитор + реконструкция мёртвых языков по реальным научным данным (Wikipedia, архивы, артефакты).</p>
-                <div class="auction">Аукцион • Стартовая цена: 100 000 000 €</div>
-                <button class="btn" onclick="alert('Лот добавлен в аукцион. Напишите a.abdukarimov@fractal-metascience.org для участия')">Участвовать в аукционе</button>
-            </div>
-
-            <div class="product">
-                <h3>🏗️ Green Station Planner v6.0</h3>
-                <p>Архитектурный планировщик regenerative станций для Узбекистана и мира (solar, water recycling, био-материалы).</p>
-                <div class="auction">Аукцион • Стартовая цена: 100 000 000 €</div>
-                <button class="btn" onclick="alert('Лот добавлен в аукцион. Напишите a.abdukarimov@fractal-metascience.org для участия')">Участвовать в аукционе</button>
-            </div>
+    <div class="products">
+        <div class="product">
+            <h3>🌐 Terra Translation Parser v5.0</h3>
+            <p>Semantic decompositor. Reconstructs dead languages from real scientific data, Wikipedia and artifacts.</p>
+            <div class="auction">AUCTION • Starting Price $100,000,000</div>
+            <button class="btn" onclick="window.location='mailto:a.abdukarimov@fractal-metascience.org?subject=Translation Parser Auction'">Participate in Auction</button>
+        </div>
+        <div class="product">
+            <h3>🏗️ Green Station Planner v6.0</h3>
+            <p>Regenerative station designer for Uzbekistan and the world.</p>
+            <div class="auction">AUCTION • Starting Price $100,000,000</div>
+            <button class="btn" onclick="window.location='mailto:a.abdukarimov@fractal-metascience.org?subject=Green Station Auction'">Participate in Auction</button>
         </div>
     </div>
 
-    <footer style="text-align:center;padding:60px 20px;background:rgba(0,0,0,0.4);font-size:0.95rem;">
-        Создано одним человеком в Ташкенте • Из Колонии-36 • 2021–2026<br>
-        Все коммерческое использование — только по лицензии FMP-L7 под личным контролем архитектора
+    <footer>
+        Built by one man in Tashkent • From Colony-36 • 2021–2026<br>
+        Architect: Abdurashid Abdukarimov • ORCID 0009-0000-6394-4912
     </footer>
 </body>
 </html>
