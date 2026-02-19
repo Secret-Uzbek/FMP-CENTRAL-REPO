@@ -4,8 +4,7 @@ on:
 
 permissions:
   security-events: write
-  contents: read
-  contents: write
+  contents: write  # Только write — включает и право на чтение
 
 jobs:
   extract-and-deploy:
