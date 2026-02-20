@@ -1,7 +1,7 @@
 versipermissions:
   contents: read
   security-events: write
-on: 2
+version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
