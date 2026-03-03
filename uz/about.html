@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Fractal Metascience Foundation</title>
+  <meta name="description" content="Абдурашид Абдукаримов — архитектор Fractal Metascience Foundation. Биография, академический профиль, ORCID 0009-0000-6394-4912.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 48px; margin-bottom: 64px;
+    }
+    .bio-sidebar { position: sticky; top: 80px; align-self: start; }
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px; text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-avatar {
+      width: 90px; height: 90px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #1a3a5c 0%, #080c14 100%);
+      border: 2px solid var(--border-2);
+      margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 2rem;
+      font-weight: 800; color: var(--cyan);
+    }
+    .profile-name {
+      font-family: var(--font-display); font-size: 1rem;
+      font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .profile-title {
+      font-size: 0.8rem; color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .profile-links { display: flex; flex-direction: column; gap: 8px; }
+    .profile-link {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--text-muted); text-decoration: none;
+      padding: 8px 12px; border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+    .profile-link:hover { border-color: var(--cyan); color: var(--cyan); }
+    .profile-link .link-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--cyan); flex-shrink: 0;
+    }
+
+    .credentials-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+    }
+    .cred-item {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.78rem;
+    }
+    .cred-item:last-child { border-bottom: none; }
+    .cred-key { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.68rem; }
+    .cred-val { color: var(--text-muted); text-align: right; }
+
+    .bio-content h3 {
+      font-family: var(--font-display); font-size: 1.3rem;
+      font-weight: 700; color: var(--text);
+      margin: 40px 0 16px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    }
+    .bio-content h3:first-child { margin-top: 0; }
+    .bio-content p {
+      color: var(--text-muted); font-size: 0.935rem;
+      line-height: 1.8; margin-bottom: 16px;
+    }
+
+    .timeline {
+      position: relative; padding-left: 28px; margin: 24px 0;
+    }
+    .timeline::before {
+      content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+      width: 1px; background: var(--border);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 28px;
+    }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -24px; top: 6px;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--bg-card); border: 2px solid var(--cyan);
+    }
+    .timeline-year {
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--cyan); margin-bottom: 4px;
+    }
+    .timeline-title {
+      font-family: var(--font-display); font-size: 0.95rem;
+      font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .timeline-desc {
+      font-size: 0.855rem; color: var(--text-muted); line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .bio-grid { grid-template-columns: 1fr; }
+      .bio-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Fractal Metascience Foundation</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="repository.html">Repository</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="../about.html" class="lang-btn">RU</a>
+      <span class="lang-btn active">UZ</span>
+      <a href="../en/about.html" class="lang-btn">EN</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="page-label">Architect · Researcher</span>
+    <h1 class="page-title">About</h1>
+    <p class="page-subtitle">Fractal Metascience Foundation asoschisi va arxitektorining biografiyasi va akademik profili.</p>
+  </div>
+
+  <div class="section">
+    <div class="bio-grid">
+
+      <!-- Sidebar -->
+      <div class="bio-sidebar">
+        <div class="profile-card">
+          <div class="profile-avatar">АА</div>
+          <div class="profile-name">Абдурашид Абдукаримов</div>
+          <div class="profile-title">Founder & Chief Architect<br>Fractal Metascience Foundation</div>
+          <div class="profile-links">
+            <a href="https://orcid.org/0009-0000-6394-4912" target="_blank" class="profile-link">
+              <div class="link-dot" style="background:#A6CE39;"></div>ORCID 0009-0000-6394-4912
+            </a>
+            <a href="https://github.com/Secret-Uzbek" target="_blank" class="profile-link">
+              <div class="link-dot"></div>github.com/Secret-Uzbek
+            </a>
+            <a href="https://huggingface.co/Terra-Codex" target="_blank" class="profile-link">
+              <div class="link-dot" style="background:#ff9d00;"></div>HuggingFace / Terra-Codex
+            </a>
+            <a href="mailto:a.abdukarimov@fractal-metascience.org" class="profile-link">
+              <div class="link-dot"></div>Aloqa
+            </a>
+          </div>
+        </div>
+        <div class="credentials-card">
+          <div class="cred-item">
+            <span class="cred-key">ResearcherID</span>
+            <span class="cred-val">OIT-6569-2025</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-key">Joylashgan</span>
+            <span class="cred-val">Ташкент, Узбекистан</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-key">Tillar</span>
+            <span class="cred-val">RU · UZ · EN · DE</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-key">ORCID yaratilgan</span>
+            <span class="cred-val">12 Jul 2025</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-key">Nashrlar</span>
+            <span class="cred-val">23 DOI</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-key">Byudjet</span>
+            <span class="cred-val">$0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main biography -->
+      <div class="bio-content">
+        <h3>Profil</h3>
+        <p>Абдурашид Абдулхамитович Абдукаримов — независимый исследователь, основатель и главный архитектор Fractal Metascience Foundation. Разработчик Fractal Metascience Paradigm (FMP) — комплексного теоретического и практического фреймворка для человеко-ИИ коллаборации и организации знаний. Его работа объединяет онтологию, семиотику, педагогику и системную теорию в единую парадигму, реализованную в виде операционной экосистемы с нулевым бюджетом.</p>
+        <p>Выпускник немецкой филологии с обширным международным опытом в дипломатических, культурных и медиаструктурах — от Швейцарского посольства в Ташкенте до Гёте-Института и крупнейших немецких СМИ. Обладатель стипендии DAAD. Участник Берлинского кинофестиваля в качестве продюсера. Весь теоретический корпус FMP — более 370 артефактов, 23 DOI-публикации, 12+ GitHub-репозиториев — создан в условиях нулевого бюджета и крайне ограниченного доступа к ресурсам.</p>
+
+        <h3>Akademik hissa</h3>
+        <p>FMP строится на четырёх концептуальных столпах: NULLO (онтология нулевой точки), PLT (Post-Lingua Trace — семантический след за пределами языка), UCOM (Universal Communication Protocol) и EUO (Emergent Universal Organization). Каждый из этих компонентов разработан как самостоятельная теоретическая единица с собственным математическим аппаратом и верифицирован через международные академические платформы.</p>
+        <p>Работы Абдукаримова приняты в три независимых сообщества Zenodo (Big Fractal, Fractal Cosmos, Syntheverse) независимыми кураторами. Две публикации проиндексированы в Clarivate Web of Science, одна — в DataCite. Академический профиль верифицирован через ORCID, Web of Science, Zenodo и SSRN eLibrary.</p>
+
+        <h3>Xronologiya</h3>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-title">BABUR-TERRA CODEX v3.0 · NAVOIY-TERRA Corpus</div>
+            <div class="timeline-desc">Выпуск BABUR-TERRA v3.0 (DataCite indexed). Публикация Navoi Digital Monument — PLT-анализ 15-векового чагатайского корпуса Навои (~25 000 стихов). Деплой fractal-metascience.org.</div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2025 / IV кв.</div>
+            <div class="timeline-title">Основание FMP-экосистемы · 23 DOI-публикации</div>
+            <div class="timeline-desc">Систематическая публикация FMP Foundations, NULLO, EUO/PLT на Zenodo, Figshare, OSF, ScienceOpen, SSRN. Создание 12+ GitHub-репозиториев и настройка CI/CD инфраструктуры. Освобождение 24 декабря 2025 и немедленное продолжение работ.</div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2021–2025</div>
+            <div class="timeline-title">Разработка FMP в условиях ограниченного доступа к ресурсам</div>
+            <div class="timeline-desc">Создание полного теоретического корпуса FMP: математические формулировки, TerraMemoryDNA, AIUZ Terra образовательная экосистема, 370+ концептуальных артефактов — при нулевом бюджете и без доступа к интернету.</div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2000-е–2021</div>
+            <div class="timeline-title">Международная дипломатическая и культурная карьера</div>
+            <div class="timeline-desc">Шесть лет торговым советником Швейцарского посольства в Ташкенте. Стипендия DAAD. Сотрудничество с немецкими СМИ и Гёте-Институтом. Продюсер на Берлинском кинофестивале.</div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-year">Образование</div>
+            <div class="timeline-title">Немецкая филология · Международные отношения</div>
+            <div class="timeline-desc">Выпускник немецкой филологии. Многоязычная компетентность (русский, узбекский, английский, немецкий) как теоретическая основа для разработки UCOM и PLT-фреймворков.</div>
+          </div>
+        </div>
+
+        <h3>Tadqiqot falsafasi</h3>
+        <p>Центральным методологическим принципом FMP является то, что Абдукаримов называет «нулевой онтологией» (Zero-Budget Ontology, NULLO): концептуальная строгость и верифицируемость могут быть достигнуты без институциональных ресурсов при условии системности мышления и честности в отношении ограничений. Все Technology Readiness Levels в публикациях FMP указаны точно — без преувеличений, свойственных академическому рынку.</p>
+        <p>Работа над Navoi Digital Monument, приуроченная к дню рождения Алишера Навои (9 февраля), демонстрирует практическое применение PLT-методологии к классическому литературному наследию: 15-вековая чагатайская поэзия обрабатывается как многоуровневая семантическая система с 9-языковыми аннотациями, что открывает новые возможности для сравнительного цифрового гуманитарного знания.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">Fractal Metascience Foundation</div>
+        <p>Inson-AI hamkorligi uchun paradigma tizimi. Nol byudjet · Ochiq fan · Terra Ekotizimi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatsiya</h4>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="repository.html">Repository</a>
+        <a href="about.html">About</a>
+        <a href="foundation.html">Foundation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Aloqa</h4>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
+        <a href="https://orcid.org/0009-0000-6394-4912" target="_blank">ORCID 0009-0000-6394-4912</a>
+        <a href="https://github.com/Secret-Uzbek" target="_blank">github.com/Secret-Uzbek</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fractal Metascience Foundation · Abdurashid Abdukarimov</span>
+      <span class="footer-orcid">ResearcherID: OIT-6569-2025 · ORCID: 0009-0000-6394-4912</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
