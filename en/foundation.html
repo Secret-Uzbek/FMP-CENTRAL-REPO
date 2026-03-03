@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Metascience Foundation | О Foundationе</title>
+  <meta name="description" content="Fractal Metascience Foundation — миссия, принципы, структура FMP-парадигмы и модель 10/90 Foundationа будущих поколений.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .fmp-pillars-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px; margin: 32px 0;
+    }
+    .pillar-detail-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      position: relative; overflow: hidden;
+    }
+    .pillar-detail-card::after {
+      content: attr(data-code);
+      position: absolute; right: 20px; bottom: 16px;
+      font-family: var(--font-mono); font-size: 3rem;
+      font-weight: 800; opacity: 0.05; color: var(--text);
+      line-height: 1;
+    }
+    .pillar-detail-card:nth-child(1) { border-top: 2px solid var(--cyan); }
+    .pillar-detail-card:nth-child(2) { border-top: 2px solid var(--gold); }
+    .pillar-detail-card:nth-child(3) { border-top: 2px solid #9b5de5; }
+    .pillar-detail-card:nth-child(4) { border-top: 2px solid var(--green); }
+    .pillar-detail-code {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.15em;
+      margin-bottom: 8px; display: block;
+    }
+    .pillar-detail-card:nth-child(1) .pillar-detail-code { color: var(--cyan); }
+    .pillar-detail-card:nth-child(2) .pillar-detail-code { color: var(--gold); }
+    .pillar-detail-card:nth-child(3) .pillar-detail-code { color: #9b5de5; }
+    .pillar-detail-card:nth-child(4) .pillar-detail-code { color: var(--green); }
+    .pillar-detail-name {
+      font-family: var(--font-display); font-size: 1.1rem;
+      font-weight: 700; color: var(--text); margin-bottom: 12px;
+    }
+    .pillar-detail-body {
+      font-size: 0.875rem; color: var(--text-muted); line-height: 1.75;
+    }
+
+    .mission-block {
+      background: linear-gradient(135deg, #0d1f38 0%, #0d1220 100%);
+      border: 1px solid var(--border-2);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px; margin-bottom: 48px;
+      position: relative; overflow: hidden;
+    }
+    .mission-block::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--gold));
+    }
+    .mission-quote {
+      font-family: var(--font-display); font-size: 1.4rem;
+      font-weight: 600; color: var(--text); line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .mission-quote em { color: var(--cyan); font-style: normal; }
+
+    .model-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 36px; margin-bottom: 24px;
+    }
+    .model-visual {
+      display: flex; align-items: center; gap: 0; margin: 24px 0;
+      border-radius: 8px; overflow: hidden;
+    }
+    .model-bar {
+      height: 48px; display: flex; align-items: center;
+      justify-content: center; font-family: var(--font-display);
+      font-size: 0.85rem; font-weight: 700;
+    }
+    .model-bar-10 { width: 10%; background: var(--cyan); color: #080c14; }
+    .model-bar-90 { width: 90%; background: var(--bg-card-2); color: var(--text-muted); border: 1px solid var(--border); border-left: none; }
+
+    .trl-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .trl-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+    }
+    .trl-level {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text-dim); margin-bottom: 4px;
+    }
+    .trl-name {
+      font-family: var(--font-display); font-size: 0.9rem;
+      font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .trl-status { font-size: 0.78rem; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .fmp-pillars-detail { grid-template-columns: 1fr; }
+      .mission-block { padding: 28px 24px; }
+      .model-bar-10 { font-size: 0.65rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Fractal Metascience Foundation</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="repository.html">Repository</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="../foundation.html" class="lang-btn">RU</a>
+      <a href="../uz/foundation.html" class="lang-btn">UZ</a>
+      <span class="lang-btn active">EN</span>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="page-label">FMP · Terra Ecosystem</span>
+    <h1 class="page-title">Fractal Metascience Foundation</h1>
+    <p class="page-subtitle">Миссия, принципы, архитектура парадигмы и операционная модель Foundationа будущих поколений.</p>
+  </div>
+
+  <div class="section">
+
+    <!-- Mission -->
+    <div class="mission-block reveal">
+      <div class="mission-quote">
+        «Концептуальная строгость и верифицируемость могут быть достигнуты <em>без институциональных ресурсов</em> — при условии системности мышления и честности в отношении ограничений.»
+      </div>
+      <p style="color:var(--text-muted);font-size:0.875rem;">— Абдурашид Абдукаримов, архитектор FMP, основной принцип NULLO</p>
+    </div>
+
+    <!-- About FMP -->
+    <span class="section-label">Paradigm</span>
+    <h2 class="section-title">Fractal Metascience Paradigm</h2>
+    <p style="color:var(--text-muted);margin-bottom:24px;max-width:800px;">Fractal Metascience Paradigm (FMP) is a theoretical and practical framework for human-AI collaboration, knowledge organization and universal communication. Developed as a unified ontological system spanning four levels: from basic zero-point ontology to emergent self-organizing structures. All components developed with zero budget and verified through international academic platforms.</p>
+
+    <div class="fmp-pillars-detail">
+      <div class="pillar-detail-card reveal" data-code="NULLO">
+        <span class="pillar-detail-code">NULLO</span>
+        <div class="pillar-detail-name">Zero-Budget Ontology</div>
+        <p class="pillar-detail-body">The ontological zero-point as a primary entity. NULLO formalizes absence not as emptiness, but as the initial condition of possibility for all conceptual constructs. Mathematically — the precursor to any ontological operation, irreducible to zero in the conventional sense. Forms the foundation of all FMP architecture and the meta-principle of scientific honesty regarding resource constraints.</p>
+      </div>
+      <div class="pillar-detail-card reveal" data-code="PLT">
+        <span class="pillar-detail-code">PLT</span>
+        <div class="pillar-detail-name">Post-Lingua Trace</div>
+        <p class="pillar-detail-body">Semantic trace beyond natural language. PLT describes meaning structures that exist before and after their linguistic embodiment — in gestures, forms, patterns, rhythms. Practically applied in the Navoi Digital Monument: 15th-century Chagatai texts of Alisher Navoi (~25,000 strophes) are processed as multi-level semantic systems with 9-language annotations.</p>
+      </div>
+      <div class="pillar-detail-card reveal" data-code="UCOM">
+        <span class="pillar-detail-code">UCOM</span>
+        <div class="pillar-detail-name">Universal Communication</div>
+        <p class="pillar-detail-body">Universal communication protocol enabling interaction between agents, humans and systems regardless of language, format and level of abstraction. Forms the foundation of Terra Translation Parser v5.0 — a semantic decomposer that reconstructs meaning across all domains based on verified scientific sources.</p>
+      </div>
+      <div class="pillar-detail-card reveal" data-code="EUO">
+        <span class="pillar-detail-code">EUO</span>
+        <div class="pillar-detail-name">Emergent Universal Organization</div>
+        <p class="pillar-detail-body">Theory of self-organizing knowledge structures. EUO describes how complex patterns emerge from simple interaction rules without centralized management. Practically implemented in AIUZ Terra Codex — the L0→L7 educational curriculum, where each level emergently forms conditions for the next.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Terra Ecosystem -->
+    <span class="section-label">Operational Level</span>
+    <h2 class="section-title">Terra Ecosystem</h2>
+    <p style="color:var(--text-muted);margin-bottom:32px;max-width:800px;">Terra Ecosystem is the operational implementation of the FMP paradigm. Includes the educational platform (AIUZ Terra Codex L0→L7), research infrastructure (terra-fmp-research-pipeline), linguistic corpus (Navoiy-Terra Corpus) and agent system (Shirak, Tomiris, Roxana). All components deployed via GitHub Actions + Cloudflare Pages with zero operational budget.</p>
+
+    <div class="trl-grid">
+      <div class="trl-item reveal">
+        <div class="trl-level">TRL 1–2</div>
+        <div class="trl-name">NULLO / PLT Теория</div>
+        <div class="trl-status">Basic principles formulated, published</div>
+      </div>
+      <div class="trl-item reveal">
+        <div class="trl-level">TRL 3–4</div>
+        <div class="trl-name">Terra Codex Curriculum</div>
+        <div class="trl-status">L0→L7 developed, JSON archive published, WoS indexed</div>
+      </div>
+      <div class="trl-item reveal">
+        <div class="trl-level">TRL 3–4</div>
+        <div class="trl-name">Navoiy-Terra Corpus</div>
+        <div class="trl-status">~25K strophes, 9 languages, v1.1 published</div>
+      </div>
+      <div class="trl-item reveal">
+        <div class="trl-level">TRL 2–3</div>
+        <div class="trl-name">Terra Translation Parser</div>
+        <div class="trl-status">Conceptual architecture, prototype</div>
+      </div>
+      <div class="trl-item reveal">
+        <div class="trl-level">TRL 4–5</div>
+        <div class="trl-name">fractal-metascience.org</div>
+        <div class="trl-status">Deployed, CI/CD active</div>
+      </div>
+      <div class="trl-item reveal">
+        <div class="trl-level">TRL 1–2</div>
+        <div class="trl-name">Green Station Planner</div>
+        <div class="trl-status">Conceptual level, EUO integration</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 10/90 Model -->
+    <span class="section-label">Финансовая модель</span>
+    <h2 class="section-title">Модель 10/90 · Foundation будущих поколений</h2>
+
+    <div class="model-card reveal">
+      <p style="color:var(--text-muted);margin-bottom:24px;">Все коммерческие продукты FMP реализуются через модель 10/90: 10% от сделки поступает архитектору (Абдурашид Абдукаримов), 90% — в Foundation будущих поколений, управляемый агентом Роксана и независимым советом. Foundation финансирует открытые исследования, образовательные программы и инфраструктуру доступа к знаниям.</p>
+      <div class="model-visual">
+        <div class="model-bar model-bar-10">10%</div>
+        <div class="model-bar model-bar-90">90% → Foundation будущих поколений</div>
+      </div>
+      <div style="display:flex;gap:16px;margin-top:16px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-dim);margin-bottom:4px;">10% — Архитектор</div>
+          <div style="font-size:0.855rem;color:var(--text-muted);">Operational costs, research, infrastructure</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-dim);margin-bottom:4px;">90% — Foundation</div>
+          <div style="font-size:0.855rem;color:var(--text-muted);">Open education, scientific grants, public access to knowledge</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <a href="mailto:a.abdukarimov@fractal-metascience.org?subject=FMP Partnership Inquiry" class="btn btn-primary">Связаться с Foundationом →</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">Fractal Metascience Foundation</div>
+        <p>Paradigm framework for human-AI collaboration. Zero-budget · Open Science · Terra Ecosystem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="repository.html">Repository</a>
+        <a href="about.html">About</a>
+        <a href="foundation.html">Foundation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
+        <a href="https://orcid.org/0009-0000-6394-4912" target="_blank">ORCID 0009-0000-6394-4912</a>
+        <a href="https://github.com/Secret-Uzbek" target="_blank">github.com/Secret-Uzbek</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fractal Metascience Foundation · Abdurashid Abdukarimov</span>
+      <span class="footer-orcid">ResearcherID: OIT-6569-2025 · ORCID: 0009-0000-6394-4912</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
