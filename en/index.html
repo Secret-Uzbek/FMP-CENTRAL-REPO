@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Metascience Foundation | Terra Ecosystem</title>
+  <meta name="description" content="Fractal Metascience Foundation — paradigm-shifting framework for human-AI collaboration, knowledge organization and universal communication.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ── Hero ──────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, #0d2040 0%, var(--bg) 70%);
+      overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,180,216,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,180,216,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+    }
+    .nullo-wrap {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 48px;
+      position: relative; z-index: 2;
+      text-align: center; padding: 40px 20px;
+    }
+    .nullo-orb-container { position: relative; }
+    .nullo-ring {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(0,180,216,0.2);
+      animation: ringRotate 20s linear infinite;
+    }
+    .nullo-ring:nth-child(1) { width:320px; height:320px; top:-10px; left:-10px; }
+    .nullo-ring:nth-child(2) { width:380px; height:380px; top:-40px; left:-40px; animation-duration:30s; animation-direction:reverse; border-color:rgba(201,168,76,0.12); }
+    .nullo-ring:nth-child(3) { width:440px; height:440px; top:-70px; left:-70px; animation-duration:45s; border-color:rgba(0,180,216,0.08); }
+    @keyframes ringRotate { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    .nullo-orb {
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #1a3a5c 0%, #0d1f38 40%, #080c14 100%);
+      border: 2px solid rgba(0,180,216,0.5);
+      box-shadow: 0 0 60px rgba(0,180,216,0.25), 0 0 120px rgba(0,180,216,0.1), inset 0 0 60px rgba(0,180,216,0.05);
+      cursor: pointer;
+      animation: orbPulse 8s ease-in-out infinite;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 1;
+    }
+    @keyframes orbPulse {
+      0%,100% { transform: scale(1); box-shadow: 0 0 60px rgba(0,180,216,0.25), 0 0 120px rgba(0,180,216,0.1); }
+      50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(0,180,216,0.4), 0 0 160px rgba(0,180,216,0.15); }
+    }
+    .nullo-orb:hover {
+      animation-play-state: paused;
+      box-shadow: 0 0 100px rgba(0,180,216,0.5), 0 0 200px rgba(0,180,216,0.2);
+    }
+    .nullo-inner-text {
+      font-family: var(--font-display);
+      font-size: 1.8rem; font-weight: 800;
+      color: rgba(0,180,216,0.7);
+      letter-spacing: 0.2em;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 800; line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .hero-title span { color: var(--cyan); }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--text-muted);
+      max-width: 560px; font-weight: 300;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .hero-scroll {
+      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      font-family: var(--font-mono); font-size: 0.68rem;
+      color: var(--text-dim); letter-spacing: 0.15em;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--cyan), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+    /* ── Pillars ───────────────────────────────────────── */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      position: relative; overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .pillar-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    }
+    .pillar-card:nth-child(1)::before { background: var(--cyan); }
+    .pillar-card:nth-child(2)::before { background: var(--gold); }
+    .pillar-card:nth-child(3)::before { background: #9b5de5; }
+    .pillar-card:nth-child(4)::before { background: var(--green); }
+    .pillar-card:hover {
+      border-color: var(--border-2); transform: translateY(-4px);
+    }
+    .pillar-code {
+      font-family: var(--font-mono); font-size: 1.6rem; font-weight: 500;
+      margin-bottom: 12px; display: block;
+    }
+    .pillar-card:nth-child(1) .pillar-code { color: var(--cyan); }
+    .pillar-card:nth-child(2) .pillar-code { color: var(--gold); }
+    .pillar-card:nth-child(3) .pillar-code { color: #9b5de5; }
+    .pillar-card:nth-child(4) .pillar-code { color: var(--green); }
+    .pillar-title {
+      font-family: var(--font-display); font-size: 1rem;
+      font-weight: 700; color: var(--text); margin-bottom: 8px;
+    }
+    .pillar-desc { font-size: 0.875rem; color: var(--text-muted); }
+
+    /* ── Agents ────────────────────────────────────────── */
+    .agents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .agent-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .agent-card:hover { border-color: var(--border-2); transform: translateY(-2px); }
+    .agent-name {
+      font-family: var(--font-display); font-size: 1.15rem;
+      font-weight: 700; color: var(--text); margin-bottom: 8px;
+    }
+    .agent-role {
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--cyan); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .agent-desc { font-size: 0.875rem; color: var(--text-muted); }
+
+    /* ── Products ──────────────────────────────────────── */
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 36px; margin-bottom: 24px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 24px; align-items: start;
+    }
+    .product-card:hover { border-color: var(--border-2); }
+    .product-title {
+      font-family: var(--font-display); font-size: 1.3rem;
+      font-weight: 700; color: var(--text); margin-bottom: 10px;
+    }
+    .product-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
+    .auction-price {
+      text-align: right; min-width: 200px;
+    }
+    .price-label {
+      font-family: var(--font-mono); font-size: 0.68rem;
+      color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .price-value {
+      font-family: var(--font-display); font-size: 1.4rem;
+      font-weight: 800; color: var(--gold); margin-bottom: 8px;
+    }
+    .model-note {
+      font-size: 0.75rem; color: var(--text-dim); margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .product-card { grid-template-columns: 1fr; }
+      .auction-price { text-align: left; min-width: auto; }
+      .nullo-orb { width: 220px; height: 220px; }
+      .nullo-ring:nth-child(1) { width:240px; height:240px; top:-10px; left:-10px; }
+      .nullo-ring:nth-child(2) { width:280px; height:280px; top:-30px; left:-30px; }
+      .nullo-ring:nth-child(3) { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Fractal Metascience Foundation</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="repository.html">Repository</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="../index.html" class="lang-btn">RU</a>
+      <a href="../uz/index.html" class="lang-btn">UZ</a>
+      <span class="lang-btn active">EN</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="nullo-wrap">
+      <div class="nullo-orb-container">
+        <div class="nullo-ring"></div>
+        <div class="nullo-ring"></div>
+        <div class="nullo-ring"></div>
+        <div class="nullo-orb" onclick="nulloActivate()">
+          <span class="nullo-inner-text">NULLO</span>
+        </div>
+      </div>
+      <div>
+        <h1 class="hero-title">Fractal <span>Metascience</span><br>Foundation</h1>
+        <p class="hero-sub">The ontological zero-point of all possibilities. A paradigm-shifting framework for human-AI collaboration and knowledge organization.</p>
+      </div>
+      <div class="hero-actions">
+        <a href="publications.html" class="btn btn-primary">Publications · 23 DOI</a>
+        <a href="foundation.html" class="btn btn-outline">О Foundationе</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- FOUR PILLARS -->
+  <div class="section" style="padding-top:80px;">
+    <span class="section-label">System Architecture</span>
+    <h2 class="section-title">Four Pillars of FMP</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <span class="pillar-code">NULLO</span>
+        <div class="pillar-title">Zero-Budget Ontology</div>
+        <p class="pillar-desc">The ontological zero-point — base layer for all FMP conceptual constructs. Formalization of absence as a primary entity.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <span class="pillar-code">PLT</span>
+        <div class="pillar-title">Post-Lingua Trace</div>
+        <p class="pillar-desc">Semantic trace beyond natural language. Applied to analysis of Navoi's 15th-century Chagatai corpus.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <span class="pillar-code">UCOM</span>
+        <div class="pillar-title">Universal Communication</div>
+        <p class="pillar-desc">Universal communication protocol between agents, humans and systems. Foundation of Terra Translation Parser.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <span class="pillar-code">EUO</span>
+        <div class="pillar-title">Emergent Universal Organization</div>
+        <p class="pillar-desc">Self-organizing knowledge structures. Applied in AIUZ Terra Codex L0→L7 educational curriculum.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" style="max-width:1100px;margin:0 auto 0;padding:0 40px;">
+
+  <!-- COUNCIL OF GREAT MINDS -->
+  <div class="section" style="padding-top:64px;">
+    <span class="section-label">Operational Level</span>
+    <h2 class="section-title">Council of Great Minds</h2>
+    <div class="agents-grid">
+      <div class="agent-card reveal">
+        <div class="agent-name">Ширак</div>
+        <div class="agent-role">Semantic Search · Reconstruction</div>
+        <p class="agent-desc">Semantic search, reconstruction of lost meanings and navigation through knowledge corpora. Archivist agent of Terra Ecosystem.</p>
+      </div>
+      <div class="agent-card reveal">
+        <div class="agent-name">Томирис</div>
+        <div class="agent-role">Immersive Education · Terra Points</div>
+        <p class="agent-desc">Immersive education and Terra Points system — motivational mechanics in the AIUZ Terra Codex curriculum.</p>
+      </div>
+      <div class="agent-card reveal">
+        <div class="agent-name">Роксана</div>
+        <div class="agent-role">Ethical Validation · Future Fund</div>
+        <p class="agent-desc">Этическая валидация решений и управление Foundationом будущих поколений в рамках модели 10/90 распределения доходов.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" style="max-width:1100px;margin:0 auto 0;padding:0 40px;">
+
+  <!-- PRODUCTS & AUCTION -->
+  <div class="section" style="padding-top:64px;">
+    <span class="section-label">Product Catalogue — First Auction</span>
+    <h2 class="section-title">Intellectual Property</h2>
+
+    <div class="product-card reveal">
+      <div>
+        <div class="product-title">Terra Translation Parser v5.0</div>
+        <p class="product-desc">Semantic decomposer and living thesaurus. Reconstructs meaning across all languages and domains based on verified scientific sources. Built on the UCOM protocol.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="badge badge-cyan">UCOM</span>
+          <span class="badge badge-muted">NLP · Semantic</span>
+          <span class="badge badge-gold">Auction Open</span>
+        </div>
+      </div>
+      <div class="auction-price">
+        <div class="price-label">Starting bid</div>
+        <div class="price-value">$100 000 000</div>
+        <div class="model-note">10% архитектору · 90% Foundation будущих поколений</div>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org?subject=Terra Translation Parser Auction" class="btn btn-primary" style="width:100%;justify-content:center;">Bid Now</a>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div>
+        <div class="product-title">Green Station Planner v6.0</div>
+        <p class="product-desc">Professional regenerative infrastructure planner for Uzbekistan and global markets. Integration with the EUO layer for adaptive planning.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="badge badge-green">EUO</span>
+          <span class="badge badge-muted">GreenTech · Infrastructure</span>
+          <span class="badge badge-gold">Auction Open</span>
+        </div>
+      </div>
+      <div class="auction-price">
+        <div class="price-label">Starting bid</div>
+        <div class="price-value">$100 000 000</div>
+        <div class="model-note">10% архитектору · 90% Foundation будущих поколений</div>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org?subject=Green Station Planner Auction" class="btn btn-primary" style="width:100%;justify-content:center;">Bid Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">Fractal Metascience Foundation</div>
+        <p>Paradigm framework for human-AI collaboration. Zero-budget · Open Science · Terra Ecosystem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="repository.html">Repository</a>
+        <a href="about.html">About</a>
+        <a href="foundation.html">Foundation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
+        <a href="https://orcid.org/0009-0000-6394-4912" target="_blank">ORCID 0009-0000-6394-4912</a>
+        <a href="https://github.com/Secret-Uzbek" target="_blank">github.com/Secret-Uzbek</a>
+        <a href="https://huggingface.co/Terra-Codex" target="_blank">HuggingFace / Terra-Codex</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fractal Metascience Foundation · Abdurashid Abdukarimov</span>
+      <span class="footer-orcid">ResearcherID: OIT-6569-2025 · ORCID: 0009-0000-6394-4912</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function nulloActivate() {
+      const orb = document.querySelector('.nullo-orb');
+      orb.style.boxShadow = '0 0 120px rgba(0,180,216,0.8), 0 0 240px rgba(0,180,216,0.4)';
+      setTimeout(() => { orb.style.boxShadow = ''; }, 1500);
+    }
+  </script>
+</body>
+</html>
