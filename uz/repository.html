@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repository | Fractal Metascience Foundation</title>
+  <meta name="description" content="GitHub infrastructure: 10+ repositories, 5 access tokens, 9 third-party integrations. github.com/Secret-Uzbek">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px; margin-bottom: 48px;
+    }
+    .repo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 26px;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .repo-card:hover { border-color: var(--border-2); transform: translateY(-3px); }
+    .repo-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; margin-bottom: 10px; gap: 10px;
+    }
+    .repo-name {
+      font-family: var(--font-mono); font-size: 0.9rem;
+      font-weight: 500; color: var(--cyan);
+    }
+    .repo-desc {
+      font-size: 0.855rem; color: var(--text-muted);
+      margin-bottom: 14px; line-height: 1.5;
+    }
+    .repo-doi {
+      font-family: var(--font-mono); font-size: 0.68rem;
+      color: var(--text-dim); margin-bottom: 10px;
+    }
+    .repo-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .token-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.855rem; margin-bottom: 48px;
+    }
+    .token-table th {
+      font-family: var(--font-mono); font-size: 0.68rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--text-dim); text-align: left;
+      padding: 10px 16px; border-bottom: 1px solid var(--border);
+    }
+    .token-table td {
+      padding: 14px 16px; border-bottom: 1px solid var(--border);
+      color: var(--text-muted); vertical-align: top;
+    }
+    .token-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .token-name {
+      font-family: var(--font-mono); color: var(--cyan); font-weight: 500;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .integration-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex; align-items: center; gap: 16px;
+      transition: border-color 0.3s;
+    }
+    .integration-card:hover { border-color: var(--border-2); }
+    .integration-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--bg-card-2);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text-dim); flex-shrink: 0;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .integration-info h4 {
+      font-family: var(--font-display); font-size: 0.9rem;
+      font-weight: 700; color: var(--text); margin-bottom: 2px;
+    }
+    .integration-info p {
+      font-size: 0.775rem; color: var(--text-dim);
+    }
+
+    .account-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px; margin-bottom: 48px;
+      display: flex; align-items: center; gap: 24px;
+    }
+    .account-avatar {
+      width: 56px; height: 56px; border-radius: 10px;
+      background: linear-gradient(135deg, #1e3a5c, #0d1f38);
+      border: 2px solid var(--border-2);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono); font-size: 0.65rem;
+      color: var(--cyan); letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+    .account-info { flex: 1; }
+    .account-handle {
+      font-family: var(--font-display); font-size: 1.05rem;
+      font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .account-meta {
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Fractal Metascience Foundation</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="repository.html">Repository</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="../repository.html" class="lang-btn">RU</a>
+      <span class="lang-btn active">UZ</span>
+      <a href="../en/repository.html" class="lang-btn">EN</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="page-label">Open Infrastructure · Verified</span>
+    <h1 class="page-title">Repository</h1>
+    <p class="page-subtitle">Полная инфраструктура FMP: 10+ репозиториев, 5 токенов доступа, 9 сторонних интеграций, CI/CD пайплайн — бюджет $0.</p>
+  </div>
+
+  <div class="section">
+
+    <!-- Stats -->
+    <div class="stat-grid">
+      <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Репозиториев</div></div>
+      <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Access Tokens</div></div>
+      <div class="stat-item"><div class="stat-number">9</div><div class="stat-label">Integratsiyalar</div></div>
+      <div class="stat-item"><div class="stat-number">7</div><div class="stat-label">DOI-архивов</div></div>
+      <div class="stat-item"><div class="stat-number">$0</div><div class="stat-label">Byudjet</div></div>
+    </div>
+
+    <!-- GitHub Account Banner -->
+    <div class="account-banner">
+      <div class="account-avatar">GH</div>
+      <div class="account-info">
+        <div class="account-handle">github.com/Secret-Uzbek</div>
+        <div class="account-meta">ORCID Verified · Zenodo DOI Integration · Figshare Integration · OSF Integration · Web of Science · SSRN eLibrary</div>
+      </div>
+      <a href="https://github.com/Secret-Uzbek" target="_blank" class="btn btn-outline">GitHub Profile →</a>
+    </div>
+    <div class="account-banner" style="margin-top:-32px;">
+      <div class="account-avatar" style="background:linear-gradient(135deg,#ff9d00,#4a2c00);">HF</div>
+      <div class="account-info">
+        <div class="account-handle">huggingface.co/Terra-Codex</div>
+        <div class="account-meta">Last login: 27 Feb 2026, Tashkent · fractal.metascience@gmail.com</div>
+      </div>
+      <a href="https://huggingface.co/Terra-Codex" target="_blank" class="btn btn-outline">HuggingFace →</a>
+    </div>
+
+    <!-- Repositories -->
+    <span class="section-label">GitHub Repositories</span>
+    <h2 class="section-title">Репозитории</h2>
+
+    <div class="repo-grid">
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">FMP-monograph</div>
+          <span class="badge badge-cyan">DOI Archived</span>
+        </div>
+        <p class="repo-desc">Монография FMP. 4 Zenodo-релиза: L7 Mandate, L6 Detox Engine, L7 v2.0 ZIP, Terra Clean Core.</p>
+        <div class="repo-doi">10.5281/zenodo.17587463 + 3</div>
+        <div class="repo-badges">
+          <span class="badge badge-muted">Monograph</span>
+          <span class="badge badge-muted">L6 · L7</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">terra-fmp-research-pipeline</div>
+          <span class="badge badge-green">Big Fractal ✓</span>
+        </div>
+        <p class="repo-desc">Исследовательский пайплайн. Принят @JosedeAngeles в Big Fractal community, январь 2026.</p>
+        <div class="repo-doi">10.5281/zenodo.18061978</div>
+        <div class="repo-badges">
+          <span class="badge badge-cyan">Zenodo</span>
+          <span class="badge badge-muted">Pipeline</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">navoiy-terra-corpus</div>
+          <span class="badge badge-cyan">DOI Archived</span>
+        </div>
+        <p class="repo-desc">~25 000 стихов Навои. v1.0 (9 фев 2026), v1.1 (18 фев 2026). 9-языковые PLT-аннотации.</p>
+        <div class="repo-doi">10.5281/zenodo.18602635</div>
+        <div class="repo-badges">
+          <span class="badge badge-muted">PLT</span>
+          <span class="badge badge-muted">Chagatai</span>
+          <span class="badge badge-muted">v1.1</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">fractal-metascience (Central)</div>
+          <span class="badge badge-cyan">DOI Archived</span>
+        </div>
+        <p class="repo-desc">Центральный репозиторий FMP. v1.0.0 (8 ноя 2025), Central repo (27 ноя 2025).</p>
+        <div class="repo-doi">10.5281/zenodo.17558638</div>
+        <div class="repo-badges">
+          <span class="badge badge-muted">Core</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">BABUR-TERRA CODEX</div>
+          <span class="badge badge-gold">DataCite ✓</span>
+        </div>
+        <p class="repo-desc">v3.0 выпущен 26 февраля 2026 с fine-grained token babur-release-1day. DataCite indexed.</p>
+        <div class="repo-doi">10.5281/zenodo.18780896</div>
+        <div class="repo-badges">
+          <span class="badge badge-cyan">Zenodo</span>
+          <span class="badge badge-muted">v3.0</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">AIUZ-terra-codex</div>
+          <span class="badge badge-gold">Clarivate WoS ✓</span>
+        </div>
+        <p class="repo-desc">L0→L7 образовательный curriculum, JSON-архив ноябрь 2025. Clarivate Web of Science indexed.</p>
+        <div class="repo-doi">10.5281/zenodo.17548828</div>
+        <div class="repo-badges">
+          <span class="badge badge-muted">Curriculum</span>
+          <span class="badge badge-muted">L0-L7</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">fractal-metascience.org</div>
+          <span class="badge badge-green">Deployed</span>
+        </div>
+        <p class="repo-desc">Website репозиторий. GitHub Actions → Cloudflare Pages (primary), Netlify (secondary). Neon PostgreSQL + Contentful CMS.</p>
+        <div class="repo-badges">
+          <span class="badge badge-muted">CI/CD</span>
+          <span class="badge badge-muted">Cloudflare</span>
+          <span class="badge badge-muted">Netlify</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">Shirak-Agent</div>
+          <span class="badge badge-green">Active</span>
+        </div>
+        <p class="repo-desc">FMF Operational Agent. Токен создан 9 февраля 2026. Автономные операционные задачи.</p>
+        <div class="repo-badges">
+          <span class="badge badge-muted">Agent</span>
+          <span class="badge badge-muted">Operational</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">Terra Auto-Fix Scripts</div>
+          <span class="badge badge-green">Active</span>
+        </div>
+        <p class="repo-desc">Скрипты автоматического обслуживания. Токен создан 25 февраля 2026.</p>
+        <div class="repo-badges">
+          <span class="badge badge-muted">Automation</span>
+          <span class="badge badge-muted">Scripts</span>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-header">
+          <div class="repo-name">AIUZ-FMP</div>
+          <span class="badge badge-green">Active</span>
+        </div>
+        <p class="repo-desc">Research Interface. Токен регенерирован 10 января 2026.</p>
+        <div class="repo-badges">
+          <span class="badge badge-muted">Research</span>
+          <span class="badge badge-muted">Interface</span>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider">
+
+    <!-- Access Tokens -->
+    <span class="section-label">GitHub Security</span>
+    <h2 class="section-title">Kirish tokenlari</h2>
+
+    <table class="token-table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Тип</th>
+          <th>Sana</th>
+          <th>Ruxsatlar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="reveal">
+          <td><span class="token-name">AIUZ</span></td>
+          <td><span class="badge badge-muted">PAT Classic</span></td>
+          <td>2 Jan 2026</td>
+          <td>repo, workflow, admin:org, admin:public_key, write:packages, gist, notifications, codespace, project</td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="token-name">AIUZ_FMP</span></td>
+          <td><span class="badge badge-muted">PAT Classic</span></td>
+          <td>10 Jan 2026</td>
+          <td>repo, workflow, admin:org, write:packages, notifications</td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="token-name">Shirak-Agent-FMF-Operational</span></td>
+          <td><span class="badge badge-muted">PAT Classic</span></td>
+          <td>9 Feb 2026</td>
+          <td>Full permissions · Operational agent framework</td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="token-name">Terra Auto-Fix Script</span></td>
+          <td><span class="badge badge-muted">PAT Classic</span></td>
+          <td>25 Feb 2026</td>
+          <td>Full permissions · Automated maintenance</td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="token-name">babur-release-1day</span></td>
+          <td><span class="badge badge-gold">Fine-Grained</span></td>
+          <td>25–26 Feb 2026</td>
+          <td>Single-use · BABUR v3.0 release · Expired after 24h</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="divider">
+
+    <!-- Integrations -->
+    <span class="section-label">Third-Party Integrations · Verified</span>
+    <h2 class="section-title">Integratsiyalar</h2>
+
+    <div class="integration-grid">
+      <div class="integration-card reveal">
+        <div class="integration-icon">CF</div>
+        <div class="integration-info">
+          <h4>Cloudflare</h4>
+          <p>CDN · DDoS · Pages (primary host) · 2 Feb 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">NL</div>
+        <div class="integration-info">
+          <h4>Netlify</h4>
+          <p>Secondary CI/CD · Auth: 10 Feb 2026 · Connected: 16 Jan 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">NE</div>
+        <div class="integration-info">
+          <h4>Neon Console</h4>
+          <p>Serverless PostgreSQL · 10 Feb 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">CF</div>
+        <div class="integration-info">
+          <h4>Contentful</h4>
+          <p>Headless CMS · 10 Feb 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">QW</div>
+        <div class="integration-info">
+          <h4>Qwen Chat</h4>
+          <p>Alibaba AI integration · 10 Feb 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">RP</div>
+        <div class="integration-info">
+          <h4>Replit</h4>
+          <p>Online IDE · 16 Jan 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">DL</div>
+        <div class="integration-info">
+          <h4>Dillinger</h4>
+          <p>Markdown editor · 16 Jan 2026</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">AR</div>
+        <div class="integration-info">
+          <h4>Arduino Auth</h4>
+          <p>Hardware / embedded · 28 Dec 2025</p>
+        </div>
+      </div>
+      <div class="integration-card reveal">
+        <div class="integration-icon">ZN</div>
+        <div class="integration-info">
+          <h4>Zenodo Webhook</h4>
+          <p>Automatic DOI minting · Active since Dec 2025</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">Fractal Metascience Foundation</div>
+        <p>Inson-AI hamkorligi uchun paradigma tizimi. Nol byudjet · Ochiq fan · Terra Ekotizimi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatsiya</h4>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="repository.html">Repository</a>
+        <a href="about.html">About</a>
+        <a href="foundation.html">Foundation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Aloqa</h4>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
+        <a href="https://orcid.org/0009-0000-6394-4912" target="_blank">ORCID 0009-0000-6394-4912</a>
+        <a href="https://github.com/Secret-Uzbek" target="_blank">github.com/Secret-Uzbek</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fractal Metascience Foundation · Abdurashid Abdukarimov</span>
+      <span class="footer-orcid">ResearcherID: OIT-6569-2025 · ORCID: 0009-0000-6394-4912</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
