@@ -1,20 +1,25 @@
 cff-version: 1.2.0
-title: "Fractal Metascience Paradigm - Central Repository"
-message: "Living citation - no versions, only breath"
+message: "If you use this software, please cite it as below."
 type: software
+title: "Secret-Uzbek/FMP-CENTRAL-REPO"
 authors:
   - family-names: Abdukarimov
-    given-names: Abdurashid Abdulkhamitovich
+    given-names: Abdurashid
     orcid: "https://orcid.org/0009-0000-6394-4912"
-version: 1.0.0
-date-released: 2025-11-08
-license: CC-BY-SA-4.0
+    affiliation: "Fractal Metascience Foundation, Tashkent, Uzbekistan"
+    email: "a.a.abdukarimov@tutamail.com"
 repository-code: "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
+abstract: "Part of the Fractal Metascience Paradigm (FMP) ecosystem — an epistemological framework integrating Zero-Point Ontology (NULLO), Post-Lingua Trace (PLT), Universal Communication (UCOM), and Emergent Universal Organization (EUO)."
 keywords:
-  - fractal metascience
-  - AIUZ Terra
-  - Uzbek mining
-  - decentralized science
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.17558638"
+  - fractal-metascience
+  - epistemology
+  - nullo
+  - post-lingua-trace
+  - ucom
+  - euo
+  - uzbekistan
+  - open-science
+license: CC-BY-4.0
+doi: "10.5281/zenodo.14205349"
+date-released: "2025-11-01"
+version: "1.0.0"
