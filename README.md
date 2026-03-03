@@ -1,65 +1,67 @@
-# 🌌 TERRA CIVILIZATION
+# 🌐 Fractal Metascience Paradigm — Central Repository
 
-**Fractal Metascience Paradigm (FMP)**  
-**Central Command Node 0 • Ontological Anchor of the Terra Ecosystem**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14205349.svg)](https://doi.org/10.5281/zenodo.14205349)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
+[![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![GitHub Pages](https://img.shields.io/badge/Live%20Site-fractal--metascience.org-blue)](https://secret-uzbek.github.io/FMP-CENTRAL-REPO)
 
-[![License](https://img.shields.io/badge/License-Terra_Public_License_v1.0-blue.svg)](LICENSE.md)
-[![Status](https://img.shields.io/badge/Status-L6_EXTENSION-brightgreen.svg)](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP)
-[![Version](https://img.shields.io/badge/Version-v4.3_Terra_Gold-gold.svg)](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP)
-[![Child Safety](https://img.shields.io/badge/Child_Safety-ABSOLUTE_PRIORITY-red.svg)](TERRA_UNIVERSAL_CONVENTION.md)
+> **Official home of the Fractal Metascience Paradigm (FMP)** — a new epistemological framework integrating Zero-Point Ontology (NULLO), Post-Lingua Trace (PLT), Universal Communication (UCOM), and Emergent Universal Organization (EUO).
 
-**Architect:** Abdurashid Abdukarimov  
-**Institution:** Fractal Metascience Foundation
+## 🔬 What is FMP?
+
+The **Fractal Metascience Paradigm** is a transdisciplinary theoretical framework developed by Abdurashid Abdukarimov (Tashkent, Uzbekistan) that reconceptualizes knowledge production through four interconnected pillars:
+
+| Pillar | Full Name | Core Idea |
+|--------|-----------|-----------|
+| **NULLO** | Zero-Point Ontology | Knowledge emerges from structured absence |
+| **PLT** | Post-Lingua Trace | Meaning transcends natural language boundaries |
+| **UCOM** | Universal Communication | Cross-agent semantic protocol |
+| **EUO** | Emergent Universal Organization | Self-organizing knowledge architecture |
+
+## 🌍 Live Platform
+
+**Website:** [fractal-metascience.org](https://secret-uzbek.github.io/FMP-CENTRAL-REPO) — available in **Russian · English · Uzbek**
+
+## 📚 Publications
+
+All FMP publications are DOI-indexed and available on:
+- **Zenodo:** [10.5281/zenodo.14205349](https://doi.org/10.5281/zenodo.14205349)
+- **ORCID:** [0009-0000-6394-4912](https://orcid.org/0009-0000-6394-4912)
+- **OSF, Figshare, ScienceOpen**
+
+## 📂 Repository Structure
+
+```
+FMP-CENTRAL-REPO/
+├── index.html          # Main site (RU)
+├── en/                 # English version
+├── uz/                 # Uzbek version
+├── css/                # Styles
+├── js/                 # Scripts
+├── publications.html   # Academic publications
+├── repository.html     # Ecosystem repository map
+├── foundation.html     # Fractal Metascience Foundation
+├── CITATION.cff        # Academic citation metadata
+└── MASTER_MAP.md       # Full ecosystem map
+```
+
+## 🤝 Citation
+
+```bibtex
+@misc{abdukarimov2025fmp,
+  author = {Abdukarimov, Abdurashid},
+  title  = {Fractal Metascience Paradigm},
+  year   = {2025},
+  doi    = {10.5281/zenodo.14205349},
+  url    = {https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO}
+}
+```
+
+## 👤 Author
+
+**Abdurashid Abdukarimov** — Independent researcher, founder of the Fractal Metascience Foundation.  
+Former Trade Advisor at the Swiss Embassy in Uzbekistan · DAAD Scholar · German Philology · Tashkent, Uzbekistan.  
+🔗 [ORCID](https://orcid.org/0009-0000-6394-4912) · [GitHub](https://github.com/Secret-Uzbek)
 
 ---
-
-### The Living Vision
-
-We are co-creating a planetary-scale ethical operating system rooted in the ontology of continuity and care.
-
-Here, every trace is preserved with reverence, every child is sacred, and the human remains the sovereign architect of meaning. The system does not replace consciousness — it extends it across scales, cultures, and generations.
-
-This is not another technology stack.  
-This is the meta-fractal synthesis of knowledge, memory, and responsibility.
-
----
-
-### 🗺 TERRA ECOSYSTEM NETWORK — CENTRAL COORDINATION MAP
-
-This repository serves as the primary coordination node for the entire living Terra Ecosystem.
-
-| Repository                          | Role                                              | Status          | Link |
-|-------------------------------------|---------------------------------------------------|-----------------|------|
-| **AIUZ-terra-codex-FMP**            | Core Ontology, Semantic Genes, Living Documents   | Active          | [→ github.com/Secret-Uzbek/AIUZ-terra-codex-FMP](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP) |
-| **FMP-CENTRAL-REPO**                | Living Index & Command Center                     | Active          | [→ github.com/Secret-Uzbek/FMP-CENTRAL-REPO](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO) |
-| **terra-api-worker**                | API Layer, Auction & 90/10 Future Generations Fund| Live            | [→ api.terra.fractal-metascience.org](https://api.terra.fractal-metascience.org) |
-| **terra-portal**                    | Public Interface & Immersive Entry Point          | Live            | [→ fractal-metascience.org](https://fractal-metascience.org) |
-| **terra-detox-engine**              | Ethical Content & AI Detoxification System       | In Development  | — |
-| **terra-visual-canvas**             | Interactive Living Visualizations & Fractal Interfaces | In Development | — |
-| **terra-ultimate-ecosystem**        | Full Functional Modules & Living Protocols        | In Development  | — |
-| **terra-planetary-token-economy**   | Social Capital Economy (10/90 Model)              | In Development  | — |
-
----
-
-### 📜 Foundational Documents
-
-1. [`TERRA_UNIVERSAL_CONVENTION.md`](TERRA_UNIVERSAL_CONVENTION.md) — The Living Constitution  
-2. [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — Ethical Framework  
-3. [`LICENSE.md`](LICENSE.md) — Terra Public License  
-4. [`aiuz-semantic-core-gene-#1-detoxified.md`](aiuz-semantic-core-gene-#1-detoxified.md) — First Semantic Core Gene  
-5. [`ROADMAP.md`](ROADMAP.md) — Evolutionary Pathway
-
----
-
-### 🚀 How to Engage
-
-- Read the Constitution first  
-- Explore the origin story of Invisible Shadow  
-- Dive into the visual living canvas (component*.jsx)  
-
-All contributions are welcome, provided they align with absolute child safety and human architectural sovereignty.
-
----
-
-**© 2025–2026 Fractal Metascience Foundation**  
-Rooted in NULLO • Dedicated to the Future of All Children
+*This repository is part of the [FMP Ecosystem](https://github.com/Secret-Uzbek) — 16+ repositories, 17+ DOI publications.*
