@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications | Fractal Metascience Foundation</title>
+  <meta name="description" content="23 DOI-verified publications across Zenodo, Figshare, OSF, ScienceOpen, SSRN. ORCID 0009-0000-6394-4912.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .pub-filters {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
+    }
+    .filter-btn {
+      background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--text-muted); font-family: var(--font-mono);
+      font-size: 0.72rem; padding: 6px 14px; border-radius: 20px;
+      cursor: pointer; transition: all 0.2s; letter-spacing: 0.05em;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--cyan); color: var(--cyan);
+      background: var(--cyan-dim);
+    }
+    .pub-list { display: flex; flex-direction: column; gap: 16px; }
+    .pub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 20px; align-items: start;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .pub-card:hover {
+      border-color: var(--border-2); transform: translateX(4px);
+    }
+    .pub-platform-tag {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--text-dim); margin-bottom: 8px;
+    }
+    .pub-title {
+      font-family: var(--font-display); font-size: 1rem;
+      font-weight: 700; color: var(--text); margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .pub-meta {
+      font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;
+    }
+    .pub-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+    .pub-actions {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 8px; min-width: 140px;
+    }
+    .pub-date {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+    .orcid-banner {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-left: 3px solid #A6CE39;
+      border-radius: var(--radius-lg); padding: 24px 28px;
+      display: flex; align-items: center; gap: 20px;
+      margin-bottom: 32px;
+    }
+    .orcid-logo {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #A6CE39; display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0;
+      font-family: var(--font-display); font-size: 0.6rem;
+      font-weight: 800; color: white; text-align: center;
+      line-height: 1.2;
+    }
+    .orcid-info { flex: 1; }
+    .orcid-name {
+      font-family: var(--font-display); font-size: 1rem;
+      font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .orcid-ids {
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 680px) {
+      .pub-card { grid-template-columns: 1fr; }
+      .pub-actions { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Fractal Metascience Foundation</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="repository.html">Repository</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="../publications.html" class="lang-btn">RU</a>
+      <span class="lang-btn active">UZ</span>
+      <a href="../en/publications.html" class="lang-btn">EN</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="page-label">Academic Output · Verified</span>
+    <h1 class="page-title">Publications</h1>
+    <p class="page-subtitle">23 ta nashr 6 ta platformada tasdiqlangan DOI bilan. Barcha yozuvlar ORCID 0009-0000-6394-4912 orqali tasdiqlangan.</p>
+  </div>
+
+  <div class="section">
+    <!-- ORCID Banner -->
+    <div class="orcid-banner">
+      <div class="orcid-logo">ORCID</div>
+      <div class="orcid-info">
+        <div class="orcid-name">Abdurashid Abdulkhamitovich Abdukarimov</div>
+        <div class="orcid-ids">
+          ORCID: 0009-0000-6394-4912 · ResearcherID: OIT-6569-2025 · HuggingFace: @Terra-Codex<br>
+          Ma'lumotlar tasdiqlangan: Web of Science · Zenodo · SSRN · Oxirgi yangilanish: 1 mart 2026
+        </div>
+      </div>
+      <a href="https://orcid.org/0009-0000-6394-4912" target="_blank" class="btn btn-outline" style="flex-shrink:0;">
+        ORCID Profili →
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="stat-grid">
+      <div class="stat-item"><div class="stat-number">23</div><div class="stat-label">Jami DOI</div></div>
+      <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">ORCID Verified</div></div>
+      <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Platformalar</div></div>
+      <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">Zenodo Communities</div></div>
+      <div class="stat-item"><div class="stat-number">$0</div><div class="stat-label">Byudjet</div></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="pub-filters">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="zenodo">Zenodo</button>
+      <button class="filter-btn" data-filter="figshare">Figshare</button>
+      <button class="filter-btn" data-filter="ssrn">SSRN</button>
+      <button class="filter-btn" data-filter="osf">OSF</button>
+      <button class="filter-btn" data-filter="scienceopen">ScienceOpen</button>
+    </div>
+
+    <!-- Publications List -->
+    <div class="pub-list">
+
+      <!-- 1 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Software · DataCite Indexed</div>
+          <div class="pub-title">BABUR-TERRA CODEX v3.0</div>
+          <div class="pub-meta">Fractal Metascience Foundation · 26 февраля 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-green">DataCite</span>
+            <span class="badge badge-muted">Software</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">26 Feb 2026</div>
+          <a href="https://doi.org/10.5281/zenodo.18780896" target="_blank" class="doi-link">10.5281/zenodo.18780896</a>
+          <a href="https://doi.org/10.5281/zenodo.18780896" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Dataset</div>
+          <div class="pub-title">navoiy-terra-corpus v1.1</div>
+          <div class="pub-meta">Навои · 9-языковые аннотации · ~25 000 строф · 18 февраля 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">Dataset</span>
+            <span class="badge badge-muted">NLP</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">18 Feb 2026</div>
+          <a href="https://doi.org/10.5281/zenodo.18676066" target="_blank" class="doi-link">10.5281/zenodo.18676066</a>
+          <a href="https://doi.org/10.5281/zenodo.18676066" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Dataset · PLT Analysis</div>
+          <div class="pub-title">NAVOIY-TERRA v1.0 — 15th-Century Chagatai Poetry Corpus</div>
+          <div class="pub-meta">~25 000 стихов · PLT-аннотации · Navoi's Birthday Release · 9 февраля 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">PLT</span>
+            <span class="badge badge-muted">Chagatai</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">9 Feb 2026</div>
+          <a href="https://doi.org/10.5281/zenodo.18602635" target="_blank" class="doi-link">10.5281/zenodo.18602635</a>
+          <a href="https://doi.org/10.5281/zenodo.18602635" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Preprint</div>
+          <div class="pub-title">FMP Foundations v2</div>
+          <div class="pub-meta">Fractal Metascience Paradigm · Foundation Paper v2 · 5 января 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">Preprint</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">5 Jan 2026</div>
+          <a href="https://doi.org/10.5281/zenodo.18155672" target="_blank" class="doi-link">10.5281/zenodo.18155672</a>
+          <a href="https://doi.org/10.5281/zenodo.18155672" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Journal Article · 3 Communities Accepted</div>
+          <div class="pub-title">FMP Foundations v1 — Community Validated</div>
+          <div class="pub-meta">Принят в Big Fractal, Fractal Cosmos, Syntheverse · Кураторы: @JosedeAngeles, @mikefios, @Aiwon · 2 января 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-green">3 Communities ✓</span>
+            <span class="badge badge-muted">Journal Article</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2 Jan 2026</div>
+          <a href="https://doi.org/10.5281/zenodo.18128845" target="_blank" class="doi-link">10.5281/zenodo.18128845</a>
+          <a href="https://doi.org/10.5281/zenodo.18128845" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Preprint · 2 Communities Accepted</div>
+          <div class="pub-title">NULLO — Zero-Budget Ontology</div>
+          <div class="pub-meta">Принят в Big Fractal, Syntheverse · 2 января 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-green">2 Communities ✓</span>
+            <span class="badge badge-muted">NULLO</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2 Jan 2026</div>
+          <a href="https://doi.org/10.5281/zenodo.18134544" target="_blank" class="doi-link">10.5281/zenodo.18134544</a>
+          <a href="https://doi.org/10.5281/zenodo.18134544" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Research Tool · Big Fractal Community</div>
+          <div class="pub-title">terra-fmp-research-pipeline</div>
+          <div class="pub-meta">Принят @JosedeAngeles в Big Fractal community · январь 2026 · 26 декабря 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-green">Big Fractal ✓</span>
+            <span class="badge badge-muted">Research Tool</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">26 Dec 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.18061978" target="_blank" class="doi-link">10.5281/zenodo.18061978</a>
+          <a href="https://doi.org/10.5281/zenodo.18061978" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Software</div>
+          <div class="pub-title">FMP Central Repository v1</div>
+          <div class="pub-meta">27 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">Software</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">27 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17731795" target="_blank" class="doi-link">10.5281/zenodo.17731795</a>
+          <a href="https://doi.org/10.5281/zenodo.17731795" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Research Tool</div>
+          <div class="pub-title">L7 Research Assistant Mandate</div>
+          <div class="pub-meta">Terra Codex L7 уровень · 13 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">L7</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">13 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17597945" target="_blank" class="doi-link">10.5281/zenodo.17597945</a>
+          <a href="https://doi.org/10.5281/zenodo.17597945" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Software</div>
+          <div class="pub-title">L6 Terra Detox Engine</div>
+          <div class="pub-meta">Terra Codex L6 уровень · 13 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">L6</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">13 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17598487" target="_blank" class="doi-link">10.5281/zenodo.17598487</a>
+          <a href="https://doi.org/10.5281/zenodo.17598487" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Archive</div>
+          <div class="pub-title">L7 Terra Codex v2.0 ZIP Archive</div>
+          <div class="pub-meta">Полный архив L7 · 13 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">Archive</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">13 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17598953" target="_blank" class="doi-link">10.5281/zenodo.17598953</a>
+          <a href="https://doi.org/10.5281/zenodo.17598953" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Software</div>
+          <div class="pub-title">Terra Clean Core v1.0</div>
+          <div class="pub-meta">12 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">Software</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">12 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17587463" target="_blank" class="doi-link">10.5281/zenodo.17587463</a>
+          <a href="https://doi.org/10.5281/zenodo.17587463" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Software</div>
+          <div class="pub-title">FMP v1.0.0 — Initial Release</div>
+          <div class="pub-meta">8 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-muted">v1.0.0</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">8 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17558638" target="_blank" class="doi-link">10.5281/zenodo.17558638</a>
+          <a href="https://doi.org/10.5281/zenodo.17558638" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Preprint · 8 Versions · Clarivate Indexed</div>
+          <div class="pub-title">FMP Foundations — Foundation Preprint (8 версий)</div>
+          <div class="pub-meta">Clarivate Web of Science indexed · 21 октября 2025 — 2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-gold">Clarivate WoS ✓</span>
+            <span class="badge badge-muted">8 Versions</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">21 Oct 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17425678" target="_blank" class="doi-link">10.5281/zenodo.17425678</a>
+          <a href="https://doi.org/10.5281/zenodo.17425678" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Dataset · Clarivate Web of Science Indexed</div>
+          <div class="pub-title">AIUZ Terra Codex JSON Archive</div>
+          <div class="pub-meta">L0→L7 curriculum · Clarivate WoS indexed · 7 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-gold">Clarivate WoS ✓</span>
+            <span class="badge badge-muted">Dataset</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">7 Nov 2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17548828" target="_blank" class="doi-link">10.5281/zenodo.17548828</a>
+          <a href="https://doi.org/10.5281/zenodo.17548828" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="pub-card reveal" data-platform="figshare">
+        <div>
+          <div class="pub-platform-tag">Figshare · Software</div>
+          <div class="pub-title">FMP Full Package</div>
+          <div class="pub-meta">19 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-gold">Figshare</span>
+            <span class="badge badge-muted">Software</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">19 Nov 2025</div>
+          <a href="https://doi.org/10.6084/m9.figshare.30648455" target="_blank" class="doi-link">10.6084/m9.figshare.30648455</a>
+          <a href="https://doi.org/10.6084/m9.figshare.30648455" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="pub-card reveal" data-platform="figshare">
+        <div>
+          <div class="pub-platform-tag">Figshare · Software</div>
+          <div class="pub-title">TCPP v1.0 + FPG (Terra Codex Parser Package)</div>
+          <div class="pub-meta">12 ноября 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-gold">Figshare</span>
+            <span class="badge badge-muted">TCPP</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">12 Nov 2025</div>
+          <a href="https://doi.org/10.6084/m9.figshare.30588389" target="_blank" class="doi-link">10.6084/m9.figshare.30588389</a>
+          <a href="https://doi.org/10.6084/m9.figshare.30588389" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="pub-card reveal" data-platform="osf">
+        <div>
+          <div class="pub-platform-tag">OSF · Project · BASE Indexed</div>
+          <div class="pub-title">FMP Central Repository — OSF Project</div>
+          <div class="pub-meta">BASE (Bielefeld Academic Search Engine) indexed · 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-muted">OSF</span>
+            <span class="badge badge-green">BASE ✓</span>
+            <span class="badge badge-muted">Project</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2025</div>
+          <a href="https://doi.org/10.17605/osf.io/gwfzm" target="_blank" class="doi-link">10.17605/osf.io/gwfzm</a>
+          <a href="https://doi.org/10.17605/osf.io/gwfzm" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="pub-card reveal" data-platform="scienceopen">
+        <div>
+          <div class="pub-platform-tag">ScienceOpen · Preprint</div>
+          <div class="pub-title">EUO and PLT — Emergent Universal Organization & Post-Lingua Trace</div>
+          <div class="pub-meta">Ноябрь 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-muted">ScienceOpen</span>
+            <span class="badge badge-muted">EUO</span>
+            <span class="badge badge-muted">PLT</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">Nov 2025</div>
+          <a href="https://doi.org/10.14293/PR2199.002363.v1" target="_blank" class="doi-link">10.14293/PR2199.002363.v1</a>
+          <a href="https://doi.org/10.14293/PR2199.002363.v1" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="pub-card reveal" data-platform="ssrn">
+        <div>
+          <div class="pub-platform-tag">SSRN · Working Paper</div>
+          <div class="pub-title">FMP Framework v1</div>
+          <div class="pub-meta">Elsevier SSRN · 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-muted">SSRN</span>
+            <span class="badge badge-muted">Working Paper</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2025</div>
+          <a href="https://doi.org/10.2139/ssrn.5738885" target="_blank" class="doi-link">10.2139/ssrn.5738885</a>
+          <a href="https://doi.org/10.2139/ssrn.5738885" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="pub-card reveal" data-platform="ssrn">
+        <div>
+          <div class="pub-platform-tag">SSRN · Working Paper</div>
+          <div class="pub-title">FMP Framework v2</div>
+          <div class="pub-meta">Elsevier SSRN · 2025–2026</div>
+          <div class="pub-badges">
+            <span class="badge badge-muted">SSRN</span>
+            <span class="badge badge-muted">Working Paper</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2025–2026</div>
+          <a href="https://doi.org/10.2139/ssrn.5769183" target="_blank" class="doi-link">10.2139/ssrn.5769183</a>
+          <a href="https://doi.org/10.2139/ssrn.5769183" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="pub-card reveal" data-platform="zenodo">
+        <div>
+          <div class="pub-platform-tag">Zenodo · Dataset · Clarivate Web of Science</div>
+          <div class="pub-title">AIUZ Terra Codex — Complete Dataset</div>
+          <div class="pub-meta">Clarivate indexed · 2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-cyan">Zenodo</span>
+            <span class="badge badge-gold">Clarivate WoS ✓</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2025</div>
+          <a href="https://doi.org/10.5281/zenodo.17632584" target="_blank" class="doi-link">10.5281/zenodo.17632584</a>
+          <a href="https://doi.org/10.5281/zenodo.17632584" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+      <!-- 23 -->
+      <div class="pub-card reveal" data-platform="figshare">
+        <div>
+          <div class="pub-platform-tag">Figshare · Software · v1</div>
+          <div class="pub-title">TCPP v1 — Terra Codex Parser Package (Version 1)</div>
+          <div class="pub-meta">2025</div>
+          <div class="pub-badges">
+            <span class="badge badge-gold">Figshare</span>
+            <span class="badge badge-muted">TCPP</span>
+          </div>
+        </div>
+        <div class="pub-actions">
+          <div class="pub-date">2025</div>
+          <a href="https://doi.org/10.6084/M9.FIGSHARE.30588389.V1" target="_blank" class="doi-link">10.6084/M9.FIGSHARE.30588389.V1</a>
+          <a href="https://doi.org/10.6084/M9.FIGSHARE.30588389.V1" target="_blank" class="btn btn-outline" style="font-size:0.75rem;padding:8px 16px;">View →</a>
+        </div>
+      </div>
+
+    </div><!-- /pub-list -->
+  </div><!-- /section -->
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">Fractal Metascience Foundation</div>
+        <p>Inson-AI hamkorligi uchun paradigma tizimi. Nol byudjet · Ochiq fan · Terra Ekotizimi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatsiya</h4>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="repository.html">Repository</a>
+        <a href="about.html">About</a>
+        <a href="foundation.html">Foundation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Aloqa</h4>
+        <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
+        <a href="https://orcid.org/0009-0000-6394-4912" target="_blank">ORCID 0009-0000-6394-4912</a>
+        <a href="https://github.com/Secret-Uzbek" target="_blank">github.com/Secret-Uzbek</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fractal Metascience Foundation · Abdurashid Abdukarimov</span>
+      <span class="footer-orcid">ResearcherID: OIT-6569-2025 · ORCID: 0009-0000-6394-4912</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Platform filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.pub-card').forEach(card => {
+          if (filter === 'all' || card.dataset.platform === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
