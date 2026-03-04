@@ -1,99 +1,118 @@
-name: Zenodo DOI Registration
+name: Zenodo DOI Auto-Update
 
 on:
   release:
     types: [published]
 
 jobs:
-  register-doi:
+  update-doi:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Wait for Zenodo webhook
-        run: sleep 90
-
-      - name: Poll Zenodo for DOI
-        id: zenodo
         run: |
-          REPO_URL="https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
-          echo "Searching Zenodo for: $REPO_URL"
+          echo "Waiting 90s for Zenodo..."
+          sleep 90
 
-          for attempt in 1 2 3 4 5; do
-            echo "Attempt $attempt..."
-            RESPONSE=$(curl -s "https://zenodo.org/api/records?q=related_identifier:$REPO_URL&sort=mostrecent&size=1")
-            DOI=$(echo "$RESPONSE" | python3 -c "
-import sys, json
-try:
-    data = json.load(sys.stdin)
-    hits = data.get('hits', {}).get('hits', [])
-    if hits:
-        doi = hits[0].get('doi') or hits[0].get('metadata', {}).get('doi', '')
-        print(doi)
-except:
-    pass
+      - name: Fetch DOI from Zenodo (attempt 1)
+        id: zn1
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          Q=$(python3 -c "import urllib.parse; print(urllib.parse.quote('related_identifier:https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO'))")
+          RESP=$(curl -s -H "Authorization: Bearer $ZENODO_TOKEN" "https://zenodo.org/api/records?q=$Q&size=5&sort=mostrecent")
+          DOI=$(echo "$RESP" | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+hits=d.get('hits',{}).get('hits',[])
+print(hits[0]['doi'] if hits and 'doi' in hits[0] else '')
 " 2>/dev/null || echo "")
+          echo "doi=$DOI" >> $GITHUB_OUTPUT
 
-            if [ -n "$DOI" ]; then
-              echo "doi=$DOI" >> $GITHUB_OUTPUT
-              echo "Found DOI: $DOI"
-              break
-            fi
+      - name: Fetch DOI from Zenodo (retry after 60s)
+        id: zn2
+        if: steps.zn1.outputs.doi == ''
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          echo "Retrying in 60s..."
+          sleep 60
+          Q=$(python3 -c "import urllib.parse; print(urllib.parse.quote('related_identifier:https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO'))")
+          RESP=$(curl -s -H "Authorization: Bearer $ZENODO_TOKEN" "https://zenodo.org/api/records?q=$Q&size=5&sort=mostrecent")
+          DOI=$(echo "$RESP" | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+hits=d.get('hits',{}).get('hits',[])
+print(hits[0]['doi'] if hits and 'doi' in hits[0] else '')
+" 2>/dev/null || echo "")
+          echo "doi=$DOI" >> $GITHUB_OUTPUT
 
-            echo "DOI not found yet, waiting 60s..."
-            sleep 60
-          done
+      - name: Resolve final DOI
+        id: doi
+        run: |
+          D="${{ steps.zn1.outputs.doi }}"
+          [ -z "$D" ] && D="${{ steps.zn2.outputs.doi }}"
+          echo "doi=$D" >> $GITHUB_OUTPUT
+          echo "Final DOI: $D"
 
       - name: Update CITATION.cff
-        if: steps.zenodo.outputs.doi != ''
+        if: steps.doi.outputs.doi != ''
         run: |
-          DOI="${{ steps.zenodo.outputs.doi }}"
-          VERSION="${{ github.event.release.tag_name }}"
+          D="${{ steps.doi.outputs.doi }}"
+          TAG="${{ github.event.release.tag_name }}"
           DATE=$(date +%Y-%m-%d)
-
           if [ -f CITATION.cff ]; then
-            # Update existing
-            python3 -c "
-import re, sys
-with open('CITATION.cff','r') as f:
-    content = f.read()
-content = re.sub(r'^(# )?doi:.*$', f'doi: {sys.argv[1]}', content, flags=re.MULTILINE)
-content = re.sub(r'^version:.*$', f'version: {sys.argv[2]}', content, flags=re.MULTILINE)
-content = re.sub(r'^date-released:.*$', f'date-released: {sys.argv[3]}', content, flags=re.MULTILINE)
-with open('CITATION.cff','w') as f:
-    f.write(content)
-" "$DOI" "$VERSION" "$DATE"
+            if grep -q "^# doi:" CITATION.cff; then
+              sed -i "s|^# doi:.*|doi: \"$D\"|" CITATION.cff
+            elif grep -q "^doi:" CITATION.cff; then
+              sed -i "s|^doi:.*|doi: \"$D\"|" CITATION.cff
+            else
+              echo "doi: \"$D\"" >> CITATION.cff
+            fi
+            sed -i "s|^version:.*|version: \"$TAG\"|" CITATION.cff
+            sed -i "s|^date-released:.*|date-released: \"$DATE\"|" CITATION.cff
           else
-            cat > CITATION.cff << EOF
+            cat > CITATION.cff <<CFFEOF
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software, please cite it."
 type: software
 title: "FMP-CENTRAL-REPO"
-version: $VERSION
-date-released: $DATE
-doi: $DOI
-url: "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
-repository-code: "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
-license: CC-BY-4.0
 authors:
   - family-names: Abdukarimov
     given-names: Abdurashid
     orcid: "https://orcid.org/0009-0000-6394-4912"
-    affiliation: "Fractal Metascience Foundation"
-EOF
+    affiliation: "Fractal Metascience Foundation, Tashkent, Uzbekistan"
+repository-code: "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
+url: "https://fractal-metascience.org"
+keywords:
+  - fractal-metascience
+  - fmp
+  - uzbekistan
+  - open-science
+license: CC-BY-4.0
+version: "$TAG"
+date-released: "$DATE"
+doi: "$D"
+CFFEOF
           fi
 
       - name: Commit CITATION.cff
-        if: steps.zenodo.outputs.doi != ''
+        if: steps.doi.outputs.doi != ''
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add CITATION.cff
-          git diff --staged --quiet || git commit -m "chore: update CITATION.cff with DOI ${{ steps.zenodo.outputs.doi }}"
+          git diff --staged --quiet || git commit -m "ci: Zenodo DOI ${{ steps.doi.outputs.doi }} @ ${{ github.event.release.tag_name }}"
           git push
+
+      - name: Job summary
+        run: |
+          D="${{ steps.doi.outputs.doi }}"
+          if [ -n "$D" ]; then echo "✅ DOI: https://doi.org/$D"
+          else echo "⚠️  DOI not found — check https://zenodo.org/search?q=FMP-CENTRAL-REPO"; fi
