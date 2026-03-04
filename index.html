@@ -1,124 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fractal Metascience Foundation | Terra Ecosystem</title>
     <style>
-        body { margin:0; padding:0; background:#0a0f1c; color:#e0e7ff; font-family:'Inter', system-ui, sans-serif; line-height:1.7; }
-        .header { background:#111827; padding:40px 20px; text-align:center; border-bottom:1px solid #334155; }
-        .title { font-size:2.8rem; font-weight:800; color:#f1f5f9; }
-        .hero { height:80vh; display:flex; align-items:center; justify-content:center; position:relative; background:radial-gradient(circle at center, #1e2937 0%, #0a0f1c 70%); }
-        .nullo-drop { width:250px; height:250px; border-radius:50%; background:radial-gradient(circle at 40% 40%, #334155, #0a0f1c); border:2px solid #00b4d8; box-shadow:0 0 60px #00b4d8; animation:pulse 6s infinite ease-in-out; cursor:pointer; }
-        @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
-        .section { max-width:1200px; margin:60px auto; padding:0 20px; }
-        h2 { font-size:2.2rem; color:#c4d0ff; border-bottom:1px solid #334155; padding-bottom:12px; margin-bottom:35px; }
-        .card { background:#1e2937; border:1px solid #475569; border-radius:12px; padding:30px; margin-bottom:30px; }
-        .list { list-style:none; padding:0; }
-        .list li { margin-bottom:10px; }
-        .btn { background:#334155; color:#e0e7ff; padding:12px 24px; border:none; border-radius:8px; font-weight:600; cursor:pointer; }
-        .btn:hover { background:#475569; }
-        footer { background:#0f172a; padding:50px 20px; text-align:center; color:#64748b; font-size:0.95rem; }
+        :root {
+            --bg: #0a0f1c;
+            --card: #111827;
+            --text: #e0e7ff;
+            --accent: #00b4d8;
+            --muted: #94a3b8;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER */
+        header {
+            background: #0f172a;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1e2937;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        /* HERO - NULLO DROP */
+        .hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: radial-gradient(circle at center, #1e2937 0%, #0a0f1c 70%);
+        }
+        .nullo {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 38% 38%, #334155, #0a0f1c);
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 80px rgba(0,180,216,0.6);
+            animation: pulse 7s infinite ease-in-out;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: var(--accent);
+            user-select: none;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        .nullo:hover { box-shadow: 0 0 120px rgba(0,180,216,0.9); }
+
+        /* SECTIONS */
+        .section { padding: 80px 0; }
+        h2 {
+            font-size: 2.4rem;
+            margin-bottom: 40px;
+            color: #c4d0ff;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 12px;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+
+        .list { padding: 0; list-style: none; }
+        .list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #1e2937;
+        }
+        .list li:last-child { border-bottom: none; }
+
+        .btn {
+            background: #334155;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #475569;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #0f172a;
+            padding: 60px 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="title">Fractal Metascience Foundation | Terra Ecosystem</div>
-        <p>Ontological zero-point and fractal metascience paradigm for human-AI collaboration and knowledge organization.</p>
-    </div>
 
-    <div class="hero">
-        <div class="nullo-drop" onclick="nulloActivate()"></div>
+<header>
+    <div class="title">Fractal Metascience Foundation</div>
+    <div class="subtitle">Terra Ecosystem • Ontological zero-point and fractal metascience paradigm</div>
+</header>
+
+<div class="hero">
+    <div class="nullo" onclick="nulloClick()">
+        NULLO
     </div>
+</div>
+
+<div class="container">
 
     <div class="section">
         <h2>Biography</h2>
         <div class="card">
             <p>Abdurashid Abdukarimov is an independent researcher and conceptual architect at the intersection of linguistic-culture, international development, and advanced meta-scientific frameworks. His work includes the Fractal Metascience Paradigm (FMP), NULLO, PLT, UCOMM, and the Terra ecosystem.</p>
-            <p>Employment: Uzbek State University of World Languages, Swiss Embassy in Uzbekistan, Konrad Adenauer Stiftung, GTZ/GIZ, Uzbek Football Federation, Goethe Institut, and more.</p>
-            <p>Education: Justus-Liebig-Universität Gießen, Humboldt-Universität zu Berlin, Uzbek State University of World Languages.</p>
-            <p>Keywords: Nullo, Fractal Meta Science, Post lingua trace, fractal epistemology, transdisciplinary integration.</p>
+            <p><strong>Employment:</strong> Uzbek State University of World Languages, Swiss Embassy in Uzbekistan, Konrad Adenauer Stiftung, GTZ/GIZ, Uzbek Football Federation, Goethe Institut, and more.</p>
+            <p><strong>Education:</strong> Justus-Liebig-Universität Gießen, Humboldt-Universität zu Berlin, Uzbek State University of World Languages.</p>
+            <p><strong>Keywords:</strong> Nullo, Fractal Meta Science, Post lingua trace, fractal epistemology, transdisciplinary integration.</p>
         </div>
     </div>
 
     <div class="section">
         <h2>Repositories</h2>
-        <ul class="list">
-            <li>AIUZ-Terra-Codex-EcoSystem/.github - Organization profile and community guidelines.</li>
-            <li>AIUZ-Terra-Codex-EcoSystem/.terra-legal - Legal documents and licenses for Terra Ecosystem.</li>
-            <li>AIUZ-Terra-Codex-EcoSystem/AIUZ-Terra-Ecosystem - Complete ecosystem archive: Education, Solar EV, DAO, Knowledge Tokenization.</li>
-            <li>AIUZ-Terra-Codex-EcoSystem/Nullo-PLT-FMP-Theory - Theoretical foundations of Nullo, PLT, and FMP.</li>
-            <li>Secret-Uzbek/AIUZ- - AIUZ base repository.</li>
-            <li>Secret-Uzbek/AIUZ-Terra-codex - AIUZ Terra Codex archive.</li>
-            <li>Secret-Uzbek/AIUZ-terra-codex-FMP - FMP-integrated Terra Codex.</li>
-            <li>Secret-Uzbek/FMP-CENTRAL-REPO - Central hub for Fractal Metascience Paradigm.</li>
-            <li>Secret-Uzbek/FMP-Full-Publication-Package - Full publication package for FMP.</li>
-            <li>Secret-Uzbek/FMP-monograph - Monographs on Fractal Metascience.</li>
-            <li>Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research - Academic research on Nullo, PLT, UCOMM, FMP.</li>
-            <li>Secret-Uzbek/Theory-of-fractal-metascience-paradigm - Theory of the Fractal Metascience Paradigm.</li>
-            <li>Secret-Uzbek/Uzbek-mining - Uzbekistan mining-related projects.</li>
-            <li>Secret-Uzbek/babur-terra-codex - Babur Terra Codex.</li>
-            <li>Secret-Uzbek/navoiy-terra-corpus - Navoiy Terra Corpus.</li>
-            <li>Secret-Uzbek/terra-fmp-research-pipeline - Terra FMP research pipeline.</li>
-            <li>Secret-Uzbek/terra-translation-api - Terra Translation API.</li>
-            <li>Secret-Uzbek/terra-ust-autobuild - Terra UST autobuild.</li>
-            <li>Secret-Uzbek/terra-ust-core - Terra UST core.</li>
-            <li>Secret-Uzbek/ust-mvp - UST MVP.</li>
-        </ul>
+        <div class="card">
+            <ul class="list">
+                <li><strong>AIUZ-Terra-Codex-EcoSystem/.github</strong> — Organization profile and community guidelines</li>
+                <li><strong>AIUZ-Terra-Codex-EcoSystem/.terra-legal</strong> — Legal documents and licenses for Terra Ecosystem</li>
+                <li><strong>AIUZ-Terra-Codex-EcoSystem/AIUZ-Terra-Ecosystem</strong> — Complete ecosystem archive: Education, Solar EV, DAO, Knowledge Tokenization</li>
+                <li><strong>AIUZ-Terra-Codex-EcoSystem/Nullo-PLT-FMP-Theory</strong> — Theoretical foundations of Nullo, PLT, and FMP</li>
+                <li><strong>Secret-Uzbek/AIUZ-</strong> — AIUZ base repository</li>
+                <li><strong>Secret-Uzbek/AIUZ-Terra-codex</strong> — AIUZ Terra Codex archive</li>
+                <li><strong>Secret-Uzbek/AIUZ-terra-codex-FMP</strong> — FMP-integrated Terra Codex</li>
+                <li><strong>Secret-Uzbek/FMP-CENTRAL-REPO</strong> — Central hub for Fractal Metascience Paradigm</li>
+                <li><strong>Secret-Uzbek/FMP-Full-Publication-Package</strong> — Full publication package for FMP</li>
+                <li><strong>Secret-Uzbek/FMP-monograph</strong> — Monographs on Fractal Metascience</li>
+                <li><strong>Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research</strong> — Academic research on Nullo, PLT, UCOMM, FMP</li>
+                <li><strong>Secret-Uzbek/Theory-of-fractal-metascience-paradigm</strong> — Theory of the Fractal Metascience Paradigm</li>
+                <li><strong>Secret-Uzbek/Uzbek-mining</strong> — Uzbekistan mining-related projects</li>
+                <li><strong>Secret-Uzbek/babur-terra-codex</strong> — Babur Terra Codex</li>
+                <li><strong>Secret-Uzbek/navoiy-terra-corpus</strong> — Navoiy Terra Corpus</li>
+                <li><strong>Secret-Uzbek/terra-fmp-research-pipeline</strong> — Terra FMP research pipeline</li>
+                <li><strong>Secret-Uzbek/terra-translation-api</strong> — Terra Translation API</li>
+                <li><strong>Secret-Uzbek/terra-ust-autobuild</strong> — Terra UST autobuild</li>
+                <li><strong>Secret-Uzbek/terra-ust-core</strong> — Terra UST core</li>
+                <li><strong>Secret-Uzbek/ust-mvp</strong> — UST MVP</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h2>Works</h2>
-        <ul class="list">
-            <li>.terra-legal (DOI: 10.5281/zenodo.18860024)</li>
-            <li>AIUZ- (DOI: 10.5281/zenodo.18860028)</li>
-            <li>AIUZ-Terra-codex (DOI: 10.5281/zenodo.18860222)</li>
-            <li>AIUZ-terra-codex-FMP (DOI: 10.5281/zenodo.18860224)</li>
-            <li>terra-translation-api (DOI: 10.5281/zenodo.18860036)</li>
-            <li>terra-ust-autobuild (DOI: 10.5281/zenodo.18860034)</li>
-            <li>Theory-of-fractal-metascience-paradigm (DOI: 10.5281/zenodo.18860032)</li>
-            <li>ust-mvp (DOI: 10.5281/zenodo.18860040)</li>
-            <li>Uzbek-mining (DOI: 10.5281/zenodo.18860030)</li>
-            <li>BABUR-TERRA CODEX v3.0 (DOI: 10.5281/zenodo.18780896)</li>
-            <li>Secret-Uzbek/navoiy-terra-corpus (DOI: 10.5281/zenodo.18676066)</li>
-            <li>NAVOIY-TERRA Corpus v1.0 (DOI: 10.5281/zenodo.18602635)</li>
-            <li>Fractal Metascience: Foundations of a New Scientific Paradigm (DOI: 10.5281/zenodo.18155672)</li>
-            <li>Fractal Metascience: Foundations of a New Scientific Paradigm (DOI: 10.5281/zenodo.18128845)</li>
-            <li>NULLO: The Ontological Zero-Point (DOI: 10.5281/zenodo.18134544)</li>
-            <li>FMP Central Repository (DOI: 10.17605/osf.io/gwfzm)</li>
-            <li>FMP Proof Artifact (DOI: 10.6084/m9.figshare.30588389.v1)</li>
-            <li>Secret-Uzbek/terra-fmp-research-pipeline (DOI: 10.5281/zenodo.18061978)</li>
-            <li>Fundamental Artifacts of the Fractal Metascience Paradigm (DOI: 10.14293/PR2199.002363.v1)</li>
-            <li>Fractal Metascience Paradigm - Central Repository (DOI: 10.5281/zenodo.17731795)</li>
-            <li>The Fractal Metascience Paradigm — Full Publication Package (DOI: 10.6084/m9.figshare.30648455)</li>
-            <li>FMP-monograph: L7 Research Assistant Mandate v1.0 (DOI: 10.5281/zenodo.17597945)</li>
-            <li>Secret-Uzbek/FMP-monograph: L6 Terra Detox Engine v1.1 (DOI: 10.5281/zenodo.17598487)</li>
-            <li>Secret-Uzbek/FMP-monograph: L7 Terra Codex v2.0 (DOI: 10.5281/zenodo.17598953)</li>
-            <li>FMP Proof Artifact (DOI: 10.6084/m9.figshare.30588389)</li>
-            <li>Secret-Uzbek/FMP-monograph: Terra Clean Core v1.0 (DOI: 10.5281/zenodo.17587463)</li>
-            <li>Fractal Metascience Paradigm v1.0.0 (DOI: 10.5281/zenodo.17558638)</li>
-            <li>AIUZ Terra Codex — Complete Repository Archive (DOI: 10.5281/zenodo.17548828)</li>
-            <li>The Fractal Metascience Paradigm: Foundations, Models, and Implications for Complex Knowledge Systems (DOI: 10.5281/zenodo.17425678)</li>
-            <li>The Fractal Metascience Paradigm: Foundations, Models, and Implications for Complex Knowledge Systems (DOI: 10.5281/zenodo.17404325)</li>
-            <li>fractal metascience (DOI: 10.5281/zenodo.17632584)</li>
-            <li>The Fractal Metascience Paradigm: Toward a Unified Epistemological Framework for 21st Century Science (DOI: 10.2139/ssrn.5738885)</li>
-            <li>The Fractal Metascience Paradigm: Toward a Unified Epistemological Framework for 21st Century Science (DOI: 10.2139/ssrn.5769183)</li>
-        </ul>
+        <h2>Works (Selected)</h2>
+        <div class="card">
+            <ul class="list">
+                <li>.terra-legal — DOI: 10.5281/zenodo.18860024</li>
+                <li>AIUZ-Terra-codex — DOI: 10.5281/zenodo.18860222</li>
+                <li>BABUR-TERRA CODEX v3.0 — DOI: 10.5281/zenodo.18780896</li>
+                <li>NAVOIY-TERRA Corpus v1.0 — DOI: 10.5281/zenodo.18602635</li>
+                <li>Fractal Metascience: Foundations... — DOI: 10.5281/zenodo.18155672</li>
+                <li>NULLO: The Ontological Zero-Point — DOI: 10.5281/zenodo.18134544</li>
+                <li>FMP Central Repository — DOI: 10.5281/zenodo.17731795</li>
+                <li>Fractal Metascience Paradigm v1.0.0 — DOI: 10.5281/zenodo.17558638</li>
+                <!-- и остальные 24 работы по желанию можно добавить -->
+            </ul>
+        </div>
     </div>
 
     <div class="section">
         <h2>Agents</h2>
         <div class="card">
             <h3>Ширак — Semantic Search · Reconstruction</h3>
-            <p>Семантический поиск, реконструкция утраченных смыслов и навигация по корпусам знаний. Агент-архивариус Terra Ecosystem.</p>
+            <p>Семантический поиск, реконструкция утраченных смыслов и навигация по корпусам знаний.</p>
         </div>
         <div class="card">
             <h3>Томирис — Immersive Education · Terra Points</h3>
-            <p>Иммерсивное образование и система Terra Points — балльная механика мотивации в AIUZ Terra Codex curriculum.</p>
+            <p>Иммерсивное образование и система Terra Points — балльная механика мотивации.</p>
         </div>
         <div class="card">
             <h3>Роксана — Ethical Validation · Future Fund</h3>
-            <p>Этическая валидация решений и управление Фондом будущих поколений в рамках модели 10/90 распределения доходов.</p>
+            <p>Этическая валидация решений и управление Фондом будущих поколений (10/90 модель).</p>
         </div>
     </div>
 
@@ -127,33 +210,40 @@
         <div class="card">
             <h3>Terra Translation Parser v5.0</h3>
             <p>Semantic decompositor and living thesaurus. Reconstructs meaning across all languages and domains using real scientific sources.</p>
-            <div class="auction">
-                <strong>Auction • Starting price: $100,000,000</strong><br>
-                10/90 model — 10% to the Architect, 90% to the Fund for Future Generations
-            </div>
+            <p><strong>Auction • Starting price: $100,000,000</strong><br>
+            10/90 model — 10% to the Architect, 90% to the Fund for Future Generations</p>
             <button class="btn" onclick="window.location.href='mailto:a.abdukarimov@fractal-metascience.org?subject=Terra Translation Parser Auction'">Participate in Auction</button>
         </div>
+
         <div class="card">
             <h3>Green Station Planner v6.0</h3>
             <p>Professional regenerative infrastructure planner for Uzbekistan and the world (solar, water recycling, bio-materials).</p>
-            <div class="auction">
-                <strong>Auction • Starting price: $100,000,000</strong><br>
-                10/90 model — 10% to the Architect, 90% to the Fund for Future Generations
-            </div>
+            <p><strong>Auction • Starting price: $100,000,000</strong><br>
+            10/90 model — 10% to the Architect, 90% to the Fund for Future Generations</p>
             <button class="btn" onclick="window.location.href='mailto:a.abdukarimov@fractal-metascience.org?subject=Green Station Planner Auction'">Participate in Auction</button>
         </div>
     </div>
 
-    <footer>
-        Fractal Metascience Foundation • Terra Ecosystem<br>
-        Architect: Abdurashid Abdukarimov • ORCID 0009-0000-6394-4912<br>
-        Contact: <a href="mailto:a.abdukarimov@fractal-metascience.org" style="color:#94a3b8;">a.abdukarimov@fractal-metascience.org</a>
-    </footer>
+</div>
 
-    <script>
-        function nulloActivate() {
-            alert('Primordial Drop NULLO activated. Entering immersive Terra Ecosystem mode (as per visual layer protocols).');
-        }
-    </script>
+<footer>
+    Fractal Metascience Foundation • Terra Ecosystem<br>
+    Architect: Abdurashid Abdukarimov • ORCID 0009-0000-6394-4912<br>
+    Contact: <a href="mailto:a.abdukarimov@fractal-metascience.org" style="color:#94a3b8;">a.abdukarimov@fractal-metascience.org</a>
+</footer>
+
+<script>
+function nulloClick() {
+    const drop = document.querySelector('.nullo');
+    drop.style.transition = 'all 0.6s';
+    drop.style.transform = 'scale(1.4)';
+    drop.style.boxShadow = '0 0 140px #00e5ff';
+    setTimeout(() => {
+        alert('Первородная капля NULLO активирована.\n\nВход в иммерсивный режим Terra Ecosystem...');
+        drop.style.transform = 'scale(1)';
+        drop.style.boxShadow = '0 0 80px rgba(0,180,216,0.6)';
+    }, 800);
+}
+</script>
 </body>
 </html>
