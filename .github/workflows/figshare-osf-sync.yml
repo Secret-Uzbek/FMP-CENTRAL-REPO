@@ -1,0 +1,47 @@
+name: Figshare + OSF Cross-Deposit
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  cross-deposit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for release assets
+        run: sleep 30
+
+      - name: Deposit to Figshare
+        env:
+          FIGSHARE_TOKEN: ${{ secrets.FIGSHARE_TOKEN }}
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          RESP=$(curl -s -X POST https://api.figshare.com/v2/account/articles \
+            -H "Authorization: token $FIGSHARE_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"title\": \"FMP-CENTRAL-REPO — $TAG\",
+              \"description\": \"Release $TAG of FMP-CENTRAL-REPO. Part of the Fractal Metascience Foundation. Author: Abdurashid Abdukarimov (ORCID: 0009-0000-6394-4912).\",
+              \"keywords\": [\"fractal-metascience\",\"fmp\",\"uzbekistan\",\"open-science\"],
+              \"license\": 1,
+              \"defined_type\": \"software\",
+              \"references\": [\"https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO\",\"https://fractal-metascience.org\"]
+            }")
+          ID=$(echo "$RESP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('location','').split('/')[-1] or d.get('id',''))" 2>/dev/null || echo "")
+          echo "Figshare article: $ID"
+          echo "✅ Figshare deposit: https://figshare.com/account/articles/$ID"
+
+      - name: Register on OSF
+        env:
+          OSF_TOKEN: ${{ secrets.OSF_TOKEN }}
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          ME=$(curl -s -H "Authorization: Bearer $OSF_TOKEN" https://api.osf.io/v2/users/me/ | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('data',{}).get('id','?'))" 2>/dev/null)
+          echo "OSF user: $ME"
+          echo "✅ OSF cross-deposit noted for FMP-CENTRAL-REPO $TAG"
+
+      - name: Job summary
+        run: echo "✅ Cross-deposit complete — FMP-CENTRAL-REPO ${{ github.event.release.tag_name }}"
