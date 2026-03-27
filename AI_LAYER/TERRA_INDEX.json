@@ -1,0 +1,12 @@
+{
+  "system": "AIUZ Terra Codex",
+  "layers": [
+    "FMP",
+    "PLT",
+    "UCOMM",
+    "EUO",
+    "DNA",
+    "Computation"
+  ],
+  "note": "Full index should be expanded from corpus"
+}
