@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    "FMP",
+    "PLT",
+    "ParserField"
+  ],
+  "edges": [
+    [
+      "FMP",
+      "defines",
+      "PLT"
+    ],
+    [
+      "PLT",
+      "enables",
+      "ParserField"
+    ]
+  ]
+}
