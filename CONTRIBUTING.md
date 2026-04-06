@@ -1,4 +1,4 @@
-🤝 CONTRIBUTING TO TERRA ECOSYSTEM
+рџ¤ќ CONTRIBUTING TO TERRA ECOSYSTEM
 
 Welcome to Terra Ecosystem - the ethically-first educational platform!
 AUTHOR OF STANDARDS: Abdurashid A. Abdukarimov
@@ -7,53 +7,53 @@ VERSION: v1.0
 STATUS: Terra Platinum Certified
 COMPLIANCE: AIUZ Documentation Standards v1.0
 
-🎯 OUR MISSION
+рџЋЇ OUR MISSION
 
 Terra Ecosystem aims to revolutionize child education through ethical technologies. Every contribution must align with our core principles:
 
-🏛️ Foundational Principles
+рџЏ›пёЏ Foundational Principles
 
-🛡️ Child Safety First - every change undergoes a child impact assessment
-⚖️ Ethical Integrity - all decisions undergo Gefunden Protocol validation
-🌍 Cultural Inclusivity - respect for the diversity of traditions and values
-🔬 Scientific Basis - only proven technologies without pseudoscience
-👪 Family-Oriented Approach - strengthening, not replacing, family ties
+рџ›ЎпёЏ Child Safety First - every change undergoes a child impact assessment
+вљ–пёЏ Ethical Integrity - all decisions undergo Gefunden Protocol validation
+рџЊЌ Cultural Inclusivity - respect for the diversity of traditions and values
+рџ”¬ Scientific Basis - only proven technologies without pseudoscience
+рџ‘Є Family-Oriented Approach - strengthening, not replacing, family ties
 
-📋 HOW TO CONTRIBUTE
+рџ“‹ HOW TO CONTRIBUTE
 
-🔍 Before starting
+рџ”Ќ Before starting
 
 Be sure to familiarize yourself with:
-📜 Terra Universal Convention v1.0 - legal foundation
-⚖️ Gefunden Ethical Framework - ethical principles
-📖 AIUZ Documentation Standards - documentation standards
-🔒 Security Guidelines - security requirements
-📋 Code of Conduct - behavioral guidelines
+рџ“њ Terra Universal Convention v1.0 - legal foundation
+вљ–пёЏ Gefunden Ethical Framework - ethical principles
+рџ“– AIUZ Documentation Standards - documentation standards
+рџ”’ Security Guidelines - security requirements
+рџ“‹ Code of Conduct - behavioral guidelines
 
-🎯 Priority areas for contribution
+рџЋЇ Priority areas for contribution
 
-🌍 HIGH PRIORITY
+рџЊЌ HIGH PRIORITY
 Localization into new languages (especially CIS region languages)
 Child safety component testing
 Cultural adaptation of educational content
 Documentation and user guides
 Accessibility for children with special needs
 
-🔧 MEDIUM PRIORITY
+рџ”§ MEDIUM PRIORITY
 Application performance improvement
 Integration with educational standards
 Development of new educational modules
 UX/UI optimization for children's perception
 
-🧪 RESEARCH PROJECTS
+рџ§Є RESEARCH PROJECTS
 Educational effectiveness research
 Cross-cultural educational research
 Ethical AI in education research
 Long-term impact of digital education on children
 
-🛠️ TYPES OF CONTRIBUTIONS
+рџ› пёЏ TYPES OF CONTRIBUTIONS
 
-📝 1. Documentation
+рџ“ќ 1. Documentation
 What is needed:
 Translations into new languages
 Guides for parents and educators
@@ -64,7 +64,7 @@ Compliance with AIUZ Documentation Standards v1.0
 Cultural adaptation for the target audience
 Ethical validation check of the content
 
-🐛 2. Bug Fixes
+рџђ› 2. Bug Fixes
 Process:
 Find or create an Issue describing the problem
 Ensure the bug affects child safety or the educational process
@@ -73,7 +73,7 @@ Fix the error with comments
 Add tests to prevent regression
 Ensure Child Safety Validation passes
 
-✨ 3. New Features
+вњЁ 3. New Features
 Prerequisites:
 You must create a Feature Request Issue
 Community discussion and maintainer approval
@@ -86,23 +86,23 @@ Add comprehensive tests
 Update documentation
 Pass the Child Safety Review
 
-🌍 4. Localization and Cultural Adaptation
+рџЊЌ 4. Localization and Cultural Adaptation
 Special requirements:
 Cultural authenticity: work with native speakers/cultural representatives
 Religious compatibility: adaptation to local religious values
 Educational standards: compliance with local educational requirements
 Family traditions: respect for local family structures
 
-🔒 5. Security
+рџ”’ 5. Security
 Critically important:
 Confidential reporting: a.abdukarimov@fractal-metascience.org
 Responsible Disclosure: do not publish vulnerabilities publicly
 Child-specific threats: special attention to threats against children
 Privacy by Design: built-in privacy protection
 
-🔄 DEVELOPMENT PROCESS
+рџ”„ DEVELOPMENT PROCESS
 
-📋 Step 1: Preparation
+рџ“‹ Step 1: Preparation
 
 # 1. Fork the repository
 # 2. Clone your fork
@@ -120,7 +120,7 @@ npm run setup:hooks
 npm test
 npm run child-safety:check
 
-🌿 Step 2: Branch Creation
+рџЊї Step 2: Branch Creation
 
 # Create a branch following the naming convention
 git checkout -b type/description
@@ -131,7 +131,7 @@ git checkout -b fix/child-privacy-leak
 git checkout -b docs/parent-guide-update
 git checkout -b security/encryption-upgrade
 
-💻 Step 3: Development
+рџ’» Step 3: Development
 
 Adhere to code standards:
 # Before every commit
@@ -144,7 +144,7 @@ npm run child-safety:audit
 npm run ethical:validate
 npm run security:scan
 
-📝 Step 4: Commits
+рџ“ќ Step 4: Commits
 
 Commit convention:
 # Format: type(scope): description
@@ -158,7 +158,7 @@ git commit -m "fix(security): resolve child data exposure in mesh network"
 git commit -m "docs(parents): add guide for screen time management"
 git commit -m "test(child-safety): add comprehensive privacy protection tests"
 
-🧪 Step 5: Testing
+рџ§Є Step 5: Testing
 
 Mandatory tests:
 # Unit tests
@@ -179,54 +179,54 @@ npm run test:localization
 # Accessibility tests
 npm run test:a11y
 
-📤 Step 6: Pull Request
+рџ“¤ Step 6: Pull Request
 
 Checklist before creating a PR:
- All tests pass ✅
- Child Safety Validation passed ✅
- Gefunden Ethical Review completed ✅
- Documentation updated ✅
- Localization verified (if applicable) ✅
- Accessibility requirements met ✅
+ All tests pass вњ…
+ Child Safety Validation passed вњ…
+ Gefunden Ethical Review completed вњ…
+ Documentation updated вњ…
+ Localization verified (if applicable) вњ…
+ Accessibility requirements met вњ…
 
 PR Template:
-## 📋 Description
+## рџ“‹ Description
 Brief description of changes and their impact on child safety.
 
-## 🎯 Type of change
-- [ ] 🐛 Bug fix 
-- [ ] ✨ New feature 
-- [ ] 📝 Documentation 
-- [ ] 🌍 Localization 
-- [ ] 🔒 Security 
+## рџЋЇ Type of change
+- [ ] рџђ› Bug fix 
+- [ ] вњЁ New feature 
+- [ ] рџ“ќ Documentation 
+- [ ] рџЊЌ Localization 
+- [ ] рџ”’ Security 
 
-## 🛡️ Child Safety Review
+## рџ›ЎпёЏ Child Safety Review
 - [ ] Changes do not affect children's data
 - [ ] Parental controls remain active  
 - [ ] Content filtering is not compromised
 - [ ] Privacy by design is maintained
 
-## ⚖️ Ethical Validation
+## вљ–пёЏ Ethical Validation
 - [ ] Gefunden Protocol complied with
 - [ ] Cultural sensitivity verified
 - [ ] Family values respected
 - [ ] Scientific basis confirmed
 
-## 🧪 Testing
+## рџ§Є Testing
 - [ ] Unit tests added/updated
 - [ ] Child safety tests passed
 - [ ] Cross-browser testing completed
 - [ ] Accessibility testing passed
 
-## 🌍 Localization (if applicable)
+## рџЊЌ Localization (if applicable)
 - [ ] Texts added to i18n files
 - [ ] Cultural adaptation completed  
 - [ ] Native speakers verified the translation
 - [ ] RTL support added (for Arabic/Hebrew)
 
-⚖️ ETHICAL STANDARDS
+вљ–пёЏ ETHICAL STANDARDS
 
-🏛️ Gefunden Protocol Compliance
+рџЏ›пёЏ Gefunden Protocol Compliance
 
 Every contribution must pass ethical validation:
 
@@ -241,7 +241,7 @@ def validate_ethical_impact(change):
     ]
     return all(checks)
 
-🚫 Unacceptable Content
+рџљ« Unacceptable Content
 
 Strictly prohibited:
 Content potentially harmful to children
@@ -251,7 +251,7 @@ Discrimination on any grounds
 Collection of children's data without parental consent
 Manipulative game mechanics
 
-✅ Encouraged Content
+вњ… Encouraged Content
 
 Welcomed:
 Educational materials with proven effectiveness
@@ -260,9 +260,9 @@ Tools for strengthening family ties
 Accessibility improvements for children with special needs
 Cross-cultural educational initiatives
 
-🌍 LOCALIZATION GUIDE
+рџЊЌ LOCALIZATION GUIDE
 
-📋 Translation Requirements
+рџ“‹ Translation Requirements
 
 Technical requirements:
 Localization:
@@ -279,33 +279,33 @@ Educational traditions: integration of local pedagogical approaches
 Color symbolism: consideration of the cultural meanings of colors
 Symbols and images: avoidance of culturally inappropriate elements
 
-🗂️ Localization File Structure
+рџ—‚пёЏ Localization File Structure
 
 locales/
-├── en/                 # English (primary)
-│   ├── common.json
-│   ├── education.json
-│   └── parents.json
-├── ru/                 # Russian  
-├── uz/                 # Uzbek
-├── de/                 # German
-├── ar/                 # Arabic (RTL)
-└── zh/                 # Chinese
+в”њв”Ђв”Ђ en/                 # English (primary)
+в”‚   в”њв”Ђв”Ђ common.json
+в”‚   в”њв”Ђв”Ђ education.json
+в”‚   в””в”Ђв”Ђ parents.json
+в”њв”Ђв”Ђ ru/                 # Russian  
+в”њв”Ђв”Ђ uz/                 # Uzbek
+в”њв”Ђв”Ђ de/                 # German
+в”њв”Ђв”Ђ ar/                 # Arabic (RTL)
+в””в”Ђв”Ђ zh/                 # Chinese
 
-🎯 Priority Languages for Localization
+рџЋЇ Priority Languages for Localization
 
-🇺🇿 Uzbek - primary regional language
-🇷🇺 Russian - lingua franca in the CIS
-🇩🇪 German - partner language (Uzbek-German cooperation)
-🇸🇦 Arabic - for Islamic educational content
-🇨🇳 Chinese - the largest educational market
-🇪🇸 Spanish - second most spoken language
-🇫🇷 French - francophone educational systems
-🇯🇵 Japanese - innovative educational technologies
+рџ‡єрџ‡ї Uzbek - primary regional language
+рџ‡·рџ‡є Russian - lingua franca in the CIS
+рџ‡©рџ‡Є German - partner language (Uzbek-German cooperation)
+рџ‡ёрџ‡¦ Arabic - for Islamic educational content
+рџ‡Ёрџ‡і Chinese - the largest educational market
+рџ‡Єрџ‡ё Spanish - second most spoken language
+рџ‡«рџ‡· French - francophone educational systems
+рџ‡Їрџ‡µ Japanese - innovative educational technologies
 
-🧪 TESTING STANDARDS
+рџ§Є TESTING STANDARDS
 
-🔒 Child Safety Testing
+рџ”’ Child Safety Testing
 
 Mandatory child safety tests:
 describe('Child Safety', () => {
@@ -326,7 +326,7 @@ describe('Child Safety', () => {
   });
 });
 
-⚖️ Ethical Validation Testing
+вљ–пёЏ Ethical Validation Testing
 
 Ethical validation tests:
 def test_gefunden_protocol_compliance():
@@ -341,7 +341,7 @@ def test_cultural_sensitivity():
         result = cultural_validator.check(content, culture)
         assert result.is_appropriate
 
-🌍 Cross-Cultural Testing
+рџЊЌ Cross-Cultural Testing
 
 Cross-cultural compatibility tests:
 Cultural_Tests:
@@ -360,9 +360,9 @@ Cultural_Tests:
     - Non-violence principles
     - Meditation integration
 
-📊 REVIEW PROCESS
+рџ“Љ REVIEW PROCESS
 
-🔍 Automated Checks
+рџ”Ќ Automated Checks
 
 Upon PR creation, the following run automatically:
 Automated_Checks:
@@ -374,16 +374,16 @@ Automated_Checks:
   Accessibility: "WCAG 2.1 AA compliance"
   Cross_Browser: "Chrome, Firefox, Safari, Edge"
 
-👥 Human Review
+рџ‘Ґ Human Review
 
 Review levels:
-🔧 Technical Review - code, architecture, performance
-🛡️ Child Safety Review - child safety specialist
-⚖️ Ethical Review - Terra Ecosystem ethical committee
-🌍 Cultural Review - representatives of target cultures (for localization)
-📚 Educational Review - pedagogues and educational experts
+рџ”§ Technical Review - code, architecture, performance
+рџ›ЎпёЏ Child Safety Review - child safety specialist
+вљ–пёЏ Ethical Review - Terra Ecosystem ethical committee
+рџЊЌ Cultural Review - representatives of target cultures (for localization)
+рџ“љ Educational Review - pedagogues and educational experts
 
-⏱️ Timelines
+вЏ±пёЏ Timelines
 
 Review_Timeline:
   Automatic_Checks: "5-10 minutes"
@@ -392,18 +392,18 @@ Review_Timeline:
   Ethical_Review: "3-7 days"
   Cultural_Review: "5-10 days (for localization)"
 
-🏆 CONTRIBUTOR RECOGNITION
+рџЏ† CONTRIBUTOR RECOGNITION
 
-🎖️ Reward System
+рџЋ–пёЏ Reward System
 
 Types of recognition:
-🏅 Terra Contributor Badge - for the first accepted PR
-🌟 Cultural Ambassador - for significant localization
-🛡️ Child Safety Champion - for child safety improvements
-⚖️ Ethics Guardian - for ethical system improvements
-📚 Education Innovator - for educational innovations
+рџЏ… Terra Contributor Badge - for the first accepted PR
+рџЊџ Cultural Ambassador - for significant localization
+рџ›ЎпёЏ Child Safety Champion - for child safety improvements
+вљ–пёЏ Ethics Guardian - for ethical system improvements
+рџ“љ Education Innovator - for educational innovations
 
-📋 Contributors Wall
+рџ“‹ Contributors Wall
 
 All contributors are acknowledged in:
 CONTRIBUTORS.md file
@@ -411,9 +411,9 @@ Official Terra Ecosystem website
 Monthly community reports
 Annual Terra Conference
 
-📞 SUPPORT AND ASSISTANCE
+рџ“ћ SUPPORT AND ASSISTANCE
 
-💬 Communication Channels
+рџ’¬ Communication Channels
 
 For contributors:
 Discord: #contributors channel in the Discord server
@@ -427,34 +427,34 @@ Ethical questions: a.abdukarimov@fractal-metascience.org
 Localization: a.abdukarimov@fractal-metascience.org
 Security: a.abdukarimov@fractal-metascience.org
 
-📚 Resources for Contributors
+рџ“љ Resources for Contributors
 
 Training materials:
-🎓 Terra Developer Academy
-📖 Gefunden Protocol Deep Dive
-🌍 Cultural Sensitivity Training
-🔒 Child Safety Best Practices
+рџЋ“ Terra Developer Academy
+рџ“– Gefunden Protocol Deep Dive
+рџЊЌ Cultural Sensitivity Training
+рџ”’ Child Safety Best Practices
 
 Tools:
-🛠️ Terra CLI Tools
-🧪 Testing Framework
-🌍 Localization Tools
-📊 Analytics Dashboard
+рџ› пёЏ Terra CLI Tools
+рџ§Є Testing Framework
+рџЊЌ Localization Tools
+рџ“Љ Analytics Dashboard
 
-🚀 ISOLATION
+рџљЂ ISOLATION
 
 Contributing to the Terra Ecosystem is an opportunity to create a better future for children worldwide. Every contribution you make undergoes rigorous validation to ensure maximum benefit for child education while fully complying with ethical standards.
 
 Remember our principles:
-🛡️ Children First - their safety and well-being is priority #1
-⚖️ Ethics Built into Code - every line of code passes ethical validation
-🌍 Globally Inclusive - respect for the diversity of cultures and traditions
-👪 Families Together - technologies to strengthen, not destroy, families
-🔬 Science without Pseudoscience - only verified and proven approaches
+рџ›ЎпёЏ Children First - their safety and well-being is priority #1
+вљ–пёЏ Ethics Built into Code - every line of code passes ethical validation
+рџЊЌ Globally Inclusive - respect for the diversity of cultures and traditions
+рџ‘Є Families Together - technologies to strengthen, not destroy, families
+рџ”¬ Science without Pseudoscience - only verified and proven approaches
 
-Join us in building the ethically-first educational platform! 🌟
+Join us in building the ethically-first educational platform! рџЊџ
 
-© 2025 Terra Ecosystem Contributors. This document is licensed under the Terra Public License v1.0.
-🌍 Together we are creating a better future for children all over the world! ✨
+В© 2025 Terra Ecosystem Contributors. This document is licensed under the Terra Public License v1.0.
+рџЊЌ Together we are creating a better future for children all over the world! вњЁ
 Contact: a.abdukarimov@fractal-metascience.org
 ORCID: 0009-0000-6394-4912
