@@ -547,7 +547,7 @@
 - [Ozbek_Nemis_Lugatlari_maqola_UZ (5).docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Ozbek_Nemis_Lugatlari_maqola_UZ (5).docx)
 - [Ozbek_Nemis_Lugatlari_maqola_UZ_Kirill (4).docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Ozbek_Nemis_Lugatlari_maqola_UZ_Kirill (4).docx)
 - [Ozbek_Nemis_Lugatlari_maqola_UZ_REFERENCES (5).docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Ozbek_Nemis_Lugatlari_maqola_UZ_REFERENCES (5).docx)
-- [O‘zbekiston Respublikasi Vazirlar Mahkamasining qarori, 10.07.2025 yildagi 425-son Постановлени КабМина о внедрении ИИ.pdf](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/O‘zbekiston Respublikasi Vazirlar Mahkamasining qarori, 10.07.2025 yildagi 425-son Постановлени КабМина о внедрении ИИ.pdf)
+- [O'zbekiston Respublikasi Vazirlar Mahkamasining qarori, 10.07.2025 yildagi 425-son Постановлени КабМина о внедрении ИИ.pdf](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/O'zbekiston Respublikasi Vazirlar Mahkamasining qarori, 10.07.2025 yildagi 425-son Постановлени КабМина о внедрении ИИ.pdf)
 - [Phase Ii Terra Codex.docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Phase Ii Terra Codex.docx)
 - [Phase Ii Terra Codex.pdf](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Phase Ii Terra Codex.pdf)
 - [Presentation AIUZ Terra Codex EkoSystem.html](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Presentation AIUZ Terra Codex EkoSystem.html)
