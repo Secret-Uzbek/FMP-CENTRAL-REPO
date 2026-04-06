@@ -1,4 +1,4 @@
-# ROOT MINIMAL RULE — FMP-CENTRAL-REPO
+# ROOT MINIMAL RULE вЂ” FMP-CENTRAL-REPO
 
 The repository root is **frozen**.
 
