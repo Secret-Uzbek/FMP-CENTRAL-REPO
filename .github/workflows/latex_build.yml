@@ -16,5 +16,5 @@ jobs:
       
       - name: Info
         run: |
-          echo "⚠️ No LaTeX files found in repository"
+          echo "вљ пёЏ No LaTeX files found in repository"
           echo "This workflow is disabled until .tex files are added"
