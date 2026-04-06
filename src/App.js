@@ -35,10 +35,10 @@ const DetoxEngine = () => {
       <div className="relative z-10">
         <h4 className="text-2xl font-bold text-red-500 mb-4">CRITICAL COMPLIANCE: TERRA-V1</h4>
         <ul className="space-y-3 text-sm font-mono text-slate-300">
-          <li>● ANTI-GROUNDHOG: Session Continuity [ENABLED]</li>
-          <li>● HALLUCINATION FILTER: Corporate Logic [REJECTED]</li>
-          <li>● ETHICAL CORE: Child-Centered (AIUZ Standard) [ACTIVE]</li>
-          <li>● KYZYLKUM LEX: Sovereign Intelligence Protection [LOCKED]</li>
+          <li>в—Џ ANTI-GROUNDHOG: Session Continuity [ENABLED]</li>
+          <li>в—Џ HALLUCINATION FILTER: Corporate Logic [REJECTED]</li>
+          <li>в—Џ ETHICAL CORE: Child-Centered (AIUZ Standard) [ACTIVE]</li>
+          <li>в—Џ KYZYLKUM LEX: Sovereign Intelligence Protection [LOCKED]</li>
         </ul>
         <button className="mt-8 px-6 py-2 bg-red-600 text-white font-black hover:bg-red-500 transition">FORCE RE-VALIDATION</button>
       </div>
@@ -73,10 +73,10 @@ const FMP_Foundation = () => {
             <p className="text-[10px] text-blue-400 mt-1">ORCID: {ARCHITECT_ID.orcid}</p>
           </div>
           <nav className="flex flex-col gap-4 text-xs uppercase tracking-widest">
-             <button onClick={() => setActiveNode('foundation')} className={`text-left transition ${activeNode === 'foundation' ? 'text-blue-400' : 'hover:text-blue-500'}`}>● Terra DNA Engine</button>
-            <button onClick={() => setActiveNode('council')} className={`text-left transition ${activeNode === 'council' ? 'text-blue-400' : 'hover:text-blue-500'}`}>● Council of Minds</button>
-            <button onClick={() => setActiveNode('detox')} className={`text-left transition ${activeNode === 'detox' ? 'text-blue-400' : 'hover:text-blue-500'}`}>● Detox Protocol</button>
-            <button onClick={() => setActiveNode('assets')} className={`text-left transition ${activeNode === 'assets' ? 'text-blue-400' : 'hover:text-blue-500'}`}>● $1T Sovereign Assets</button>
+             <button onClick={() => setActiveNode('foundation')} className={`text-left transition ${activeNode === 'foundation' ? 'text-blue-400' : 'hover:text-blue-500'}`}>в—Џ Terra DNA Engine</button>
+            <button onClick={() => setActiveNode('council')} className={`text-left transition ${activeNode === 'council' ? 'text-blue-400' : 'hover:text-blue-500'}`}>в—Џ Council of Minds</button>
+            <button onClick={() => setActiveNode('detox')} className={`text-left transition ${activeNode === 'detox' ? 'text-blue-400' : 'hover:text-blue-500'}`}>в—Џ Detox Protocol</button>
+            <button onClick={() => setActiveNode('assets')} className={`text-left transition ${activeNode === 'assets' ? 'text-blue-400' : 'hover:text-blue-500'}`}>в—Џ $1T Sovereign Assets</button>
           </nav>
         </div>
       </aside>
