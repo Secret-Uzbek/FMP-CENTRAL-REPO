@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TERRA AI — Local System v1.0
+# TERRA AI вЂ” Local System v1.0
 # AIUZ Terra Codex | FMP-CENTRAL-REPO
 # Stack: Ollama + Mistral
 # Run: python3 terra_local.py --mode all
@@ -15,10 +15,10 @@ except ImportError:
     import requests
 
 AGENTS = {
-    "terra": {"name":"Terra","layer":"L7","system":"You are Terra — core intelligence of AIUZ Terra Codex. Apply NULLO·PLT·UCOMM·FMP principles. Answer in user's language. Sign: — Terra [L7]"},
-    "shirak": {"name":"Shirak","layer":"L5","system":"You are Shirak — research agent L5. Deep research, DOI/Zenodo references. Sign: — Shirak [L5]"},
-    "tomiris": {"name":"Tomiris","layer":"L6","system":"You are Tomiris — strategy agent L6. Ecosystem architecture, Fractal Silk Route. Sign: — Tomiris [L6]"},
-    "roxana": {"name":"Roxana","layer":"L4","system":"You are Roxana — PLT linguistics agent L4. Multilingual semantic mapping uz/ru/en/de. Sign: — Roxana [L4]"}
+    "terra": {"name":"Terra","layer":"L7","system":"You are Terra вЂ” core intelligence of AIUZ Terra Codex. Apply NULLOВ·PLTВ·UCOMMВ·FMP principles. Answer in user's language. Sign: вЂ” Terra [L7]"},
+    "shirak": {"name":"Shirak","layer":"L5","system":"You are Shirak вЂ” research agent L5. Deep research, DOI/Zenodo references. Sign: вЂ” Shirak [L5]"},
+    "tomiris": {"name":"Tomiris","layer":"L6","system":"You are Tomiris вЂ” strategy agent L6. Ecosystem architecture, Fractal Silk Route. Sign: вЂ” Tomiris [L6]"},
+    "roxana": {"name":"Roxana","layer":"L4","system":"You are Roxana вЂ” PLT linguistics agent L4. Multilingual semantic mapping uz/ru/en/de. Sign: вЂ” Roxana [L4]"}
 }
 
 class TerraAI:
@@ -55,7 +55,7 @@ def main():
     p.add_argument("--mode",choices=["cli","web","all"],default="cli")
     args = p.parse_args()
     terra = TerraAI(model=args.model)
-    print("\n🌍 Terra AI — FMP Ecosystem")
+    print("\nрџЊЌ Terra AI вЂ” FMP Ecosystem")
     print("Agents: /terra /shirak /tomiris /roxana | /exit")
     print("-"*50)
     while True:
