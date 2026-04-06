@@ -31,4 +31,4 @@ jobs:
       
       - name: Summary
         run: |
-          echo "✅ Sync complete" >> $GITHUB_STEP_SUMMARY
+          echo "вњ… Sync complete" >> $GITHUB_STEP_SUMMARY
