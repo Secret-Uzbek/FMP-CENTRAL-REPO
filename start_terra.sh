@@ -1,5 +1,5 @@
 #!/bin/bash
-# Terra AI — Quick Setup (NULLO Protocol)
+# Terra AI вЂ” Quick Setup (NULLO Protocol)
 echo "=== Terra AI Setup ==="
 command -v ollama >/dev/null || curl -fsSL https://ollama.ai/install.sh | sh
 ollama serve &>/dev/null &
