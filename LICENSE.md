@@ -1,58 +1,60 @@
 # License Note
 
-`FMP-CENTRAL-REPO` currently contains two different license-facing files for two
-different roles.
+`FMP-CENTRAL-REPO` keeps two different license-facing files for two different
+jobs.
 
-## Canonical repository license
+## 1. Canonical repository license
 
-The GitHub-recognized repository license is stored in:
+The GitHub-recognized repository license is:
 
 - [`LICENSE`](./LICENSE)
 
-That file is the canonical machine-detected public software/content license for
-this repository surface.
+That file is the canonical machine-detected legal text for this repository
+surface.
 
-## Why this file also exists
+## 2. Why `LICENSE.md` also exists
 
-`LICENSE.md` is kept as a human-readable Terra-specific legal note so that this
-repository does not lose contact with the wider ethical and governance layer of
-the ecosystem.
+`LICENSE.md` is the human-readable explanation layer.
 
-It is not the best place to dump an unreadable legal wall.
-Its job is to explain how this repository relates to:
+Its job is not to replace the canonical legal text.
+Its job is to explain:
 
-- the canonical repository license;
-- Terra-specific legal and ethical donor documents;
-- publication and governance boundaries.
+- what the repository license is;
+- why this public hub also links to a wider Terra legal donor layer;
+- where public publishing boundaries are defined.
 
-## Terra legal donor layer
+## Reading rule
+
+If you need:
+
+- the legal text GitHub recognizes as the repository license, read
+  [`LICENSE`](./LICENSE);
+- the repository-specific public publishing boundary, read
+  [`PUBLICATION_RULE.md`](./PUBLICATION_RULE.md);
+- the stronger donor legal/governance layer, use
+  `AIUZ-Terra-Codex-EcoSystem/terra-legal`.
+
+## Why the split matters
+
+`FMP-CENTRAL-REPO` is a public hub.
+It is not the whole legal headquarters of the Terra ecosystem.
+
+So:
+
+- `LICENSE` should stay canonical and machine-recognizable;
+- `LICENSE.md` should stay short, readable, and explanatory;
+- the heavier legal donor materials should live in `terra-legal`.
+
+## Donor layer
 
 The stronger donor legal layer now lives in:
 
 - `AIUZ-Terra-Codex-EcoSystem/terra-legal`
 
-That donor repository contains the more specialized Terra legal/governance
-documents, including:
+Relevant donor files include:
 
 - `LICENSE.md`
 - `CODE_OF_CONDUCT.md`
 - `SECURITY.md`
 - `PUBLICATION_RULE.md`
 - `TERRA_UNIVERSAL_CONVENTION.md`
-
-## Practical reading rule
-
-If you need to know:
-
-- **what GitHub treats as the repository license** — read [`LICENSE`](./LICENSE)
-- **what the wider Terra governance/legal donor layer is** — use `terra-legal`
-- **what this central repository is allowed to publish publicly** — read
-  [`PUBLICATION_RULE.md`](./PUBLICATION_RULE.md)
-
-## Repository boundary
-
-`FMP-CENTRAL-REPO` is a public hub, not the full legal headquarters of the
-ecosystem.
-
-So this file should stay short, readable, and explanatory instead of trying to
-be the entire Terra legal universe in one unreadable blob.

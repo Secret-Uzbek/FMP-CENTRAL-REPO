@@ -1,39 +1,63 @@
 # Code of Conduct
 
-This repository uses the Terra community conduct baseline.
+`FMP-CENTRAL-REPO` is a public-facing repository, a GitHub Pages surface, and a
+theory-facing entry point into the wider Terra ecosystem.
 
-`FMP-CENTRAL-REPO` is a public-facing repository and live site surface. That
-means conduct rules apply not only to code contributions, but also to issues,
-pull requests, public discussions, publication metadata, and linked site
-surfaces.
+That means conduct here applies not only to code, but also to:
 
-## Our pledge
+- issues and pull requests;
+- public discussions and review comments;
+- README and documentation edits;
+- publication metadata, DOI-facing files, and site text;
+- AI-assisted edits that affect what human readers see first.
 
-We want participation in this repository and its public surfaces to remain:
+## Purpose
 
-- respectful;
-- non-harassing;
-- human-readable;
+This repository should stay:
+
+- readable for human visitors;
+- safe for serious research and public communication;
 - culturally responsible;
-- and safe for serious research and public communication.
+- structurally honest about what is draft, donor-derived, operational, or
+  machine-facing.
 
 ## Expected behavior
 
+Please:
+
 - discuss ideas without personal attacks;
 - criticize texts, structures, or implementations without humiliating people;
-- preserve source integrity when editing theory-facing materials;
-- keep public-facing changes legible for humans first, not only for tools;
-- be explicit when a file is operational, machine-facing, or donor-derived.
+- preserve source integrity when editing theory-facing or publication-facing
+  materials;
+- keep public surfaces legible for humans first, not only for tools;
+- mark AI-generated, operational, mirrored, or donor-derived material clearly;
+- avoid adding noise, vanity automation, or misleading placeholders to
+  first-entry repository surfaces.
 
 ## Unacceptable behavior
 
-- harassment, intimidation, or degrading language;
-- vandalizing repository surfaces with noise, broken encoding, or misleading
-  automation output;
-- publishing private information or credentials;
+The following are not acceptable here:
+
+- harassment, intimidation, degrading language, or bullying;
+- intentionally damaging repository readability or public trust;
+- publishing credentials, private information, or confidential contact data;
 - disguising machine-generated placeholders as finished human documentation;
-- using this repository to exploit, manipulate, or deceive contributors or
-  readers.
+- using broken encoding, mojibake, spam, or automation residue as if it were a
+  finished public artifact;
+- treating public readers as if this repository existed only for internal AI
+  routing.
+
+## Public-surface rule
+
+If a file is meant mainly for:
+
+- AI coordination;
+- regeneration logic;
+- internal trace routing;
+- deployment plumbing;
+- or operator-only maintenance,
+
+it must not pretend to be a first-entry document for human readers.
 
 ## Reporting
 
@@ -41,11 +65,27 @@ For conduct concerns, contact:
 
 - `a.abdukarimov@fractal-metascience.org`
 
-## Relation to the broader Terra layer
+When reporting, include:
 
-The stronger donor version of the conduct baseline is maintained in:
+- the affected file, issue, PR, or page;
+- what happened;
+- whether public readers, contributors, or repository integrity were affected.
+
+## Enforcement
+
+Responses may include:
+
+- clarification requests;
+- edit reversal;
+- content removal;
+- issue/PR closure;
+- contributor blocking for severe or repeated misconduct.
+
+## Donor layer
+
+The stronger ecosystem-wide donor baseline lives in:
 
 - `AIUZ-Terra-Codex-EcoSystem/terra-legal`
 
-This repository keeps a compact readable version because it is a public hub,
-not the full governance donor layer.
+This repository keeps a compact repo-specific version because it is a public
+hub, not the whole governance headquarters.

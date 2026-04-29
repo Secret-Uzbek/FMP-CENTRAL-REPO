@@ -1,21 +1,41 @@
 # FMP Ecosystem Map
 
-This file is an internal ecosystem navigation map.
+This file is a technical ecosystem navigation map.
 
-Audience:
+## Audience
+
+Primary audience:
 
 - maintainers;
-- AI nodes;
+- repository coordinators;
 - technical operators;
-- repository coordinators.
+- AI or automation nodes that need cross-repository orientation.
 
-It is not the best first-entry document for a new human reader.
-Human readers should start with:
+Secondary audience:
+
+- human readers who already understand that this is a coordination map, not the
+  main public explanation of FMP.
+
+## Human-first warning
+
+This is not the best first-entry document for a new human reader.
+
+If you arrived here first and want the public reading path, start with:
 
 - `README.md`
 - `README_RU.md`
 - `README_UZ.md`
 - `META-INDEX.md`
+
+## Why this file exists
+
+`FMP-CENTRAL-REPO` sits at the center of a wider repository network.
+That means some file has to answer the question:
+
+> what other repositories exist, and how do they relate structurally?
+
+That is the job of this file.
+It is a coordination aid, not the main public narrative.
 
 *Generated from repository coordination work · 2026-03-21*
 
