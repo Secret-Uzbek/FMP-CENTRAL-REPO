@@ -1,7 +1,16 @@
-# ROOT MINIMAL RULE вЂ” FMP-CENTRAL-REPO
+# Root Minimal Rule — FMP-CENTRAL-REPO
 
-The repository root is **frozen**.
+The repository root should stay compact and intentional.
 
-- No new files may be added to repository root.
-- Published surface is defined in /PUBLICATION_RULE.md
-- Root allowlist is stored in: control/root_allowlist.json
+## Rule
+
+- do not add new root files casually;
+- do not turn the root into a dump of mirrors, AI residues, or temporary fixes;
+- keep public-entry files readable and few;
+- move operational, experimental, and auxiliary material downward into proper
+  folders whenever possible.
+
+## Related files
+
+- public boundary: [`PUBLICATION_RULE.md`](./PUBLICATION_RULE.md)
+- root allowlist: `control/root_allowlist.json`
