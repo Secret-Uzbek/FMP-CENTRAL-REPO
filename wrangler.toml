@@ -1,4 +1,4 @@
-name = "terra-codex-worker"
+name = "fractal-metascience"
 main = "worker.js"
 compatibility_date = "2026-02-01"
 account_id = "c6b63a2d52d28f1d47ba7c63e4a00d9e"
