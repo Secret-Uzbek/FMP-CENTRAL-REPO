@@ -10,11 +10,11 @@
 The **Fractal Metascience Paradigm (FMP)** is a sovereign epistemological architecture designed to solve the crisis of knowledge fragmentation. Built under radical resource constraints ($0 budget, NGMK firewall environment), the system demonstrates unparalleled resilience and structural integrity, proving that visionary design overrides financial capital.
 
 ## 2. PROFESSIONAL AUTHORITY & VALIDATION
-The FoundationвЂ™s legitimacy is anchored in 25+ years of the ArchitectвЂ™s strategic interface with global industrial and diplomatic leaders:
+The Foundation's legitimacy is anchored in 25+ years of the Architect's strategic interface with global industrial and diplomatic leaders:
 * **Energy Infrastructure:** Strategic analysis for **ABB Switzerland Ltd**.
 * **Sovereign Security:** Identification and MRTD standards expert for **SICPA SA (Prilly)**.
 * **Economic Diplomacy:** Trade advisory for the **Embassy of Switzerland in Uzbekistan** and the **Joint Chamber of Commerce (JCC)**.
-* **Academic Pedigree:** Research at **Humboldt-UniversitГ¤t zu Berlin** (DAAD Scholar).
+* **Academic Pedigree:** Research at **Humboldt-Universitat zu Berlin** (DAAD Scholar).
 
 ## 3. THE TERRA CODEX ARCHITECTURE
 We have activated 24 functional portals for planetary governance, including:
