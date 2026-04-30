@@ -16,6 +16,13 @@ Secondary audience:
 - human readers who already understand that this is a coordination map, not the
   main public explanation of FMP.
 
+## Status rule
+
+This file is descriptive, not constitutional.
+
+It helps orientation.
+It does not by itself prove that every listed description is canonical forever.
+
 ## Human-first warning
 
 This is not the best first-entry document for a new human reader.
@@ -60,15 +67,15 @@ Agents:
 |---|---|---|
 | [FMP-CENTRAL-REPO](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO) | HTML | Central hub of Fractal Metascience Paradigm. Theory, publications, live site. |
 | [women-made-central-asia](https://github.com/Secret-Uzbek/women-made-central-asia) | HTML | Public research repository on women as civilizational operators in Central Asia. |
-| [AIUZ-Terra-codex](https://github.com/Secret-Uzbek/AIUZ-Terra-codex) | HTML | Complete ecosystem archive: Education, Solar EV, DAO, Knowledge Tokenization. |
-| [cargotrack-bot](https://github.com/Secret-Uzbek/cargotrack-bot) | Python | cargo track telegram bot project |
+| [AIUZ-Terra-codex](https://github.com/Secret-Uzbek/AIUZ-Terra-codex) | HTML | Archive-facing AIUZ and Terra Codex repository surface. |
+| [cargotrack-bot](https://github.com/Secret-Uzbek/cargotrack-bot) | Python | Cargo tracking Telegram bot project. |
 | [babur-terra-codex](https://github.com/Secret-Uzbek/babur-terra-codex) | — | Fractal semantic analysis of Baburnama across 9 languages using PLT methodology. |
 | [navoiy-terra-corpus](https://github.com/Secret-Uzbek/navoiy-terra-corpus) | JavaScript | Computational PLT analysis of Alisher Navoi's Lisonut-tayr. |
 | [terra-ust-autobuild](https://github.com/Secret-Uzbek/terra-ust-autobuild) | HTML | Automated build pipeline for Universal Semantic Translator. |
 | [terra-ust-core](https://github.com/Secret-Uzbek/terra-ust-core) | HTML | Terra UST Core specification and FMP ecosystem integration matrix. |
 | [ust-mvp](https://github.com/Secret-Uzbek/ust-mvp) | HTML | Universal Semantic Translator MVP — live implementation of UCOM protocol. |
-| [fractal-silk-route-hub-invisible-shadow](https://github.com/Secret-Uzbek/fractal-silk-route-hub-invisible-shadow) | — | AI-экспедитор Invisible Shadow для Fractal Silk Route Hub |
-| [women-made-central-asia-corpus](https://github.com/Secret-Uzbek/women-made-central-asia-corpus) | — | Women Made Central Asia: research corpus repository |
+| [fractal-silk-route-hub-invisible-shadow](https://github.com/Secret-Uzbek/fractal-silk-route-hub-invisible-shadow) | — | Invisible Shadow logistics and coordination branch for the Fractal Silk Route Hub. |
+| [women-made-central-asia-corpus](https://github.com/Secret-Uzbek/women-made-central-asia-corpus) | — | Corpus repository for Women Made Central Asia research materials. |
 | [AIUZ](https://github.com/Secret-Uzbek/AIUZ) | Python | AI Ethics-based Universal Learning Zone. First ethics-grounded AI ecosystem from Uzbekistan. |
 | [terra-translation-api](https://github.com/Secret-Uzbek/terra-translation-api) | — | Production-ready semantic translation API based on UCOM protocol. |
 | [terra-fmp-research-pipeline](https://github.com/Secret-Uzbek/terra-fmp-research-pipeline) | HTML | Integrates theory, code and publication workflow with Zenodo auto-publish. |
@@ -83,6 +90,13 @@ Agents:
 - ORCID: https://orcid.org/0009-0000-6394-4912
 - DOI: 10.5281/zenodo.17731795 — FMP Central Repository
 - DOI: 10.5281/zenodo.17598953 — Terra Codex v2.0
+
+## English-first rule
+
+Descriptions in this map should stay English-first.
+
+Additional language versions may exist elsewhere, but this coordination surface
+should remain consistent for cross-repository reading.
 
 ---
 *NULLO · PLT · UCOMM · FMP Core*
