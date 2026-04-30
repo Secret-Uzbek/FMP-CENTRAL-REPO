@@ -3,6 +3,11 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17731795.svg)](https://doi.org/10.5281/zenodo.17731795)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![Release](https://img.shields.io/github/v/release/Secret-Uzbek/FMP-CENTRAL-REPO?display_name=tag)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/Secret-Uzbek/FMP-CENTRAL-REPO)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/commits/main)
+[![Release Pipeline](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/release-and-publish.yml/badge.svg)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/release-and-publish.yml)
+[![Zenodo Sync](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/zenodo-release.yml/badge.svg)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/zenodo-release.yml)
+[![Terra Audit](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/terra-audit.yml/badge.svg)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/terra-audit.yml)
 [![Live Site](https://img.shields.io/badge/Live-fractal--metascience.org-blue)](https://fractal-metascience.org/)
 [![GitHub Pages](https://img.shields.io/badge/Pages-FMP--CENTRAL--REPO-0f6b57)](https://secret-uzbek.github.io/FMP-CENTRAL-REPO/)
 
@@ -26,6 +31,15 @@ Its job is to stay public, legible, DOI-aware, and structurally coherent.
 - Main vitrine: [fractal-metascience.org](https://fractal-metascience.org/)
 - GitHub Pages: [secret-uzbek.github.io/FMP-CENTRAL-REPO](https://secret-uzbek.github.io/FMP-CENTRAL-REPO/)
 - Foundation page: [fractal-metascience.org/foundation](https://fractal-metascience.org/foundation)
+- Citation metadata: [CITATION.cff](./CITATION.cff)
+
+## ⚙️ Publication Automation
+
+This central repository now exposes the full public publication chain:
+
+- tagged release bundle creation;
+- release-linked Zenodo DOI synchronization;
+- Terra audit of the visible repository surface.
 
 ## 🧭 Repository Role
 

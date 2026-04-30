@@ -1,0 +1,35 @@
+name: release-and-publish
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create release bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          mkdir -p release
+          zip -r "release/${REPO_NAME}-${GITHUB_REF_NAME}.zip" . -x ".git/*" -x "release/*"
+          sha256sum "release/${REPO_NAME}-${GITHUB_REF_NAME}.zip" > "release/CHECKSUMS.txt"
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/${{ github.event.repository.name }}-${{ github.ref_name }}.zip
+            release/CHECKSUMS.txt
+
+      - name: Summary
+        run: |
+          echo "Release bundle created for ${{ github.repository }} ${{ github.ref_name }}" >> "$GITHUB_STEP_SUMMARY"
