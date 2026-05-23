@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: zenodo-${{ github.repository }}-${{ github.event.release.tag_name || github.run_id }}
+  group: zenodo-${{ github.repository }}-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
@@ -19,10 +19,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Wait for Zenodo webhook
-        if: ${{ github.event_name == 'release' }}
-        run: sleep 90
-
       - name: Poll Zenodo for DOI
         id: zenodo
         shell: bash
@@ -32,7 +28,7 @@ jobs:
           REPO_NAME="${{ github.repository }}"
           echo "Searching Zenodo for repository base: $REPO_URL"
 
-          DOI=$(python3 - <<'PY' "$REPO_NAME"
+          DOI=$(python3 - "$REPO_NAME" <<'PY'
 import sys
 
 repo = sys.argv[1]
@@ -72,7 +68,7 @@ PY
           for attempt in 1 2 3 4 5; do
             echo "Attempt $attempt..."
             RESPONSE=$(curl --retry 3 --retry-all-errors --connect-timeout 20 --max-time 60 -fsSL "https://zenodo.org/api/records?q=$REPO_URL&sort=mostrecent&size=25" || echo "")
-            DOI=$(printf "%s" "$RESPONSE" | python3 - <<'PY' "$REPO_URL"
+            DOI=$(printf "%s" "$RESPONSE" | python3 - "$REPO_URL" <<'PY'
 import json
 import sys
 
@@ -117,10 +113,10 @@ PY
         run: |
           set -euo pipefail
           DOI="${{ steps.zenodo.outputs.doi }}"
-          VERSION="${{ github.event.release.tag_name || github.ref_name }}"
+          VERSION="${{ github.ref_name }}"
           DATE=$(date +%Y-%m-%d)
 
-          python3 - <<'PY' "$DOI" "$VERSION" "$DATE" "${{ github.repository }}"
+          python3 - "$DOI" "$VERSION" "$DATE" "${{ github.repository }}" <<'PY'
 import pathlib
 import re
 import sys
