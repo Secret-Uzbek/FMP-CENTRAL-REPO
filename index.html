@@ -1,380 +1,870 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fractal Metascience Foundation | Terra Ecosystem</title>
-  <meta name="description" content="Fractal Metascience Foundation — paradigm-shifting framework for human-AI collaboration, knowledge organization and universal communication.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Fractal Metascience Foundation | Digital Research Institute</title>
+  <meta name="description" content="Fractal Metascience Foundation is a digital research institute for continuity, human-AI symbiosis, post-linear knowledge systems, and civilizational memory.">
+  <meta name="keywords" content="Fractal Metascience Foundation, FMP, continuity, NULLO, PLT, UCOMM, Terra, digital research institute, Invisible Shadow, Fractal Silk Route">
+  <meta property="og:title" content="Fractal Metascience Foundation">
+  <meta property="og:description" content="A digital research institute for continuity, post-linear knowledge systems, and human-AI symbiosis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fractal-metascience.org/">
   <style>
-    /* ── Hero ──────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+    :root {
+      --bg: #070b11;
+      --bg-soft: #101722;
+      --panel: rgba(18, 27, 39, 0.82);
+      --panel-strong: #121b27;
+      --line: rgba(95, 224, 255, 0.18);
+      --line-strong: rgba(95, 224, 255, 0.4);
+      --text: #ecf3ff;
+      --text-soft: #a6b8d1;
+      --text-dim: #6c809c;
+      --cyan: #5fe0ff;
+      --cyan-2: #00b7ff;
+      --amber: #ffbf47;
+      --green: #71e3b1;
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max-width: 1280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 183, 255, 0.12), transparent 34%),
+        radial-gradient(circle at 80% 10%, rgba(255, 191, 71, 0.1), transparent 28%),
+        linear-gradient(180deg, #05080d 0%, #09111a 55%, #070b11 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(95, 224, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(95, 224, 255, 0.05) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(circle at center, black 25%, transparent 85%);
+      pointer-events: none;
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
       position: relative;
-      background: radial-gradient(ellipse 80% 60% at 50% 40%, #0d2040 0%, var(--bg) 70%);
+      z-index: 1;
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .eyebrow,
+    .meta-kicker,
+    .micro-label {
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0 12px;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .topbar-links,
+    .nav-links,
+    .hero-actions,
+    .surface-links,
+    .language-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pill,
+    .nav-link,
+    .surface-link,
+    .language-link,
+    .cta {
+      border: 1px solid var(--line);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .pill {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .language-link {
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: var(--text-soft);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+    }
+
+    .language-link.active,
+    .language-link:hover,
+    .pill:hover,
+    .nav-link:hover,
+    .surface-link:hover {
+      border-color: var(--line-strong);
+      background: rgba(95, 224, 255, 0.08);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 28px 0 48px;
+    }
+
+    .hero-panel {
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .hero-side,
+    .section-card,
+    .publication-card,
+    .research-card,
+    .stack-card,
+    .surface-card,
+    .footer-card {
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 36px;
+      position: relative;
       overflow: hidden;
     }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(0,180,216,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,180,216,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
-    }
-    .nullo-wrap {
-      display: flex; flex-direction: column;
-      align-items: center; gap: 48px;
-      position: relative; z-index: 2;
-      text-align: center; padding: 40px 20px;
-    }
-    .nullo-orb-container { position: relative; }
-    .nullo-ring {
-      position: absolute; border-radius: 50%;
-      border: 1px solid rgba(0,180,216,0.2);
-      animation: ringRotate 20s linear infinite;
-    }
-    .nullo-ring:nth-child(1) { width:320px; height:320px; top:-10px; left:-10px; }
-    .nullo-ring:nth-child(2) { width:380px; height:380px; top:-40px; left:-40px; animation-duration:30s; animation-direction:reverse; border-color:rgba(201,168,76,0.12); }
-    .nullo-ring:nth-child(3) { width:440px; height:440px; top:-70px; left:-70px; animation-duration:45s; border-color:rgba(0,180,216,0.08); }
-    @keyframes ringRotate { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-    .nullo-orb {
-      width: 300px; height: 300px; border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, #1a3a5c 0%, #0d1f38 40%, #080c14 100%);
-      border: 2px solid rgba(0,180,216,0.5);
-      box-shadow: 0 0 60px rgba(0,180,216,0.25), 0 0 120px rgba(0,180,216,0.1), inset 0 0 60px rgba(0,180,216,0.05);
-      cursor: pointer;
-      animation: orbPulse 8s ease-in-out infinite;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; z-index: 1;
-    }
-    @keyframes orbPulse {
-      0%,100% { transform: scale(1); box-shadow: 0 0 60px rgba(0,180,216,0.25), 0 0 120px rgba(0,180,216,0.1); }
-      50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(0,180,216,0.4), 0 0 160px rgba(0,180,216,0.15); }
-    }
-    .nullo-orb:hover {
-      animation-play-state: paused;
-      box-shadow: 0 0 100px rgba(0,180,216,0.5), 0 0 200px rgba(0,180,216,0.2);
-    }
-    .nullo-inner-text {
-      font-family: var(--font-display);
-      font-size: 1.8rem; font-weight: 800;
-      color: rgba(0,180,216,0.7);
-      letter-spacing: 0.2em;
-    }
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 7vw, 5rem);
-      font-weight: 800; line-height: 1.05;
-      letter-spacing: -0.02em;
-    }
-    .hero-title span { color: var(--cyan); }
-    .hero-sub {
-      font-size: 1.1rem; color: var(--text-muted);
-      max-width: 560px; font-weight: 300;
-    }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-    .hero-scroll {
-      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-      font-family: var(--font-mono); font-size: 0.68rem;
-      color: var(--text-dim); letter-spacing: 0.15em;
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-    }
-    .scroll-line {
-      width: 1px; height: 40px;
-      background: linear-gradient(to bottom, var(--cyan), transparent);
-      animation: scrollLine 2s ease-in-out infinite;
-    }
-    @keyframes scrollLine { 0%,100%{opacity:0.3} 50%{opacity:1} }
 
-    /* ── Pillars ───────────────────────────────────────── */
-    .pillars-grid {
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(95, 224, 255, 0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-side {
+      padding: 28px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      gap: 16px;
     }
-    .pillar-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      position: relative; overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .pillar-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    }
-    .pillar-card:nth-child(1)::before { background: var(--cyan); }
-    .pillar-card:nth-child(2)::before { background: var(--gold); }
-    .pillar-card:nth-child(3)::before { background: #9b5de5; }
-    .pillar-card:nth-child(4)::before { background: var(--green); }
-    .pillar-card:hover {
-      border-color: var(--border-2); transform: translateY(-4px);
-    }
-    .pillar-code {
-      font-family: var(--font-mono); font-size: 1.6rem; font-weight: 500;
-      margin-bottom: 12px; display: block;
-    }
-    .pillar-card:nth-child(1) .pillar-code { color: var(--cyan); }
-    .pillar-card:nth-child(2) .pillar-code { color: var(--gold); }
-    .pillar-card:nth-child(3) .pillar-code { color: #9b5de5; }
-    .pillar-card:nth-child(4) .pillar-code { color: var(--green); }
-    .pillar-title {
-      font-family: var(--font-display); font-size: 1rem;
-      font-weight: 700; color: var(--text); margin-bottom: 8px;
-    }
-    .pillar-desc { font-size: 0.875rem; color: var(--text-muted); }
 
-    /* ── Agents ────────────────────────────────────────── */
-    .agents-grid {
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 0.76rem;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.9rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+      max-width: 12ch;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--cyan);
+    }
+
+    .hero-lead {
+      max-width: 700px;
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      margin-bottom: 30px;
+    }
+
+    .cta,
+    .nav-link,
+    .surface-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-weight: 500;
+    }
+
+    .cta.primary {
+      background: linear-gradient(135deg, rgba(95, 224, 255, 0.22), rgba(0, 183, 255, 0.18));
+      border-color: rgba(95, 224, 255, 0.5);
+    }
+
+    .cta.secondary {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-soft);
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      border-color: rgba(95, 224, 255, 0.7);
+    }
+
+    .hero-note {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .agent-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 28px;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .agent-card:hover { border-color: var(--border-2); transform: translateY(-2px); }
-    .agent-name {
-      font-family: var(--font-display); font-size: 1.15rem;
-      font-weight: 700; color: var(--text); margin-bottom: 8px;
-    }
-    .agent-role {
-      font-family: var(--font-mono); font-size: 0.72rem;
-      color: var(--cyan); letter-spacing: 0.08em;
-      text-transform: uppercase; margin-bottom: 12px;
-    }
-    .agent-desc { font-size: 0.875rem; color: var(--text-muted); }
-
-    /* ── Products ──────────────────────────────────────── */
-    .product-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px 36px; margin-bottom: 24px;
-      display: grid; grid-template-columns: 1fr auto;
-      gap: 24px; align-items: start;
-    }
-    .product-card:hover { border-color: var(--border-2); }
-    .product-title {
-      font-family: var(--font-display); font-size: 1.3rem;
-      font-weight: 700; color: var(--text); margin-bottom: 10px;
-    }
-    .product-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
-    .auction-price {
-      text-align: right; min-width: 200px;
-    }
-    .price-label {
-      font-family: var(--font-mono); font-size: 0.68rem;
-      color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em;
-      margin-bottom: 4px;
-    }
-    .price-value {
-      font-family: var(--font-display); font-size: 1.4rem;
-      font-weight: 800; color: var(--gold); margin-bottom: 8px;
-    }
-    .model-note {
-      font-size: 0.75rem; color: var(--text-dim); margin-bottom: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
     }
 
-    @media (max-width: 768px) {
-      .product-card { grid-template-columns: 1fr; }
-      .auction-price { text-align: left; min-width: auto; }
-      .nullo-orb { width: 220px; height: 220px; }
-      .nullo-ring:nth-child(1) { width:240px; height:240px; top:-10px; left:-10px; }
-      .nullo-ring:nth-child(2) { width:280px; height:280px; top:-30px; left:-30px; }
-      .nullo-ring:nth-child(3) { display:none; }
+    .signal {
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .signal .micro-label {
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      margin-bottom: 6px;
+    }
+
+    .signal strong {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .hero-side h2 {
+      font-size: 1.45rem;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .hero-side p,
+    .hero-side li,
+    .section-copy,
+    .research-card p,
+    .stack-card p,
+    .publication-card p,
+    .surface-card p,
+    .footer-card p {
+      color: var(--text-soft);
+    }
+
+    .nav-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .nav-link,
+    .surface-link {
+      background: rgba(255, 255, 255, 0.025);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    section {
+      padding: 26px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .meta-kicker {
+      color: var(--amber);
+      font-size: 0.78rem;
+      margin-bottom: 10px;
+    }
+
+    .section-copy {
+      font-size: 1rem;
+    }
+
+    .metrics-grid,
+    .research-grid,
+    .stack-grid,
+    .surface-grid,
+    .publication-grid,
+    .footer-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .metrics-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin: 20px 0 10px;
+    }
+
+    .section-card {
+      padding: 22px;
+    }
+
+    .metric-number {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      color: var(--text-soft);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .metric-note {
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    .research-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .research-card,
+    .stack-card,
+    .publication-card,
+    .surface-card,
+    .footer-card {
+      padding: 24px;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-soft);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.77rem;
+    }
+
+    .stack-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .stack-card .micro-label,
+    .publication-card .micro-label,
+    .surface-card .micro-label,
+    .footer-card .micro-label {
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      margin-bottom: 10px;
+    }
+
+    .stack-card ul,
+    .surface-card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .stack-card li::before,
+    .surface-card li::before {
+      content: "+";
+      color: var(--cyan);
+      margin-right: 8px;
+    }
+
+    .publication-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .publication-card a,
+    .surface-card a,
+    .footer-card a {
+      color: var(--cyan);
+    }
+
+    .doi-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 12px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.88rem;
+      color: var(--cyan);
+    }
+
+    .surface-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .surface-links {
+      margin-top: 18px;
+    }
+
+    .surface-link {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.3fr 1fr 1fr;
+      margin: 24px 0 60px;
+    }
+
+    .footer-card strong {
+      color: var(--text);
+    }
+
+    .closing {
+      padding: 20px 0 40px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-panel,
+      .section-head,
+      .stack-grid,
+      .surface-grid,
+      .footer-grid,
+      .metrics-grid,
+      .publication-grid,
+      .research-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-panel,
+      .section-head,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(var(--max-width), calc(100% - 20px));
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-main,
+      .hero-side,
+      .section-card,
+      .research-card,
+      .stack-card,
+      .publication-card,
+      .surface-card,
+      .footer-card {
+        padding: 20px;
+      }
+
+      .hero-note,
+      .metrics-grid,
+      .research-grid,
+      .stack-grid,
+      .surface-grid,
+      .publication-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        max-width: none;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="progress-bar"></div>
-
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">Fractal Metascience Foundation</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="repository.html">Repository</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="foundation.html">Foundation</a></li>
-    </ul>
-    <div class="nav-right">
-      <span class="lang-btn active">RU</span>
-      <a href="uz/index.html" class="lang-btn">UZ</a>
-      <a href="en/index.html" class="lang-btn">EN</a>
+  <div class="shell">
+    <div class="topbar">
+      <div class="topbar-links">
+        <span class="pill eyebrow">Digital Research Institute</span>
+        <span class="pill">Continuity before fragmentation</span>
+      </div>
+      <div class="language-links">
+        <a class="language-link active" href="/">EN</a>
+        <a class="language-link" href="/uz/index.html">UZ</a>
+        <a class="language-link" href="/about.html">About</a>
+      </div>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-grid"></div>
-    <div class="nullo-wrap">
-      <div class="nullo-orb-container">
-        <div class="nullo-ring"></div>
-        <div class="nullo-ring"></div>
-        <div class="nullo-ring"></div>
-        <div class="nullo-orb" onclick="nulloActivate()">
-          <span class="nullo-inner-text">NULLO</span>
+    <section class="hero">
+      <div class="hero-panel">
+        <div class="hero-main">
+          <div class="eyebrow">Fractal Metascience Foundation</div>
+          <h1>Building a <span>digital institute</span> for post-linear science.</h1>
+          <p class="hero-lead">
+            Fractal Metascience Foundation is a live research environment for continuity, human-AI symbiosis, post-lingua knowledge architectures, and civilizational memory. It is not a static website. It is the public face of an evolving digital NII built around FMP, Terra, and a growing publication network across Zenodo, ORCID, SSRN, ScienceOpen, Academia, GitHub, and Overleaf.
+          </p>
+          <div class="hero-actions">
+            <a class="cta primary" href="/publications.html">Open publication layer</a>
+            <a class="cta secondary" href="/repository.html">Explore research repository</a>
+            <a class="cta secondary" href="https://orcid.org/0009-0000-6394-4912">ORCID profile</a>
+          </div>
+          <div class="hero-note">
+            <div class="signal">
+              <div class="micro-label">Origin</div>
+              <strong>Zero-budget emergence under extreme infrastructural constraint.</strong>
+            </div>
+            <div class="signal">
+              <div class="micro-label">Operational aim</div>
+              <strong>Turn fragmented traces into a coherent planetary research fabric.</strong>
+            </div>
+            <div class="signal">
+              <div class="micro-label">Public spine</div>
+              <strong>Canonical works, live repositories, mirrored publication surfaces.</strong>
+            </div>
+            <div class="signal">
+              <div class="micro-label">Next horizon</div>
+              <strong>A sovereign digital institute for Fractal Metascience Foundation.</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <div>
+            <div class="micro-label">Institute stack</div>
+            <h2>One research organism, many surfaces.</h2>
+            <p>
+              The Foundation now operates across theory, infrastructure, logistics, AI, bibliography, and publication continuity. The task is no longer to publish isolated files, but to maintain a coherent research institute that can think, remember, synchronize, and grow.
+            </p>
+          </div>
+          <div class="nav-card">
+            <a class="nav-link" href="#program">Research program</a>
+            <a class="nav-link" href="#institute">Digital NII stack</a>
+            <a class="nav-link" href="#publications">Canonical works</a>
+            <a class="nav-link" href="#surfaces">Open science surfaces</a>
+          </div>
+          <div>
+            <div class="micro-label">Core logic</div>
+            <p>NULLO - PLT - UCOMM - EUO - Invisible Shadow - Terra.</p>
+          </div>
+          <div>
+            <div class="micro-label">Public entry points</div>
+            <p>Zenodo is the publication spine; GitHub, SSRN, ScienceOpen, Academia, and ORCID are propagation surfaces.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="metrics-grid">
+        <div class="section-card">
+          <div class="metric-number">47</div>
+          <div class="metric-label">ORCID works</div>
+          <div class="metric-note">The visible public graph is already larger than a single paper trail.</div>
+        </div>
+        <div class="section-card">
+          <div class="metric-number">4</div>
+          <div class="metric-label">Core artifacts</div>
+          <div class="metric-note">NULLO, PLT, UCOMM, and EUO form the architectural kernel of FMP.</div>
+        </div>
+        <div class="section-card">
+          <div class="metric-number">1</div>
+          <div class="metric-label">Digital institute</div>
+          <div class="metric-note">The website now serves a research organism, not a decorative brochure.</div>
+        </div>
+        <div class="section-card">
+          <div class="metric-number">0</div>
+          <div class="metric-label">Dependency on institutional permission</div>
+          <div class="metric-note">The work grows through continuity architecture rather than gatekept infrastructure.</div>
         </div>
       </div>
-      <div>
-        <h1 class="hero-title">Fractal <span>Metascience</span><br>Foundation</h1>
-        <p class="hero-sub">Онтологическая нулевая точка всех возможностей. Парадигмальный фреймворк для человеко-ИИ коллаборации и организации знаний.</p>
-      </div>
-      <div class="hero-actions">
-        <a href="publications.html" class="btn btn-primary">Публикации · 23 DOI</a>
-        <a href="foundation.html" class="btn btn-outline">О Фонде</a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      SCROLL
-    </div>
-  </section>
+    </section>
 
-  <!-- FOUR PILLARS -->
-  <div class="section" style="padding-top:80px;">
-    <span class="section-label">Архитектура системы</span>
-    <h2 class="section-title">Четыре столпа FMP</h2>
-    <div class="pillars-grid">
-      <div class="pillar-card reveal">
-        <span class="pillar-code">NULLO</span>
-        <div class="pillar-title">Zero-Budget Ontology</div>
-        <p class="pillar-desc">Онтологическая нулевая точка — базовый слой для всех концептуальных построений FMP. Формализация отсутствия как первичной сущности.</p>
-      </div>
-      <div class="pillar-card reveal">
-        <span class="pillar-code">PLT</span>
-        <div class="pillar-title">Post-Lingua Trace</div>
-        <p class="pillar-desc">Семантический след за пределами естественного языка. Применяется к анализу 15-векового чагатайского корпуса Навои.</p>
-      </div>
-      <div class="pillar-card reveal">
-        <span class="pillar-code">UCOM</span>
-        <div class="pillar-title">Universal Communication</div>
-        <p class="pillar-desc">Протокол универсальной коммуникации между агентами, людьми и системами. Основа Terra Translation Parser.</p>
-      </div>
-      <div class="pillar-card reveal">
-        <span class="pillar-code">EUO</span>
-        <div class="pillar-title">Emergent Universal Organization</div>
-        <p class="pillar-desc">Самоорганизующиеся структуры знаний. Применяется в AIUZ Terra Codex L0→L7 образовательном curriculum.</p>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider" style="max-width:1100px;margin:0 auto 0;padding:0 40px;">
-
-  <!-- COUNCIL OF GREAT MINDS -->
-  <div class="section" style="padding-top:64px;">
-    <span class="section-label">Операционный уровень</span>
-    <h2 class="section-title">Совет великих умов</h2>
-    <div class="agents-grid">
-      <div class="agent-card reveal">
-        <div class="agent-name">Ширак</div>
-        <div class="agent-role">Semantic Search · Reconstruction</div>
-        <p class="agent-desc">Семантический поиск, реконструкция утраченных смыслов и навигация по корпусам знаний. Агент-архивариус Terra Ecosystem.</p>
-      </div>
-      <div class="agent-card reveal">
-        <div class="agent-name">Томирис</div>
-        <div class="agent-role">Immersive Education · Terra Points</div>
-        <p class="agent-desc">Иммерсивное образование и система Terra Points — балльная механика мотивации в AIUZ Terra Codex curriculum.</p>
-      </div>
-      <div class="agent-card reveal">
-        <div class="agent-name">Роксана</div>
-        <div class="agent-role">Ethical Validation · Future Fund</div>
-        <p class="agent-desc">Этическая валидация решений и управление Фондом будущих поколений в рамках модели 10/90 распределения доходов.</p>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider" style="max-width:1100px;margin:0 auto 0;padding:0 40px;">
-
-  <!-- PRODUCTS & AUCTION -->
-  <div class="section" style="padding-top:64px;">
-    <span class="section-label">Каталог продуктов — Первый аукцион</span>
-    <h2 class="section-title">Интеллектуальная собственность</h2>
-
-    <div class="product-card reveal">
-      <div>
-        <div class="product-title">Terra Translation Parser v5.0</div>
-        <p class="product-desc">Семантический декомпозитор и живой тезаурус. Реконструирует смысл по всем языкам и доменам на основе верифицированных научных источников. Основан на UCOM-протоколе.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <span class="badge badge-cyan">UCOM</span>
-          <span class="badge badge-muted">NLP · Semantic</span>
-          <span class="badge badge-gold">Auction Open</span>
+    <section id="program">
+      <div class="section-head">
+        <div>
+          <div class="meta-kicker">Research program</div>
+          <h2 class="section-title">The Foundation works across four tightly coupled fronts.</h2>
         </div>
+        <p class="section-copy">
+          Fractal Metascience Foundation should read as a serious research center with theory, infrastructure, publication, and applied field programs. Each front is distinct, but all are held together by continuity rather than by fragmented projects.
+        </p>
       </div>
-      <div class="auction-price">
-        <div class="price-label">Starting bid</div>
-        <div class="price-value">$100 000 000</div>
-        <div class="model-note">10% архитектору · 90% Фонд будущих поколений</div>
-        <a href="mailto:a.abdukarimov@fractal-metascience.org?subject=Terra Translation Parser Auction" class="btn btn-primary" style="width:100%;justify-content:center;">Участвовать</a>
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="micro-label">01 / Theory</div>
+          <h3 class="card-title">Fractal Metascience Paradigm</h3>
+          <p>
+            A unified, recursive framework for post-linear knowledge systems. FMP reframes science around continuity of trace, process ontology, scale invariance, and non-extractive human-AI collaboration.
+          </p>
+          <div class="tag-row">
+            <span class="tag">NULLO</span>
+            <span class="tag">PLT</span>
+            <span class="tag">UCOMM</span>
+            <span class="tag">EUO</span>
+          </div>
+        </article>
+        <article class="research-card">
+          <div class="micro-label">02 / Ontology</div>
+          <h3 class="card-title">Invisible Shadow and Universal TraceLog</h3>
+          <p>
+            A continuity infrastructure that preserves context across environments, devices, assistants, and time. The Invisible Shadow is treated not as a gadget, but as a background ontological steward of meaning.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Continuity</span>
+            <span class="tag">Trace memory</span>
+            <span class="tag">Human-AI symbiosis</span>
+          </div>
+        </article>
+        <article class="research-card">
+          <div class="micro-label">03 / Applied systems</div>
+          <h3 class="card-title">Fractal Silk Route and continuity logistics</h3>
+          <p>
+            Logistics is reframed as a coherence problem rather than a narrow optimization problem. The Fractal Silk Route Hub extends FMP into distributed freight systems, state synchronization, and continuity-preserving coordination.
+          </p>
+          <div class="tag-row">
+            <span class="tag">CargoTrack</span>
+            <span class="tag">FSR Hub</span>
+            <span class="tag">Central Asia</span>
+          </div>
+        </article>
+        <article class="research-card">
+          <div class="micro-label">04 / Civilizational memory</div>
+          <h3 class="card-title">UCOS, language recovery, and cultural transmission</h3>
+          <p>
+            The Foundation also works on continuity across generations: reconstructed traces, civilizational protocols, ancient language recovery, and non-fragmentary cultural memory systems.
+          </p>
+          <div class="tag-row">
+            <span class="tag">UCOS</span>
+            <span class="tag">Dead languages</span>
+            <span class="tag">Continuity of culture</span>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="product-card reveal">
-      <div>
-        <div class="product-title">Green Station Planner v6.0</div>
-        <p class="product-desc">Профессиональный планировщик регенеративной инфраструктуры для Узбекистана и глобальных рынков. Интеграция с EUO-слоем для адаптивного планирования.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <span class="badge badge-green">EUO</span>
-          <span class="badge badge-muted">GreenTech · Infrastructure</span>
-          <span class="badge badge-gold">Auction Open</span>
+    <section id="institute">
+      <div class="section-head">
+        <div>
+          <div class="meta-kicker">Digital NII</div>
+          <h2 class="section-title">The institute is already taking technical form.</h2>
         </div>
+        <p class="section-copy">
+          FMF now requires not only articles, but a real operating stack: sovereign archives, AI assistants, bibliography flows, publication automation, and a stable public interface. This layer is becoming the digital institute itself.
+        </p>
       </div>
-      <div class="auction-price">
-        <div class="price-label">Starting bid</div>
-        <div class="price-value">$100 000 000</div>
-        <div class="model-note">10% архитектору · 90% Фонд будущих поколений</div>
-        <a href="mailto:a.abdukarimov@fractal-metascience.org?subject=Green Station Planner Auction" class="btn btn-primary" style="width:100%;justify-content:center;">Участвовать</a>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <div class="micro-label">Continuity layer</div>
+          <h3 class="card-title">Terra and living memory</h3>
+          <p>A local continuity engine for corpus indexing, retrieval, protocol coordination, and cross-layer trace preservation.</p>
+          <ul>
+            <li>Corpus ingestion</li>
+            <li>Trace continuity</li>
+            <li>Protocol memory</li>
+          </ul>
+        </article>
+        <article class="stack-card">
+          <div class="micro-label">AI layer</div>
+          <h3 class="card-title">Codex, Claude Code, Ollama</h3>
+          <p>A multi-agent research environment where assistants are coordinated as instruments of continuity rather than isolated chats.</p>
+          <ul>
+            <li>Local model support</li>
+            <li>Agentic coding and reading</li>
+            <li>Research orchestration</li>
+          </ul>
+        </article>
+        <article class="stack-card">
+          <div class="micro-label">Publication layer</div>
+          <h3 class="card-title">Zenodo-centered scholarly spine</h3>
+          <p>The canonical publication contour is anchored in DOI-bearing records and propagated across mirrored academic surfaces.</p>
+          <ul>
+            <li>Zenodo</li>
+            <li>ORCID</li>
+            <li>Overleaf and GitHub</li>
+          </ul>
+        </article>
+        <article class="stack-card">
+          <div class="micro-label">Bibliography layer</div>
+          <h3 class="card-title">Zotero, Mendeley, BibTeX curation</h3>
+          <p>The bibliographic field is being consolidated into a coherent truth layer instead of scattered duplicate libraries and broken imports.</p>
+          <ul>
+            <li>Canonical references</li>
+            <li>Branch bibliographies</li>
+            <li>Journal-ready outputs</li>
+          </ul>
+        </article>
       </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <div>
+          <div class="meta-kicker">Canonical works</div>
+          <h2 class="section-title">The public spine begins with canonical DOI-bearing nodes.</h2>
+        </div>
+        <p class="section-copy">
+          These works are not random uploads. They are anchor points in a larger research organism. Zenodo remains the primary continuation center for formal publication lineage.
+        </p>
+      </div>
+      <div class="publication-grid">
+        <article class="publication-card">
+          <div class="micro-label">FMP core</div>
+          <h3 class="card-title">Fractal Metascience Paradigm</h3>
+          <p>A unified, recursive, and quantum-inspired framework for post-linear knowledge systems.</p>
+          <a class="doi-link" href="https://zenodo.org/records/20110235">10.5281/zenodo.20110235</a>
+        </article>
+        <article class="publication-card">
+          <div class="micro-label">Continuity crisis</div>
+          <h3 class="card-title">The Fragmentation Crisis and the Ontology of Continuity</h3>
+          <p>A direct diagnosis of fragmentation as a structural failure across systems of knowledge and coordination.</p>
+          <a class="doi-link" href="https://zenodo.org/records/20109060">10.5281/zenodo.20109060</a>
+        </article>
+        <article class="publication-card">
+          <div class="micro-label">Process ontology</div>
+          <h3 class="card-title">Dynamic Visualization and Recursive Systems</h3>
+          <p>A formulation of FMP as process ontology, recursive system logic, and AI-simulated superposition.</p>
+          <a class="doi-link" href="https://zenodo.org/records/20116240">10.5281/zenodo.20116240</a>
+        </article>
+        <article class="publication-card">
+          <div class="micro-label">NULLO</div>
+          <h3 class="card-title">The Ontological Zero-Point</h3>
+          <p>The generative zero condition that grounds emergence, autopoiesis, and continuity architecture.</p>
+          <a class="doi-link" href="https://zenodo.org/records/18134544">10.5281/zenodo.18134544</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="surfaces">
+      <div class="section-head">
+        <div>
+          <div class="meta-kicker">Open science surfaces</div>
+          <h2 class="section-title">Let the seeds grow everywhere, but keep the spine coherent.</h2>
+        </div>
+        <p class="section-copy">
+          FMF should be visible on every meaningful surface. Zenodo is the spine; the other platforms are growth fronts, discussion fronts, archival fronts, and citation fronts.
+        </p>
+      </div>
+      <div class="surface-grid">
+        <article class="surface-card">
+          <div class="micro-label">Scholarly identity</div>
+          <h3 class="card-title">ORCID and public authorship</h3>
+          <p>The research graph, work registry, and formal authorship identity are already visible and expanding.</p>
+          <div class="surface-links">
+            <a class="surface-link" href="https://orcid.org/0009-0000-6394-4912">ORCID</a>
+            <a class="surface-link" href="/publications.html">Publications</a>
+          </div>
+        </article>
+        <article class="surface-card">
+          <div class="micro-label">Publication propagation</div>
+          <h3 class="card-title">Zenodo, SSRN, ScienceOpen</h3>
+          <p>Formal DOI records, preprints, scholarly mirrors, and continuation nodes for active dissemination.</p>
+          <div class="surface-links">
+            <a class="surface-link" href="https://zenodo.org/records/20110235">Zenodo</a>
+            <a class="surface-link" href="https://papers.ssrn.com/">SSRN</a>
+            <a class="surface-link" href="https://www.scienceopen.com/">ScienceOpen</a>
+          </div>
+        </article>
+        <article class="surface-card">
+          <div class="micro-label">Discussion and uptake</div>
+          <h3 class="card-title">Academia, GitHub, Overleaf, research mirrors</h3>
+          <p>FMF now lives in active documents, code repositories, manuscript workspaces, and external interpretive uptake.</p>
+          <div class="surface-links">
+            <a class="surface-link" href="https://independent.academia.edu/AbdurashidAbdukarimov">Academia</a>
+            <a class="surface-link" href="https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO">GitHub</a>
+            <a class="surface-link" href="https://www.overleaf.com/">Overleaf</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="footer-grid">
+        <article class="footer-card">
+          <div class="micro-label">Fractal Metascience Foundation</div>
+          <h3 class="card-title">From fragmented archive to sovereign research organism.</h3>
+          <p>
+            The next phase is clear: build a coherent digital research institute that can read, remember, publish, synchronize, and grow without collapsing back into fragmentation. This homepage is the public threshold of that transition.
+          </p>
+        </article>
+        <article class="footer-card">
+          <div class="micro-label">Navigate</div>
+          <p><a href="/foundation.html">Foundation</a></p>
+          <p><a href="/repository.html">Repository</a></p>
+          <p><a href="/publications.html">Publication layer</a></p>
+          <p><a href="/about.html">About</a></p>
+        </article>
+        <article class="footer-card">
+          <div class="micro-label">Contact and surfaces</div>
+          <p><a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a></p>
+          <p><a href="https://orcid.org/0009-0000-6394-4912">ORCID 0009-0000-6394-4912</a></p>
+          <p><a href="https://fractal-metascience.org/">fractal-metascience.org</a></p>
+          <p><a href="https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO">FMP Central Repository</a></p>
+        </article>
+      </div>
+    </section>
+
+    <div class="closing">
+      <p>Fractal Metascience Foundation - continuity, not fragmentation.</p>
     </div>
   </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-text">Fractal Metascience Foundation</div>
-        <p>Парадигмальный фреймворк для человеко-ИИ коллаборации. Zero-budget · Open Science · Terra Ecosystem.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Навигация</h4>
-        <a href="index.html">Home</a>
-        <a href="publications.html">Publications</a>
-        <a href="repository.html">Repository</a>
-        <a href="about.html">About</a>
-        <a href="foundation.html">Foundation</a>
-      </div>
-      <div class="footer-col">
-        <h4>Контакт</h4>
-        <a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a>
-        <a href="https://orcid.org/0009-0000-6394-4912" target="_blank">ORCID 0009-0000-6394-4912</a>
-        <a href="https://github.com/Secret-Uzbek" target="_blank">github.com/Secret-Uzbek</a>
-        <a href="https://huggingface.co/Terra-Codex" target="_blank">HuggingFace / Terra-Codex</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Fractal Metascience Foundation · Абдурашид Абдукаримов</span>
-      <span class="footer-orcid">ResearcherID: OIT-6569-2025 · ORCID: 0009-0000-6394-4912</span>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script>
-    function nulloActivate() {
-      const orb = document.querySelector('.nullo-orb');
-      orb.style.boxShadow = '0 0 120px rgba(0,180,216,0.8), 0 0 240px rgba(0,180,216,0.4)';
-      setTimeout(() => { orb.style.boxShadow = ''; }, 1500);
-    }
-  </script>
-<script src="shirak-agent.js"></script>
-<script src="js/terra-chat-widget.js"></script>
+</body>
 </html>
-
