@@ -1,20 +1,33 @@
 cff-version: 1.2.0
-message: "If you use or quote this central hub layer, please cite it as below."
+message: "If you use or quote this central repository, cite the canonical FMP paper DOI below and keep the central repository records attached as companion identifiers."
 type: software
-title: "FMP-CENTRAL-REPO"
+title: "Fractal Metascience Paradigm - Central Repository"
 authors:
   - family-names: Abdukarimov
-    given-names: Abdurashid
+    given-names: Abdurashid Abdulkhamitovich
     orcid: "https://orcid.org/0009-0000-6394-4912"
-    affiliation: "Fractal Metascience Foundation, Tashkent"
 repository-code: "https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO"
-abstract: "Central hub of Fractal Metascience Paradigm. Theory, publications, live site."
+url: "https://doi.org/10.5281/zenodo.20110235"
+abstract: "Central public repository surface for the Fractal Metascience Paradigm, linked to software, dataset, journal, and OSF public records across the wider publication ecosystem."
 keywords:
   - fractal-metascience
   - fmp
   - uzbekistan
   - open-science
-license: CC0-1.0
-date-released: "2026-03-03"
-version: "1.0.0"
-doi: "10.5281/zenodo.17731795"
+license: CC-BY-SA-4.0
+date-released: "2026-03-24"
+version: "v1.1-AWAKENING"
+doi: "10.5281/zenodo.20110235"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.17632583"
+    description: "Central repository public software record."
+  - type: doi
+    value: "10.5281/zenodo.17632584"
+    description: "Parallel central repository public record mirrored into journal-article and dataset channels."
+  - type: doi
+    value: "10.5281/zenodo.17731795"
+    description: "Earlier public central repository software release still present in ORCID."
+  - type: doi
+    value: "10.17605/osf.io/gwfzm"
+    description: "OSF public record linked to the central repository."

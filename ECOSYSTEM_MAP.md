@@ -81,15 +81,16 @@ Agents:
 | [terra-fmp-research-pipeline](https://github.com/Secret-Uzbek/terra-fmp-research-pipeline) | HTML | Integrates theory, code and publication workflow with Zenodo auto-publish. |
 | [Uzbek-mining](https://github.com/Secret-Uzbek/Uzbek-mining) | HTML | Academic archive of Uzbek mining industry, ESG reports and sustainable extraction. |
 | [Theory-of-fractal-metascience-paradigm](https://github.com/Secret-Uzbek/Theory-of-fractal-metascience-paradigm) | HTML | Core theoretical paper: New epistemological framework for post-digital science. |
-| [Nullo-PLT-UCOMM-FMP-Academic-Research](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research) | HTML | Academic research archive: NULLO, PLT, UCOM papers and datasets. |
+| [Nullo-PLT-FMP-Theory](https://github.com/AIUZ-Terra-Codex-EcoSystem/Nullo-PLT-FMP-Theory) | HTML | Theory-facing repository for NULLO, PLT, and related FMP formalization layers. |
 | [FMP-monograph](https://github.com/Secret-Uzbek/FMP-monograph) | HTML | Full academic monograph: Theory of Fractal Metascience Paradigm (LaTeX sources). |
 | [FMP-Full-Publication-Package](https://github.com/Secret-Uzbek/FMP-Full-Publication-Package) | TeX | LaTeX sources for peer-review papers: Theoretical and Applied FMP. |
 | [AIUZ-terra-codex-FMP](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP) | HTML | Child-centric multilingual educational platform based on FMP L0-L7 framework. |
 
 ## Publications (Zenodo/ORCID)
 - ORCID: https://orcid.org/0009-0000-6394-4912
-- DOI: 10.5281/zenodo.17731795 — FMP Central Repository
-- DOI: 10.5281/zenodo.17598953 — Terra Codex v2.0
+- Canonical theory DOI: 10.5281/zenodo.20110235 — Fractal Metascience Paradigm: A Unified, Recursive, and Quantum-Inspired Framework for Post-Linear Knowledge Systems
+- Central repository public records: 10.5281/zenodo.17632583, 10.5281/zenodo.17632584, 10.5281/zenodo.17731795, 10.17605/osf.io/gwfzm
+- Companion package DOI: 10.5281/zenodo.17598953 — Terra Codex v2.0
 
 ## English-first rule
 
