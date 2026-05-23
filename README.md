@@ -1,9 +1,9 @@
 # 🌐 Fractal Metascience Paradigm — Central Repository
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17731795.svg)](https://doi.org/10.5281/zenodo.17731795)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17632583.svg)](https://doi.org/10.5281/zenodo.17632583)
 [![Layer](https://img.shields.io/badge/Layer-Central%20Hub-0b5cad)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--6394--4912-green)](https://orcid.org/0009-0000-6394-4912)
-[![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![License: CC-BY--SA 4.0](https://img.shields.io/badge/License-CC--BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Release](https://img.shields.io/github/v/release/Secret-Uzbek/FMP-CENTRAL-REPO?display_name=tag)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/releases)
 [![Last Commit](https://img.shields.io/github/last-commit/Secret-Uzbek/FMP-CENTRAL-REPO)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/commits/main)
 [![Release Pipeline](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/release-and-publish.yml/badge.svg)](https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO/actions/workflows/release-and-publish.yml)
@@ -15,6 +15,9 @@
 > **Official public hub of the Fractal Metascience Paradigm (FMP)** — central
 > routing layer for theory, publication, live pages, and entry points into the
 > wider Terra ecosystem.
+
+Preferred repository DOI: [10.5281/zenodo.17632583](https://doi.org/10.5281/zenodo.17632583)  
+Parallel public records: [10.5281/zenodo.17632584](https://doi.org/10.5281/zenodo.17632584), [10.5281/zenodo.17731795](https://doi.org/10.5281/zenodo.17731795), [10.17605/osf.io/gwfzm](https://doi.org/10.17605/osf.io/gwfzm)
 
 ## 🔬 Layer role
 
@@ -40,6 +43,7 @@ machine trace into one root story.
 - GitHub Pages: [secret-uzbek.github.io/FMP-CENTRAL-REPO](https://secret-uzbek.github.io/FMP-CENTRAL-REPO/)
 - Foundation page: [fractal-metascience.org/foundation](https://fractal-metascience.org/foundation)
 - Citation metadata: [CITATION.cff](./CITATION.cff)
+- Public surface map: [docs/public-surfaces.md](./docs/public-surfaces.md)
 
 ## ⚙️ Publication Automation
 
@@ -128,11 +132,11 @@ Useful navigation files in this repository:
 ## 📖 Citation
 
 ```bibtex
-@software{abdukarimov2026fmpcentralrepo,
+@software{abdukarimov2025fmpcentralrepo,
   author       = {Abdukarimov, Abdurashid},
-  title        = {FMP-CENTRAL-REPO},
-  year         = {2026},
-  doi          = {10.5281/zenodo.17731795},
+  title        = {Fractal Metascience Paradigm - Central Repository},
+  year         = {2025},
+  doi          = {10.5281/zenodo.17632583},
   url          = {https://github.com/Secret-Uzbek/FMP-CENTRAL-REPO},
   orcid        = {0009-0000-6394-4912}
 }
