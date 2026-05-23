@@ -319,6 +319,75 @@ h3 {
   color: var(--ink-soft);
 }
 
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.signal-card {
+  background: rgba(255, 253, 249, 0.9);
+  border: 1px solid rgba(188, 174, 156, 0.6);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.signal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.signal-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(39, 73, 61, 0.08);
+  color: var(--forest);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signal-badge.is-warn {
+  background: rgba(141, 90, 51, 0.12);
+  color: var(--clay);
+}
+
+.signal-badge.is-error {
+  background: rgba(93, 46, 36, 0.12);
+  color: var(--accent);
+}
+
+.signal-copy {
+  margin: 0 0 14px;
+  color: var(--ink-soft);
+}
+
+.signal-body {
+  display: grid;
+  gap: 10px;
+}
+
+.signal-line {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  border: 1px solid rgba(188, 174, 156, 0.55);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.signal-line strong {
+  color: var(--ink);
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -470,7 +539,8 @@ h3 {
 @media (max-width: 1040px) {
   .hero-grid,
   .page-grid,
-  .page-layout {
+  .page-layout,
+  .live-grid {
     grid-template-columns: 1fr;
   }
 
@@ -494,7 +564,8 @@ h3 {
   .hero-copy,
   .panel,
   .card,
-  .section-card {
+  .section-card,
+  .signal-card {
     padding: 22px;
   }
 

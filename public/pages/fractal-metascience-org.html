@@ -10,6 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fractal-metascience.org/">
   <link rel="stylesheet" href="../../css/style.css">
+  <script defer src="../../js/live-signals.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -129,6 +130,79 @@
             <h3>Repository map</h3>
             <p>Inspect the public repository layer without exposing internal operational secrets or maintenance traces.</p>
             <div class="record-links"><a href="../../repository.html">Open repository map</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Live Signals</div>
+            <h2>Public continuity in motion</h2>
+          </div>
+          <p class="section-copy">
+            This layer pulls the latest public release and archive signals so the site reflects the living research surface rather than a static summary.
+          </p>
+        </div>
+        <div class="live-grid">
+          <article class="signal-card">
+            <div class="signal-head">
+              <h3>FMP-CENTRAL-REPO</h3>
+              <span class="signal-badge" id="github-central-status">Loading</span>
+            </div>
+            <p class="signal-copy">Latest public GitHub release signal from the central institute repository.</p>
+            <div class="signal-body" id="github-central-body">
+              <div class="signal-line">Checking GitHub release surface…</div>
+            </div>
+          </article>
+          <article class="signal-card">
+            <div class="signal-head">
+              <h3>Research Pipeline</h3>
+              <span class="signal-badge" id="github-pipeline-status">Loading</span>
+            </div>
+            <p class="signal-copy">Latest public GitHub release signal from the submission and publication pipeline.</p>
+            <div class="signal-body" id="github-pipeline-body">
+              <div class="signal-line">Checking release and automation layer…</div>
+            </div>
+          </article>
+          <article class="signal-card">
+            <div class="signal-head">
+              <h3>Zenodo Surface</h3>
+              <span class="signal-badge" id="zenodo-status">Loading</span>
+            </div>
+            <p class="signal-copy">Latest public Zenodo record currently visible for the FMP publication spine.</p>
+            <div class="signal-body" id="zenodo-body">
+              <div class="signal-line">Checking DOI archive surface…</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">UCOMM</div>
+            <h2>Open contact channels</h2>
+          </div>
+          <p class="section-copy">
+            Public scientific dialogue should remain direct, reviewable, and easy to enter.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="section-card">
+            <h3>Email</h3>
+            <p>Primary review and scientific correspondence channel for manuscripts, endorsements, and institutional contact.</p>
+            <div class="record-links"><a href="mailto:a.abdukarimov@fractal-metascience.org">a.abdukarimov@fractal-metascience.org</a></div>
+          </article>
+          <article class="section-card">
+            <h3>GitHub</h3>
+            <p>Public code, repositories, releases, and workflow-visible infrastructure for the research ecosystem.</p>
+            <div class="record-links"><a href="https://github.com/Secret-Uzbek" target="_blank" rel="noopener noreferrer">Open Secret-Uzbek</a></div>
+          </article>
+          <article class="section-card">
+            <h3>ORCID</h3>
+            <p>Canonical scholarly identity layer for publications, metadata continuity, and external academic discovery.</p>
+            <div class="record-links"><a href="https://orcid.org/0009-0000-6394-4912" target="_blank" rel="noopener noreferrer">Open ORCID profile</a></div>
           </article>
         </div>
       </section>
