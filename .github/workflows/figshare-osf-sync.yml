@@ -1,8 +1,7 @@
 name: Figshare & OSF Sync
 
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
 
 jobs:
   sync-figshare-osf:
