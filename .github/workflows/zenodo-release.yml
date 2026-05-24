@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       zenodo_doi:
-        description: "Zenodo DOI to write into CITATION.cff (for example 10.5281/zenodo.20110235)"
+        description: "Zenodo DOI to write into CITATION.cff"
         required: false
         type: string
       release_version:
