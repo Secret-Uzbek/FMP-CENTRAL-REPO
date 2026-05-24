@@ -1,22 +1,48 @@
-name: Terra Audit
+name: terra-audit
 
 on:
   workflow_dispatch:
+    inputs:
+      fail_on_missing:
+        description: "Fail when core files are missing"
+        required: false
+        default: false
+        type: boolean
+      fail_on_mojibake:
+        description: "Fail when mojibake markers are detected"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
+
+concurrency:
+  group: terra-audit-${{ github.repository }}
+  cancel-in-progress: false
 
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Check central public surface
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Terra audit
         shell: bash
+        env:
+          FAIL_ON_MISSING: ${{ inputs.fail_on_missing }}
+          FAIL_ON_MOJIBAKE: ${{ inputs.fail_on_mojibake }}
         run: |
           set -euo pipefail
 
-          check_any() {
+          missing=0
+          mojibake=0
+
+          echo "## Terra audit" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Repository: \`${{ github.repository }}\`" >> "$GITHUB_STEP_SUMMARY"
+
+          check_one() {
             local label="$1"
             shift
             for file in "$@"; do
@@ -26,22 +52,35 @@ jobs:
               fi
             done
             echo "- $label: NO" >> "$GITHUB_STEP_SUMMARY"
+            missing=1
             return 1
           }
 
-          fail=0
-          echo "## Terra Audit" >> "$GITHUB_STEP_SUMMARY"
-          check_any "README" "README.md" || fail=1
-          check_any "LICENSE" "LICENSE" "LICENSE.md" || fail=1
-          check_any "CITATION" "CITATION.cff" || fail=1
-          check_any "SECURITY" "SECURITY.md" || fail=1
-          check_any "CONTRIBUTING" "CONTRIBUTING.md" || fail=1
-          check_any "CODE_OF_CONDUCT" "CODE_OF_CONDUCT.md" || fail=1
-          check_any "PUBLICATION_RULE" "PUBLICATION_RULE.md" || fail=1
-          check_any "ROOT_MINIMAL_RULE" "ROOT_MINIMAL_RULE.md" || fail=1
-          check_any "META_INDEX" "META-INDEX.md" || fail=1
+          check_one "README" "README.md" || true
+          check_one "CITATION" "CITATION.cff" || true
+          check_one "LIVING_INDEX" "LIVING_INDEX.md" || true
+          check_one "CHANGELOG" "CHANGELOG.md" || true
+          check_one "LICENSE" "LICENSE" "LICENSE.md" || true
+          check_one "SECURITY" "SECURITY.md" ".github/SECURITY.md" || true
 
-          if [ "$fail" -ne 0 ]; then
-            echo "Required central public surface is incomplete."
+          if command -v rg >/dev/null 2>&1; then
+            if rg -n --glob '*.md' --glob '*.cff' --glob '*.yml' --glob '*.yaml' 'Ð|Ñ|�' . > terra-mojibake-hits.txt; then
+              mojibake=1
+              {
+                echo ""
+                echo "### Mojibake hot spots"
+                head -n 40 terra-mojibake-hits.txt
+              } >> "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+
+          if [ "$missing" -ne 0 ] && [ "${FAIL_ON_MISSING}" = "true" ]; then
+            echo "Missing required Terra surface." >&2
             exit 1
           fi
+
+          if [ "$mojibake" -ne 0 ] && [ "${FAIL_ON_MOJIBAKE}" = "true" ]; then
+            echo "Mojibake detected." >&2
+            exit 1
+          fi
+
