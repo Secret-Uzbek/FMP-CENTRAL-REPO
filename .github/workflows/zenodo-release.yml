@@ -6,19 +6,21 @@ on:
       zenodo_doi:
         description: "Zenodo DOI to write into CITATION.cff (for example 10.5281/zenodo.20110235)"
         required: false
+        type: string
       release_version:
         description: "Optional version string to write into CITATION.cff"
         required: false
+        type: string
 
 permissions:
   contents: write
 
 concurrency:
-  group: zenodo-${{ github.repository }}-${{ github.run_id }}
+  group: zenodo-${{ github.repository }}
   cancel-in-progress: false
 
 jobs:
-  update_citation:
+  update-citation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,50 +31,57 @@ jobs:
       - name: Resolve metadata
         id: meta
         shell: bash
+        env:
+          DOI_INPUT: ${{ inputs.zenodo_doi }}
+          VERSION_INPUT: ${{ inputs.release_version }}
         run: |
           set -euo pipefail
-          DOI_INPUT="${{ github.event.inputs.zenodo_doi }}"
-          VERSION_INPUT="${{ github.event.inputs.release_version }}"
-          TODAY=$(date +%Y-%m-%d)
 
-          CURRENT_DOI=$(grep -E '^doi:' CITATION.cff | head -n 1 | sed 's/^doi:[[:space:]]*//; s/"//g' || true)
-          CURRENT_VERSION=$(grep -E '^version:' CITATION.cff | head -n 1 | sed 's/^version:[[:space:]]*//; s/"//g' || true)
+          current_doi="$(sed -n 's/^doi:[[:space:]]*//p' CITATION.cff | head -n 1 | tr -d '\"')"
+          current_version="$(sed -n 's/^version:[[:space:]]*//p' CITATION.cff | head -n 1 | tr -d '\"')"
+          today="$(date +%Y-%m-%d)"
 
-          DOI="${DOI_INPUT:-$CURRENT_DOI}"
-          VERSION="${VERSION_INPUT:-$CURRENT_VERSION}"
+          doi="${DOI_INPUT:-$current_doi}"
+          version="${VERSION_INPUT:-$current_version}"
 
-          if [ -z "$DOI" ]; then
+          if [ -z "$doi" ]; then
             echo "No DOI available. Supply workflow input zenodo_doi or add doi to CITATION.cff." >&2
             exit 1
           fi
 
-          if [ -z "$VERSION" ]; then
-            VERSION="${GITHUB_REF_NAME:-manual}"
+          if [ -z "$version" ]; then
+            version="${GITHUB_REF_NAME:-manual}"
           fi
 
-          echo "doi=$DOI" >> "$GITHUB_OUTPUT"
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+          {
+            echo "doi=$doi"
+            echo "version=$version"
+            echo "today=$today"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Normalize CITATION.cff
         shell: bash
+        env:
+          DOI: ${{ steps.meta.outputs.doi }}
+          VERSION: ${{ steps.meta.outputs.version }}
+          TODAY: ${{ steps.meta.outputs.today }}
+          REPOSITORY_CODE: https://github.com/${{ github.repository }}
         run: |
           set -euo pipefail
-          python3 - "${{ steps.meta.outputs.doi }}" "${{ steps.meta.outputs.version }}" "${{ steps.meta.outputs.today }}" "${{ github.repository }}" <<'PY'
+          python3 <<'PY'
+          import os
           import pathlib
           import re
-          import sys
 
-          doi, version, date_released, repo = sys.argv[1:]
           path = pathlib.Path("CITATION.cff")
           content = path.read_text(encoding="utf-8")
 
           updates = {
-              "doi": f"\"{doi}\"",
-              "url": f"\"https://doi.org/{doi}\"",
-              "version": f"\"{version}\"",
-              "date-released": f"\"{date_released}\"",
-              "repository-code": f"\"https://github.com/{repo}\"",
+              "doi": f"\"{os.environ['DOI']}\"",
+              "url": f"\"https://doi.org/{os.environ['DOI']}\"",
+              "version": f"\"{os.environ['VERSION']}\"",
+              "date-released": f"\"{os.environ['TODAY']}\"",
+              "repository-code": f"\"{os.environ['REPOSITORY_CODE']}\"",
           }
 
           for key, value in updates.items():
@@ -89,19 +98,25 @@ jobs:
 
       - name: Commit CITATION.cff if changed
         shell: bash
+        env:
+          DOI: ${{ steps.meta.outputs.doi }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add CITATION.cff
-          git diff --staged --quiet || git commit -m "chore: sync CITATION.cff with Zenodo DOI ${{ steps.meta.outputs.doi }}"
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: sync CITATION.cff with Zenodo DOI ${DOI}"
+            git push
+          fi
 
       - name: Summary
         shell: bash
         run: |
-          echo "## Zenodo release sync" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Repository: \`${{ github.repository }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "- DOI: \`${{ steps.meta.outputs.doi }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Version: \`${{ steps.meta.outputs.version }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Date released: \`${{ steps.meta.outputs.today }}\`" >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "## Zenodo release sync"
+            echo "- Repository: \`${{ github.repository }}\`"
+            echo "- DOI: \`${{ steps.meta.outputs.doi }}\`"
+            echo "- Version: \`${{ steps.meta.outputs.version }}\`"
+            echo "- Date released: \`${{ steps.meta.outputs.today }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
