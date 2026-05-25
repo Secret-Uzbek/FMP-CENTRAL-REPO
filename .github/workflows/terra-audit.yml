@@ -28,6 +28,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install ripgrep (if needed)
+        shell: bash
+        run: |
+          if ! command -v rg >/dev/null 2>&1; then
+            echo "Installing ripgrep..."
+            sudo apt-get update -qq
+            sudo apt-get install -y ripgrep
+          else
+            echo "ripgrep already installed"
+          fi
+
       - name: Run Terra audit
         shell: bash
         env:
@@ -64,14 +75,19 @@ jobs:
           check_one "SECURITY" "SECURITY.md" ".github/SECURITY.md" || true
 
           if command -v rg >/dev/null 2>&1; then
-            if rg -n --glob '*.md' --glob '*.cff' --glob '*.yml' --glob '*.yaml' 'Ð|Ñ|�' . > terra-mojibake-hits.txt; then
-              mojibake=1
-              {
-                echo ""
-                echo "### Mojibake hot spots"
-                head -n 40 terra-mojibake-hits.txt
-              } >> "$GITHUB_STEP_SUMMARY"
+            if rg -n --glob '*.md' --glob '*.cff' --glob '*.yml' --glob '*.yaml' 'Ð|Ñ|�' . > terra-mojibake-hits.txt 2>&1 || true; then
+              hit_count=$(wc -l < terra-mojibake-hits.txt || echo "0")
+              if [ "$hit_count" -gt 0 ]; then
+                mojibake=1
+                {
+                  echo ""
+                  echo "### Mojibake hot spots"
+                  head -n 40 terra-mojibake-hits.txt
+                } >> "$GITHUB_STEP_SUMMARY"
+              fi
             fi
+          else
+            echo "Warning: ripgrep not available, skipping mojibake detection" >> "$GITHUB_STEP_SUMMARY"
           fi
 
           if [ "$missing" -ne 0 ] && [ "${FAIL_ON_MISSING}" = "true" ]; then
@@ -83,4 +99,3 @@ jobs:
             echo "Mojibake detected." >&2
             exit 1
           fi
-
