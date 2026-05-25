@@ -28,6 +28,23 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Create minimal CITATION.cff if missing
+        shell: bash
+        run: |
+          if [[ ! -f CITATION.cff ]]; then
+            echo "CITATION.cff not found, creating minimal version..."
+            cat > CITATION.cff <<'EOF'
+          cff-version: 1.2.0
+          message: "If you use this repository, please cite it as below."
+          title: Repository
+          type: software
+          authors:
+            - family-names: Author
+              given-names: Name
+          repository-code: "https://github.com/${{ github.repository }}"
+          EOF
+          fi
+
       - name: Resolve metadata
         id: meta
         shell: bash
@@ -37,8 +54,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          current_doi="$(sed -n 's/^doi:[[:space:]]*//p' CITATION.cff | head -n 1 | tr -d '\"')"
-          current_version="$(sed -n 's/^version:[[:space:]]*//p' CITATION.cff | head -n 1 | tr -d '\"')"
+          current_doi="$(sed -n 's/^doi:[[:space:]]*//p' CITATION.cff | head -n 1 | tr -d '\"' || echo '')"
+          current_version="$(sed -n 's/^version:[[:space:]]*//p' CITATION.cff | head -n 1 | tr -d '\"' || echo '')"
           today="$(date +%Y-%m-%d)"
 
           doi="${DOI_INPUT:-$current_doi}"
