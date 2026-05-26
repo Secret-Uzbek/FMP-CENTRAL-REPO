@@ -61,10 +61,10 @@ jobs:
 
           mojibake_patterns = [
               r"вЂ",
-              r"Ã.",
-              r"Ð.",
-              r"Ñ.",
-              r"�",
+              r"\u00C3.",
+              r"\u00D0.",
+              r"\u00D1.",
+              r"\uFFFD",
           ]
           mojibake_re = re.compile("|".join(mojibake_patterns))
 
