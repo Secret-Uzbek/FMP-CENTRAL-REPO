@@ -1,0 +1,91 @@
+{
+  "schema": "tracelog-sanitization-rules-v1",
+  "status": "active",
+  "method_stack": ["NULLO", "PLT", "UCOMM", "EUO", "FMP"],
+  "zones": {
+    "public_surface": ["README.md", "LIVING_INDEX.md", "CITATION.cff", "LICENSE", "LICENSE.md", "SECURITY.md", "GOVERNANCE.md", "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md"],
+    "publication_layer_extensions": [".md", ".tex", ".bib", ".cff", ".yml", ".yaml", ".json"],
+    "raw_archive_markers": ["fullchat", "chat", "archive", "session", "dump", "html mirror"]
+  },
+  "failure_classes": {
+    "AUDIT-001": {
+      "name": "Broken Terra audit workflow",
+      "safe_fix": true,
+      "review_required": false
+    },
+    "DONOR-001": {
+      "name": "Donor-layer residue",
+      "safe_fix": true,
+      "review_required": false
+    },
+    "PATH-001": {
+      "name": "Broken reading path",
+      "safe_fix": true,
+      "review_required": false
+    },
+    "MOJI-001": {
+      "name": "Encoding damage",
+      "safe_fix": true,
+      "review_required": false
+    },
+    "META-001": {
+      "name": "DOI and citation drift",
+      "safe_fix": false,
+      "review_required": true
+    },
+    "LICENSE-001": {
+      "name": "License conflict",
+      "safe_fix": false,
+      "review_required": true
+    },
+    "CLAIM-001": {
+      "name": "Evidence overclaim",
+      "safe_fix": false,
+      "review_required": true
+    },
+    "RAW-001": {
+      "name": "Raw archive as public surface",
+      "safe_fix": false,
+      "review_required": true
+    },
+    "PRIVACY-001": {
+      "name": "Sensitive identity surface",
+      "safe_fix": false,
+      "review_required": true
+    },
+    "BINARY-001": {
+      "name": "Unread binary publication surface",
+      "safe_fix": false,
+      "review_required": true
+    }
+  },
+  "safe_replacements": {
+    "вЂ”": "—",
+    "вЂ“": "–",
+    "в†’": "→",
+    "в†“": "↓",
+    "в†‘": "↑",
+    "в‚¬": "€",
+    "В«": "«",
+    "В»": "»",
+    "BarabГЎsi": "Barabási",
+    "MarГ­n": "Marín",
+    "LГёmo": "Lømo",
+    "COв‚‚": "CO₂",
+    "NOв‚‚": "NO₂",
+    "15В°C": "15°C",
+    "в‰€": "≈",
+    "в‰¤": "≤",
+    "ОІ": "β",
+    "О±": "α",
+    "О¦": "Φ",
+    "Пѓ": "σ"
+  },
+  "boundaries": {
+    "no_blind_global_rewrite": true,
+    "no_raw_archive_deletion": true,
+    "no_automatic_doi_correction": true,
+    "no_automatic_license_correction": true,
+    "no_automatic_claim_rewriting": true
+  }
+}
