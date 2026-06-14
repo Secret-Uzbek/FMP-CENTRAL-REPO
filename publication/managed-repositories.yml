@@ -1,0 +1,40 @@
+schema_version: 1
+controller:
+  repository: Secret-Uzbek/FMP-CENTRAL-REPO
+policy:
+  repository: AIUZ-Terra-Codex-EcoSystem/terra-legal
+  commit: 4a2a95300e2eb752a72fc86fa9b37483aa7f819d
+  publication_gate_file: decisions/2026-06-14-publication-decision.md
+managed_repositories:
+  - repository: Secret-Uzbek/FMP-CENTRAL-REPO
+    role: central-control-plane
+    github_release: managed
+    external_publication: verified-only
+  - repository: AIUZ-Terra-Codex-EcoSystem/terra-legal
+    role: legal-governance-donor
+    github_release: managed
+    external_publication: verified-only
+  - repository: Secret-Uzbek/AIUZ-terra-codex-FMP
+    role: theory-and-codex-donor
+    github_release: managed
+    external_publication: verified-only
+  - repository: Secret-Uzbek/AIUZ-Terra-codex
+    role: historical-codex-donor
+    github_release: managed
+    external_publication: verified-only
+  - repository: Secret-Uzbek/terra-fmp-research-pipeline
+    role: research-pipeline
+    github_release: managed
+    external_publication: verified-only
+  - repository: Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research
+    role: academic-research
+    github_release: managed
+    external_publication: verified-only
+publication_rules:
+  independent_release_workflows: prohibited
+  doi_before_verified_record: prohibited
+  create_external_record_without_gate: prohibited
+  floating_reusable_workflow_reference: prohibited
+  required_gate_values:
+    - GO
+    - GO_WITH_EXCLUSIONS
