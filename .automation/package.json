@@ -1,7 +1,7 @@
 {
   "name": "fmp-automation",
   "version": "1.0.0",
-  "description": "FMP Unified Automation System вЂ” Zenodo, OSF, Figshare, GitHub integration",
+  "description": "FMP Unified Automation System — Zenodo, OSF, Figshare, GitHub integration",
   "main": "unified-publisher.js",
   "scripts": {
     "publish": "node unified-publisher.js",

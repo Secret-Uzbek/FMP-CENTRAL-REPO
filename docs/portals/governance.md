@@ -2,7 +2,7 @@
 ## Subject: Institutional Charter of the Fractal Metascience Foundation
 
 ### 1. DECLARATION OF SOVEREIGNTY
-The Fractal Metascience Foundation operates as a sovereign digital scientific entity. Its legitimacy is derived from the **NULLO protocol** (Ontological Zero-Budget Innovation) and the verified strategic expertise of the Lead Architect.
+The Fractal Metascience Foundation operates as a sovereign digital scientific entity. Its legitimacy is derived from the **NULLO protocol** (Ontological Zero-Budget Innovation) and the strategic direction of the Lead Architect.
 
 ### 2. ETHICAL SUPREMACY (THE 10/90 RULE)
 To prevent the commodification of planetary knowledge, all technical and scientific output is governed by the 10/90 distribution model:
@@ -16,7 +16,7 @@ In accordance with the **AIUZ Education Protocol**, all AI-driven systems within
 - Generation of toxic or hallucinatory cognitive content.
 
 ### 4. MULTIPERSPECTIVAL VALIDATION
-Knowledge within the Foundation is verified through the **Recursive Validation Interface (RVI)**, ensuring coherence across all 24 domains of the Terra Civilization Interface.
+Knowledge within the Foundation is reviewed through the **Recursive Validation Interface (RVI)** to maintain coherence across all 24 domains of the Terra Civilization Interface.
 
 ### 5. LEADERSHIP & AUTHORITY
 - **Architect:** Abdurashid Abdukarimov

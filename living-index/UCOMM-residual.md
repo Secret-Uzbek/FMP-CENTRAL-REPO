@@ -640,7 +640,7 @@
 - [Привет. Можешь создать мне профессиональное, солид.md](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/Привет. Можешь создать мне профессиональное, солид.md)
 - [Рационализаторлик таклифи - Ўзбек тили (кирилл) - Тўғрилашган.pdf](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/Рационализаторлик таклифи - Ўзбек тили (кирилл) - Тўғрилашган.pdf)
 - [Рационализаторлик таклифи - Ўзбек тили (кирилл).pdf](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/Рационализаторлик таклифи - Ўзбек тили (кирилл).pdf)
-- [Сlaude_AI_Nullo_PLT__Terra_GitHub_full_chat.md](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/Сlaude_AI_Nullo_PLT__Terra_GitHub_full_chat.md)
+- [Claude_AI_Nullo_PLT__Terra_GitHub_full_chat.md](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/Claude_AI_Nullo_PLT__Terra_GitHub_full_chat.md)
 - [Ты можешь помочь мне написать рационализаторское п.md](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/Ты можешь помочь мне написать рационализаторское п.md)
 - [ФАЗА 2_ Карта миграции теоретических файлов.pdf](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/ФАЗА 2_ Карта миграции теоретических файлов.pdf)
 - [анализ расхода масла.pdf](https://github.com/Secret-Uzbek/Nullo-PLT-UCOMM-FMP-Academic-Research/blob/main/анализ расхода масла.pdf)
@@ -744,5 +744,6 @@
 ---
 **Contact:** a.abdukarimov@fractal-metascience.org  
 **ORCID:** 0009-0000-6394-4912
+
 
 

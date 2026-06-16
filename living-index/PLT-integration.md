@@ -606,7 +606,7 @@
 - [Резюме на русском АИУЗ.txt](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Резюме на русском АИУЗ.txt)
 - [Реквизиты TrackIT.docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Реквизиты TrackIT.docx)
 - [Рекомендации по улучшению структуры.docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Рекомендации по улучшению структуры.docx)
-- [Стратегия публикации и распространения ПараDIгмы Фрактальной Метанауки (FMP).txt](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Стратегия публикации и распространения ПараDIгмы Фрактальной Метанауки (FMP).txt)
+- [Стратегия публикации и распространения Парадигмы Фрактальной Метанауки (FMP).txt](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Стратегия публикации и распространения Парадигмы Фрактальной Метанауки (FMP).txt)
 - [Структура диссертации.docx](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Структура диссертации.docx)
 - [Утверждён перечень проектов по внедрению ИИ в Узбекистане на 2025−2026 годы.txt](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Утверждён перечень проектов по внедрению ИИ в Узбекистане на 2025−2026 годы.txt)
 - [Финансовая_модель_хаба_электрозаправок.txt](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/Финансовая_модель_хаба_электрозаправок.txt)
@@ -811,8 +811,8 @@
 - [🗺️-aiuz-terra-os-v3.0-стратегическая-дорожная-карта-(ru).md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🗺️-aiuz-terra-os-v3.0-стратегическая-дорожная-карта-(ru).md)
 - [🗺️-живая-дорожная-карта-terra-archive-manager-2.0.html](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🗺️-живая-дорожная-карта-terra-archive-manager-2.0.html)
 - [🗺️-живая-дорожная-карта-terra-archive-manager-2.0.md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🗺️-живая-дорожная-карта-terra-archive-manager-2.0.md)
-- [🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.html](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.html)
-- [🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.md)
+- [🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.html](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.html)
+- [🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.md)
 - [🚀-aiuz-terra-os-v3.0-investor-presentation-(en).html](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-terra-os-v3.0-investor-presentation-(en).html)
 - [🚀-aiuz-terra-os-v3.0-investor-presentation-(en).md](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-terra-os-v3.0-investor-presentation-(en).md)
 - [🚀-aiuz-terra-os-v3.0-investorlar-prezentatsiyasi-(uz).html](https://github.com/Secret-Uzbek/AIUZ-terra-codex-FMP/blob/main/🚀-aiuz-terra-os-v3.0-investorlar-prezentatsiyasi-(uz).html)
@@ -1499,4 +1499,5 @@
 ---
 **Contact:** a.abdukarimov@fractal-metascience.org  
 **ORCID:** 0009-0000-6394-4912
+
 

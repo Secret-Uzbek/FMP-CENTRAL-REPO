@@ -298,8 +298,8 @@
 - [🗺️-aiuz-terra-os-v3.0-strategik-rivojlanish-yo'l-xaritasi-(uz).html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🗺️-aiuz-terra-os-v3.0-strategik-rivojlanish-yo'l-xaritasi-(uz).html)
 - [🗺️-aiuz-terra-os-v3.0-strategik-rivojlanish-yo'l-xaritasi-(uz).md](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🗺️-aiuz-terra-os-v3.0-strategik-rivojlanish-yo'l-xaritasi-(uz).md)
 - [🗺️-aiuz-terra-os-v3.0-стратегическая-дорожная-карта-(ru).html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🗺️-aiuz-terra-os-v3.0-стратегическая-дорожная-карта-(ru).html)
-- [🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.html)
-- [🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.md](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-finальный-мета-анализ-революционная-экосистема-этического-будущего.md)
+- [🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.html)
+- [🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.md](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-finalnyy-meta-analiz-revolyutsionnaya-ekosistema-eticheskogo-budushchego.md)
 - [🚀-aiuz-terra-os-v3.0-investor-presentation-(en).html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-terra-os-v3.0-investor-presentation-(en).html)
 - [🚀-aiuz-terra-os-v3.0-investorlar-prezentatsiyasi-(uz).html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-terra-os-v3.0-investorlar-prezentatsiyasi-(uz).html)
 - [🚀-aiuz-terra-os-v3.0-презентация-для-инвесторов-(ru).html](https://github.com/Secret-Uzbek/AIUZ-Terra-codex/blob/main/🚀-aiuz-terra-os-v3.0-презентация-для-инвесторов-(ru).html)
@@ -702,3 +702,4 @@
 ---
 **Contact:** a.abdukarimov@fractal-metascience.org  
 **ORCID:** 0009-0000-6394-4912
+

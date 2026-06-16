@@ -1,4 +1,4 @@
-name: terra-autofix
+﻿name: terra-autofix
 
 on:
   workflow_dispatch:
@@ -60,7 +60,7 @@ jobs:
           missing = [name for name in required if not (root / name).exists()]
 
           mojibake_patterns = [
-              r"вЂ",
+              r"—,
               r"\u00C3.",
               r"\u00D0.",
               r"\u00D1.",

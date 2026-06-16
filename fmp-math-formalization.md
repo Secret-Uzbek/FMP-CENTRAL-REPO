@@ -104,7 +104,7 @@ Where:
 FMP spreads through **understanding-based replication**:
 
 ```
-dN/dt = rN(1 - N/K) + ОІSI
+dN/dt = rN(1 - N/K) + βSI
 ```
 
 Where:
