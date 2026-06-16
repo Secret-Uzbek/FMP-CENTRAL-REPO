@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # TERRA AI — Local System v1.1
 # AIUZ Terra Codex | FMP-CENTRAL-REPO
 # Stack: Ollama + qwen3:4b (default)

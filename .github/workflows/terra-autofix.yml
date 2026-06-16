@@ -1,4 +1,4 @@
-﻿name: terra-autofix
+name: terra-autofix
 
 on:
   workflow_dispatch:
