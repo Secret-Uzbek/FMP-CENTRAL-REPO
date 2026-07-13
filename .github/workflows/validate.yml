@@ -1,0 +1,44 @@
+name: FMP Repository Validation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Validate JSON files
+      run: |
+        echo "🔍 Проверка JSON файлов на синтаксические ошибки..."
+        find . -name "*.json" -exec python -m json.tool {} > /dev/null \; || (echo "❌ Ошибка в JSON файлах!" && exit 1)
+        echo "✅ Все JSON файлы валидны."
+
+    - name: Check for sensitive data (Tokens/Secrets)
+      run: |
+        echo "🔍 Поиск потенциальных утечек токенов..."
+        if grep -rnw . -e "ghp_" -e "PAT_" -e "token_for_claude" --exclude-dir=.git; then
+          echo "❌ ВНИМАНИЕ: Обнаружены потенциальные токены в коде!"
+          exit 1
+        fi
+        echo "✅ Явные токены не найдены."
+        
+    - name: Check Documentation Structure
+      run: |
+        echo "🔍 Проверка наличия ключевых документов..."
+        for file in README.md README_RU.md MASTER_MAP.md STANDARDS.md; do
+          if [ ! -f "$file" ]; then
+            echo "❌ Отсутствует обязательный файл: $file"
+            exit 1
+          fi
+        done
+        echo "✅ Все ключевые документы на месте."
